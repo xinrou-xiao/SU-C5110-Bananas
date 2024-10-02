@@ -12,6 +12,7 @@ namespace ContosoCrafts.WebSite.Pages
     /// Xinrou Xiao
     /// Samarth Singh Tanwar
     /// Vineet Somwanshi
+    /// Shanvi Sinha
     /// </summary>
     public class IndexModel : PageModel
     {
