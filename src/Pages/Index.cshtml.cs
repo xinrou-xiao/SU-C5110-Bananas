@@ -13,7 +13,8 @@ namespace ContosoCrafts.WebSite.Pages
     /// Samarth Singh Tanwar
     /// Vineet Somwanshi
     /// Shanvi Sinha
-    /// 10/02 10:24pm Xinrou test github push on mac 
+    /// 10/02 10:24pm Xinrou test github push on mac
+    /// 10/07 Xinrou test push
     /// </summary>
     public class IndexModel : PageModel
     {
