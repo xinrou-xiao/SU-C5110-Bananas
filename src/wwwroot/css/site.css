@@ -29,6 +29,10 @@
     font-family: 'poppins-light' !important;
 }
 
+.modal-title {
+    font-family: 'poppins-medium';
+}
+
 body {
     background-color: #092144 !important;
 }
