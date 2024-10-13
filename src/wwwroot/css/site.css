@@ -8,6 +8,11 @@
     src: url('../fonts/poppins-extralight.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'poppins-medium';
+    src: url('../fonts/poppins-medium.ttf') format('truetype');
+}
+
 body {
     background-color: #092144 !important;
 }
