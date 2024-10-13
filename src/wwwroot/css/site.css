@@ -21,6 +21,10 @@
     font-family: 'poppins-light';
 }
 
+.nav-link {
+    font-family: 'poppins-light';
+}
+
 body {
     background-color: #092144 !important;
 }
