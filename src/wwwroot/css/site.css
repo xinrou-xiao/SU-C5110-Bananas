@@ -1,4 +1,9 @@
-﻿body {
+﻿@font-face {
+    font-family: 'poppins-light';
+    src: url('../fonts/poppins-light.ttf') format('truetype');
+}
+
+body {
     background-color: #092144 !important;
 }
 
