@@ -33,6 +33,10 @@
     font-family: 'poppins-medium';
 }
 
+.card-text {
+    font-family: 'poppins-light';
+}
+
 body {
     background-color: #092144 !important;
 }
