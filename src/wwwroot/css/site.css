@@ -13,6 +13,10 @@
     src: url('../fonts/poppins-medium.ttf') format('truetype');
 }
 
+.card-title {
+    font-family: 'poppins-light';
+}
+
 body {
     background-color: #092144 !important;
 }
