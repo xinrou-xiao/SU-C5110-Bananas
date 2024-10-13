@@ -41,6 +41,10 @@
     font-family: 'poppins-extralight';
 }
 
+h1 {
+    font-family: 'poppins-medium' !important
+}
+
 body {
     background-color: #092144 !important;
 }
