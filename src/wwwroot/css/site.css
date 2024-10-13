@@ -25,6 +25,10 @@
     font-family: 'poppins-light';
 }
 
+.footer {
+    font-family: 'poppins-light' !important;
+}
+
 body {
     background-color: #092144 !important;
 }
