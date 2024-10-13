@@ -37,6 +37,10 @@
     font-family: 'poppins-light';
 }
 
+.modal-footer {
+    font-family: 'poppins-extralight';
+}
+
 body {
     background-color: #092144 !important;
 }
