@@ -44,6 +44,9 @@
 h1 {
     font-family: 'poppins-medium' !important
 }
+p {
+    font-family: 'poppins-light' !important
+}
 
 body {
     background-color: #092144 !important;
