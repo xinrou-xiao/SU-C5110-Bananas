@@ -1,4 +1,8 @@
-﻿.checked {
+﻿body {
+    background-color: #092144 !important;
+}
+
+.checked {
   color: orange;
 }
 
