@@ -3,6 +3,11 @@
     src: url('../fonts/poppins-light.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'poppins-extralight';
+    src: url('../fonts/poppins-extralight.ttf') format('truetype');
+}
+
 body {
     background-color: #092144 !important;
 }
