@@ -51,7 +51,7 @@
 }
 
 h1 {
-    font-family: 'poppins-medium' !important
+    font-family: 'poppins-medium' !important /* Change font type to poppins-medium, should have higher priority */
 }
 p {
     font-family: 'poppins-light' !important
