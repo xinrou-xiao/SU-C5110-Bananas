@@ -35,7 +35,7 @@
 }
 
 .footer {
-    font-family: 'poppins-light' !important;
+    font-family: 'poppins-light' !important; /* Change font type to poppins-light, should have higher priority */
 }
 
 .modal-title {
