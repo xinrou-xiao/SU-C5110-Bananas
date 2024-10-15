@@ -1,4 +1,7 @@
-﻿@font-face {
+﻿/*
+    Load custom font type poppins-light to website 
+*/
+@font-face {
     font-family: 'poppins-light';
     src: url('../fonts/poppins-light.ttf') format('truetype');
 }
