@@ -39,7 +39,7 @@
 }
 
 .modal-title {
-    font-family: 'poppins-medium';
+    font-family: 'poppins-medium'; /* Change font type to poppins-medium */
 }
 
 .card-text {
