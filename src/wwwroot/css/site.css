@@ -47,7 +47,7 @@
 }
 
 .modal-footer {
-    font-family: 'poppins-extralight';
+    font-family: 'poppins-extralight'; /* Change font type to poppins-extralight */
 }
 
 h1 {
