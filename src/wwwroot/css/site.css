@@ -6,6 +6,9 @@
     src: url('../fonts/poppins-light.ttf') format('truetype');
 }
 
+/*
+    Load custom font type poppins-extralight to website 
+*/
 @font-face {
     font-family: 'poppins-extralight';
     src: url('../fonts/poppins-extralight.ttf') format('truetype');
