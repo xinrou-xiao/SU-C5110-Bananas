@@ -49,7 +49,7 @@ p {
 }
 
 body {
-    background-color: #092144 !important;
+    background-color: #092144 !important; /* Change background color to blue */
     font-family: 'poppins-light' !important
 }
 
