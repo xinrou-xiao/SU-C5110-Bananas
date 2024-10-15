@@ -59,7 +59,7 @@ p {
 
 body {
     background-color: #092144 !important; /* Change background color to blue */
-    font-family: 'poppins-light' !important
+    font-family: 'poppins-light' !important /* Change font type to poppins-light, should have higher priority */
 }
 
 .checked {
