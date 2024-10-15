@@ -61,6 +61,13 @@ body {
   cursor: pointer;
 }
 
+.logo img {
+    width: 144px; /* Your current width */
+    height: auto; /* Keep aspect ratio */
+    margin-right: -10px; /* Space to the right */
+    margin-top: -10px; /* Adjust this to move it higher */
+}
+
 /* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 .card-columns .card:hover .card-img {
