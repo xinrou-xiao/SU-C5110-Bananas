@@ -14,6 +14,9 @@
     src: url('../fonts/poppins-extralight.ttf') format('truetype');
 }
 
+/*
+    Load custom font type poppins-medium to website 
+*/
 @font-face {
     font-family: 'poppins-medium';
     src: url('../fonts/poppins-medium.ttf') format('truetype');
