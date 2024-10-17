@@ -1,4 +1,8 @@
-﻿/*
+﻿.table {
+    color: white /* Set font color to white */
+}
+
+/*
     Load custom font type poppins-light to website 
 */
 @font-face {
