@@ -9,7 +9,7 @@ using ContosoCrafts.WebSite.Services;
 namespace ContosoCrafts.WebSite.Pages.Read
 {
     /// <summary>
-    /// Index Page will return all the data to show the user
+    /// Read page will display one product details data
     /// </summary>
     public class IndexModel : PageModel
     {
