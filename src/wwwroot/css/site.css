@@ -11,6 +11,10 @@ td > a:hover {
     color: #00a36c; /* Set font color to white */
 }
 
+.read-img {
+    width: inherit; /* set image width to inherit */
+}
+
 /*
     Load custom font type poppins-light to website 
 */
