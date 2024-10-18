@@ -25,8 +25,8 @@ namespace ContosoCrafts.WebSite.Pages.Read
         // Data Service
         public JsonFileProductService ProductService { get; }
 
-        // Collection of the Data
-        public IEnumerable<ProductModel> Products { get; private set; }
+        // Product data
+        public ProductModel Product { get; private set; }
 
         /// <summary>
         /// REST OnGet
