@@ -29,12 +29,13 @@ namespace ContosoCrafts.WebSite.Pages.Read
         public ProductModel Product { get; private set; }
 
         /// <summary>
-        /// REST OnGet
-        /// Return all the data
+        /// Rest OnGet, require title as parameter, 
+        /// will retrieve specific product data
         /// </summary>
-        public void OnGet()
+        /// <param name="title"></param>
+        public void OnGet(string title)
         {
-            Products = ProductService.GetAllData();
+            Product = ProductService.GetOneDataByTitle(title);
         }
     }
 }
