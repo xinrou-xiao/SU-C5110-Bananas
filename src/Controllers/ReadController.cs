@@ -8,7 +8,7 @@ namespace ContosoCrafts.WebSite.Controllers
         /// Read page Controller, return its view
         /// </summary>
         /// <returns></returns>
-        public IActionResult Index()
+        public IActionResult Read()
         {
             return View();
         }
