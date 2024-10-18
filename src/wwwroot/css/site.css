@@ -3,7 +3,7 @@
     color: white; /* Set font color to white */
 }
 
-.table {
+.table, td>a {
     color: white; /* Set font color to white */
 }
 
