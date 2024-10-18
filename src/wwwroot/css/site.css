@@ -7,6 +7,10 @@
     color: white; /* Set font color to white */
 }
 
+    td > a:hover {
+        color: #00a36c; /* Set font color to white */
+    }
+
 /*
     Load custom font type poppins-light to website 
 */
