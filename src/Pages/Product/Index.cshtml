@@ -17,7 +17,7 @@
             @foreach (var product in Model.Products)
             {
                 <tr>
-                    <td>@product.Title</td>
+                    <td><a href='/Read?title=@product.Title'>@product.Title</a></td>
                     @*<td><a asp-page="Read" asp-route-id="@product.Id">Read</a></td>*@
                 </tr>
             }
