@@ -36,6 +36,28 @@ namespace ContosoCrafts.WebSite.Services
         }
 
         /// <summary>
+        /// Call by onGet function in read page, return product data who has the 
+        /// same title as given title.
+        /// </summary>
+        /// <param name="title"></param>
+        /// <returns></returns>
+        public ProductModel GetOneDataByTitle(string title)
+        {
+            using (var jsonFileReader = File.OpenText(JsonFileName))
+            {
+                var products = JsonSerializer.Deserialize<ProductModel[]>(jsonFileReader.ReadToEnd(),
+                    new JsonSerializerOptions
+                    {
+                        PropertyNameCaseInsensitive = true
+                    });
+
+                // Get the data that has the given title
+                var product = products.FirstOrDefault(prod => prod.Title == title);
+                return product;
+            }
+        }
+
+        /// <summary>
         /// Add Rating
         /// 
         /// Take in the product ID and the rating
