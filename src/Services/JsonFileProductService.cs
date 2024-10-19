@@ -39,9 +39,9 @@ namespace ContosoCrafts.WebSite.Services
         /// Call by onGet function in read page, return product data who has the 
         /// same title as given title.
         /// </summary>
-        /// <param name="title"></param>
+        /// <param name="id"></param>
         /// <returns></returns>
-        public ProductModel GetOneDataById(string title)
+        public ProductModel GetOneDataById(string id)
         {
             using (var jsonFileReader = File.OpenText(JsonFileName))
             {
@@ -52,7 +52,7 @@ namespace ContosoCrafts.WebSite.Services
                     });
 
                 // Get the data that has the given title
-                var product = products.FirstOrDefault(prod => prod.Title == title);
+                var product = products.FirstOrDefault(prod => prod.Title == id);
                 return product;
             }
         }
