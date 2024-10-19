@@ -52,7 +52,7 @@ namespace ContosoCrafts.WebSite.Services
                     });
 
                 // Get the data that has the given title
-                var product = products.FirstOrDefault(prod => prod.Title == id);
+                var product = products.FirstOrDefault(prod => prod.Id == id);
                 return product;
             }
         }
