@@ -35,7 +35,7 @@ namespace ContosoCrafts.WebSite.Pages.Read
         /// <param name="title"></param>
         public void OnGet(string title)
         {
-            Product = ProductService.GetOneDataByTitle(title);
+            Product = ProductService.GetOneDataById(title);
         }
     }
 }
