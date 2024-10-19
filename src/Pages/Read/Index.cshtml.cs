@@ -33,9 +33,9 @@ namespace ContosoCrafts.WebSite.Pages.Read
         /// will retrieve specific product data
         /// </summary>
         /// <param name="title"></param>
-        public void OnGet(string title)
+        public void OnGet(string id)
         {
-            Product = ProductService.GetOneDataById(title);
+            Product = ProductService.GetOneDataById(id);
         }
     }
 }
