@@ -41,7 +41,7 @@ namespace ContosoCrafts.WebSite.Services
         /// </summary>
         /// <param name="title"></param>
         /// <returns></returns>
-        public ProductModel GetOneDataByTitle(string title)
+        public ProductModel GetOneDataById(string title)
         {
             using (var jsonFileReader = File.OpenText(JsonFileName))
             {
