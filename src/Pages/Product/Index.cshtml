@@ -18,8 +18,7 @@
             {
                 <tr>
                     <!--a tag will add a link to the given url-->
-                    <td><a href='/Read?title=@product.Title'>@product.Title</a></td>
-                    @*<td><a asp-page="Read" asp-route-id="@product.Id">Read</a></td>*@
+                    <td><a asp-page="/Read/Index" asp-route-id="@product.Id">@product.Title</a></td>
                 </tr>
             }
         </tbody>
