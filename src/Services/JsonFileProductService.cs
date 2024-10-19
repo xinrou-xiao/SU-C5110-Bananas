@@ -37,7 +37,7 @@ namespace ContosoCrafts.WebSite.Services
 
         /// <summary>
         /// Call by onGet function in read page, return product data who has the 
-        /// same title as given title.
+        /// same id as given id.
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
@@ -51,7 +51,7 @@ namespace ContosoCrafts.WebSite.Services
                         PropertyNameCaseInsensitive = true
                     });
 
-                // Get the data that has the given title
+                // Get the data that has the given id
                 var product = products.FirstOrDefault(prod => prod.Id == id);
                 return product;
             }
