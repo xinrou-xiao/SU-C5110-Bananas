@@ -29,10 +29,10 @@ namespace ContosoCrafts.WebSite.Pages.Read
         public ProductModel Product { get; private set; }
 
         /// <summary>
-        /// Rest OnGet, require title as parameter, 
-        /// will retrieve specific product data
+        /// Rest OnGet, require id as parameter, 
+        /// will retrieve specific product data with that id
         /// </summary>
-        /// <param name="title"></param>
+        /// <param name="id"></param>
         public void OnGet(string id)
         {
             Product = ProductService.GetOneDataById(id);
