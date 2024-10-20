@@ -35,8 +35,10 @@
                 </div>
             </div>
         </nav>
-
+        !-- Banner Carousel Section: A slideshow of anime banners that automatically cycles -->
         <div id="animeCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators for switching between banners -->
+            <!-- Each 'li' represents an indicator dot for a specific slide (0-3) -->
             <ol class="carousel-indicators">
                 <li data-target="#animeCarousel" data-slide-to="0" class="active"></li>
                 <li data-target="#animeCarousel" data-slide-to="1"></li>
@@ -82,7 +84,7 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
-</header>
+    </header>
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
