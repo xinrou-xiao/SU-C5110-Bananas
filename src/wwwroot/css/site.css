@@ -95,6 +95,12 @@ body {
     margin-top: -10px; /* Adjust this to move it higher */
 }
 
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.6); /* Slightly dark background behind text to make sure that the text is visible */
+    padding: 15px;
+    border-radius: 5px;
+}
+
 /* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 .card-columns .card:hover .card-img {
