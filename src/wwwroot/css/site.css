@@ -95,10 +95,11 @@ body {
     margin-top: -10px; /* Adjust this to move it higher */
 }
 
+/*Banner Carousel Styling*/
 .carousel-caption {
     background-color: rgba(0, 0, 0, 0.6); /* Slightly dark background behind text to make sure that the text is visible */
-    padding: 15px;
-    border-radius: 5px;
+    padding: 15px; /*Added padding around the text*/
+    border-radius: 5px; /*Applied rounded corners to the caption box*/
 }
 
 /* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
