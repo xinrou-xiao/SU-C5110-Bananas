@@ -234,8 +234,8 @@ ul {
     background: linear-gradient(110deg, #e9a8a6 60%, #00A36C 60%); /* Changed header colour to blue */
 }
 .bg-footer {
-    background: -webkit-linear-gradient(110deg, #00A36C 60%, #e9a8a6 60%);
-    background: -o-linear-gradient(110deg, #00A36C 60%, #e9a8a6 60%);
-    background: -moz-linear-gradient(110deg, #00A36C 60%, #e9a8a6 60%);
-    background: linear-gradient(110deg, #00A36C 60%, #e9a8a6 60%); /* changed footer color to new green color */
+    background: -webkit-linear-gradient(110deg, #00A36C 60%, #c1e899 60%);
+    background: -o-linear-gradient(110deg, #00A36C 60%, #c1e899 60%);
+    background: -moz-linear-gradient(110deg, #00A36C 60%, #c1e899 60%);
+    background: linear-gradient(110deg, #00A36C 60%, #c1e899 60%); /* changed footer color to new green color */
 }
