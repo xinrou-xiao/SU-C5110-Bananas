@@ -239,3 +239,8 @@ ul {
     background: -moz-linear-gradient(110deg, #00A36C 60%, #c1e899 60%);
     background: linear-gradient(110deg, #00A36C 60%, #c1e899 60%); /* changed footer color to new green color */
 }
+
+.footer-text {
+    color: #212529
+}
+/*Footer Text color*/
