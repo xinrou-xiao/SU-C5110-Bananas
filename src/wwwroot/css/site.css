@@ -228,10 +228,10 @@ ul {
 }
 /*Backgrounds*/
 .bg-navbar {
-    background: -webkit-linear-gradient(110deg, #e9a8a6 60%, #00A36C 60%); /* Changed header colour to blue */
-    background: -o-linear-gradient(110deg, #e9a8a6 60%, #00A36C 60%); /* Changed header colour to blue */
-    background: -moz-linear-gradient(110deg, #e9a8a6 60%, #00A36C 60%); /* Changed header colour to blue */
-    background: linear-gradient(110deg, #e9a8a6 60%, #00A36C 60%); /* Changed header colour to blue */
+    background: -webkit-linear-gradient(110deg, #c1e899 60%, #00A36C 60%); /* Changed header colour to green and light green */
+    background: -o-linear-gradient(110deg, #c1e899 60%, #00A36C 60%); /* Changed header colour to green and light green */
+    background: -moz-linear-gradient(110deg, #c1e899 60%, #00A36C 60%); /* Changed header colour to green and light green */
+    background: linear-gradient(110deg, #c1e899 60%, #00A36C 60%); /* Changed header colour to green and light green */
 }
 .bg-footer {
     background: -webkit-linear-gradient(110deg, #00A36C 60%, #c1e899 60%);
