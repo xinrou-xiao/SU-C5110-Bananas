@@ -161,8 +161,8 @@ a {
 }
 .btn-primary:hover {
     color: #fff;
-    background-color: #c1e899;
-    border-color: #c1e899; /*Changed Product button hover color*/
+    background-color: #00A36C;
+    border-color: #00A36C; /*Changed Product button hover color*/
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
