@@ -2,21 +2,11 @@
   {
     "Id": "jenlooper-cactus",
     "Maker": "@jenlooper",
-    "img": "https://wallpapers.com/images/high/naruto-s-friend-2992-x-4143-wallpaper-rps0wgmdm3i8re9f.webp",//added anime image 
-    "Url": "https://wallpapers.com/search/naruto",//added anime url
-    "Title": "Naruto: The Journey of a Ninja Dreamer",//added anime title
-    "Description": "Naruto is action - packed anime about Naruto Uzumaki, a young ninja aspiring to become hokage, exploring themes of perseverance ,frienship and identity.",
-    "Ratings": [
-      5,
-      5,
-      3,
-      2,
-      1,
-      5,
-      4,
-      5,
-      3
-    ],
+    "img": "https://wallpapers.com/images/high/naruto-s-friend-2992-x-4143-wallpaper-rps0wgmdm3i8re9f.webp",
+    "Url": "https://wallpapers.com/search/naruto",
+    "Title": "Naruto: The Journey of a Ninja Dreamer",
+    "Description": "Naruto is an action-packed anime about Naruto Uzumaki, a young ninja aspiring to become Hokage, exploring themes of perseverance, friendship, and identity.",
+    "Ratings": [ 5, 5, 3, 2, 1, 5, 4, 5, 3 ],
     "ProductType": 55,
     "Quantity": null,
     "Price": 0,
@@ -25,9 +15,9 @@
   {
     "Id": "jenlooper-light",
     "Maker": "jenlooper",
-    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlOVO11YgmcGp6YaAa1qaVgyPQ_vSM1GNYvgR7hIKKq3a5tH0NUd5vnEFn2zEM&s=10", //added anime image 
-    "Url": "https://www.hackster.io/agent-hawking-1/book-light-dee7e4", //added anime url
-    "Title": "Rick and Morty", //added anime title
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlOVO11YgmcGp6YaAa1qaVgyPQ_vSM1GNYvgR7hIKKq3a5tH0NUd5vnEFn2zEM&s=10",
+    "Url": "https://www.hackster.io/agent-hawking-1/book-light-dee7e4",
+    "Title": "Rick and Morty",
     "Description": "Rick and Morty: The Anime explores the chaotic and interdimensional adventures of a mad scientist and his good-hearted but easily influenced grandson, blending sci-fi, humor, and existential themes.",
     "Ratings": null,
     "ProductType": 1,
@@ -38,9 +28,9 @@
   {
     "Id": "jenlooper-lightshow",
     "Maker": "@jenlooper",
-    "img": "https://static0.gamerantimages.com/wordpress/wp-content/uploads/2022/06/darker-than-black-featured.jpg", //added anime image 
-    "Url": "https://www.hackster.io/agent-hawking-1/bling-your-laptop-with-an-internet-connected-light-show-30e4db", //added anime url
-    "Title": "Darker than Black", //added anime title
+    "img": "https://static0.gamerantimages.com/wordpress/wp-content/uploads/2022/06/darker-than-black-featured.jpg",
+    "Url": "https://www.hackster.io/agent-hawking-1/bling-your-laptop-with-an-internet-connected-light-show-30e4db",
+    "Title": "Darker than Black",
     "Description": "Darker than Black is a mysterious and action-packed anime set in a world where individuals known as Contractors wield supernatural powers, following the enigmatic Hei as he navigates a web of espionage and intrigue.",
     "Ratings": null,
     "ProductType": 55,
@@ -51,9 +41,9 @@
   {
     "Id": "jenlooper-survival",
     "Maker": "jenlooper",
-    "img": "https://wallpapers.com/images/high/heroes-villains-dragonball-z-pictures-25x7q62cuz031st0.webp", //added anime image 
-    "Url": "https://www.hackster.io/agent-hawking-1/create-a-compact-survival-kit-38bfdb", //added anime url
-    "Title": "Dragon Ball Z", //added anime title
+    "img": "https://wallpapers.com/images/high/heroes-villains-dragonball-z-pictures-25x7q62cuz031st0.webp",
+    "Url": "https://www.hackster.io/agent-hawking-1/create-a-compact-survival-kit-38bfdb",
+    "Title": "Dragon Ball Z",
     "Description": "Dragon Ball Z is a legendary anime series that chronicles the adventures of Goku and his friends as they defend Earth from powerful foes, exploring themes of friendship, perseverance, and the quest for ultimate strength.",
     "Ratings": null,
     "ProductType": 1,
@@ -64,9 +54,9 @@
   {
     "Id": "sailorhg-bubblesortpic",
     "Maker": "sailorhg",
-    "img": "https://assets-prd.ignimgs.com/2022/09/22/deathnote-1663870021590.jpg", //added anime image 
-    "Url": "https://twitter.com/sailorhg/status/1090107740049952770", //added anime url
-    "Title": "Death Note", //added anime title
+    "img": "https://assets-prd.ignimgs.com/2022/09/22/deathnote-1663870021590.jpg",
+    "Url": "https://twitter.com/sailorhg/status/1090107740049952770",
+    "Title": "Death Note",
     "Description": "Death Note is a thrilling anime that follows high school student Light Yagami as he discovers a mysterious notebook with the power to kill anyone whose name is written in it, leading to a high-stakes battle of wits with the enigmatic detective L.",
     "Ratings": null,
     "ProductType": 55,
@@ -77,13 +67,11 @@
   {
     "Id": "sailorhg-corsage",
     "Maker": "sailorhg",
-    "img": "https://assets-prd.ignimgs.com/2022/09/22/demonslayer-1663870772245.jpg", //added anime image 
-    "Url": "https://wallpapers.com/demon-slayer", //added anime url
-    "Title": "Demon Slayer: Kimetsu no Yaiba", //added anime title
+    "img": "https://assets-prd.ignimgs.com/2022/09/22/demonslayer-1663870772245.jpg",
+    "Url": "https://wallpapers.com/demon-slayer",
+    "Title": "Demon Slayer: Kimetsu no Yaiba",
     "Description": "Demon Slayer follows Tanjiro Kamado's quest for vengeance and a cure for his demon-turned sister in Taisho-era Japan, featuring stunning animation and intense battles.",
-    "Ratings": [
-      4
-    ],
+    "Ratings": [ 4 ],
     "ProductType": 1,
     "Quantity": null,
     "Price": 0,
@@ -92,9 +80,9 @@
   {
     "Id": "sailorhg-kit",
     "Maker": "sailorhg",
-    "img": "https://wallpapers.com/images/high/attack-on-titan-logo-portrait-ka1uktrjzusfr3de.webp", //added anime image 
-    "Url": "https://twitter.com/sailorhg/status/1090122822007963648", //added anime url
-    "Title": "Attack on Titan", //added anime title
+    "img": "https://wallpapers.com/images/high/attack-on-titan-logo-portrait-ka1uktrjzusfr3de.webp",
+    "Url": "https://twitter.com/sailorhg/status/1090122822007963648",
+    "Title": "Attack on Titan",
     "Description": "Attack on Titan is a gripping anime series that follows humanity's desperate struggle for survival against giant humanoid creatures known as Titans, exploring themes of freedom, sacrifice, and the human spirit.",
     "Ratings": null,
     "ProductType": 130,
@@ -105,9 +93,9 @@
   {
     "Id": "sailorhg-led",
     "Maker": "sailorhg",
-    "img": "https://oyster.ignimgs.com/wordpress/stg.ign.com/2019/11/one-piece.png", //added anime image 
-    "Url": "https://twitter.com/sailorhg/status/1090117277540745216", //added anime url
-    "Title": "One Piece", //added anime title
+    "img": "https://oyster.ignimgs.com/wordpress/stg.ign.com/2019/11/one-piece.png",
+    "Url": "https://twitter.com/sailorhg/status/1090117277540745216",
+    "Title": "One Piece",
     "Description": "One Piece is an epic adventure anime that follows Monkey D. Luffy and his diverse crew of pirates as they journey across the Grand Line in search of the legendary treasure known as the One Piece, aiming to become the Pirate King.",
     "Ratings": null,
     "ProductType": 1,
@@ -118,9 +106,9 @@
   {
     "Id": "selinazawacki-soi-shirt",
     "Maker": "selinazawacki",
-    "img": "https://wallpapers.com/images/high/fullmetal-alchemist-black-and-white-ghosts-xdxdm0se6mpco3hc.webp", //added anime image 
-    "Url": "https://www.instagram.com/p/BNvESj-j8PI/", //added anime url
-    "Title": "Fullmetal Alchemist: Brotherhood", //added anime title
+    "img": "https://wallpapers.com/images/high/fullmetal-alchemist-black-and-white-ghosts-xdxdm0se6mpco3hc.webp",
+    "Url": "https://www.instagram.com/p/BNvESj-j8PI/",
+    "Title": "Fullmetal Alchemist: Brotherhood",
     "Description": "Fullmetal Alchemist: Brotherhood is a gripping anime that follows brothers Edward and Alphonse Elric on their quest to restore their bodies after a failed alchemical experiment, exploring themes of sacrifice, redemption, and the pursuit of truth.",
     "Ratings": null,
     "ProductType": 55,
@@ -131,10 +119,10 @@
   {
     "Id": "selinazawacki-soi-pins",
     "Maker": "selinazawacki",
-    "img": "https://wallpapers.com/images/high/psycho-pass-1000-x-1000-wallpaper-10aj7ecsalnfk9at.webp", //added anime image
-    "Url": "https://www.instagram.com/p/BNm6hZzDoEF/", //added anime url
-    "Title": "Psycho-Pass", //added anime title
-    "Description": "Psycho-Pass is a futuristic anime that delves into a society where a powerful surveillance system measures mental states to maintain order, raising profound questions about justice and free will! ",
+    "img": "https://wallpapers.com/images/high/psycho-pass-1000-x-1000-wallpaper-10aj7ecsalnfk9at.webp",
+    "Url": "https://www.instagram.com/p/BNm6hZzDoEF/",
+    "Title": "Psycho-Pass",
+    "Description": "Psycho-Pass is a futuristic anime that delves into a society where a powerful surveillance system measures mental states to maintain order, raising profound questions about justice and free will.",
     "Ratings": null,
     "ProductType": 1,
     "Quantity": null,
@@ -144,9 +132,9 @@
   {
     "Id": "vogueandcode-hipster-dev-bro",
     "Maker": "vogueandcode",
-    "img": "https://wallpapers.com/images/high/haikyuu-teams-photo-collage-mm371yuaimn98slh.webp", //added anime image
-    "Url": "https://www.vogueandcode.com/shop/hipster-dev-bro", //added anime url
-    "Title": "Haikyuu ", //added anime title
+    "img": "https://wallpapers.com/images/high/haikyuu-teams-photo-collage-mm371yuaimn98slh.webp",
+    "Url": "https://www.vogueandcode.com/shop/hipster-dev-bro",
+    "Title": "Haikyuu",
     "Description": "Haikyuu is an inspiring sports anime that chronicles the journey of Shoyo Hinata and his high school volleyball team as they strive to reach the top, overcoming personal and team challenges with determination and teamwork.",
     "Ratings": null,
     "ProductType": 1,
@@ -157,9 +145,9 @@
   {
     "Id": "vogueandcode-pretty-girls-code-tee",
     "Maker": "vogueandcode",
-    "img": "https://wallpapers.com/images/high/eminencein-shadow-dynamic-pose-04jg2unr42d07lku.webp", //added anime image
-    "Url": "https://www.vogueandcode.com/shop/pretty-girls-code-tee", //added anime url
-    "Title": "The Eminence in Shadow ", //added anime title
+    "img": "https://wallpapers.com/images/high/eminencein-shadow-dynamic-pose-04jg2unr42d07lku.webp",
+    "Url": "https://www.vogueandcode.com/shop/pretty-girls-code-tee",
+    "Title": "The Eminence in Shadow",
     "Description": "The Eminence in Shadow is a captivating anime that follows a young boy who dreams of becoming a mastermind behind the scenes, only to find himself inadvertently leading a secret organization against a real-world shadowy threat.",
     "Ratings": null,
     "ProductType": 0,
@@ -170,9 +158,9 @@
   {
     "Id": "vogueandcode-ruby-sis-2",
     "Maker": "vogueandcode",
-    "img": "https://wallpapers.com/images/high/itadori-with-lights-in-jujutsu-kaisen-b67kjhcj2c869z2v.webp", //added anime image
-    "Url": "https://www.vogueandcode.com/shop/ruby-sis-2", //added anime url
-    "Title": "Jujutsu Kaisen", //added anime title
+    "img": "https://wallpapers.com/images/high/itadori-with-lights-in-jujutsu-kaisen-b67kjhcj2c869z2v.webp",
+    "Url": "https://www.vogueandcode.com/shop/ruby-sis-2",
+    "Title": "Jujutsu Kaisen",
     "Description": "Yuji Itadori enters the dangerous world of curses after consuming a powerful cursed object, facing dark forces alongside skilled Jujutsu sorcerers.",
     "Ratings": null,
     "ProductType": 0,
@@ -183,9 +171,9 @@
   {
     "Id": "selinazawacki-moon",
     "Maker": "selinazawacki",
-    "img": "https://wallpapers.com/images/high/caption-dynamic-hellsing-ultimate-4k-resolution-capture-ygbzrfl5o273bfhd.webp", //added anime image
-    "Url": "https://www.instagram.com/p/BFktVYPinKQ/", //added anime url
-    "Title": "Hellsing Ultimate ", //added anime title
+    "img": "https://wallpapers.com/images/high/caption-dynamic-hellsing-ultimate-4k-resolution-capture-ygbzrfl5o273bfhd.webp",
+    "Url": "https://www.instagram.com/p/BFktVYPinKQ/",
+    "Title": "Hellsing Ultimate",
     "Description": "Hellsing Ultimate is a dark and intense anime that follows the Hellsing Organization, led by the powerful vampire Alucard, as they battle supernatural forces and protect humanity from the undead and other sinister threats.",
     "Ratings": null,
     "ProductType": 0,
@@ -196,9 +184,9 @@
   {
     "Id": "selinazawacki-shirt",
     "Maker": "selinazawacki",
-    "img": "https://m.media-amazon.com/images/M/MV5BMjAzMjUyNDQ1NF5BMl5BanBnXkFtZTgwMjAwMTQ0NjE@._V1_.jpg", //added anime image
-    "Url": "https://www.instagram.com/p/BEXlpiZCnJ3", //added anime url
-    "Title": "JoJo's Bizarre Adventure", //added anime title
+    "img": "https://m.media-amazon.com/images/M/MV5BMjAzMjUyNDQ1NF5BMl5BanBnXkFtZTgwMjAwMTQ0NjE@._V1_.jpg",
+    "Url": "https://www.instagram.com/p/BEXlpiZCnJ3",
+    "Title": "JoJo's Bizarre Adventure",
     "Description": "JoJo's Bizarre Adventure is an epic anime saga that chronicles the extraordinary and supernatural adventures of the Joestar family across generations, filled with unique powers, eccentric characters, and thrilling battles.",
     "Ratings": null,
     "ProductType": 0,
