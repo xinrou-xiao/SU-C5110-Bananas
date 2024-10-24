@@ -17,7 +17,7 @@ namespace ContosoCrafts.WebSite.Pages.Product
         /// Default Constructor
         /// </summary>
         /// <param name="productService"></param>
-        public IndexModel(JsonFileProductService productService)
+        public ReadModel(JsonFileProductService productService)
         {
             ProductService = productService;
         }
