@@ -22,8 +22,4 @@
       <CopyToPublishDirectory>Never</CopyToPublishDirectory>
     </Content>
   </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="wwwroot\Images\Icons\" />
-  </ItemGroup>
 </Project>
