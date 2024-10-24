@@ -11,7 +11,7 @@ namespace ContosoCrafts.WebSite.Pages.Product
     /// <summary>
     /// Read page will display one product details data
     /// </summary>
-    public class IndexModel : PageModel
+    public class ReadModel : PageModel
     {
         /// <summary>
         /// Default Constructor
