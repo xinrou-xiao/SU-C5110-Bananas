@@ -19,6 +19,9 @@
                 <tr>
                     <!--a tag will add a link to the given url-->
                     <td><a asp-page="/Product/Read" asp-route-id="@product.Id">@product.Title</a></td>
+                    <td>
+                        <button class="btn-success btn" onclick="location.href='/Product/Read?Id=@product.Id';">Read</button>
+                    </td>
                 </tr>
             }
         </tbody>
