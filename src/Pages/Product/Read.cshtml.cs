@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using ContosoCrafts.WebSite.Models;
 using ContosoCrafts.WebSite.Services;
 
-namespace ContosoCrafts.WebSite.Pages.Read
+namespace ContosoCrafts.WebSite.Pages.Product
 {
     /// <summary>
     /// Read page will display one product details data
