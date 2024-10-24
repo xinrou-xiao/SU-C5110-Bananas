@@ -10,6 +10,7 @@
     "Genre": [ "Action", "Romance" ],
     "Release": "1999",
     "Trailor": "https://www.youtube.com/watch?v=yeUpnIKt6k4",
+    "OTT" :  ["Netflix" , "Prime"],
     "CommentList": []
   },
   {
@@ -23,6 +24,7 @@
     "Genre": [ "Action", "Romance" ],
     "Release": "1999",
     "Trailor": "https://www.youtube.com/watch?v=yeUpnIKt6k4",
+    "OTT": [ "Netflix", "Prime" ],
     "CommentList": []
   },
   {
@@ -36,6 +38,7 @@
     "Genre": [ "Action", "Romance" ],
     "Release": "1999",
     "Trailor": "https://www.youtube.com/watch?v=yeUpnIKt6k4",
+    "OTT": [ "Netflix", "Prime" ],
     "CommentList": []
   },
   {
@@ -49,6 +52,7 @@
     "Genre": [ "Action", "Romance" ],
     "Release": "1999",
     "Trailor": "https://www.youtube.com/watch?v=yeUpnIKt6k4",
+    "OTT": [ "Netflix", "Prime" ],
     "CommentList": []
   },
   {
@@ -62,6 +66,7 @@
     "Genre": [ "Action", "Romance" ],
     "Release": "1999",
     "Trailor": "https://www.youtube.com/watch?v=yeUpnIKt6k4",
+    "OTT": [ "Netflix", "Prime" ],
     "CommentList": []
   },
   {
@@ -75,6 +80,7 @@
     "Genre": [ "Action", "Romance" ],
     "Release": "1999",
     "Trailor": "https://www.youtube.com/watch?v=yeUpnIKt6k4",
+    "OTT": [ "Netflix", "Prime" ],
     "CommentList": []
   },
   {
@@ -88,6 +94,7 @@
     "Genre": [ "Action", "Romance" ],
     "Release": "1999",
     "Trailor": "https://www.youtube.com/watch?v=yeUpnIKt6k4",
+    "OTT": [ "Netflix", "Prime" ],
     "CommentList": []
   },
   {
@@ -101,6 +108,7 @@
     "Genre": [ "Action", "Romance" ],
     "Release": "1999",
     "Trailor": "https://www.youtube.com/watch?v=yeUpnIKt6k4",
+    "OTT": [ "Netflix", "Prime" ],
     "CommentList": []
   },
   {
@@ -114,6 +122,7 @@
     "Genre": [ "Action", "Romance" ],
     "Release": "1999",
     "Trailor": "https://www.youtube.com/watch?v=yeUpnIKt6k4",
+    "OTT": [ "Netflix", "Prime" ],
     "CommentList": []
   },
   {
@@ -127,6 +136,7 @@
     "Genre": [ "Action", "Romance" ],
     "Release": "1999",
     "Trailor": "https://www.youtube.com/watch?v=yeUpnIKt6k4",
+    "OTT": [ "Netflix", "Prime" ],
     "CommentList": []
   },
   {
@@ -140,6 +150,7 @@
     "Genre": [ "Action", "Romance" ],
     "Release": "1999",
     "Trailor": "https://www.youtube.com/watch?v=yeUpnIKt6k4",
+    "OTT": [ "Netflix", "Prime" ],
     "CommentList": []
   },
   {
@@ -153,6 +164,7 @@
     "Genre": [ "Action", "Romance" ],
     "Release": "1999",
     "Trailor": "https://www.youtube.com/watch?v=yeUpnIKt6k4",
+    "OTT": [ "Netflix", "Prime" ],
     "CommentList": []
   },
   {
@@ -166,6 +178,7 @@
     "Genre": [ "Action", "Romance" ],
     "Release": "1999",
     "Trailor": "https://www.youtube.com/watch?v=yeUpnIKt6k4",
+    "OTT": [ "Netflix", "Prime" ],
     "CommentList": []
   },
   {
@@ -179,6 +192,7 @@
     "Genre": [ "Action", "Romance" ],
     "Release": "1999",
     "Trailor": "https://www.youtube.com/watch?v=yeUpnIKt6k4",
+    "OTT": [ "Netflix", "Prime" ],
     "CommentList": []
   },
   {
@@ -192,6 +206,7 @@
     "Genre": [ "Action", "Romance" ],
     "Release": "1999",
     "Trailor": "https://www.youtube.com/watch?v=yeUpnIKt6k4",
+    "OTT": [ "Netflix", "Prime" ],
     "CommentList": []
   }
 ]
