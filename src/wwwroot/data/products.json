@@ -7,6 +7,7 @@
     "Title": "Naruto: The Journey of a Ninja Dreamer",
     "Description": "Naruto is an action-packed anime about Naruto Uzumaki, a young ninja aspiring to become Hokage, exploring themes of perseverance, friendship, and identity.",
     "Ratings": [ 5, 5, 3, 2, 1, 5, 4, 5, 3 ],
+    "Genre": [ "Action","Romance" ],
     "CommentList": []
   },
   {
@@ -17,6 +18,7 @@
     "Title": "Rick and Morty",
     "Description": "Rick and Morty: The Anime explores the chaotic and interdimensional adventures of a mad scientist and his good-hearted but easily influenced grandson, blending sci-fi, humor, and existential themes.",
     "Ratings": null,
+    "Genre": [ "Action", "Romance" ],
     "CommentList": []
   },
   {
@@ -27,6 +29,7 @@
     "Title": "Darker than Black",
     "Description": "Darker than Black is a mysterious and action-packed anime set in a world where individuals known as Contractors wield supernatural powers, following the enigmatic Hei as he navigates a web of espionage and intrigue.",
     "Ratings": null,
+    "Genre": [ "Action", "Romance" ],
     "CommentList": []
   },
   {
@@ -37,6 +40,7 @@
     "Title": "Dragon Ball Z",
     "Description": "Dragon Ball Z is a legendary anime series that chronicles the adventures of Goku and his friends as they defend Earth from powerful foes, exploring themes of friendship, perseverance, and the quest for ultimate strength.",
     "Ratings": null,
+    "Genre": [ "Action", "Romance" ],
     "CommentList": []
   },
   {
@@ -47,6 +51,7 @@
     "Title": "Death Note",
     "Description": "Death Note is a thrilling anime that follows high school student Light Yagami as he discovers a mysterious notebook with the power to kill anyone whose name is written in it, leading to a high-stakes battle of wits with the enigmatic detective L.",
     "Ratings": null,
+    "Genre": [ "Action", "Romance" ],
     "CommentList": []
   },
   {
@@ -57,6 +62,7 @@
     "Title": "Demon Slayer: Kimetsu no Yaiba",
     "Description": "Demon Slayer follows Tanjiro Kamado's quest for vengeance and a cure for his demon-turned sister in Taisho-era Japan, featuring stunning animation and intense battles.",
     "Ratings": [ 4 ],
+    "Genre": [ "Action", "Romance" ],
     "CommentList": []
   },
   {
@@ -67,6 +73,7 @@
     "Title": "Attack on Titan",
     "Description": "Attack on Titan is a gripping anime series that follows humanity's desperate struggle for survival against giant humanoid creatures known as Titans, exploring themes of freedom, sacrifice, and the human spirit.",
     "Ratings": null,
+    "Genre": [ "Action", "Romance" ],
     "CommentList": []
   },
   {
@@ -77,6 +84,7 @@
     "Title": "One Piece",
     "Description": "One Piece is an epic adventure anime that follows Monkey D. Luffy and his diverse crew of pirates as they journey across the Grand Line in search of the legendary treasure known as the One Piece, aiming to become the Pirate King.",
     "Ratings": null,
+    "Genre": [ "Action", "Romance" ],
     "CommentList": []
   },
   {
@@ -87,6 +95,7 @@
     "Title": "Fullmetal Alchemist: Brotherhood",
     "Description": "Fullmetal Alchemist: Brotherhood is a gripping anime that follows brothers Edward and Alphonse Elric on their quest to restore their bodies after a failed alchemical experiment, exploring themes of sacrifice, redemption, and the pursuit of truth.",
     "Ratings": null,
+    "Genre": [ "Action", "Romance" ],
     "CommentList": []
   },
   {
@@ -97,6 +106,7 @@
     "Title": "Psycho-Pass",
     "Description": "Psycho-Pass is a futuristic anime that delves into a society where a powerful surveillance system measures mental states to maintain order, raising profound questions about justice and free will.",
     "Ratings": null,
+    "Genre": [ "Action", "Romance" ],
     "CommentList": []
   },
   {
@@ -107,6 +117,7 @@
     "Title": "Haikyuu",
     "Description": "Haikyuu is an inspiring sports anime that chronicles the journey of Shoyo Hinata and his high school volleyball team as they strive to reach the top, overcoming personal and team challenges with determination and teamwork.",
     "Ratings": null,
+    "Genre": [ "Action", "Romance" ],
     "CommentList": []
   },
   {
@@ -117,6 +128,7 @@
     "Title": "The Eminence in Shadow",
     "Description": "The Eminence in Shadow is a captivating anime that follows a young boy who dreams of becoming a mastermind behind the scenes, only to find himself inadvertently leading a secret organization against a real-world shadowy threat.",
     "Ratings": null,
+    "Genre": [ "Action", "Romance" ],
     "CommentList": []
   },
   {
@@ -127,6 +139,7 @@
     "Title": "Jujutsu Kaisen",
     "Description": "Yuji Itadori enters the dangerous world of curses after consuming a powerful cursed object, facing dark forces alongside skilled Jujutsu sorcerers.",
     "Ratings": null,
+    "Genre": [ "Action", "Romance" ],
     "CommentList": []
   },
   {
@@ -137,6 +150,7 @@
     "Title": "Hellsing Ultimate",
     "Description": "Hellsing Ultimate is a dark and intense anime that follows the Hellsing Organization, led by the powerful vampire Alucard, as they battle supernatural forces and protect humanity from the undead and other sinister threats.",
     "Ratings": null,
+    "Genre": [ "Action", "Romance" ],
     "CommentList": []
   },
   {
@@ -147,6 +161,7 @@
     "Title": "JoJo's Bizarre Adventure",
     "Description": "JoJo's Bizarre Adventure is an epic anime saga that chronicles the extraordinary and supernatural adventures of the Joestar family across generations, filled with unique powers, eccentric characters, and thrilling battles.",
     "Ratings": null,
+    "Genre": [ "Action", "Romance" ],
     "CommentList": []
   }
 ]
