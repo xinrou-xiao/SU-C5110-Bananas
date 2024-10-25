@@ -37,6 +37,11 @@ namespace ContosoCrafts.WebSite.Models
         /// </summary>
         public string Trailor { get; set; }
 
+        /// <summary>
+        /// Map OTT field in product.json to ProductModel's OTT list
+        /// </summary>
+        public List<OTTModel> OTT { get; set; } = new List<OTTModel> ();
+
         public ProductTypeEnum ProductType { get; set; } = ProductTypeEnum.Undefined;
 
         public string Quantity { get; set; }
