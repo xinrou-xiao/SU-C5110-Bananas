@@ -1,4 +1,8 @@
 ﻿
+.padding-block {
+    padding: 20px; /* set padding to 20px for all sides */
+}
+
 .OTT-Icon {
     max-width: 80px; /* set up maximum width */
     min-width: 40px; /* set up maximum height */
