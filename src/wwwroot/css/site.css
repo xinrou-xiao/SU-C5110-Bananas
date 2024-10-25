@@ -1,4 +1,8 @@
 ﻿
+.description {
+    max-width: 1000px; /* set maximum width to 1000px */
+}
+
 .padding-block {
     padding: 20px; /* set padding to 20px for all sides */
 }
