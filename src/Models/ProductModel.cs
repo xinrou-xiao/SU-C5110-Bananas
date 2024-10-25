@@ -32,6 +32,11 @@ namespace ContosoCrafts.WebSite.Models
         /// </summary>
         public string Release { get; set; }
 
+        /// <summary>
+        /// Map Trailor field in product.json to ProductModel's Trailor
+        /// </summary>
+        public string Trailor { get; set; }
+
         public ProductTypeEnum ProductType { get; set; } = ProductTypeEnum.Undefined;
 
         public string Quantity { get; set; }
