@@ -18,4 +18,14 @@
             <span class="tags">#@genre</span>
         }
     </div>
+
+    <div>
+        <!--Product OTT display as clickable icon one by one--> 
+        @foreach (var ott in Model.Product.OTT)
+        {
+            <a href="@ott.Url" target="_blank">
+                <img class="OTT-Icon" src="@ott.Icon"></img>
+            </a>
+        }
+    </div>
 </div>
