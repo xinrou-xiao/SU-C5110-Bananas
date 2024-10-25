@@ -13,6 +13,7 @@
     <h3>Release Year</h3><!--Release year title-->
     <div>@Model.Product.Release</div><!--Product Release year-->
 
+    <!--Product genre display as tags one by one-->
     @foreach (var genre in Model.Product.Genre)
     {
         <span class="tags">#@genre</span>
