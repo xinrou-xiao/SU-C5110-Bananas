@@ -13,7 +13,7 @@ td > a:hover {
 
 .read-img {
     width: inherit; /* set image width to inherit */
-    max-width:400px
+    max-width: 400px /* set image max-width to 400px */
 }
 
 /*
