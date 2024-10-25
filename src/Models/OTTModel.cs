@@ -11,5 +11,10 @@
         /// Map Url field of OTT object in product.json to OTTModel's Url
         /// </summary>
         public string Url { get; set; }
+
+        /// <summary>
+        /// Map Icon field of OTT object in product.json to OTTModel's Icon
+        /// </summary>
+        public string Icon { get; set; }
     }
 }
