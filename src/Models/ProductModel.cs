@@ -42,6 +42,11 @@ namespace ContosoCrafts.WebSite.Models
         /// </summary>
         public List<OTTModel> OTT { get; set; } = new List<OTTModel> ();
 
+        /// <summary>
+        /// Map Season field in product.json to ProductModel's Season
+        /// </summary>
+        public int Season { get; set; }
+
         public ProductTypeEnum ProductType { get; set; } = ProductTypeEnum.Undefined;
 
         public string Quantity { get; set; }
