@@ -1,4 +1,9 @@
 ﻿
+.OTT-Icon {
+    max-width: 50px; /* set up maximum width */
+    min-width: 30px; /* set up maximum height */
+}
+
 .tags {
     background-color: #00a36c; /* set tag's background color*/
     padding: 2pt 4pt; /* set padding for better look */
