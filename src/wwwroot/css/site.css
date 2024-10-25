@@ -1,4 +1,12 @@
 ﻿
+.tags {
+    background-color: #00a36c; /* set tag's background color*/
+    padding: 2pt 4pt; /* set padding for better look */
+    border-radius: 5px; /* set radius to 5px */
+    font-size: 10pt; /* set font size to 10 pt*/
+    font-weight: bold; /* set font weight to bold*/
+}
+
 .white-font {
     color: white; /* Set font color to white */
 }
