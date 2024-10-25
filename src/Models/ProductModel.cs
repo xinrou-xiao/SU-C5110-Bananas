@@ -22,6 +22,11 @@ namespace ContosoCrafts.WebSite.Models
 
         public int[] Ratings { get; set; }
 
+        /// <summary>
+        /// Map Genre field in product.json to ProductModel's Genre
+        /// </summary>
+        public string[] Genre { get; set; }
+
         public ProductTypeEnum ProductType { get; set; } = ProductTypeEnum.Undefined;
 
         public string Quantity { get; set; }
