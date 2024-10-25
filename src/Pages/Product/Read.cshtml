@@ -11,7 +11,7 @@
     <h2>@Model.Product.Title</h2> <!--Product title-->
     <div class="description">@Model.Product.Description</div><!--Product description-->
 
-    <div>
+    <div class="padding-block">
         <span class="tags">#@Model.Product.Release</span><!--Product Release year-->
         <!--Product genre display as tags one by one-->
         @foreach (var genre in Model.Product.Genre)
