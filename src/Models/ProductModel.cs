@@ -27,6 +27,11 @@ namespace ContosoCrafts.WebSite.Models
         /// </summary>
         public string[] Genre { get; set; }
 
+        /// <summary>
+        /// Map Release field in product.json to ProductModel's Release
+        /// </summary>
+        public string Release { get; set; }
+
         public ProductTypeEnum ProductType { get; set; } = ProductTypeEnum.Undefined;
 
         public string Quantity { get; set; }
