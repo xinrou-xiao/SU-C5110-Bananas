@@ -10,7 +10,18 @@
     "Genre": [ "Action", "Romance" ],
     "Release": "1999",
     "Trailor": "https://www.youtube.com/watch?v=yeUpnIKt6k4",
-    "OTT": [ "Netflix", "Prime" ],
+    "OTT": [
+      {
+        "Platform": "Netflix",
+        "Url": "https://www.netflix.com/",
+        "Icon": "https://images.ctfassets.net/y2ske730sjqp/1aONibCke6niZhgPxuiilC/2c401b05a07288746ddf3bd3943fbc76/BrandAssets_Logos_01-Wordmark.jpg?w=940"
+      },
+      {
+        "Platform": "Prime",
+        "Url": "https://www.amazon.com/Amazon-Video/b/?&node=2858778011&ref=dvm_MLP_ROWNA_US_1",
+        "Icon": "https://assets.aboutamazon.com/dims4/default/59e4166/2147483647/strip/true/crop/4454x2634+0+0/resize/365x216!/format/webp/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2F4b%2F7f%2F4a4a80724a5e9a6b4a1931e8bf99%2Fprime-logo-rgb-prime-blue-master.png"
+      }
+    ],
     "Season": 5,
     "CommentList": []
   },
@@ -25,7 +36,18 @@
     "Genre": [ "Action", "Romance" ],
     "Release": "1999",
     "Trailor": "https://www.youtube.com/watch?v=yeUpnIKt6k4",
-    "OTT": [ "Netflix", "Prime" ],
+    "OTT": [
+      {
+        "Platform": "Netflix",
+        "Url": "https://www.netflix.com/",
+        "Icon": "https://images.ctfassets.net/y2ske730sjqp/1aONibCke6niZhgPxuiilC/2c401b05a07288746ddf3bd3943fbc76/BrandAssets_Logos_01-Wordmark.jpg?w=940"
+      },
+      {
+        "Platform": "Prime",
+        "Url": "https://www.amazon.com/Amazon-Video/b/?&node=2858778011&ref=dvm_MLP_ROWNA_US_1",
+        "Icon": "https://assets.aboutamazon.com/dims4/default/59e4166/2147483647/strip/true/crop/4454x2634+0+0/resize/365x216!/format/webp/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2F4b%2F7f%2F4a4a80724a5e9a6b4a1931e8bf99%2Fprime-logo-rgb-prime-blue-master.png"
+      }
+    ],
     "Season": 5,
     "CommentList": []
   },
@@ -40,7 +62,18 @@
     "Genre": [ "Action", "Romance" ],
     "Release": "1999",
     "Trailor": "https://www.youtube.com/watch?v=yeUpnIKt6k4",
-    "OTT": [ "Netflix", "Prime" ],
+    "OTT": [
+      {
+        "Platform": "Netflix",
+        "Url": "https://www.netflix.com/",
+        "Icon": "https://images.ctfassets.net/y2ske730sjqp/1aONibCke6niZhgPxuiilC/2c401b05a07288746ddf3bd3943fbc76/BrandAssets_Logos_01-Wordmark.jpg?w=940"
+      },
+      {
+        "Platform": "Prime",
+        "Url": "https://www.amazon.com/Amazon-Video/b/?&node=2858778011&ref=dvm_MLP_ROWNA_US_1",
+        "Icon": "https://assets.aboutamazon.com/dims4/default/59e4166/2147483647/strip/true/crop/4454x2634+0+0/resize/365x216!/format/webp/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2F4b%2F7f%2F4a4a80724a5e9a6b4a1931e8bf99%2Fprime-logo-rgb-prime-blue-master.png"
+      }
+    ],
     "Season": 5,
     "CommentList": []
   },
@@ -55,7 +88,18 @@
     "Genre": [ "Action", "Romance" ],
     "Release": "1999",
     "Trailor": "https://www.youtube.com/watch?v=yeUpnIKt6k4",
-    "OTT": [ "Netflix", "Prime" ],
+    "OTT": [
+      {
+        "Platform": "Netflix",
+        "Url": "https://www.netflix.com/",
+        "Icon": "https://images.ctfassets.net/y2ske730sjqp/1aONibCke6niZhgPxuiilC/2c401b05a07288746ddf3bd3943fbc76/BrandAssets_Logos_01-Wordmark.jpg?w=940"
+      },
+      {
+        "Platform": "Prime",
+        "Url": "https://www.amazon.com/Amazon-Video/b/?&node=2858778011&ref=dvm_MLP_ROWNA_US_1",
+        "Icon": "https://assets.aboutamazon.com/dims4/default/59e4166/2147483647/strip/true/crop/4454x2634+0+0/resize/365x216!/format/webp/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2F4b%2F7f%2F4a4a80724a5e9a6b4a1931e8bf99%2Fprime-logo-rgb-prime-blue-master.png"
+      }
+    ],
     "Season": 5,
     "CommentList": []
   },
@@ -70,7 +114,18 @@
     "Genre": [ "Action", "Romance" ],
     "Release": "1999",
     "Trailor": "https://www.youtube.com/watch?v=yeUpnIKt6k4",
-    "OTT": [ "Netflix", "Prime" ],
+    "OTT": [
+      {
+        "Platform": "Netflix",
+        "Url": "https://www.netflix.com/",
+        "Icon": "https://images.ctfassets.net/y2ske730sjqp/1aONibCke6niZhgPxuiilC/2c401b05a07288746ddf3bd3943fbc76/BrandAssets_Logos_01-Wordmark.jpg?w=940"
+      },
+      {
+        "Platform": "Prime",
+        "Url": "https://www.amazon.com/Amazon-Video/b/?&node=2858778011&ref=dvm_MLP_ROWNA_US_1",
+        "Icon": "https://assets.aboutamazon.com/dims4/default/59e4166/2147483647/strip/true/crop/4454x2634+0+0/resize/365x216!/format/webp/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2F4b%2F7f%2F4a4a80724a5e9a6b4a1931e8bf99%2Fprime-logo-rgb-prime-blue-master.png"
+      }
+    ],
     "Season": 5,
     "CommentList": []
   },
@@ -85,7 +140,18 @@
     "Genre": [ "Action", "Romance" ],
     "Release": "1999",
     "Trailor": "https://www.youtube.com/watch?v=yeUpnIKt6k4",
-    "OTT": [ "Netflix", "Prime" ],
+    "OTT": [
+      {
+        "Platform": "Netflix",
+        "Url": "https://www.netflix.com/",
+        "Icon": "https://images.ctfassets.net/y2ske730sjqp/1aONibCke6niZhgPxuiilC/2c401b05a07288746ddf3bd3943fbc76/BrandAssets_Logos_01-Wordmark.jpg?w=940"
+      },
+      {
+        "Platform": "Prime",
+        "Url": "https://www.amazon.com/Amazon-Video/b/?&node=2858778011&ref=dvm_MLP_ROWNA_US_1",
+        "Icon": "https://assets.aboutamazon.com/dims4/default/59e4166/2147483647/strip/true/crop/4454x2634+0+0/resize/365x216!/format/webp/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2F4b%2F7f%2F4a4a80724a5e9a6b4a1931e8bf99%2Fprime-logo-rgb-prime-blue-master.png"
+      }
+    ],
     "Season": 5,
     "CommentList": []
   },
@@ -100,7 +166,18 @@
     "Genre": [ "Action", "Romance" ],
     "Release": "1999",
     "Trailor": "https://www.youtube.com/watch?v=yeUpnIKt6k4",
-    "OTT": [ "Netflix", "Prime" ],
+    "OTT": [
+      {
+        "Platform": "Netflix",
+        "Url": "https://www.netflix.com/",
+        "Icon": "https://images.ctfassets.net/y2ske730sjqp/1aONibCke6niZhgPxuiilC/2c401b05a07288746ddf3bd3943fbc76/BrandAssets_Logos_01-Wordmark.jpg?w=940"
+      },
+      {
+        "Platform": "Prime",
+        "Url": "https://www.amazon.com/Amazon-Video/b/?&node=2858778011&ref=dvm_MLP_ROWNA_US_1",
+        "Icon": "https://assets.aboutamazon.com/dims4/default/59e4166/2147483647/strip/true/crop/4454x2634+0+0/resize/365x216!/format/webp/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2F4b%2F7f%2F4a4a80724a5e9a6b4a1931e8bf99%2Fprime-logo-rgb-prime-blue-master.png"
+      }
+    ],
     "Season": 5,
     "CommentList": []
   },
@@ -115,7 +192,18 @@
     "Genre": [ "Action", "Romance" ],
     "Release": "1999",
     "Trailor": "https://www.youtube.com/watch?v=yeUpnIKt6k4",
-    "OTT": [ "Netflix", "Prime" ],
+    "OTT": [
+      {
+        "Platform": "Netflix",
+        "Url": "https://www.netflix.com/",
+        "Icon": "https://images.ctfassets.net/y2ske730sjqp/1aONibCke6niZhgPxuiilC/2c401b05a07288746ddf3bd3943fbc76/BrandAssets_Logos_01-Wordmark.jpg?w=940"
+      },
+      {
+        "Platform": "Prime",
+        "Url": "https://www.amazon.com/Amazon-Video/b/?&node=2858778011&ref=dvm_MLP_ROWNA_US_1",
+        "Icon": "https://assets.aboutamazon.com/dims4/default/59e4166/2147483647/strip/true/crop/4454x2634+0+0/resize/365x216!/format/webp/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2F4b%2F7f%2F4a4a80724a5e9a6b4a1931e8bf99%2Fprime-logo-rgb-prime-blue-master.png"
+      }
+    ],
     "Season": 5,
     "CommentList": []
   },
@@ -130,7 +218,18 @@
     "Genre": [ "Action", "Romance" ],
     "Release": "1999",
     "Trailor": "https://www.youtube.com/watch?v=yeUpnIKt6k4",
-    "OTT": [ "Netflix", "Prime" ],
+    "OTT": [
+      {
+        "Platform": "Netflix",
+        "Url": "https://www.netflix.com/",
+        "Icon": "https://images.ctfassets.net/y2ske730sjqp/1aONibCke6niZhgPxuiilC/2c401b05a07288746ddf3bd3943fbc76/BrandAssets_Logos_01-Wordmark.jpg?w=940"
+      },
+      {
+        "Platform": "Prime",
+        "Url": "https://www.amazon.com/Amazon-Video/b/?&node=2858778011&ref=dvm_MLP_ROWNA_US_1",
+        "Icon": "https://assets.aboutamazon.com/dims4/default/59e4166/2147483647/strip/true/crop/4454x2634+0+0/resize/365x216!/format/webp/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2F4b%2F7f%2F4a4a80724a5e9a6b4a1931e8bf99%2Fprime-logo-rgb-prime-blue-master.png"
+      }
+    ],
     "Season": 5,
     "CommentList": []
   },
@@ -145,7 +244,18 @@
     "Genre": [ "Action", "Romance" ],
     "Release": "1999",
     "Trailor": "https://www.youtube.com/watch?v=yeUpnIKt6k4",
-    "OTT": [ "Netflix", "Prime" ],
+    "OTT": [
+      {
+        "Platform": "Netflix",
+        "Url": "https://www.netflix.com/",
+        "Icon": "https://images.ctfassets.net/y2ske730sjqp/1aONibCke6niZhgPxuiilC/2c401b05a07288746ddf3bd3943fbc76/BrandAssets_Logos_01-Wordmark.jpg?w=940"
+      },
+      {
+        "Platform": "Prime",
+        "Url": "https://www.amazon.com/Amazon-Video/b/?&node=2858778011&ref=dvm_MLP_ROWNA_US_1",
+        "Icon": "https://assets.aboutamazon.com/dims4/default/59e4166/2147483647/strip/true/crop/4454x2634+0+0/resize/365x216!/format/webp/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2F4b%2F7f%2F4a4a80724a5e9a6b4a1931e8bf99%2Fprime-logo-rgb-prime-blue-master.png"
+      }
+    ],
     "Season": 5,
     "CommentList": []
   },
@@ -160,7 +270,18 @@
     "Genre": [ "Action", "Romance" ],
     "Release": "1999",
     "Trailor": "https://www.youtube.com/watch?v=yeUpnIKt6k4",
-    "OTT": [ "Netflix", "Prime" ],
+    "OTT": [
+      {
+        "Platform": "Netflix",
+        "Url": "https://www.netflix.com/",
+        "Icon": "https://images.ctfassets.net/y2ske730sjqp/1aONibCke6niZhgPxuiilC/2c401b05a07288746ddf3bd3943fbc76/BrandAssets_Logos_01-Wordmark.jpg?w=940"
+      },
+      {
+        "Platform": "Prime",
+        "Url": "https://www.amazon.com/Amazon-Video/b/?&node=2858778011&ref=dvm_MLP_ROWNA_US_1",
+        "Icon": "https://assets.aboutamazon.com/dims4/default/59e4166/2147483647/strip/true/crop/4454x2634+0+0/resize/365x216!/format/webp/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2F4b%2F7f%2F4a4a80724a5e9a6b4a1931e8bf99%2Fprime-logo-rgb-prime-blue-master.png"
+      }
+    ],
     "Season": 5,
     "CommentList": []
   },
@@ -175,7 +296,18 @@
     "Genre": [ "Action", "Romance" ],
     "Release": "1999",
     "Trailor": "https://www.youtube.com/watch?v=yeUpnIKt6k4",
-    "OTT": [ "Netflix", "Prime" ],
+    "OTT": [
+      {
+        "Platform": "Netflix",
+        "Url": "https://www.netflix.com/",
+        "Icon": "https://images.ctfassets.net/y2ske730sjqp/1aONibCke6niZhgPxuiilC/2c401b05a07288746ddf3bd3943fbc76/BrandAssets_Logos_01-Wordmark.jpg?w=940"
+      },
+      {
+        "Platform": "Prime",
+        "Url": "https://www.amazon.com/Amazon-Video/b/?&node=2858778011&ref=dvm_MLP_ROWNA_US_1",
+        "Icon": "https://assets.aboutamazon.com/dims4/default/59e4166/2147483647/strip/true/crop/4454x2634+0+0/resize/365x216!/format/webp/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2F4b%2F7f%2F4a4a80724a5e9a6b4a1931e8bf99%2Fprime-logo-rgb-prime-blue-master.png"
+      }
+    ],
     "Season": 5,
     "CommentList": []
   },
@@ -190,7 +322,18 @@
     "Genre": [ "Action", "Romance" ],
     "Release": "1999",
     "Trailor": "https://www.youtube.com/watch?v=yeUpnIKt6k4",
-    "OTT": [ "Netflix", "Prime" ],
+    "OTT": [
+      {
+        "Platform": "Netflix",
+        "Url": "https://www.netflix.com/",
+        "Icon": "https://images.ctfassets.net/y2ske730sjqp/1aONibCke6niZhgPxuiilC/2c401b05a07288746ddf3bd3943fbc76/BrandAssets_Logos_01-Wordmark.jpg?w=940"
+      },
+      {
+        "Platform": "Prime",
+        "Url": "https://www.amazon.com/Amazon-Video/b/?&node=2858778011&ref=dvm_MLP_ROWNA_US_1",
+        "Icon": "https://assets.aboutamazon.com/dims4/default/59e4166/2147483647/strip/true/crop/4454x2634+0+0/resize/365x216!/format/webp/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2F4b%2F7f%2F4a4a80724a5e9a6b4a1931e8bf99%2Fprime-logo-rgb-prime-blue-master.png"
+      }
+    ],
     "Season": 5,
     "CommentList": []
   },
@@ -205,7 +348,18 @@
     "Genre": [ "Action", "Romance" ],
     "Release": "1999",
     "Trailor": "https://www.youtube.com/watch?v=yeUpnIKt6k4",
-    "OTT": [ "Netflix", "Prime" ],
+    "OTT": [
+      {
+        "Platform": "Netflix",
+        "Url": "https://www.netflix.com/",
+        "Icon": "https://images.ctfassets.net/y2ske730sjqp/1aONibCke6niZhgPxuiilC/2c401b05a07288746ddf3bd3943fbc76/BrandAssets_Logos_01-Wordmark.jpg?w=940"
+      },
+      {
+        "Platform": "Prime",
+        "Url": "https://www.amazon.com/Amazon-Video/b/?&node=2858778011&ref=dvm_MLP_ROWNA_US_1",
+        "Icon": "https://assets.aboutamazon.com/dims4/default/59e4166/2147483647/strip/true/crop/4454x2634+0+0/resize/365x216!/format/webp/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2F4b%2F7f%2F4a4a80724a5e9a6b4a1931e8bf99%2Fprime-logo-rgb-prime-blue-master.png"
+      }
+    ],
     "Season": 5,
     "CommentList": []
   },
@@ -220,7 +374,18 @@
     "Genre": [ "Action", "Romance" ],
     "Release": "1999",
     "Trailor": "https://www.youtube.com/watch?v=yeUpnIKt6k4",
-    "OTT": [ "Netflix", "Prime" ],
+    "OTT": [
+      {
+        "Platform": "Netflix",
+        "Url": "https://www.netflix.com/",
+        "Icon": "https://images.ctfassets.net/y2ske730sjqp/1aONibCke6niZhgPxuiilC/2c401b05a07288746ddf3bd3943fbc76/BrandAssets_Logos_01-Wordmark.jpg?w=940"
+      },
+      {
+        "Platform": "Prime",
+        "Url": "https://www.amazon.com/Amazon-Video/b/?&node=2858778011&ref=dvm_MLP_ROWNA_US_1",
+        "Icon": "https://assets.aboutamazon.com/dims4/default/59e4166/2147483647/strip/true/crop/4454x2634+0+0/resize/365x216!/format/webp/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2F4b%2F7f%2F4a4a80724a5e9a6b4a1931e8bf99%2Fprime-logo-rgb-prime-blue-master.png"
+      }
+    ],
     "Season": 5,
     "CommentList": []
   }
