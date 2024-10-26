@@ -97,6 +97,15 @@
     <span id="song-name"></span>
 </div>
 
+<!--JavaScript for Audio Control and Display Logic-->
+<script>const bgMusic = document.getElementById('bg-music'); // Audio element reference
+    const playPauseIcon = document.getElementById('play-pause-icon'); // Play/Pause icon reference
+    const songNameDisplay = document.getElementById('song-name-display'); // Song name display reference
+    const songNameText = document.getElementById('song-name'); // Text element for song name
+    let currentSongIndex = 0; // Track the currently playing song index
+
+</script>
+
 <h1 style="color: white;">Banime</h1>
 @(await Html.RenderComponentAsync<ProductList>(RenderMode.ServerPrerendered))
 
