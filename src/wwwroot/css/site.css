@@ -18,6 +18,10 @@ body.dark-theme .btn-primary:hover {
         border-color: #bb86fc; /* Change border color on hover */
 }
 
+body.dark-theme .bg-navbar {
+        background: linear-gradient(110deg, #370e63 60%, #3a3a3a 60%); /* Set navbar gradient background */
+}
+
 
 .description {
     max-width: 1000px; /* set maximum width to 1000px */
