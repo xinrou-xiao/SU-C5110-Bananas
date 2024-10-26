@@ -34,6 +34,10 @@ body.dark-theme .card-footer {
         background: #1f1f1f !important; /* Match footer background to card body */
 }
 
+body.dark-theme .footer-text {
+        color: #f0f0f0; /* Set footer text color for dark theme */
+}
+
 .description {
     max-width: 1000px; /* set maximum width to 1000px */
 }
