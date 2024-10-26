@@ -134,6 +134,14 @@ body {
     justify-content: flex-end; /* Align to the right end */
 }
 
+/* Styling for "Music" label text */
+#music-label {
+    font-size: 25px; /* Set font size */
+    font-weight: bold; /* Make the text bold */
+    font-family: 'Dancing Script'; /* Use cursive font */
+    color: #a2e07b; /* light green for label */
+}
+
 /* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 .card-columns .card:hover .card-img {
