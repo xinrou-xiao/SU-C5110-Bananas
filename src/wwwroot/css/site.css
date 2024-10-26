@@ -46,6 +46,10 @@ body.dark-theme .nav-link {
         color: #f0f0f0 !important; /* Set nav link color to light for dark theme */
 }
 
+body.dark-theme .navbar-brand {
+        color: #f0f0f0 !important; /* Set navbar brand color to light for dark theme */
+}
+
 
 .description {
     max-width: 1000px; /* set maximum width to 1000px */
