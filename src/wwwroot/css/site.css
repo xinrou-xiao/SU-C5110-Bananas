@@ -50,6 +50,12 @@ body.dark-theme .navbar-brand {
         color: #f0f0f0 !important; /* Set navbar brand color to light for dark theme */
 }
 
+body.dark-theme h1,
+body.dark-theme p,
+body.dark-theme ul {
+        color: #f0f0f0 !important; /* Light text for better readability in dark theme */
+}
+
 
 .description {
     max-width: 1000px; /* set maximum width to 1000px */
