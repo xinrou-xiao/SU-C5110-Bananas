@@ -91,6 +91,12 @@
     <i class="fas fa-forward" onclick="nextSong()" id="next-song-icon"></i> <!-- Next Song Icon -->
 </div>
 
+<!-- Floating Display for Current Song Name -->
+<div id="song-name-display" style="position: fixed; bottom: 10px; right: 10px; background-color: rgba(0,0,0,0.7); color: white; padding: 5px 10px; border-radius: 5px; display: none;">
+    <!-- Element to Show Song Name -->
+    <span id="song-name"></span>
+</div>
+
 <h1 style="color: white;">Banime</h1>
 @(await Html.RenderComponentAsync<ProductList>(RenderMode.ServerPrerendered))
 
