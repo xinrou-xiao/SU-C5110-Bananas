@@ -50,6 +50,21 @@ body.dark-theme .navbar-brand {
         color: #f0f0f0 !important; /* Set navbar brand color to light for dark theme */
 }
 
+/* Dark theme styling for "Music" label text */
+body.dark-theme #music-label {
+        color: #bb86fc; /* Light purple for the label in dark mode */
+}
+
+/* Dark theme icon styling */
+body.dark-theme #audio-controls i {
+        color: #ddc4f5; /* lighter tone for icons in dark mode */
+}
+
+/* Dark theme icon hover effect */
+        body.dark-theme #audio-controls i:hover {
+            color: #b5354c; /* Red color on hover for contrast */
+ }
+
 body.dark-theme h1,
 body.dark-theme p,
 body.dark-theme ul {
