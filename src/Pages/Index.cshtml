@@ -135,6 +135,12 @@
         }
     }
 
+    // Move to the next song in the playlist
+    function nextSong() {
+        currentSongIndex = (currentSongIndex + 1) % songs.length; // Cycle through songs
+        loadSong(currentSongIndex); // Load the next song
+    }
+
 </script>
 
 <h1 style="color: white;">Banime</h1>
