@@ -12,6 +12,7 @@
   <ItemGroup>
     <Content Remove="wwwroot\Images\" />
     <Content Remove="wwwroot\Audio\" />
+    <Content Remove="wwwroot\Audio\kamado_tanjiro_no_uta.mp3" />
   </ItemGroup>
   <ItemGroup>
     <Content Update="wwwroot\data\products.json">
