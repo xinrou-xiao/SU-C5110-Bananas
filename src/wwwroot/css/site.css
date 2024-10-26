@@ -26,7 +26,13 @@ body.dark-theme .bg-footer {
         background: linear-gradient(110deg, #3a3a3a 60%, #370e63 60%); /* Set footer gradient background */
 }
 
+body.dark-theme .card-body {
+        background: #1f1f1f !important; /* Adjust card background for better contrast */
+}
 
+body.dark-theme .card-footer {
+        background: #1f1f1f !important; /* Match footer background to card body */
+}
 
 .description {
     max-width: 1000px; /* set maximum width to 1000px */
