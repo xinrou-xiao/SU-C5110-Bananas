@@ -141,6 +141,12 @@
         loadSong(currentSongIndex); // Load the next song
     }
 
+    // Update play/pause icon based on the audio state
+    function updatePlayPauseIcon() {
+        playPauseIcon.classList.remove('fa-play', 'fa-pause'); // Remove old icon
+        playPauseIcon.classList.add(bgMusic.paused ? 'fa-play' : 'fa-pause'); // Add new icon
+    }
+
 </script>
 
 <h1 style="color: white;">Banime</h1>
