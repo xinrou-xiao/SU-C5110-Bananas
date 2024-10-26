@@ -113,6 +113,15 @@
         { src: "Audio/Yugen.mp3", name: "Yugen" }
     ];
 
+    // Load the selected song and update display
+    function loadSong(index) {
+        bgMusic.src = songs[index].src; // Update audio source
+        songNameText.textContent = songs[index].name; // Update displayed song name
+        songNameDisplay.style.display = 'block'; // Show song name display
+        bgMusic.play(); // Start playing the song
+        updatePlayPauseIcon(); // Update play/pause icon
+    }
+
 </script>
 
 <h1 style="color: white;">Banime</h1>
