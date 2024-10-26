@@ -122,6 +122,19 @@
         updatePlayPauseIcon(); // Update play/pause icon
     }
 
+    // Toggle play and pause functionality
+    function toggleAudio() {
+        if (bgMusic.paused) {
+            bgMusic.play(); // Play the music if paused
+            playPauseIcon.classList.remove('fa-play'); // Change icon to pause
+            playPauseIcon.classList.add('fa-pause');
+        } else {
+            bgMusic.pause(); // Pause the music if playing
+            playPauseIcon.classList.remove('fa-pause'); // Change icon to play
+            playPauseIcon.classList.add('fa-play');
+        }
+    }
+
 </script>
 
 <h1 style="color: white;">Banime</h1>
