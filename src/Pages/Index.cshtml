@@ -84,6 +84,13 @@
     Your browser does not support the audio element.
 </audio>
 
+<!-- Music Controls for Play/Pause and Next Song -->
+<div id="audio-controls">
+    <i class="fas fa-play" onclick="toggleAudio()" id="play-pause-icon"></i> <!-- Play/Pause Icon -->
+    <span id="music-label">Music</span>
+    <i class="fas fa-forward" onclick="nextSong()" id="next-song-icon"></i> <!-- Next Song Icon -->
+</div>
+
 <h1 style="color: white;">Banime</h1>
 @(await Html.RenderComponentAsync<ProductList>(RenderMode.ServerPrerendered))
 
