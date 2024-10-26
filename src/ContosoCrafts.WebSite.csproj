@@ -11,6 +11,7 @@
 
   <ItemGroup>
     <Content Remove="wwwroot\Images\" />
+    <Content Remove="wwwroot\Audio\" />
   </ItemGroup>
   <ItemGroup>
     <Content Update="wwwroot\data\products.json">
@@ -21,5 +22,8 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <CopyToPublishDirectory>Never</CopyToPublishDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="wwwroot\Audio\" />
   </ItemGroup>
 </Project>
