@@ -13,6 +13,11 @@ body.dark-theme .btn-primary {
         border-color: #3a3a3a; /* Set primary button border color */
 }
 
+body.dark-theme .btn-primary:hover {
+        background-color: #bb86fc !important; /* Change background color on hover */
+        border-color: #bb86fc; /* Change border color on hover */
+}
+
 
 .description {
     max-width: 1000px; /* set maximum width to 1000px */
