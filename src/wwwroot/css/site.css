@@ -142,6 +142,13 @@ body {
     color: #a2e07b; /* light green for label */
 }
 
+/* Icon styling */
+#audio-controls i {
+    font-size: 20px; /* Icon size */
+    color: #f2eb88; /* Darker green for icon */
+    cursor: pointer; /* Change cursor on hover */
+}
+
 /* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 .card-columns .card:hover .card-img {
