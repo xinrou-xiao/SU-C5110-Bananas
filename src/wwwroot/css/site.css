@@ -42,6 +42,11 @@ body.dark-theme .modal {
         color: #1f1f1f; /* Set modal text color for better contrast */
 }
 
+body.dark-theme .nav-link {
+        color: #f0f0f0 !important; /* Set nav link color to light for dark theme */
+}
+
+
 .description {
     max-width: 1000px; /* set maximum width to 1000px */
 }
