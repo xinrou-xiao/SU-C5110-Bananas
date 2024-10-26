@@ -1,4 +1,11 @@
-﻿
+﻿/* Dark Theme Styles */
+body.dark-theme {
+    background-color: #000 !important; /* Set body background to black */
+    color: #f0f0f0; /* Set text color to light */
+}
+
+
+
 .description {
     max-width: 1000px; /* set maximum width to 1000px */
 }
