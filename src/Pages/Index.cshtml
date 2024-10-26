@@ -75,6 +75,15 @@
         <span class="sr-only">Next</span>
     </a>
 </div>
+
+<!-- Audio Element for Background Music -->
+<audio id="bg-music" autoplay loop>
+    <!-- Specifying the path and type of audio file -->
+    <source src="Audio/kamado_tanjiro_no_uta.mp3" type="audio/mp3">
+    <!-- Fallback message for browsers that do not support the audio element -->
+    Your browser does not support the audio element.
+</audio>
+
 <h1 style="color: white;">Banime</h1>
 @(await Html.RenderComponentAsync<ProductList>(RenderMode.ServerPrerendered))
 
