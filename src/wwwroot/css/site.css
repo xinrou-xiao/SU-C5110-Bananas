@@ -38,6 +38,10 @@ body.dark-theme .footer-text {
         color: #f0f0f0; /* Set footer text color for dark theme */
 }
 
+body.dark-theme .modal {
+        color: #1f1f1f; /* Set modal text color for better contrast */
+}
+
 .description {
     max-width: 1000px; /* set maximum width to 1000px */
 }
