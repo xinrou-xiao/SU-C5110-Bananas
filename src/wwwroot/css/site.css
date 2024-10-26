@@ -4,6 +4,10 @@ body.dark-theme {
     color: #f0f0f0; /* Set text color to light */
 }
 
+body.dark-theme a {
+        color: #bb86fc; /* Set link color for dark theme */
+}
+
 
 
 .description {
