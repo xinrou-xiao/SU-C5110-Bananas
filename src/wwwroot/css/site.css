@@ -8,6 +8,10 @@ body.dark-theme a {
         color: #bb86fc; /* Set link color for dark theme */
 }
 
+body.dark-theme .btn-primary {
+        background-color: #3a3a3a !important; /* Set primary button background color */
+        border-color: #3a3a3a; /* Set primary button border color */
+}
 
 
 .description {
