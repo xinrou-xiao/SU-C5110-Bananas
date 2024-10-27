@@ -14,10 +14,13 @@
             </div>
             <div class="card-footer">
                 <small class="text-muted">
-                    <button @onclick="(e => SelectProduct(product.Id))"
-                        data-toggle="modal" data-target="#productModal" class="btn btn-primary">
-                        More Info
-                    </button>
+                    <div class="d-flex justify-content-between">
+            <button @onclick="(e => SelectProduct(product.Id))"
+                data-toggle="modal" data-target="#productModal" class="btn btn-primary">
+                More Info
+            </button>
+            <a href="@product.Trailor" target="_blank" class="btn btn-secondary btn-watch-trailer"> Watch Trailer</a>
+            </div>
                 </small>
             </div>
         </div>
