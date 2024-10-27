@@ -129,11 +129,12 @@
             bgMusic.play(); // Play the music if paused
             playPauseIcon.classList.remove('fa-play'); // Change icon to pause
             playPauseIcon.classList.add('fa-pause');
-        } else {
-            bgMusic.pause(); // Pause the music if playing
-            playPauseIcon.classList.remove('fa-pause'); // Change icon to play
-            playPauseIcon.classList.add('fa-play');
+            return;
         }
+
+        bgMusic.pause(); // Pause the music if playing
+        playPauseIcon.classList.remove('fa-pause'); // Change icon to play
+        playPauseIcon.classList.add('fa-play');
     }
 
     // Move to the next song in the playlist
