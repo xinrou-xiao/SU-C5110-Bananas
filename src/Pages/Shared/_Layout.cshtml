@@ -73,22 +73,29 @@
 
     <script>const toggle = document.getElementById('theme-toggle'); // Get the toggle checkbox
 
-        // Check local storage for theme preference
-        if (localStorage.getItem('theme') === 'dark') {
-            document.body.classList.add('dark-theme'); // Add dark theme class if preference is dark
-            toggle.checked = true; // Set toggle state to checked
+        // Check and apply the saved theme preference on initial load
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.body.classList.add('dark-theme'); // Apply dark theme if saved preference is dark
+            toggle.checked = true; // Set toggle to checked if dark theme was saved
         }
 
-        // Event listener for the toggle switch
+        // Listen for changes to the toggle switch
         toggle.addEventListener('change', () => {
+            // Apply dark theme and save preference when toggle is checked
             if (toggle.checked) {
-                document.body.classList.add('dark-theme'); // Add dark theme class when toggled on
-                localStorage.setItem('theme', 'dark'); // Save theme preference to local storage
-            } else {
-                document.body.classList.remove('dark-theme'); // Remove dark theme class when toggled off
-                localStorage.setItem('theme', 'light'); // Save theme preference to local storage
+                document.body.classList.add('dark-theme');
+                localStorage.setItem('theme', 'dark');
             }
-        });</script>
+
+            // Remove dark theme and save preference as light when toggle is unchecked
+            if (!toggle.checked) {
+                document.body.classList.remove('dark-theme');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+    </script>
+
 
     @RenderSection("Scripts", required: false)
 </body>
