@@ -86,7 +86,8 @@
 
 <!-- Music Controls for Play/Pause and Next Song -->
 <div id="audio-controls">
-    <i class="fas fa-play" onclick="toggleAudio()" id="play-pause-icon"></i> <!-- Play/Pause Icon -->
+    <i class="fas fa-play" onclick="playAudio()" id="play-icon" style="cursor: pointer;"></i> <!-- Play Icon -->
+    <i class="fas fa-pause" onclick="pauseAudio()" id="pause-icon" style="cursor: pointer;"></i> <!-- Pause Icon --> 
     <span id="music-label">Music</span>
     <i class="fas fa-forward" onclick="nextSong()" id="next-song-icon"></i> <!-- Next Song Icon -->
 </div>
