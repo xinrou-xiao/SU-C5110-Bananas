@@ -375,3 +375,17 @@ ul {
     color: #fff;/*Privacy page font color*/
     font-family: 'poppins-light', sans-serif;
 }
+
+/*Watch Trailor Button CSS*/
+.btn-watch-trailer {
+    background-color: #252152;
+    color: white;
+    border: none;
+    text-decoration: underline;
+}
+
+    .btn-watch-trailer:hover {
+        background-color: coral;
+        color: black;
+        text-decoration: underline;
+    }
