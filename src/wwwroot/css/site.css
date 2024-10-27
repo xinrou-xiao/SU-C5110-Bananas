@@ -233,37 +233,61 @@ for details on configuring this project to bundle and minify static web assets. 
 .card-columns .card:hover .card-img {
     opacity: 1;
     -webkit-transform-style: preserve-3d;
-}
+    }
 
 .card-columns .card-body {
     height: 100px;
-    font-family: 'Nunito', sans-serif;
-    background: #fbfafd;
+    font-family: poppins-medium, sans-serif;
+    text-align: center;
+    background-color: #FAD5A5;
+    font-weight:2000;
+    /*Added code for color and text alignment*/
+}
+
+.card {
+    /*Added class to get radius on the product cards */
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px ;
+    border-bottom-right-radius: 50px;
 }
 
 .card-columns .card-img {
-  height: 330px;
-  vertical-align: bottom;
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
-  opacity: .8;
+    height: 330px;
+    vertical-align: bottom;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    opacity: .8;
+    /*added background color and radius*/
+    background-color: #FAD5A5;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
 }
 
 .modal .card-img {
-  height: 500px;
-  vertical-align: bottom;
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
+    height: 500px;
+    vertical-align: bottom;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    /*added background color and radius*/
+    background-color: #FAD5A5;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
 }
 
 .card-columns .card:hover {
     transform: scale(1.05);
+    /*added background color and radius*/
+    background-color: #FAD5A5;
     box-shadow: 0 10px 20px rgba(37,33,82,.12), 0 4px 8px rgba(37,33,82,.06);
 }
 .card-footer {
-    background: #fbfafd;
+    /*changed background color and radius*/
+    background-color: #FAD5A5;
+    border-bottom-left-radius: 50px !important;
+    border-bottom-right-radius: 50px !important;
 }
 
 
@@ -284,11 +308,15 @@ a {
     color: #fff;
     background-color: #252152;
     border-color: #252152;
+    /*added border radius to the button*/
+    border-radius : 10px;
 }
 .btn-primary:hover {
     color: #fff;
     background-color: #00A36C;
     border-color: #00A36C; /*Changed Product button hover color*/
+    /*added border radius to the button*/
+    border-radius : 10px;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
@@ -382,10 +410,14 @@ ul {
     color: white;
     border: none;
     text-decoration: underline;
+    /*added border radius to the button*/
+    border-radius: 10px;
 }
 
-    .btn-watch-trailer:hover {
-        background-color: coral;
-        color: black;
-        text-decoration: underline;
-    }
+.btn-watch-trailer:hover {
+    background-color: coral;
+    color: black;
+    text-decoration: underline;
+    /*added border radius to the button*/
+    border-radius: 10px;
+}
