@@ -101,7 +101,6 @@
 
 <!--JavaScript for Audio Control and Display Logic-->
 <script>const bgMusic = document.getElementById('bg-music'); // Audio element reference
-    const playPauseIcon = document.getElementById('play-pause-icon'); // Play/Pause icon reference
     const songNameDisplay = document.getElementById('song-name-display'); // Song name display reference
     const songNameText = document.getElementById('song-name'); // Text element for song name
     let currentSongIndex = 0; // Track the currently playing song index
@@ -121,33 +120,22 @@
         songNameText.textContent = songs[index].name; // Update displayed song name
         songNameDisplay.style.display = 'block'; // Show song name display
         bgMusic.play(); // Start playing the song
-        updatePlayPauseIcon(); // Update play/pause icon
     }
 
-    // Toggle play and pause functionality
-    function toggleAudio() {
-        if (bgMusic.paused) {
-            bgMusic.play(); // Play the music if paused
-            playPauseIcon.classList.remove('fa-play'); // Change icon to pause
-            playPauseIcon.classList.add('fa-pause');
-            return;
-        }
+    // Play the audio
+    function playAudio() {
+        bgMusic.play();
+    }
 
-        bgMusic.pause(); // Pause the music if playing
-        playPauseIcon.classList.remove('fa-pause'); // Change icon to play
-        playPauseIcon.classList.add('fa-play');
+    // Pause the audio
+    function pauseAudio() {
+        bgMusic.pause();
     }
 
     // Move to the next song in the playlist
     function nextSong() {
         currentSongIndex = (currentSongIndex + 1) % songs.length; // Cycle through songs
         loadSong(currentSongIndex); // Load the next song
-    }
-
-    // Update play/pause icon based on the audio state
-    function updatePlayPauseIcon() {
-        playPauseIcon.classList.remove('fa-play', 'fa-pause'); // Remove old icon
-        playPauseIcon.classList.add(bgMusic.paused ? 'fa-play' : 'fa-pause'); // Add new icon
     }
 
     // Load the first song on initial page load
