@@ -163,5 +163,30 @@ namespace UnitTests.Pages.Product.AddRating
             Assert.That(dataNewList.Ratings.Last(), Is.EqualTo(3));
         }
         #endregion AddRating
+
+        #region CreateData
+        /// <summary>
+        /// Test CreateData, expected it append the data in the product.json and the length should add by one.
+        /// </summary>
+
+        [Test]
+        public void CreateData_Should_Append_New_Data_To_Json_And_Return_Data()
+        {
+            // Arrange
+
+            // Get the data list
+            var data = TestHelper.ProductService.GetAllData();
+
+            // Act
+            var result = TestHelper.ProductService.CreateData();
+            var dataNewList = TestHelper.ProductService.GetAllData();
+
+            //Reset
+
+            // Assert
+            Assert.That(result.ToString(), Is.EqualTo(dataNewList.Last().ToString()));
+            Assert.That(dataNewList.Count(), Is.EqualTo(data.Count() + 1));
+        }
+        #endregion CreateData
     }
 }
