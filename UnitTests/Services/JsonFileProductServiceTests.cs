@@ -188,5 +188,31 @@ namespace UnitTests.Pages.Product.AddRating
             Assert.That(dataNewList.Count(), Is.EqualTo(data.Count() + 1));
         }
         #endregion CreateData
+
+        #region DeleteData
+        /// <summary>
+        /// Test DeleteData, expected it to delete the data from the product.json 
+        /// and the length should decrease by one.
+        /// </summary>
+
+        [Test]
+        public void DeleteData_Valid_Id_Should_Decrease_Size_By_One_And_Return_Deleted_Data()
+        {
+            // Arrange
+
+            // Get the last data 
+            var data = TestHelper.ProductService.GetAllData();
+
+            // Act
+            var result = TestHelper.ProductService.DeleteData(data.Last().Id);
+            var dataNewList = TestHelper.ProductService.GetAllData();
+
+            //Reset
+
+            // Assert
+            Assert.That(result.ToString(), Is.EqualTo(data.Last().ToString()));
+            Assert.That(dataNewList.Count(), Is.EqualTo(data.Count() - 1));
+        }
+        #endregion DeleteData
     }
 }
