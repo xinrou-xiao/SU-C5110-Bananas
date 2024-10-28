@@ -8,10 +8,13 @@ namespace ContosoCrafts.WebSite.Pages.Product
     /// <summary>
     /// UpdateModel class handles update operations for product details, 
     /// allowing users to modify and save changes to existing products,
-    /// for product data, using JsonFileProductService as its data source.
     /// </summary>
     public class UpdateModel : PageModel
     {
+
+        /// <summary>
+        /// Service used to retrieve, update, and save product details.
+        /// </summary>
         private readonly JsonFileProductService _productService;
 
         public UpdateModel(JsonFileProductService productService)
