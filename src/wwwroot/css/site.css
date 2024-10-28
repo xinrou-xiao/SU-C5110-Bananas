@@ -5,13 +5,13 @@
     padding-bottom: 56.25%; /* set outer div's padding to 56.25% so acutual w:h would be 16:9 */
 }
 
-    .videobox iframe {
-        position: absolute; /* set iframe position to absolute */
-        top: 0; /* no top distance from videobox*/
-        left: 0; /* no left distance from videobox*/
-        width: 100%; /* fill out the whole videobox */
-        height: 100%; /* fill out the whole videobox */
-    }
+.videobox iframe {
+    position: absolute; /* set iframe position to absolute */
+    top: 0; /* no top distance from videobox*/
+    left: 0; /* no left distance from videobox*/
+    width: 100%; /* fill out the whole videobox */
+    height: 100%; /* fill out the whole videobox */
+}
 
 /* Dark Theme Styles */
 body.dark-theme {
