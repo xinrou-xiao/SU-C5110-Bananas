@@ -76,6 +76,24 @@ namespace UnitTests.Pages.Product.AddRating
             Assert.That(dataNewList.Ratings.Length, Is.EqualTo(countOriginal + 1));
             Assert.That(dataNewList.Ratings.Last(), Is.EqualTo(5));
         }
+
+        /// <summary>
+        /// Test with not exists product id, expect to return false
+        /// </summary>
+        [Test]
+        public void AddRating_NotExist_ProductId_Hello_Should_Return_False()
+        {
+            // Arrange
+
+            // Act
+            var result = TestHelper.ProductService.AddRating("Hello", 1);
+
+            //Reset
+
+            // Assert
+            Assert.That(result, Is.EqualTo(false));
+        }
+
         #endregion AddRating
 
     }
