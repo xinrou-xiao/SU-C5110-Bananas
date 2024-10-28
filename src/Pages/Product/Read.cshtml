@@ -13,7 +13,10 @@
         return;
     }
     <!--Embeded video with iframe-->
-    <iframe class="trailer" src="@Model.Product.Trailor" title="Official English Trailer | Naruto, Set 1 | VIZ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div class="videobox">
+        <!--for responsive usage-->
+        <iframe class="trailer" src="@Model.Product.Trailor" title="Official English Trailer | Naruto, Set 1 | VIZ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
     <h2>@Model.Product.Title</h2> <!--Product title-->
     <div class="description">@Model.Product.Description</div><!--Product description-->
     
