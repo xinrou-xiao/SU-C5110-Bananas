@@ -74,7 +74,7 @@ namespace UnitTests.Pages.Product.Read
         #region OnGet
         /// <summary>
         /// Test pass the first product id in product.json to OnGet method,
-        /// return data should equal to the one we retreived before.
+        ///  Product should be the one we retreived before.
         /// </summary>
         [Test]
         public void OnGet_Valid_Id_Should_Set_Product_To_Correct_Product_And_Page_Is_Valid()
