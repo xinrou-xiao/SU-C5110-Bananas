@@ -98,7 +98,7 @@ namespace UnitTests.Pages.Product.Read
         /// return data should equal to null, and page should still valid.
         /// </summary>
         [Test]
-        public void OnGet_NotExists_Id_Should_Return_Null_And_Page_Still_Valid()
+        public void OnGet_NotExists_Id_Should_Set_Product_To_Null_And_Page_Still_Valid()
         {
             // Arrange
 
