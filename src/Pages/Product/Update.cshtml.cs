@@ -41,7 +41,11 @@ namespace ContosoCrafts.WebSite.Pages.Product
         /// <returns>Redirects to error page if product not found, otherwise loads page with product data</returns>
         public IActionResult OnGet(string id)
         {
+
+            // Retrieve product details by ID to prepare for editing
             Product = _productService.GetOneDataById(id);
+
+            // Redirect to error page if the product is not found
             if (Product ==null)
             {
                 return RedirectToPage("/Error");
