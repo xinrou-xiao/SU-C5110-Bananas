@@ -170,7 +170,7 @@ namespace UnitTests.Pages.Product.AddRating
         /// </summary>
 
         [Test]
-        public void CreateData_Should_Append_New_Data_To_Json_And_Return_Data()
+        public void CreateData_Should_Increase_Size_by_One_To_Json_And_Return_Data_And_Last_Item_In_New_List_Should_Equal_To_New_Data()
         {
             // Arrange
 
