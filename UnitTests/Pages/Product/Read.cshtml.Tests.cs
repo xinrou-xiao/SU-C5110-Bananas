@@ -112,6 +112,24 @@ namespace UnitTests.Pages.Product.Read
             Assert.That(pageModel.Product, Is.EqualTo(null));
         }
 
+        /// <summary>
+        /// Test pass a null to OnGet method,
+        /// Product should be null, and page should still valid.
+        /// </summary>
+        [Test]
+        public void OnGet_Id_Null_Should_Set_Product_To_Null_And_Page_Still_Valid()
+        {
+            // Arrange
+
+            // Act
+            pageModel.OnGet(null);
+
+            // Reset
+
+            // Assert
+            Assert.That(pageModel.ModelState.IsValid, Is.EqualTo(true));
+            Assert.That(pageModel.Product, Is.EqualTo(null));
+        }
         #endregion OnGet
     }
 }
