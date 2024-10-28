@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UnitTests.Pages.Product.Read
 {
-    internal class Read
+    internal class ReadTests
     {
     }
 }
