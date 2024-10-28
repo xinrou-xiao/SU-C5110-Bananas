@@ -94,6 +94,26 @@ namespace UnitTests.Pages.Product.AddRating
             Assert.That(result, Is.EqualTo(false));
         }
 
+
+        /// <summary>
+        /// Test with rating value less than 0, expect to return false
+        /// </summary>
+        [Test]
+        public void AddRating_Invalid_Rating_LessThanZero_Should_Return_False()
+        {
+            // Arrange
+
+            // Get the First data item
+            var data = TestHelper.ProductService.GetAllData().First();
+
+            // Act
+            var result = TestHelper.ProductService.AddRating(data.Id, -1);
+
+            //Reset
+
+            // Assert
+            Assert.That(result, Is.EqualTo(false));
+        }
         #endregion AddRating
 
     }
