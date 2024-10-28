@@ -137,18 +137,22 @@
 
     // Play the audio
     function playAudio() {
+        // Call the play method on the audio element to start playback
         bgMusic.play();
     }
 
     // Pause the audio
     function pauseAudio() {
+        // Call the pause method on the audio element to stop playback
         bgMusic.pause();
     }
 
     // Move to the next song in the playlist
     function nextSong() {
-        currentSongIndex = (currentSongIndex + 1) % songs.length; // Cycle through songs
-        loadSong(currentSongIndex); // Load the next song
+        // Increment the current song index; if it exceeds the length of the array, wrap around to 0
+        currentSongIndex = (currentSongIndex + 1) % songs.length; 
+        // Load the next song based on the updated index
+        loadSong(currentSongIndex); 
     }
 
     // Load the first song on initial page load
