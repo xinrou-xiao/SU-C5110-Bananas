@@ -33,6 +33,12 @@ namespace ContosoCrafts.WebSite.Pages.Product
         [BindProperty]
         public ProductModel Product { get; set; }
 
+
+        /// <summary>
+        /// Handles GET requests to load product details for editing by product ID.
+        /// </summary>
+        /// <param name="id">The ID of the product to be updated</param>
+        /// <returns>Redirects to error page if product not found, otherwise loads page with product data</returns>
         public IActionResult OnGet(string id)
         {
             Product = _productService.GetOneDataById(id);
