@@ -17,6 +17,11 @@ namespace ContosoCrafts.WebSite.Pages.Product
         /// </summary>
         private readonly JsonFileProductService _productService;
 
+        /// <summary>
+        /// Constructor for UpdateModel, initializes with productService to manage 
+        /// update operations for product details.
+        /// </summary>
+        /// <param name="productService">Service to handle product data and updates</param>
         public UpdateModel(JsonFileProductService productService)
         {
             _productService = productService;
