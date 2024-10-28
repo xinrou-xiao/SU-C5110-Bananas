@@ -86,24 +86,33 @@
 
 <!-- Music Controls for Play/Pause and Next Song -->
 <div id="audio-controls">
-    <i class="fas fa-play" onclick="playAudio()" id="play-icon" style="cursor: pointer;"></i> <!-- Play Icon -->
-    <i class="fas fa-pause" onclick="pauseAudio()" id="pause-icon" style="cursor: pointer;"></i> <!-- Pause Icon --> 
+    <!-- Play Icon: Starts playing the currently loaded audio when clicked -->
+    <i class="fas fa-play" onclick="playAudio()" id="play-icon" style="cursor: pointer;"></i>
+    <!-- Pause Icon: Pauses the currently playing audio when clicked -->
+    <i class="fas fa-pause" onclick="pauseAudio()" id="pause-icon" style="cursor: pointer;"></i>
     <span id="music-label">Music</span>
-    <i class="fas fa-forward" onclick="nextSong()" id="next-song-icon"></i> <!-- Next Song Icon -->
+    <!-- Next Song Icon: Advances to the next song in the playlist when clicked -->
+    <i class="fas fa-forward" onclick="nextSong()" id="next-song-icon"></i>
 </div>
 
 <!-- Floating Display for Current Song Name -->
 <div id="song-name-display" style="position: fixed; bottom: 10px; right: 10px; background-color: rgba(0,0,0,0.7); color: white; padding: 5px 10px; border-radius: 5px; display: none;">
-    <i class="fas fa-music"></i> <!-- Music Icon -->
+    <!-- Music Icon: Visual indicator that music is currently playing -->
+    <i class="fas fa-music"></i>
     <!-- Element to Show Song Name -->
     <span id="song-name"></span>
 </div>
 
 <!--JavaScript for Audio Control and Display Logic-->
-<script>const bgMusic = document.getElementById('bg-music'); // Audio element reference
-    const songNameDisplay = document.getElementById('song-name-display'); // Song name display reference
-    const songNameText = document.getElementById('song-name'); // Text element for song name
-    let currentSongIndex = 0; // Track the currently playing song index
+<script>
+    // Reference to the audio element in the HTML
+    const bgMusic = document.getElementById('bg-music');
+    // Reference to the floating display that shows the current song name
+    const songNameDisplay = document.getElementById('song-name-display');
+    // Text element for displaying the name of the currently playing song
+    const songNameText = document.getElementById('song-name');
+    // Variable to track the index of the currently playing song in the playlist
+    let currentSongIndex = 0; 
 
     // List of songs with their file paths and names
     const songs = [
@@ -116,32 +125,38 @@
 
     // Load the selected song and update display
     function loadSong(index) {
-        bgMusic.src = songs[index].src; // Update audio source
-        songNameText.textContent = songs[index].name; // Update displayed song name
-        songNameDisplay.style.display = 'block'; // Show song name display
-        bgMusic.play(); // Start playing the song
+        // Update the audio source to the file path of the selected song
+        bgMusic.src = songs[index].src;
+        // Update the text content to display the name of the currently selected song
+        songNameText.textContent = songs[index].name;
+        // Make the song name display visible to the user
+        songNameDisplay.style.display = 'block';
+        // Start playing the selected song
+        bgMusic.play(); 
     }
 
     // Play the audio
     function playAudio() {
+        // Call the play method on the audio element to start playback
         bgMusic.play();
     }
 
     // Pause the audio
     function pauseAudio() {
+        // Call the pause method on the audio element to stop playback
         bgMusic.pause();
     }
 
     // Move to the next song in the playlist
     function nextSong() {
-        currentSongIndex = (currentSongIndex + 1) % songs.length; // Cycle through songs
-        loadSong(currentSongIndex); // Load the next song
+        // Increment the current song index; if it exceeds the length of the array, wrap around to 0
+        currentSongIndex = (currentSongIndex + 1) % songs.length; 
+        // Load the next song based on the updated index
+        loadSong(currentSongIndex); 
     }
 
     // Load the first song on initial page load
-    loadSong(currentSongIndex);
-
-</script>
+    loadSong(currentSongIndex);</script>
 
 <h1 style="color: white;">Banime</h1>
 @(await Html.RenderComponentAsync<ProductList>(RenderMode.ServerPrerendered))
