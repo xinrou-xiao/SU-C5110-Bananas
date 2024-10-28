@@ -31,10 +31,18 @@ namespace ContosoCrafts.WebSite.Pages.Product
         /// <summary>
         /// Rest OnGet, require id as parameter, 
         /// will retrieve specific product data with that id
+        /// will retrieve specific product data with that id, if 
+        /// id is null, set Product to null and early return
         /// </summary>
         /// <param name="id"></param>
         public void OnGet(string id)
         {
+            // Set Product to null and return
+            if (id == null)
+            {
+                Product = null;
+                return;
+            }
             Product = ProductService.GetOneDataById(id);
         }
     }

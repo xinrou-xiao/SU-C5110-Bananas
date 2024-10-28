@@ -1,4 +1,20 @@
-﻿/* Dark Theme Styles */
+﻿.videobox {
+    position: relative; /* set outer box's position to relative*/
+    width: 100%; /* set outer div's width to 100% */
+    height: 0; /* set outer div's height to 0 */
+    padding-bottom: 56.25%; /* set outer div's padding to 56.25% so acutual w:h would be 16:9 */
+}
+
+.videobox iframe {
+    position: absolute; /* set iframe position to absolute */
+    top: 0; /* no top distance from videobox*/
+    left: 0; /* no left distance from videobox*/
+    width: 100%; /* fill out the whole videobox */
+    height: 100%; /* fill out the whole videobox */
+    border-radius: 10px; /* set up border radius for softer look */
+}
+
+/* Dark Theme Styles */
 body.dark-theme {
     background-color: #000 !important; /* Set body background to black */
     color: #f0f0f0; /* Set text color to light */

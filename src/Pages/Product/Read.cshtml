@@ -1,13 +1,22 @@
 ﻿@page
 @model ReadModel
 @{
-    ViewData["Title"] = "Read"; @* set page title to Read *@
+    ViewData["Title"] = "Read";
+    @* set page title to Read *@
 }
 
 
 <div class="container white-font"> <!--content container-->
+    @if (Model.Product == null)
+    {
+        <h5>Sorry, the data you trying to access is not exists.</h5>
+        return;
+    }
     <!--Embeded video with iframe-->
-    <iframe width="1000" height="600" src="@Model.Product.Trailor" title="Official English Trailer | Naruto, Set 1 | VIZ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div class="videobox">
+        <!--for responsive usage-->
+        <iframe class="trailer" src="@Model.Product.Trailor" title="Official English Trailer | Naruto, Set 1 | VIZ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
     <h2>@Model.Product.Title</h2> <!--Product title-->
     <div class="description">@Model.Product.Description</div><!--Product description-->
     
@@ -25,7 +34,7 @@
     <div class="padding-block"></div> <!--push some space for better look-->
 
     <!--OTT area-->
-    <h5>Available platforms</h5><!--Description title-->
+    <h5>Available platforms</h5><!--OTT title-->
     <div>
         <!--Product OTT display as clickable icon one by one--> 
         @foreach (var ott in Model.Product.OTT)
