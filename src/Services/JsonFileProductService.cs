@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -118,29 +119,29 @@ namespace ContosoCrafts.WebSite.Services
         /// Save to the data store
         /// </summary>
         /// <param name="data"></param>
-        public ProductModel UpdateData(ProductModel data)
+        public ProductModel UpdateData(ProductModel updatedProduct)
         {
-            var products = GetAllData();
-            var productData = products.FirstOrDefault(x => x.Id.Equals(data.Id));
-            if (productData == null)
+            var products = GetAllData().ToList();
+            var existingProduct = products.FirstOrDefault(x => x.Id.Equals(updatedProduct.Id));
+
+            if (existingProduct !=null)
             {
-                return null;
+                existingProduct.Title = updatedProduct.Title;
+                existingProduct.Description = updatedProduct.Description.Trim();
+                existingProduct.Url = updatedProduct.Url;
+                existingProduct.Image = updatedProduct.Image;
+                existingProduct.Quantity = updatedProduct.Quantity;
+                existingProduct.Price = updatedProduct.Price;
+                existingProduct.CommentList = updatedProduct.CommentList;
+                existingProduct.Release = updatedProduct.Release;
+                existingProduct.Trailor = updatedProduct.Trailor;
+                existingProduct.Season = updatedProduct.Season;
+                existingProduct.OTT = updatedProduct.OTT;
+
+                SaveData(products);
             }
 
-            // Update the data to the new passed in values
-            productData.Title = data.Title;
-            productData.Description = data.Description.Trim();
-            productData.Url = data.Url;
-            productData.Image = data.Image;
-
-            productData.Quantity = data.Quantity;
-            productData.Price = data.Price;
-
-            productData.CommentList = data.CommentList;
-
-            SaveData(products);
-
-            return productData;
+            return existingProduct;
         }
 
         /// <summary>
@@ -203,6 +204,10 @@ namespace ContosoCrafts.WebSite.Services
 
             return data;
         }
-        
+
+        internal void UpdateProduct(ProductModel product)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

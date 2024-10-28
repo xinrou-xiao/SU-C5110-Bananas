@@ -21,6 +21,7 @@
                     <td><a asp-page="/Product/Read" asp-route-id="@product.Id">@product.Title</a></td>
                     <td>
                         <button class="btn-success btn" onclick="location.href='/Product/Read?Id=@product.Id';">Read</button>
+                        <button class="btn-primary btn" onclick="location.href='/Product/Update?Id=@product.Id';">Update</button>
                     </td>
                 </tr>
             }
