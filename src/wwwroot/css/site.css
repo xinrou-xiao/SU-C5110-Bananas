@@ -11,6 +11,7 @@
     left: 0; /* no left distance from videobox*/
     width: 100%; /* fill out the whole videobox */
     height: 100%; /* fill out the whole videobox */
+    border-radius: 10px; /* set up border radius for softer look */
 }
 
 /* Dark Theme Styles */
