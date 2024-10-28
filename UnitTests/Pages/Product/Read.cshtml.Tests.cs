@@ -86,6 +86,8 @@ namespace UnitTests.Pages.Product.Read
             // Act
             pageModel.OnGet(data.Id);
 
+            // Reset
+
             // Assert
             Assert.That(pageModel.ModelState.IsValid, Is.EqualTo(true));
             Assert.That(pageModel.Product.ToString(), Is.EqualTo(data.ToString()));
