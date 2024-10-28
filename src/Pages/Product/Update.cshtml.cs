@@ -27,6 +27,9 @@ namespace ContosoCrafts.WebSite.Pages.Product
             _productService = productService;
         }
 
+        /// <summary>
+        /// Product data model bound to the page for updating details.
+        /// </summary>
         [BindProperty]
         public ProductModel Product { get; set; }
 
