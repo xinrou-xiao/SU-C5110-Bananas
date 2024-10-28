@@ -5,6 +5,11 @@ using ContosoCrafts.WebSite.Services;
 
 namespace ContosoCrafts.WebSite.Pages.Product
 {
+    /// <summary>
+    /// UpdateModel class handles update operations for product details, 
+    /// allowing users to modify and save changes to existing products,
+    /// for product data, using JsonFileProductService as its data source.
+    /// </summary>
     public class UpdateModel : PageModel
     {
         private readonly JsonFileProductService _productService;
