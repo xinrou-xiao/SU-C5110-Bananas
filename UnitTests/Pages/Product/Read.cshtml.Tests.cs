@@ -70,5 +70,27 @@ namespace UnitTests.Pages.Product.Read
         }
 
         #endregion TestSetup
+
+        #region OnGet
+        /// <summary>
+        /// Test pass the first product id in product.json to OnGet method,
+        /// return data should equal to the one we retreived before.
+        /// </summary>
+        [Test]
+        public void OnGet_Valid_Id_Should_Return_Correct_Product()
+        {
+            // Arrange
+            // Get the first data from product.json
+            ProductModel data = pageModel.ProductService.GetAllData().First();
+
+            // Act
+            pageModel.OnGet(data.Id);
+
+            // Assert
+            Assert.That(pageModel.ModelState.IsValid, Is.EqualTo(true));
+            Assert.That(pageModel.Product.ToString(), Is.EqualTo(data.ToString()));
+        }
+
+        #endregion OnGet
     }
 }
