@@ -125,10 +125,14 @@
 
     // Load the selected song and update display
     function loadSong(index) {
-        bgMusic.src = songs[index].src; // Update audio source
-        songNameText.textContent = songs[index].name; // Update displayed song name
-        songNameDisplay.style.display = 'block'; // Show song name display
-        bgMusic.play(); // Start playing the song
+        // Update the audio source to the file path of the selected song
+        bgMusic.src = songs[index].src;
+        // Update the text content to display the name of the currently selected song
+        songNameText.textContent = songs[index].name;
+        // Make the song name display visible to the user
+        songNameDisplay.style.display = 'block';
+        // Start playing the selected song
+        bgMusic.play(); 
     }
 
     // Play the audio
