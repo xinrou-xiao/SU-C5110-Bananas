@@ -86,10 +86,13 @@
 
 <!-- Music Controls for Play/Pause and Next Song -->
 <div id="audio-controls">
-    <i class="fas fa-play" onclick="playAudio()" id="play-icon" style="cursor: pointer;"></i> <!-- Play Icon -->
-    <i class="fas fa-pause" onclick="pauseAudio()" id="pause-icon" style="cursor: pointer;"></i> <!-- Pause Icon --> 
+    <!-- Play Icon: Starts playing the currently loaded audio when clicked -->
+    <i class="fas fa-play" onclick="playAudio()" id="play-icon" style="cursor: pointer;"></i>
+    <!-- Pause Icon: Pauses the currently playing audio when clicked -->
+    <i class="fas fa-pause" onclick="pauseAudio()" id="pause-icon" style="cursor: pointer;"></i>
     <span id="music-label">Music</span>
-    <i class="fas fa-forward" onclick="nextSong()" id="next-song-icon"></i> <!-- Next Song Icon -->
+    <!-- Next Song Icon: Advances to the next song in the playlist when clicked -->
+    <i class="fas fa-forward" onclick="nextSong()" id="next-song-icon"></i> 
 </div>
 
 <!-- Floating Display for Current Song Name -->
