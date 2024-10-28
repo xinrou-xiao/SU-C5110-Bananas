@@ -135,6 +135,33 @@ namespace UnitTests.Pages.Product.AddRating
             Assert.That(result, Is.EqualTo(false));
         }
 
+        /// <summary>
+        /// Test to add rating to a product has a null for Ratings attribute, expect it to
+        /// create an array of rating, add the rating to array, function should return true,
+        /// the length should equal to 1 and last rating should be 3.
+        /// </summary>
+
+        [Test]
+        public void AddRating_Rating_In_Json_Is_Null_Should_Create_Array_And_Add_Rate_And_Retrun_True()
+        {
+            // Arrange
+
+            // Get the Last data item
+            var data = TestHelper.ProductService.GetAllData().Last();
+            var arrayOriginal = data.Ratings;
+
+            // Act
+            var result = TestHelper.ProductService.AddRating(data.Id, 3);
+            var dataNewList = TestHelper.ProductService.GetAllData().Last();
+
+            //Reset
+
+            // Assert
+            Assert.That(result, Is.EqualTo(true));
+            Assert.That(dataNewList.Ratings, !Is.EqualTo(arrayOriginal));
+            Assert.That(dataNewList.Ratings.Length, Is.EqualTo(1));
+            Assert.That(dataNewList.Ratings.Last(), Is.EqualTo(3));
+        }
         #endregion AddRating
     }
 }
