@@ -95,7 +95,7 @@ namespace UnitTests.Pages.Product.Read
 
         /// <summary>
         /// Test pass a not exists id to OnGet method,
-        /// return data should equal to null, and page should still valid.
+        /// Product should be null, and page should still valid.
         /// </summary>
         [Test]
         public void OnGet_NotExists_Id_Should_Set_Product_To_Null_And_Page_Still_Valid()
