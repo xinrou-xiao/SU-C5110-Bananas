@@ -35,7 +35,7 @@ namespace ContosoCrafts.WebSite.Models
         /// <summary>
         /// Map Trailor field in product.json to ProductModel's Trailor
         /// </summary>
-        public string Trailor { get; set; }
+        public string Trailer { get; set; }
 
         /// <summary>
         /// Map OTT field in product.json to ProductModel's OTT list
