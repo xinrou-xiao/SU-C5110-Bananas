@@ -53,6 +53,10 @@ namespace ContosoCrafts.WebSite.Pages.Product
             return Page();
         }
 
+        /// <summary>
+        /// Handles POST requests to submit updates to product details.
+        /// </summary>
+        /// <returns>Redirects to error page if update fails, otherwise navigates to product index page on success</returns>
         public IActionResult OnPost()
         {
             if (!ModelState.IsValid)
