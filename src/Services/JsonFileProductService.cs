@@ -134,8 +134,9 @@ namespace ContosoCrafts.WebSite.Services
                 existingProduct.Price = updatedProduct.Price;
                 existingProduct.CommentList = updatedProduct.CommentList;
                 existingProduct.Release = updatedProduct.Release;
-                existingProduct.Trailor = updatedProduct.Trailor;
+                existingProduct.Trailer = updatedProduct.Trailer;
                 existingProduct.Season = updatedProduct.Season;
+                existingProduct.Genre = updatedProduct.Genre;
                 existingProduct.OTT = updatedProduct.OTT;
 
                 SaveData(products);
