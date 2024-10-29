@@ -7,6 +7,7 @@
 <div class="container">
     <h2>Update Anime Information</h2>
     <form method="post">
+        <input type="hidden" asp-for="Product.Id" />
         <div class="form-group">
             <label asp-for="Product.Title">Title</label>
             <input asp-for="Product.Title" class="form-control" />
