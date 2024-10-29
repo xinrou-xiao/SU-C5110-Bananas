@@ -59,17 +59,21 @@ namespace ContosoCrafts.WebSite.Pages.Product
         /// <returns>Redirects to error page if update fails, otherwise navigates to product index page on success</returns>
         public IActionResult OnPost()
         {
+
+            // Return to update page if model state is invalid
             if (!ModelState.IsValid)
             {
                 return Page();
             }
 
+            // Attempt to update product details with provided data
             var updatedProduct = _productService.UpdateData(Product);
             if (updatedProduct ==null)
             {
                 return RedirectToPage("/Error");
             }
 
+            // Redirect to the main product index page on successful update
             return RedirectToPage("/Product/Index");
         }
     }
