@@ -130,8 +130,6 @@ namespace ContosoCrafts.WebSite.Services
                 existingProduct.Description = updatedProduct.Description.Trim();
                 existingProduct.Url = updatedProduct.Url;
                 existingProduct.Image = updatedProduct.Image;
-                existingProduct.Quantity = updatedProduct.Quantity;
-                existingProduct.Price = updatedProduct.Price;
                 existingProduct.CommentList = updatedProduct.CommentList;
                 existingProduct.Release = updatedProduct.Release;
                 existingProduct.Trailer = updatedProduct.Trailer;
