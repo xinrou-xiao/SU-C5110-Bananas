@@ -325,14 +325,12 @@ a {
     background-color: #252152;
     border-color: #252152;
     /*added border radius to the button*/
-    border-radius : 10px;
 }
 .btn-primary:hover {
     color: #fff;
     background-color: #00A36C;
     border-color: #00A36C; /*Changed Product button hover color*/
     /*added border radius to the button*/
-    border-radius : 10px;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
