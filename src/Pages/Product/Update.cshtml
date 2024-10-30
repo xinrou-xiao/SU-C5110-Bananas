@@ -5,45 +5,45 @@
 }
 
 <div class="container">
-    <h2>Update Anime Information</h2>
+    <h2 class ="white-font">Update Anime Information</h2>
     <form method="post">
         <input type="hidden" asp-for="Product.Id" />
         <input type="hidden" asp-for="Product.Maker" />
 
         <div class="form-group">
-            <label asp-for="Product.Title">Title</label>
+            <label class="white-font" asp-for="Product.Title">Title</label>
             <input asp-for="Product.Title" class="form-control" />
         </div>
         <div class="form-group">
-            <label asp-for="Product.Description">Description</label>
+            <label class="white-font" asp-for="Product.Description">Description</label>
             <textarea asp-for="Product.Description" class="form-control"></textarea>
         </div>
         <div class="form-group">
-            <label asp-for="Product.Url">URL</label>
+            <label class="white-font" asp-for="Product.Url">URL</label>
             <input asp-for="Product.Url" class="form-control" />
         </div>
         <div class="form-group">
-            <label asp-for="Product.Image">Image URL</label>
+            <label class="white-font" asp-for="Product.Image">Image URL</label>
             <input asp-for="Product.Image" class="form-control" />
         </div>
         <div class="form-group">
-            <label asp-for="Product.Release">Release Year</label>
+            <label class="white-font" asp-for="Product.Release">Release Year</label>
             <input asp-for="Product.Release" class="form-control" />
         </div>
         <div class="form-group">
-            <label asp-for="Product.Trailer">Trailer URL</label>
+            <label class="white-font" asp-for="Product.Trailer">Trailer URL</label>
             <input asp-for="Product.Trailer" class="form-control" />
         </div>
         <div class="form-group">
-            <label asp-for="Product.Season">Season</label>
+            <label class="white-font" asp-for="Product.Season">Season</label>
             <input asp-for="Product.Season" type="number" class="form-control" />
         </div>
         <div class="form-group">
-            <label asp-for="Product.Genre">Genre</label>
+            <label class="white-font" asp-for="Product.Genre">Genre</label>
             <input asp-for="Product.Genre" class="form-control" />
         </div>
         <div class="form-group">
-            <label asp-for="Product.OTT">OTT Platforms </label>
+            <label class="white-font" asp-for="Product.OTT">OTT Platforms </label>
             <textarea asp-for="Product.OTT" class="form-control"></textarea>
         </div>
         <button type="submit" class="btn btn-primary">Save Changes</button>
