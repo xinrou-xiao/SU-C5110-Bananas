@@ -66,9 +66,23 @@
         </div>
         <div class="form-group">
             <label class="white-font" asp-for="Product.OTT">OTT Platforms </label>
-            <textarea asp-for="Product.OTT" class="form-control"></textarea>
-            <span asp-validation-for="Product.OTT" class="text-danger"></span>
-
+            @{int i = 1;}
+            @foreach (var OTT in Model.Product.OTT)
+            {
+                <div class="white-font">Platform @i</div>
+                <div class="form-group">
+                    <input asp-for="@OTT.Icon" type="text" class="form-control" />
+                    <span asp-validation-for="@OTT.Icon" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input asp-for="@OTT.Platform" type="text" class="form-control" />
+                    <span asp-validation-for="@OTT.Platform" class="text-danger"></span>
+                </div>
+                 <div class="form-group">
+                    <input asp-for="@OTT.Url" type="text" class="form-control" />
+                    <span asp-validation-for="@OTT.Url" class="text-danger"></span>
+                </div>
+            }
         </div>
         <button type="submit" class="btn btn-primary">Save Changes</button>
         <a asp-page="/Product/Index" class="btn btn-secondary">Cancel</a>
