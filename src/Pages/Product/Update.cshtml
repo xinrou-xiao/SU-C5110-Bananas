@@ -1,4 +1,6 @@
-﻿@page
+﻿@page "{id}"
+@using ContosoCrafts.WebSite.Services
+@inject JsonFileProductService ProductService
 @model ContosoCrafts.WebSite.Pages.Product.UpdateModel
 @{
     ViewData["Title"] = "Update Anime";
@@ -7,46 +9,70 @@
 <div class="container">
     <h2 class ="white-font">Update Anime Information</h2>
     <form method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        @Html.HiddenFor(x=>x.Product.Id)
         <input type="hidden" asp-for="Product.Id" />
         <input type="hidden" asp-for="Product.Maker" />
 
         <div class="form-group">
             <label class="white-font" asp-for="Product.Title">Title</label>
             <input asp-for="Product.Title" class="form-control" />
+            <span asp-validation-for="Product.Title" class="text-danger"></span>
         </div>
         <div class="form-group">
             <label class="white-font" asp-for="Product.Description">Description</label>
             <textarea asp-for="Product.Description" class="form-control"></textarea>
+            <span asp-validation-for="Product.Description" class="text-danger"></span>
+
         </div>
         <div class="form-group">
             <label class="white-font" asp-for="Product.Url">URL</label>
             <input asp-for="Product.Url" class="form-control" />
+            <span asp-validation-for="Product.Url" class="text-danger"></span>
+
         </div>
         <div class="form-group">
             <label class="white-font" asp-for="Product.Image">Image URL</label>
             <input asp-for="Product.Image" class="form-control" />
+            <span asp-validation-for="Product.Image" class="text-danger"></span>
+
         </div>
         <div class="form-group">
             <label class="white-font" asp-for="Product.Release">Release Year</label>
             <input asp-for="Product.Release" class="form-control" />
+            <span asp-validation-for="Product.Release" class="text-danger"></span>
+
         </div>
         <div class="form-group">
             <label class="white-font" asp-for="Product.Trailer">Trailer URL</label>
             <input asp-for="Product.Trailer" class="form-control" />
+            <span asp-validation-for="Product.Trailer" class="text-danger"></span>
+
         </div>
         <div class="form-group">
             <label class="white-font" asp-for="Product.Season">Season</label>
             <input asp-for="Product.Season" type="number" class="form-control" />
+            <span asp-validation-for="Product.Season" class="text-danger"></span>
         </div>
         <div class="form-group">
             <label class="white-font" asp-for="Product.Genre">Genre</label>
             <input asp-for="Product.Genre" class="form-control" />
+            <span asp-validation-for="Product.Genre" class="text-danger"></span>
+
         </div>
         <div class="form-group">
             <label class="white-font" asp-for="Product.OTT">OTT Platforms </label>
             <textarea asp-for="Product.OTT" class="form-control"></textarea>
+            <span asp-validation-for="Product.OTT" class="text-danger"></span>
+
         </div>
         <button type="submit" class="btn btn-primary">Save Changes</button>
         <a asp-page="/Product/Index" class="btn btn-secondary">Cancel</a>
     </form>
 </div>
+
+@section Scripts{
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
