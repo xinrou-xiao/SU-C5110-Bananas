@@ -56,9 +56,13 @@
         </div>
         <div class="form-group">
             <label class="white-font" asp-for="Product.Genre">Genre</label>
-            <input asp-for="Product.Genre" class="form-control" />
-            <span asp-validation-for="Product.Genre" class="text-danger"></span>
-
+            @foreach (var genre in Model.Product.Genre)
+            {
+                <div class="form-group">
+                    <input class="margin-bottom form-control" asp-for="Product.Genre" class="form-control" value="@genre" />
+                    <span asp-validation-for="Product.Genre" class="text-danger"></span>
+                </div>
+            }
         </div>
         <div class="form-group">
             <label class="white-font" asp-for="Product.OTT">OTT Platforms </label>
