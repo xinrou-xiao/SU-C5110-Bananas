@@ -71,10 +71,21 @@ namespace UnitTests.Pages.Product.Update
         #region OnGet
 
         [Test]
-        public void OnGet_Valid_Id_Should_Return_Product()
+        public void OnGet_Invalid_Id_Should_Redirect_To_Error()
+        {
+            // Act
+            var result = PageModel.OnGet("invalid-id") as RedirectToPageResult;
+
+            // Assert
+            Assert.That(result.PageName, Is.EqualTo("/Error"));
+            Assert.That(PageModel.Product, Is.Null);
+        }
+
+        [Test]
+        public void OnGet_Valid_Id_Should_Return_Product_new()
         {
             // Arrange
-            var productId = "valid-product-id"; // Replace with a valid product ID from your data source
+            var productId = "vogueandcode-ruby-sis-2"; // Use an actual product ID from your JSON data
 
             // Act
             var result = PageModel.OnGet(productId);
@@ -86,28 +97,33 @@ namespace UnitTests.Pages.Product.Update
             Assert.That(PageModel.Product.Id, Is.EqualTo(productId));
         }
 
-        [Test]
-        public void OnGet_Invalid_Id_Should_Redirect_To_Error()
-        {
-            // Act
-            var result = PageModel.OnGet("invalid-id") as RedirectToPageResult;
-
-            // Assert
-            Assert.That(result.PageName, Is.EqualTo("/Error"));
-            Assert.That(PageModel.Product, Is.Null);
-        }
-
         #endregion OnGet
 
         #region OnPost
 
         [Test]
-        public void OnPost_Valid_Product_Should_Update_And_Redirect()
+        public void OnPost_Invalid_Model_Should_Return_Page()
+        {
+            // Force an invalid error state
+            PageModel.ModelState.AddModelError("bogus", "Bogus Error");
+
+            // Act
+            var result = PageModel.OnPost() as PageResult;
+
+            // Assert
+            Assert.That(PageModel.ModelState.IsValid, Is.EqualTo(false));
+            Assert.That(result, Is.Not.Null);
+        }
+
+        
+
+        [Test]
+        public void OnPost_Valid_Product_Should_Update_And_Redirect_new()
         {
             // Arrange
             PageModel.Product = new ProductModel
             {
-                Id = "valid-product-id", // Replace with a valid product ID from your data source
+                Id = "vogueandcode-ruby-sis-2", // Use an actual product ID from your JSON data
                 Title = "Updated Title",
                 Description = "Updated Description",
                 Url = "http://example.com",
@@ -127,20 +143,6 @@ namespace UnitTests.Pages.Product.Update
             // Assert
             Assert.That(PageModel.ModelState.IsValid, Is.EqualTo(true));
             Assert.That(result.PageName, Is.EqualTo("/Product/Index"));
-        }
-
-        [Test]
-        public void OnPost_Invalid_Model_Should_Return_Page()
-        {
-            // Force an invalid error state
-            PageModel.ModelState.AddModelError("bogus", "Bogus Error");
-
-            // Act
-            var result = PageModel.OnPost() as PageResult;
-
-            // Assert
-            Assert.That(PageModel.ModelState.IsValid, Is.EqualTo(false));
-            Assert.That(result, Is.Not.Null);
         }
 
         #endregion OnPost
