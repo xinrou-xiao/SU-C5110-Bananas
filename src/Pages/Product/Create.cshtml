@@ -28,5 +28,11 @@
             <input class="form-control" type="text" asp-for="Product.Url" placeholder="related webstie URL" />
             <span asp-asp-validation-for="Product.Url" class="text-danger"></span>
         </div>
-    </form>
+        <div class="row form-group">
+            <div class="col"> <!--Anime Release input group-->
+                <label class="white-font" asp-for="Product.Release">Release Year</label>
+                <input class="form-control" type="number" asp-for="Product.Release" placeholder="Release year" />
+                <span asp-asp-validation-for="Product.Release" class="text-danger"></span>
+            </div>
+        </div>
 </div>
