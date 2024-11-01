@@ -22,7 +22,12 @@
     
     <!--tags area, contains release year and genre-->
     <div class="padding-block">
-        <span class="tags">#@Model.Product.Release</span><!--Product Release year-->
+        @if (@Model.Product.Release != null)
+        {
+            <span class="tags">#@Model.Product.Release</span>
+
+            <!--Product Release year-->
+        }
         <span class="tags">#@Model.Product.Season Seasons</span><!--Total Seasons-->
         <!--Product genre display as tags one by one-->
         @foreach (var genre in Model.Product.Genre)
