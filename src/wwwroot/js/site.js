@@ -23,7 +23,7 @@ $(".remove-genre").click(function () {
 
 /// bind onClick event for id is create-OTT button, append a OTT input group after create button,
 /// bind remove function to remove button for new Added input group
-$("#c").click(function () {
+$("#create-OTT").click(function () {
     $(this).after('<div class="form-group border border-light border-right-0 border-left-0 rounded OTT-group">' +
         '<div class= "form-group"> ' +
         '<label class="white-font" >Platform</label>' +
