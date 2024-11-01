@@ -1,4 +1,9 @@
-﻿.videobox {
+﻿.create-btn {
+    margin-bottom: 10px; /* set margin bottom to 10px */
+    float: right; /* button will be in the most right position */
+}
+
+.videobox {
     position: relative; /* set outer box's position to relative*/
     width: 100%; /* set outer div's width to 100% */
     height: 0; /* set outer div's height to 0 */
