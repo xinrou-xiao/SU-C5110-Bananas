@@ -43,3 +43,8 @@ $("#c").click(function () {
         $(this).parent().parent().remove()
     })
 })
+
+/// bind onclick event to all OTT remove button
+$(".remove-OTT").click(function () {
+    $(this).parent().parent().remove()
+})
