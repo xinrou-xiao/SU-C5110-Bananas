@@ -1,4 +1,9 @@
 ﻿
+
+.btn {
+    font-weight: bold; /* set font-weight to bold for better look */
+}
+
 .OTT-group {
     padding: 10px; /* set up padding for inner group looks*/
 }
