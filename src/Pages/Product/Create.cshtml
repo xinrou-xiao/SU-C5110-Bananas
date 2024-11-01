@@ -8,6 +8,10 @@
     <h2 class="white-font">Create new anime</h2>
     <form method="post"> <!--Create form-->
         <div asp-validation-asp-validation-summary="ModelOnly" class="text-danger"></div>
-
+        <div class="form-group"> <!--Anime Title input group-->
+            <label class="white-font" asp-for="Product.Title">Title</label><small>*</small>
+            <input type="text" class="form-control" asp-for="Product.Title" placeholder="Title" />
+            <span asp-asp-validation-for="Product.Title" class="text-danger"></span>
+        </div>
     </form>
 </div>
