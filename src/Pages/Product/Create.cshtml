@@ -34,5 +34,10 @@
                 <input class="form-control" type="number" asp-for="Product.Release" placeholder="Release year" />
                 <span asp-asp-validation-for="Product.Release" class="text-danger"></span>
             </div>
+            <div class="col"> <!--Anime Season input group-->
+                <label class="white-font" asp-for="Product.Season">Total Season</label>
+                <input class="form-control" type="number" asp-for="Product.Season" placeholder="Total Season" value=1 />
+                <span asp-asp-validation-for="Product.Season" class="text-danger"></span>
+            </div>
         </div>
 </div>
