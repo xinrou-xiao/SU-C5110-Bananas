@@ -163,28 +163,23 @@ namespace ContosoCrafts.WebSite.Services
         }
 
         /// <summary>
-        /// Create a new product using default values
-        /// After create the user can update to set values
+        /// Added given product into json file
         /// </summary>
         /// <returns></returns>
-        public ProductModel CreateData()
+        public ProductModel CreateData(ProductModel product)
         {
-            var data = new ProductModel()
+            // just in case any incorrect called
+            if (product == null)
             {
-                Id = System.Guid.NewGuid().ToString(),
-                Title = "Enter Title",
-                Description = "Enter Description",
-                Url = "Enter URL",
-                Image = "",
-            };
-
+                return null;
+            }
             // Get the current set, and append the new record to it because IEnumerable does not have Add
             var dataSet = GetAllData();
-            dataSet = dataSet.Append(data);
+            dataSet = dataSet.Append(product);
 
             SaveData(dataSet);
 
-            return data;
+            return product;
         }
 
         /// <summary>
