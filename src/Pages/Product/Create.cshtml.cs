@@ -12,6 +12,8 @@ namespace ContosoCrafts.WebSite.Pages.Product
         // Data Service
         public JsonFileProductService ProductService { get; }
 
+        // Product data
+        public ProductModel Product { get; private set; }
 
         public void OnGet()
         {
