@@ -15,3 +15,8 @@ $("#create-genre").click(function () {
         $(this).parent().remove()
     })
 })
+
+/// bind onclick event to all genre remove button
+$(".remove-genre").click(function () {
+    $(this).parent().remove()
+})
