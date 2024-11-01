@@ -1,4 +1,13 @@
-﻿.create-btn {
+﻿.custom-btn {
+    margin-left: 10px; /* set margin left to 10px */
+    padding-top: 0px; /* set up padding-top to make button round */
+    padding-bottom: 0px; /* set up padding-bottom to make button round */
+    padding-left: 8px; /* set up padding-left to make button round */
+    padding-right: 8px; /* set up padding-right to make button round */
+    border-radius: 40px; /* set up border-radius to make button round */
+}
+
+.create-btn {
     margin-bottom: 10px; /* set margin bottom to 10px */
     float: right; /* button will be in the most right position */
 }
