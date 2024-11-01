@@ -22,8 +22,12 @@ namespace ContosoCrafts.WebSite.Pages.Product
         // Product data
         public ProductModel Product { get; private set; }
 
+        /// <summary>
+        /// Initialize Product object.
+        /// </summary>
         public void OnGet()
         {
+            ProductModel Product = new ProductModel();
         }
     }
 }
