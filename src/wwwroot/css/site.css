@@ -1,4 +1,6 @@
-﻿
+﻿h1, h2, h3, h4, h5 {
+    font-family: 'poppins-medium'; /* set font-family for all title tag */
+}
 
 .btn {
     font-weight: bold; /* set font-weight to bold for better look */
