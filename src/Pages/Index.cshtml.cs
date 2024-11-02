@@ -42,8 +42,13 @@ namespace ContosoCrafts.WebSite.Pages
         /// </summary>
         public IEnumerable<ProductModel> Products { get; private set; }
 
+        /// <summary>
+        /// Method called on GET requests to retrieve product data.
+        /// This method populates the Products property with data from the product service.
+        /// </summary>
         public void OnGet()
         {
+            // Retrieve all products
             Products = ProductService.GetAllData();
         }
     }
