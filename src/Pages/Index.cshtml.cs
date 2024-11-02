@@ -32,7 +32,14 @@ namespace ContosoCrafts.WebSite.Pages
             ProductService = productService;
         }
 
+        /// <summary>
+        /// Gets the product service used to access product data.
+        /// </summary>
         public JsonFileProductService ProductService { get; }
+
+        /// <summary>
+        /// Collection of products to be displayed on the Index page.
+        /// </summary>
         public IEnumerable<ProductModel> Products { get; private set; }
 
         public void OnGet()
