@@ -8,13 +8,23 @@ using ContosoCrafts.WebSite.Services;
 
 namespace ContosoCrafts.WebSite
 {
+
+    /// <summary>
+    /// Configures services and the request pipeline for the web application.
+    /// </summary>
     public class Startup
     {
+        /// <summary>
+        /// Initializes the Startup class with configuration.
+        /// </summary>
+        /// <param name="configuration">App configuration settings.</param>
         public Startup(IConfiguration configuration)
         {
+            // Store configuration
             Configuration = configuration;
         }
 
+        // Configuration property
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
