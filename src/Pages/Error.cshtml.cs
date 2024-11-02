@@ -36,6 +36,10 @@ namespace ContosoCrafts.WebSite.Pages
             _logger = logger;
         }
 
+        /// <summary>
+        /// Handles GET requests for the error page.
+        /// Sets the RequestId for identifying the specific error occurrence.
+        /// </summary>
         public void OnGet()
         {
             RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier;
