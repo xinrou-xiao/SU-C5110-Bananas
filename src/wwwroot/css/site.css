@@ -461,3 +461,14 @@ ul {
     /*added border radius to the button*/
     border-radius: 10px;
 }
+
+.delete-btn {
+    background-color: #eeb2b2;
+    color: #d11a2a;
+}
+
+.delete-btn:hover {
+    background-color: #d11a2a;
+    color : #fff;
+    text-decoration: underline;
+}
