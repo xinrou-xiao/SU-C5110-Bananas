@@ -27,17 +27,25 @@ namespace ContosoCrafts.WebSite
         // Configuration property
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
+        /// <summary>
+        /// Method called by the runtime to add services to the DI container.
+        /// </summary>
         public void ConfigureServices(IServiceCollection services)
         {
+            // Add Razor Pages
+            // Enable runtime compilation
             services.AddRazorPages().AddRazorRuntimeCompilation();
+            // Add Blazor support
             services.AddServerSideBlazor();
+            // Add HTTP Client
             services.AddHttpClient();
+            // Add MVC controllers
             services.AddControllers();
+            // Register Service
             services.AddTransient<JsonFileProductService>();
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        /// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
