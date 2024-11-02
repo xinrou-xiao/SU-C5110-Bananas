@@ -1,4 +1,87 @@
 ﻿@page
+@using ContosoCrafts.WebSite.Services
+@inject JsonFileProductService ProductService
 @model ContosoCrafts.WebSite.Pages.Product.DeleteModel
 @{
+    ViewData["Title"] = "Delete Anime";
+}
+
+<div class="container">
+    <h2 class="white-font">Delete Anime Information</h2>
+    <form method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        @Html.HiddenFor(x => x.Product.Id)
+        <input type="hidden" asp-for="Product.Id" />
+        <input type="hidden" asp-for="Product.Maker" />
+
+        <div class="form-group">
+            <label class="white-font" asp-for="Product.Title">Title</label>
+            <input asp-for="Product.Title" class="form-control" readonly />
+        </div>
+        <div class="form-group">
+            <label class="white-font" asp-for="Product.Description">Description</label>
+            <textarea asp-for="Product.Description" class="form-control" readonly></textarea>
+        </div>
+        <div class="form-group">
+            <label class="white-font" asp-for="Product.Url">URL</label>
+            <input asp-for="Product.Url" class="form-control" readonly />
+        </div>
+        <div class="form-group">
+            <label class="white-font" asp-for="Product.Image">Image URL</label>
+            <input asp-for="Product.Image" class="form-control" readonly />
+        </div>
+        <div class="form-group">
+            <label class="white-font" asp-for="Product.Release">Release Year</label>
+            <input asp-for="Product.Release" class="form-control" readonly />
+        </div>
+        <div class="form-group">
+            <label class="white-font" asp-for="Product.Trailer">Trailer URL</label>
+            <input asp-for="Product.Trailer" class="form-control" readonly />
+        </div>
+        <div class="form-group">
+            <label class="white-font" asp-for="Product.Season">Season</label>
+            <input asp-for="Product.Season" type="number" class="form-control" readonly />
+        </div>
+        <div class="form-group">
+            <label class="white-font" asp-for="Product.Genre">Genre</label>
+            @foreach (var genre in Model.Product.Genre)
+            {
+                <div class="form-group">
+                    <input class="margin-bottom form-control" asp-for="Product.Genre" value="@genre" readonly />
+                </div>
+            }
+        </div>
+        <div class="form-group">
+            <label class="white-font" asp-for="Product.OTT">OTT Platforms </label>
+            @{
+                int i = 1;
+            }
+            @foreach (var OTT in Model.Product.OTT)
+            {
+                <div class="white-font">Platform @i</div>
+                <div class="form-group">
+                    <input asp-for="@OTT.Icon" type="text" class="form-control" readonly />
+                </div>
+                <div class="form-group">
+                    <input asp-for="@OTT.Platform" type="text" class="form-control" readonly />
+                </div>
+                <div class="form-group">
+                    <input asp-for="@OTT.Url" type="text" class="form-control" readonly />
+                </div>
+                i++;
+            }
+        </div>
+
+        <button type="submit" class="btn delete-btn";">Delete</button>
+        <a asp-page="/Product/Index" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>
+
+@section Scripts {
+    <script>
+        function redirectToIndex() {
+            // After form submission, redirect to the Index page
+            window.location.href = '@Url.Page("/Product/Index")';
+        }
+    </script>
 }
