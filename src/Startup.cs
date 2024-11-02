@@ -45,14 +45,19 @@ namespace ContosoCrafts.WebSite
             services.AddTransient<JsonFileProductService>();
         }
 
+        /// <summary>
         /// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        /// </summary>
+        /// <param name="app">Application builder.</param>
+        /// <param name="env">Hosting environment.</param>
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
+                // Development error page
                 app.UseDeveloperExceptionPage();
             }
-  
+                // Production error handler
                 app.UseExceptionHandler("/Error");
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
