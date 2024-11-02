@@ -28,7 +28,11 @@
 
             <!--Product Release year-->
         }
-        <span class="tags">#@Model.Product.Season Seasons</span><!--Total Seasons-->
+
+        @if (@Model.Product.Season != null)
+        {
+            <span class="tags">#@Model.Product.Season</span>  <!--Product Season year-->
+        }
         <!--Product genre display as tags one by one-->
         @foreach (var genre in Model.Product.Genre)
         {
