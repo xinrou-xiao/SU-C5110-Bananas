@@ -61,19 +61,25 @@ namespace ContosoCrafts.WebSite
                 app.UseExceptionHandler("/Error");
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
-            
 
+            // Redirect HTTP requests to HTTPS
             app.UseHttpsRedirection();
+            // Enable serving static files
             app.UseStaticFiles();
 
+            // Set up request routing
             app.UseRouting();
-
+            // Enable authorization middleware
             app.UseAuthorization();
 
+            // Map endpoints for various components
             app.UseEndpoints(endpoints =>
             {
+                // Route for Razor Pages
                 endpoints.MapRazorPages();
+                // Route for API controllers
                 endpoints.MapControllers();
+                // Route for Blazor Hub
                 endpoints.MapBlazorHub();
 
                 // endpoints.MapGet("/products", (context) => 
