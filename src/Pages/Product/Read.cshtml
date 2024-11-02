@@ -34,9 +34,12 @@
             <span class="tags">#@Model.Product.Season</span>  <!--Product Season year-->
         }
         <!--Product genre display as tags one by one-->
-        @foreach (var genre in Model.Product.Genre)
+        @if (Model.Product.Genre.Length > 0)
         {
-            <span class="tags">#@genre</span>
+            @foreach (var genre in Model.Product.Genre)
+            {
+                <span class="tags">#@genre</span>
+            }
         }
     </div>
     
