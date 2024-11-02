@@ -29,15 +29,15 @@ namespace ContosoCrafts.WebSite.Pages.Product
             }
             Product = ProductService.GetOneDataById(id);
         }
-        public IActionResult OnPost()
+        public IActionResult OnPost(string id)
         {
-            if(!ModelState.IsValid)
+            if (string.IsNullOrEmpty(id))
             {
                 return Page();
             }
-            ProductService.DeleteData(Product.Id);
-            return RedirectToPage("./Index");
 
+            ProductService.DeleteData(id);
+            return RedirectToPage("./Index");
         }
     }
 }
