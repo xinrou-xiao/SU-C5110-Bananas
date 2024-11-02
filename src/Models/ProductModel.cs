@@ -5,6 +5,9 @@ using System.Collections.Generic;
 
 namespace ContosoCrafts.WebSite.Models
 {
+    /// <summary>
+    /// Represents a product including its details, ratings, and user comments.
+    /// </summary>
     public class ProductModel
     {
         public string Id { get; set; }
