@@ -9,10 +9,16 @@ namespace ContosoCrafts.WebSite.Pages
     /// </summary>
     public class PrivacyModel : PageModel
     {
+        // Logger to log information for the Privacy page
         private readonly ILogger<PrivacyModel> _logger;
 
+        /// <summary>
+        /// Constructor to initialize the PrivacyModel with a logger.
+        /// </summary>
+        /// <param name="logger">The logger used for logging information.</param>
         public PrivacyModel(ILogger<PrivacyModel> logger)
         {
+            //Assign the logger
             _logger = logger;
         }
 
