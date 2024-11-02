@@ -485,3 +485,14 @@ ul {
     color : black;
     text-decoration: underline;
 }
+
+.read-btn {
+    background-color: #00A36C;
+    color: #fff;
+}
+
+.read-btn:hover {
+    background-color: #c1e899;
+    color : black;
+    text-decoration: underline;
+}
