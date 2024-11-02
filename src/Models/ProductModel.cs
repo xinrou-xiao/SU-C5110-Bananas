@@ -10,19 +10,41 @@ namespace ContosoCrafts.WebSite.Models
     /// </summary>
     public class ProductModel
     {
+        /// <summary>
+        /// Map Id field in product.json to ProductModel's Id
+        /// </summary>
         public string Id { get; set; }
+
+        /// <summary>
+        /// Map Maker field in product.json to ProductModel's Maker
+        /// </summary>
         public string Maker { get; set; }
 
+        /// <summary>
+        /// Map img field in product.json to ProductModel's Image
+        /// </summary>
         [JsonPropertyName("img")]
         public string Image { get; set; }
 
+        /// <summary>
+        /// Map Url field in product.json to ProductModel's Url
+        /// </summary>
         public string Url { get; set; }
-        
+
+        // <summary>
+        /// Map Title field in product.json to ProductModel's Title with validation
+        /// </summary>
         [StringLength (maximumLength: 200, MinimumLength = 1, ErrorMessage = "The Title should have a length of more than {2} and less than {1}")]
         public string Title { get; set; }
 
+        /// <summary>
+        /// Map Description field in product.json to ProductModel's Description
+        /// </summary>
         public string Description { get; set; }
 
+        /// <summary>
+        /// Map Ratings field in product.json to ProductModel's Ratings array
+        /// </summary>
         public int[] Ratings { get; set; }
 
         /// <summary>
@@ -53,6 +75,9 @@ namespace ContosoCrafts.WebSite.Models
         // Store the Comments entered by the users on this product
         public List<CommentModel> CommentList { get; set; } = new List<CommentModel>();
 
+        /// <summary>
+        /// Serialize ProductModel instance to JSON format for display
+        /// </summary>
         public override string ToString() => JsonSerializer.Serialize<ProductModel>(this);
 
 
