@@ -461,46 +461,86 @@ ul {
     /*added border radius to the button*/
     border-radius: 10px;
 }
-
+/* Style for the trailer watch button when hovered */
 .btn-watch-trailer:hover {
+    /* Change the background color to coral on hover */
     background-color: coral;
+
+    /* Change the text color to black on hover */
     color: black;
+
+    /* Underline the text when the button is hovered */
     text-decoration: underline;
-    /*added border radius to the button*/
+
+    /* Added border radius to the button for rounded corners */
     border-radius: 10px;
 }
 
+/* Base styles for the delete button */
 .delete-btn {
+    /* Set background color to a light red shade */
     background-color: #eeb2b2;
+
+    /* Set text color to a darker red */
     color: #d11a2a;
 }
 
+/* Style for the delete button when hovered */
 .delete-btn:hover {
+    /* Change background color to a darker red on hover */
     background-color: #d11a2a;
-    color : black;
+
+    /* Change text color to black on hover */
+    color: black;
+
+    /* Underline the text when the button is hovered */
     text-decoration: underline;
 }
 
+/* Base styles for the update button */
 .update-btn {
+    /* Set background color to coral */
     background-color: coral;
+
+    /* Set text color to white */
     color: #fff;
+
+    /* Add left margin for spacing */
     margin-left: 24px;
+
+    /* Add right margin for spacing */
     margin-right: 24px;
 }
 
+/* Style for the update button when hovered */
 .update-btn:hover {
+    /* Change background color to yellow on hover */
     background-color: yellow;
-    color : black;
+
+    /* Change text color to black on hover */
+    color: black;
+
+    /* Underline the text when the button is hovered */
     text-decoration: underline;
 }
 
+/* Base styles for the read button */
 .read-btn {
+    /* Set background color to a teal shade */
     background-color: #00A36C;
+
+    /* Set text color to white */
     color: #fff;
 }
 
+/* Style for the read button when hovered */
 .read-btn:hover {
+    /* Change background color to a light green on hover */
     background-color: #c1e899;
-    color : black;
+
+    /* Change text color to black on hover */
+    color: black;
+
+    /* Underline the text when the button is hovered */
     text-decoration: underline;
 }
