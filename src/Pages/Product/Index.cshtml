@@ -22,7 +22,7 @@
                     <!--a tag will add a link to the given url-->
                     <td><a asp-page="/Product/Read" asp-route-id="@product.Id">@product.Title</a></td>
                     <td>
-                        <button class="btn-success btn" onclick="location.href='/Product/Read?Id=@product.Id';">Read</button>
+                        <button class="read-btn btn" onclick="location.href='/Product/Read?Id=@product.Id';">Read</button>
                         <button class="update-btn btn" onclick="location.href='/Product/Update?Id=@product.Id';">Update</button>
                         <button class="delete-btn btn" onclick="location.href='/Product/Delete?Id=@product.Id';">Delete</button>
                     </td>
