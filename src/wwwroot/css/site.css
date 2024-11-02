@@ -469,6 +469,19 @@ ul {
 
 .delete-btn:hover {
     background-color: #d11a2a;
-    color : #fff;
+    color : black;
+    text-decoration: underline;
+}
+
+.update-btn {
+    background-color: coral;
+    color: #fff;
+    margin-left: 24px;
+    margin-right: 24px;
+}
+
+.update-btn:hover {
+    background-color: yellow;
+    color : black;
     text-decoration: underline;
 }
