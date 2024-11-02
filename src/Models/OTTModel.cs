@@ -1,5 +1,9 @@
 ﻿namespace ContosoCrafts.WebSite.Models
 {
+    /// <summary>
+    /// Model representing OTT platform details for the anime product
+    /// Maps data from product.json file.
+    /// </summary>
     public class OTTModel
     {
         /// <summary>
