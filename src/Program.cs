@@ -9,10 +9,14 @@ namespace ContosoCrafts.WebSite
     /// </summary>
     public class Program
     {
-        // The main method that serves as the application's entry point.
-        // It creates and runs the web host for the application.
+        /// <summary>
+        /// The main method that serves as the application's entry point.
+        /// It creates and runs the web host for the application.
+        /// </summary>
+        /// <param name="args">The command-line arguments passed to the application.</param>
         public static void Main(string[] args)
         {
+            // Create the host builder, build it, and run the application
             CreateHostBuilder(args).Build().Run();
         }
 
