@@ -13,8 +13,15 @@ namespace ContosoCrafts.WebSite.Pages
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public class ErrorModel : PageModel
     {
+
+        /// <summary>
+        /// Gets or sets the unique identifier for the current request.
+        /// </summary>
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// Gets a value indicating whether the RequestId should be shown.
+        /// </summary>
         public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
 
         // Logger to record error information for debugging purposes
