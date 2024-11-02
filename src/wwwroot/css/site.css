@@ -24,6 +24,14 @@
     float: right; /* button will be in the most right position */
 }
 
+.create-btn:hover {
+    /* Change the background color to bright magenta when hovered */
+    background-color: #ff00ff;
+
+    /* Underline the text when the button is hovered */
+    text-decoration: underline;
+}
+
 .videobox {
     position: relative; /* set outer box's position to relative*/
     width: 100%; /* set outer div's width to 100% */
