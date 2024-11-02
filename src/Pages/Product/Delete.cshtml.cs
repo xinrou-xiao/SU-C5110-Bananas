@@ -6,37 +6,51 @@ using ContosoCrafts.WebSite.Services;
 
 namespace ContosoCrafts.WebSite.Pages.Product
 {
+    // DeleteModel class for handling delete operations on product data
     public class DeleteModel : PageModel
     {
-        /// Default Constructor
+        /// Constructor that initializes the ProductService dependency
         public DeleteModel(JsonFileProductService productService)
         {
             ProductService = productService;
         }
-        // Data Service
+
+        // Service for accessing and manipulating product data
         public JsonFileProductService ProductService { get; }
 
-        // Product data
-        public ProductModel Product { get; private set; }
+        // Holds the product to be deleted, fetched by ID in the OnGet method
+        public ProductModel Product 
+        { 
+            get; private set; 
+        }
 
+        // Handles GET requests to display product information for deletion
         public void OnGet(string id)
         {
-            // Set Product to null and return
+            // If no ID is provided, set Product to null and return early
             if (id == null)
             {
                 Product = null;
                 return;
             }
+
+            // Retrieve the product with the specified ID
             Product = ProductService.GetOneDataById(id);
         }
+
+        // Handles POST requests to delete the specified product by ID
         public IActionResult OnPost(string id)
         {
+            // If the ID is null or empty, return to the same page without performing any action
             if (string.IsNullOrEmpty(id))
             {
                 return Page();
             }
 
+            // Use ProductService to delete the product with the specified ID
             ProductService.DeleteData(id);
+
+            // After deletion, redirect to the Index page
             return RedirectToPage("./Index");
         }
     }
