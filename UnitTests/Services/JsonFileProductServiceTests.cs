@@ -15,6 +15,7 @@ namespace UnitTests.Pages.Product.AddRating
         [SetUp]
         public void TestInitialize()
         {
+            // No setup needed for now, but this method is here for future setup if required
         }
 
         #endregion TestSetup
@@ -34,6 +35,9 @@ namespace UnitTests.Pages.Product.AddRating
 
         // ....
 
+        /// <summary>
+        /// Test AddRating with a null product ID to ensure it returns false.
+        /// </summary>
         [Test]
         public void AddRating_InValid_Product_Null_Should_Return_False()
         {
@@ -46,6 +50,9 @@ namespace UnitTests.Pages.Product.AddRating
             Assert.That(result, Is.EqualTo(false));
         }
 
+        /// <summary>
+        /// Test AddRating with an empty product ID to check that it returns false.
+        /// </summary>
         [Test]
         public void AddRating_InValid_Product_Empty_Should_Return_False()
         {
@@ -58,6 +65,10 @@ namespace UnitTests.Pages.Product.AddRating
             Assert.That(result, Is.EqualTo(false));
         }
 
+        /// <summary>
+        /// Test AddRating with a valid product ID and a rating of 5.
+        /// Ensures that the rating is added successfully.
+        /// </summary>
         [Test]
         public void AddRating_Valid_Product_Rating_5_Should_Return_True()
         {
