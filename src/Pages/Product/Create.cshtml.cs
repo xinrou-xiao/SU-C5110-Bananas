@@ -27,7 +27,7 @@ namespace ContosoCrafts.WebSite.Pages.Product
         /// </summary>
         public void OnGet()
         {
-            ProductModel Product = new ProductModel();
+            Product = new ProductModel();
         }
 
         /// <summary>
