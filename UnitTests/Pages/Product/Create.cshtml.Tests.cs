@@ -16,7 +16,7 @@ using ContosoCrafts.WebSite.Models;
 using System.Collections.Generic;
 using System;
 
-namespace UnitTests.Pages.Product
+namespace UnitTests.Pages.Product.Create
 {
     internal class Create
     {
