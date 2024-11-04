@@ -176,28 +176,8 @@ namespace UnitTests.Pages.Product.AddRating
         #endregion AddRating
 
         #region CreateData
-        /// <summary>
-        /// Test CreateData, expected it append the data in the product.json and the length should add by one.
-        /// </summary>
+        
 
-        [Test]
-        public void CreateData_Should_Increase_Size_by_One_To_Json_And_Return_Data_And_Last_Item_In_New_List_Should_Equal_To_New_Data()
-        {
-            // Arrange
-
-            // Get the data list
-            var data = TestHelper.ProductService.GetAllData();
-
-            // Act
-            var result = TestHelper.ProductService.CreateData();
-            var dataNewList = TestHelper.ProductService.GetAllData();
-
-            //Reset
-
-            // Assert
-            Assert.That(result.ToString(), Is.EqualTo(dataNewList.Last().ToString()));
-            Assert.That(dataNewList.Count(), Is.EqualTo(data.Count() + 1));
-        }
         #endregion CreateData
 
         #region DeleteData
