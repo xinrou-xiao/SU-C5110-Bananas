@@ -14,6 +14,7 @@ using Moq;
 using NUnit.Framework;
 using Microsoft.AspNetCore.Mvc.Routing;
 using System.Collections.Generic;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace UnitTests.Pages.Product.Update
 {
@@ -21,6 +22,7 @@ namespace UnitTests.Pages.Product.Update
     {
         #region TestSetup
 
+        // Setting up the default HTTP context for the tests
         public static DefaultHttpContext httpContextDefault;
         public static IWebHostEnvironment webHostEnvironment;
         public static ModelStateDictionary modelState;
@@ -32,32 +34,43 @@ namespace UnitTests.Pages.Product.Update
 
         public static UpdateModel PageModel;
 
+        // This method runs before each test to initialize the test environment
         [SetUp]
         public void TestInitialize()
         {
+
+            // Creating a new default HTTP context for isolation
             httpContextDefault = new DefaultHttpContext();
 
+            // Initialize a new model state
             modelState = new ModelStateDictionary();
 
+            // Creating the action context with the current HTTP context and empty model state
             actionContext = new ActionContext(httpContextDefault, httpContextDefault.GetRouteData(), new PageActionDescriptor(), modelState);
 
+            // Setting up the metadata provider for models
             modelMetadataProvider = new EmptyModelMetadataProvider();
             viewData = new ViewDataDictionary(modelMetadataProvider, modelState);
+            // Setting up TempData to store data across requests
             tempData = new TempDataDictionary(httpContextDefault, Mock.Of<ITempDataProvider>());
 
+            // Creating the page context with action context and view data
             pageContext = new PageContext(actionContext)
             {
                 ViewData = viewData,
             };
 
+            // Mocking the web host environment for testing purposes
             var mockWebHostEnvironment = new Mock<IWebHostEnvironment>();
             mockWebHostEnvironment.Setup(m => m.EnvironmentName).Returns("Hosting:UnitTestEnvironment");
             mockWebHostEnvironment.Setup(m => m.WebRootPath).Returns("../../../../src/bin/Debug/net7.0/wwwroot");
             mockWebHostEnvironment.Setup(m => m.ContentRootPath).Returns("./data/");
 
+            // Setting up a mock logger for the UpdateModel
             var MockLoggerDirect = Mock.Of<ILogger<UpdateModel>>();
             JsonFileProductService productService = new JsonFileProductService(mockWebHostEnvironment.Object);
 
+            // Creating an instance of the UpdateModel with the mocked services
             PageModel = new UpdateModel(productService)
             {
                 PageContext = pageContext,
@@ -70,6 +83,8 @@ namespace UnitTests.Pages.Product.Update
 
         #region OnGet
 
+
+        // Test case to verify that an invalid product ID redirects to the error page
         [Test]
         public void OnGet_Invalid_Id_Should_Redirect_To_Error()
         {
@@ -77,10 +92,13 @@ namespace UnitTests.Pages.Product.Update
             var result = PageModel.OnGet("invalid-id") as RedirectToPageResult;
 
             // Assert
+            // Check if redirected to error page
             Assert.That(result.PageName, Is.EqualTo("/Error"));
+            // Ensure no product is loaded
             Assert.That(PageModel.Product, Is.Null);
         }
 
+        // Test case to check that a valid product ID returns the correct product
         [Test]
         public void OnGet_Valid_Id_Should_Return_Product_new()
         {
@@ -91,9 +109,13 @@ namespace UnitTests.Pages.Product.Update
             var result = PageModel.OnGet(productId);
 
             // Assert
+            // Verify the result type is PageResult
             Assert.That(result, Is.InstanceOf<PageResult>());
+            // Check if model state is valid
             Assert.That(PageModel.ModelState.IsValid, Is.EqualTo(true));
+            // Ensure the product is loaded
             Assert.That(PageModel.Product, Is.Not.Null);
+            // Confirm the product ID matches
             Assert.That(PageModel.Product.Id, Is.EqualTo(productId));
         }
 
@@ -101,29 +123,36 @@ namespace UnitTests.Pages.Product.Update
 
         #region OnPost
 
+        // Test case to ensure that if the model state is invalid, the page is returned
         [Test]
         public void OnPost_Invalid_Model_Should_Return_Page()
         {
             // Force an invalid error state
+            // Adding a dummy error to simulate invalid state
             PageModel.ModelState.AddModelError("bogus", "Bogus Error");
 
             // Act
             var result = PageModel.OnPost() as PageResult;
 
             // Assert
+            // Check that the model state is invalid
             Assert.That(PageModel.ModelState.IsValid, Is.EqualTo(false));
+            // Ensure the result is not null
             Assert.That(result, Is.Not.Null);
         }
 
-        
 
+        // Test case to check if a valid product can be updated and redirects correctly
         [Test]
         public void OnPost_Valid_Product_Should_Update_And_Redirect_new()
         {
             // Arrange
+            // Setting up a product with updated information
             PageModel.Product = new ProductModel
             {
-                Id = "vogueandcode-ruby-sis-2", // Use an actual product ID from your JSON data
+
+                // Use an actual product ID from your JSON data
+                Id = "vogueandcode-ruby-sis-2",
                 Title = "Updated Title",
                 Description = "Updated Description",
                 Url = "http://example.com",
@@ -141,7 +170,9 @@ namespace UnitTests.Pages.Product.Update
             var result = PageModel.OnPost() as RedirectToPageResult;
 
             // Assert
+            // Check that the model state is valid after posting
             Assert.That(PageModel.ModelState.IsValid, Is.EqualTo(true));
+            // Verify that it redirects to the product index page
             Assert.That(result.PageName, Is.EqualTo("/Product/Index"));
         }
 
