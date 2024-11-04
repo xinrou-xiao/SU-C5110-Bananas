@@ -220,7 +220,7 @@ namespace UnitTests.Pages.Product.AddRating
             var data = TestHelper.ProductService.GetAllData();
 
             // Act
-
+            // pass null to CreateData
             var result = TestHelper.ProductService.CreateData(null);
             var dataNewList = TestHelper.ProductService.GetAllData();
 
