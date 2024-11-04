@@ -91,16 +91,16 @@ namespace UnitTests.Pages.Product.Index
         /// </summary>
         [Test]
 
-        public void OnGet_Valid_Should_Return_Products()
+        public void OnGet_Valid_Should_Return_Products_First_Product_Id_Should_Be_Correct()
         {
             // Arrange: No setup is needed here as OnGet() doesn’t take parameters
 
             // Act: Call the OnGet method to fetch products
             pageModel.OnGet();
 
-            // Assert: Ensure that the model state is valid and products list is populated with 15 items
+            // Assert: Ensure that the model state is valid and first item's id should be jenlooper-cactus
             Assert.That(pageModel.ModelState.IsValid, Is.EqualTo(true));
-            Assert.That(pageModel.Products.ToList().Count, Is.EqualTo(15));
+            Assert.That(pageModel.Products.First().Id, Is.EqualTo("jenlooper-cactus"));
         }
         #endregion OnGet
     }
