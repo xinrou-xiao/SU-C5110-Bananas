@@ -133,8 +133,11 @@ namespace UnitTests.Pages.Product.Create
         {
             // Arrange
             var data = pageModel.ProductService.GetAllData();
+
+            // create arguments
             var product = new ProductModel();
             product.Id = "test-data";
+            // empty genre_dynamic array
             string[] genre_dynamic = new string[] { };
             string[] OTT_dynamic_platform = new string[] { "Netflex", "Prime" };
             string[] OTT_dynamic_url = new string[] { "Netflex.com", "Prime.com" };
@@ -165,8 +168,10 @@ namespace UnitTests.Pages.Product.Create
         {
             // Arrange
             var data = pageModel.ProductService.GetAllData();
+            // create valid arguments
             var product = new ProductModel();
             product.Id = "test-data";
+            // a null is inside genre_dynamic
             string[] genre_dynamic = new string[] { "Action", null, "Shonen" };
             string[] OTT_dynamic_platform = new string[] { "Netflex", "Prime" };
             string[] OTT_dynamic_url = new string[] { "Netflex.com", "Prime.com" };
@@ -196,9 +201,11 @@ namespace UnitTests.Pages.Product.Create
         {
             // Arrange
             var data = pageModel.ProductService.GetAllData();
+            // create valid arguments
             var product = new ProductModel();
             product.Id = "test-data";
             string[] genre_dynamic = new string[] { "Action", "Shonen" };
+            // empty OTT_dynamic_platform array
             string[] OTT_dynamic_platform = new string[] { };
             string[] OTT_dynamic_url = new string[] { "Netflex.com", "Prime.com" };
             string[] OTT_dynamic_icon = new string[] { "Netflex.png", "Prime.png" };
@@ -226,9 +233,11 @@ namespace UnitTests.Pages.Product.Create
         {
             // Arrange
             var data = pageModel.ProductService.GetAllData();
+            // create valid arguments
             var product = new ProductModel();
             product.Id = "test-data";
             string[] genre_dynamic = new string[] { "Action", "Shonen" };
+            // a null inside OTT_dynamic_platform
             string[] OTT_dynamic_platform = new string[] { "Netflex", null };
             string[] OTT_dynamic_url = new string[] { "Netflex.com", "Prime.com" };
             string[] OTT_dynamic_icon = new string[] { "Netflex.png", "Prime.png" };
