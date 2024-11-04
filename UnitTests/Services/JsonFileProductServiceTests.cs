@@ -207,6 +207,30 @@ namespace UnitTests.Pages.Product.AddRating
             Assert.That(dataNewList.Count(), Is.EqualTo(data.Count() + 1));
         }
 
+        /// <summary>
+        /// Test CreateData by passing a null,
+        /// expected it return null, and no change to json file.
+        /// </summary>
+        [Test]
+        public void CreateData_Null_Product_Should_Return_Null_And_No_Update_On_Json_File()
+        {
+            // Arrange
+
+            // Get the data list
+            var data = TestHelper.ProductService.GetAllData();
+
+            // Act
+
+            var result = TestHelper.ProductService.CreateData(null);
+            var dataNewList = TestHelper.ProductService.GetAllData();
+
+            //Reset
+
+            // Assert
+            Assert.That(result, Is.EqualTo(null));
+            Assert.That(dataNewList.Count(), Is.EqualTo(data.Count()));
+        }
+
         #endregion CreateData
 
         #region DeleteData
