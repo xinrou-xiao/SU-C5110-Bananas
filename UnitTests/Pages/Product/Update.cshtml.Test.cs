@@ -83,8 +83,9 @@ namespace UnitTests.Pages.Product.Update
 
         #region OnGet
 
-
-        // Test case to verify that an invalid product ID redirects to the error page
+        /// <summary>
+        /// Test case to verify that an invalid product ID redirects to the error page
+        /// </summary>
         [Test]
         public void OnGet_Invalid_Id_Should_Redirect_To_Error()
         {
@@ -98,7 +99,9 @@ namespace UnitTests.Pages.Product.Update
             Assert.That(PageModel.Product, Is.Null);
         }
 
-        // Test case to check that a valid product ID returns the correct product
+        /// <summary>
+        /// Test case to check that a valid product ID returns the correct product
+        /// </summary>
         [Test]
         public void OnGet_Valid_Id_Should_Return_Product_new()
         {
@@ -123,7 +126,9 @@ namespace UnitTests.Pages.Product.Update
 
         #region OnPost
 
-        // Test case to ensure that if the model state is invalid, the page is returned
+        /// <summary>
+        /// Test case to ensure that if the model state is invalid, the page is returned
+        /// </summary>
         [Test]
         public void OnPost_Invalid_Model_Should_Return_Page()
         {
@@ -142,7 +147,9 @@ namespace UnitTests.Pages.Product.Update
         }
 
 
-        // Test case to check if a valid product can be updated and redirects correctly
+        /// <summary>
+        /// Test case to check if a valid product can be updated and redirects correctly
+        /// </summary>
         [Test]
         public void OnPost_Valid_Product_Should_Update_And_Redirect_new()
         {
