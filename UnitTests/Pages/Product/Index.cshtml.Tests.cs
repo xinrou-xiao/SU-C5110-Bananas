@@ -86,7 +86,9 @@ namespace UnitTests.Pages.Product.Index
         #endregion TestSetup
 
         #region OnGet
-        // This test checks if OnGet() fetches products correctly
+        /// <summary>
+        /// This test checks if OnGet() fetches products correctly
+        /// </summary>
         [Test]
 
         public void OnGet_Valid_Should_Return_Products()
