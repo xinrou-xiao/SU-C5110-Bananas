@@ -70,5 +70,26 @@ namespace UnitTests.Pages.Product.Create
         }
 
         #endregion TestSetup
+
+        #region OnGet
+        /// <summary>
+        /// Initialize the Create page and set Product id to test, it should create a valid Create page and Product id should be test.
+        /// </summary>
+        [Test]
+        public void OnGet_Page_Should_be_Valid_Id_Should_Be_Test()
+        {
+            // Arrange
+
+            // Act
+            pageModel.OnGet();
+            // set up product id to test
+            pageModel.Product.Id = "test"; 
+
+
+            // Assert
+            Assert.That(pageModel.ModelState.IsValid, Is.EqualTo(true));
+            Assert.That(pageModel.Product.Id, Is.EqualTo("test"));
+        }
+        #endregion OnGet
     }
 }
