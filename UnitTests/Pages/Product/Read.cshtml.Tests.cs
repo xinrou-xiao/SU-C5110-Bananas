@@ -21,6 +21,7 @@ namespace UnitTests.Pages.Product.Read
     internal class ReadTests
     {
         #region TestSetup
+        // Setting up necessary components for testing
         public static IUrlHelperFactory urlHelperFactory;
         public static DefaultHttpContext httpContextDefault;
         public static IWebHostEnvironment webHostEnvironment;
@@ -31,41 +32,53 @@ namespace UnitTests.Pages.Product.Read
         public static TempDataDictionary tempData;
         public static PageContext pageContext;
 
+        // Instance of the ReadModel to test
         public static ReadModel pageModel;
 
         [SetUp]
         public void TestInitialize()
         {
+            // Initializing default HTTP context
             httpContextDefault = new DefaultHttpContext()
             {
                 //RequestServices = serviceProviderMock.Object,
             };
 
+            // Initialize the model state dictionary
             modelState = new ModelStateDictionary();
 
+            // Creating action context with the default HTTP context and model state
             actionContext = new ActionContext(httpContextDefault, httpContextDefault.GetRouteData(), new PageActionDescriptor(), modelState);
 
             modelMetadataProvider = new EmptyModelMetadataProvider();
             viewData = new ViewDataDictionary(modelMetadataProvider, modelState);
             tempData = new TempDataDictionary(httpContextDefault, Mock.Of<ITempDataProvider>());
 
+            // Setting up page context with action context and view data
             pageContext = new PageContext(actionContext)
             {
                 ViewData = viewData,
             };
 
+            // Mocking the web host environment for unit tests
             var mockWebHostEnvironment = new Mock<IWebHostEnvironment>();
             mockWebHostEnvironment.Setup(m => m.EnvironmentName).Returns("Hosting:UnitTestEnvironment");
             mockWebHostEnvironment.Setup(m => m.WebRootPath).Returns("../../../../src/bin/Debug/net7.0/wwwroot");
             mockWebHostEnvironment.Setup(m => m.ContentRootPath).Returns("./data/");
 
+            // Mocking the logger for ReadModel
             var MockLoggerDirect = Mock.Of<ILogger<ReadModel>>();
+            // Service to interact with product data
             JsonFileProductService productService;
 
+            // Initializing the product service with the mocked environment
             productService = new JsonFileProductService(mockWebHostEnvironment.Object);
 
+            // Creating an instance of ReadModel for testing
             pageModel = new ReadModel(productService)
             {
+                // Add necessary initializations for the page model if needed
+
             };
         }
 
@@ -89,6 +102,7 @@ namespace UnitTests.Pages.Product.Read
             // Reset
 
             // Assert
+            // Verifying that the model state is valid and the retrieved product matches
             Assert.That(pageModel.ModelState.IsValid, Is.EqualTo(true));
             Assert.That(pageModel.Product.ToString(), Is.EqualTo(data.ToString()));
         }
@@ -103,11 +117,13 @@ namespace UnitTests.Pages.Product.Read
             // Arrange
 
             // Act
+            // Attempting to retrieve a product using an invalid ID
             pageModel.OnGet("test, test, I don't exists.");
 
             // Reset
 
             // Assert
+            // Checking that the model state remains valid and product is null
             Assert.That(pageModel.ModelState.IsValid, Is.EqualTo(true));
             Assert.That(pageModel.Product, Is.EqualTo(null));
         }
@@ -122,11 +138,13 @@ namespace UnitTests.Pages.Product.Read
             // Arrange
 
             // Act
+            // Calling OnGet with a null ID
             pageModel.OnGet(null);
 
             // Reset
 
             // Assert
+            // Verifying that the model state is still valid and product is null
             Assert.That(pageModel.ModelState.IsValid, Is.EqualTo(true));
             Assert.That(pageModel.Product, Is.EqualTo(null));
         }
