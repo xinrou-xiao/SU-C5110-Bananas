@@ -252,6 +252,26 @@ namespace UnitTests.Pages.Product.Create
             Assert.That(result.Last().Id, Is.EqualTo(product.Id));
             Assert.That(result.Last().OTT.Count, Is.EqualTo(1));
         }
+
+        /// <summary>
+        /// Test if page state is invalid, should return Page.
+        /// </summary>
+        [Test]
+        public void OnPost_Invalid_PageModel_State_Should_Be_False_And_Return_A_Page()
+        {
+            // Arrange
+            pageModel.OnGet();
+            pageModel.Product.Title = "";
+            pageModel.ModelState.AddModelError("test", "test");
+
+            // Act
+            var action = pageModel.OnPost(pageModel.Product, new string[] { }, new string[] { }, new string[] { }, new string[] { });
+
+            Console.WriteLine(action);
+            // Assert
+            Assert.That(pageModel.ModelState.IsValid, Is.EqualTo(false));
+            Assert.That(action.GetType().ToString(), Is.EqualTo("Microsoft.AspNetCore.Mvc.RazorPages.PageResult"));
+        }
         #endregion OnPost
     }
 }
