@@ -1,4 +1,5 @@
 ﻿using ContosoCrafts.WebSite.Controllers;
+using Microsoft.AspNetCore.Mvc;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
@@ -18,6 +19,15 @@ namespace UnitTests.Controllers
         {
             // Initialize the ReadController before each test
             _controller = new ReadController();
+        }
+        [Test]
+        public void Read_Should_Return_ViewResult()
+        {
+            // Act
+            var result = _controller.Read();
+
+            // Assert
+            Assert.That(result, Is.InstanceOf<ViewResult>());
         }
     }
 }
