@@ -24,7 +24,19 @@ namespace UnitTests.Models
             // Assert
             Assert.That(ottModel.Platform, Is.EqualTo(expectedPlatform));
         }
+        [Test]
+        public void Url_Property_Should_Be_Set_And_Retrieved_Correctly()
+        {
+            // Arrange
+            var ottModel = new OTTModel();
+            var expectedUrl = "http://netflix.com";
 
-      
+            // Act
+            ottModel.Url = expectedUrl;
+
+            // Assert
+            Assert.That(ottModel.Url, Is.EqualTo(expectedUrl));
+        }
+
     }
 }
