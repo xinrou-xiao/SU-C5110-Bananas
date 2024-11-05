@@ -71,6 +71,18 @@ namespace UnitTests.Models
             // Assert
             Assert.That(displayName, Is.EqualTo(""));
         }
+        [Test]
+        public void DisplayName_Should_Return_Empty_String_For_Unknown_Value()
+        {
+            // Arrange
+            var productType = (ProductTypeEnum)999; // An unknown value not defined in the enum
+
+            // Act
+            var displayName = productType.DisplayName();
+
+            // Assert
+            Assert.That(displayName, Is.EqualTo(""));
+        }
 
     }
 }
