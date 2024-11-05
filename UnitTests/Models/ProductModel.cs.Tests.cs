@@ -155,5 +155,25 @@ namespace UnitTests.Models
             Assert.That(productModel.CommentList, Is.EqualTo(expectedComments));
         }
 
+        [Test]
+        public void ToString_Should_Serialize_ProductModel_To_JSON()
+        {
+            // Arrange
+            var productModel = new ProductModel
+            {
+                Id = "123",
+                Maker = "Contoso",
+                Image = "image.png",
+                Url = "http://example.com",
+                Title = "Product Title",
+                Description = "This is a product description.",
+                Release = "2023",
+                Trailer = "trailer.mp4",
+                OTT = new List<OTTModel> { new OTTModel { Platform = "Netflix" } },
+                Season = 2,
+                CommentList = new List<CommentModel> { new CommentModel { Comment = "Great product!" } }
+            };
+
+        }
     }
 }
