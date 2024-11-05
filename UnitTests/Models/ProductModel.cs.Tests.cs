@@ -63,6 +63,18 @@ namespace UnitTests.Models
             // Assert
             Assert.That(productModel.Url, Is.EqualTo(expectedUrl));
         }
+        [Test]
+        public void Title_Property_Should_Be_Set_And_Retrieved_Correctly()
+        {
+            // Arrange
+            var productModel = new ProductModel();
+            var expectedTitle = "Product Title";
 
+            // Act
+            productModel.Title = expectedTitle;
+
+            // Assert
+            Assert.That(productModel.Title, Is.EqualTo(expectedTitle));
+        }
     }
 }
