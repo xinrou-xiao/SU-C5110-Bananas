@@ -89,6 +89,19 @@ namespace UnitTests.Models
             // Assert
             Assert.That(productModel.Description, Is.EqualTo(expectedDescription));
         }
+        [Test]
+        public void Release_Property_Should_Be_Set_And_Retrieved_Correctly()
+        {
+            // Arrange
+            var productModel = new ProductModel();
+            var expectedRelease = "2023";
+
+            // Act
+            productModel.Release = expectedRelease;
+
+            // Assert
+            Assert.That(productModel.Release, Is.EqualTo(expectedRelease));
+        }
 
     }
 }
