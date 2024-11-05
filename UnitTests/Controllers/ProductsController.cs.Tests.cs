@@ -25,5 +25,11 @@ namespace UnitTests.Controllers
             // Create the controller with the mocked service
             _controller = new ProductsController(_mockProductService.Object);
         }
+        [Test]
+        public void Constructor_Should_Initialize_ProductService()
+        {
+            // Assert
+            Assert.That(_controller.ProductService, Is.Not.Null);
+        }
     }
 }
