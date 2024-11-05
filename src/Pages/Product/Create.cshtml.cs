@@ -42,6 +42,10 @@ namespace ContosoCrafts.WebSite.Pages.Product
         /// <returns></returns>
         public IActionResult OnPost(ProductModel Product, string[] genre_dynamic, string[] OTT_dynamic_platform, string[] OTT_dynamic_url, string[] OTT_dynamic_icon)
         {
+            if (!ModelState.IsValid)
+            {
+                return RedirectToPage("/Product/Error");
+            }
 
             Product.Id = System.Guid.NewGuid().ToString(); // set up id
             Product.Maker = "banana"; // maker is us
