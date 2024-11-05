@@ -42,9 +42,10 @@ namespace ContosoCrafts.WebSite.Pages.Product
         /// <returns></returns>
         public IActionResult OnPost(ProductModel Product, string[] genre_dynamic, string[] OTT_dynamic_platform, string[] OTT_dynamic_url, string[] OTT_dynamic_icon)
         {
+            // Return to update page if model state is invalid
             if (!ModelState.IsValid)
             {
-                return RedirectToPage("/Product/Error");
+                return Page();
             }
 
             Product.Id = System.Guid.NewGuid().ToString(); // set up id
