@@ -76,5 +76,19 @@ namespace UnitTests.Models
             // Assert
             Assert.That(productModel.Title, Is.EqualTo(expectedTitle));
         }
+        [Test]
+        public void Description_Property_Should_Be_Set_And_Retrieved_Correctly()
+        {
+            // Arrange
+            var productModel = new ProductModel();
+            var expectedDescription = "This is a product description.";
+
+            // Act
+            productModel.Description = expectedDescription;
+
+            // Assert
+            Assert.That(productModel.Description, Is.EqualTo(expectedDescription));
+        }
+
     }
 }
