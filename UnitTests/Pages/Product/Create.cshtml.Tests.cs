@@ -254,10 +254,10 @@ namespace UnitTests.Pages.Product.Create
         }
 
         /// <summary>
-        /// Test if page state is invalid, should return Page.
+        /// Test if page state is invalid, should return RedirectToPageResult.
         /// </summary>
         [Test]
-        public void OnPost_Invalid_PageModel_State_Should_Be_False_And_Return_A_Page()
+        public void OnPost_Invalid_PageModel_State_Should_Be_False_And_Return_A_RedirectToPageResult()
         {
             // Arrange
             pageModel.OnGet();
@@ -270,7 +270,7 @@ namespace UnitTests.Pages.Product.Create
             Console.WriteLine(action);
             // Assert
             Assert.That(pageModel.ModelState.IsValid, Is.EqualTo(false));
-            Assert.That(action.GetType().ToString(), Is.EqualTo("Microsoft.AspNetCore.Mvc.RazorPages.PageResult"));
+            Assert.That(action.GetType().ToString(), Is.EqualTo("\"Microsoft.AspNetCore.Mvc.RedirectToPageResult"));
         }
         #endregion OnPost
     }
