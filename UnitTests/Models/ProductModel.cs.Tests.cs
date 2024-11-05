@@ -128,6 +128,19 @@ namespace UnitTests.Models
             // Assert
             Assert.That(productModel.OTT, Is.EqualTo(expectedOTT));
         }
+        [Test]
+        public void Season_Property_Should_Be_Set_And_Retrieved_Correctly()
+        {
+            // Arrange
+            var productModel = new ProductModel();
+            var expectedSeason = 2;
+
+            // Act
+            productModel.Season = expectedSeason;
+
+            // Assert
+            Assert.That(productModel.Season, Is.EqualTo(expectedSeason));
+        }
 
 
     }
