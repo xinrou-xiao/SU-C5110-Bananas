@@ -35,5 +35,18 @@ namespace UnitTests.Models
             // Assert
             Assert.That(displayName, Is.EqualTo("Antiques"));
         }
+        [Test]
+        public void DisplayName_Should_Return_Correct_DisplayName_For_Collectable()
+        {
+            // Arrange
+            var productType = ProductTypeEnum.Collectable;
+
+            // Act
+            var displayName = productType.DisplayName();
+
+            // Assert
+            Assert.That(displayName, Is.EqualTo("Collectables"));
+        }
+
     }
 }
