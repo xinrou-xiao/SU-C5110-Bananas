@@ -20,7 +20,20 @@ namespace UnitTests.Models
             Assert.That(commentModel.Id, Is.Not.Empty);
             Assert.That(System.Guid.TryParse(commentModel.Id, out _), Is.True);
         }
+        [Test]
+        public void Comment_Property_Should_Be_Set_And_Retrieved_Correctly()
+        {
+            // Arrange
+            var commentModel = new CommentModel();
+            var expectedComment = "This is a test comment.";
 
-        
+            // Act
+            commentModel.Comment = expectedComment;
+
+            // Assert
+            Assert.That(commentModel.Comment, Is.EqualTo(expectedComment));
+        }
+
+
     }
 }
