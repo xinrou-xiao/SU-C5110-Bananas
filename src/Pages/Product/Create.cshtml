@@ -61,14 +61,18 @@
                     <label class="white-font">Platform</label>
                     <button class="btn btn-danger custom-btn remove-OTT" type="button">-</button>
                     <input class="form-control" type="text" name="OTT_dynamic_platform" placeholder="Platform" />
+                    <span asp-asp-validation-for="Product.OTT.Platform" class="text-danger"></span>
                 </div>
                 <div class="form-group">
                     <label class="white-font">Url</label>
                     <input class="form-control" type="text" name="OTT_dynamic_url" placeholder="Platform URL" />
+                    <span asp-asp-validation-for="Product.OTT.Url" class="text-danger"></span>
                 </div>
                 <div class="form-group">
                     <label class="white-font">Icon</label>
                     <input class="form-control" type="text" name="OTT_dynamic_icon" placeholder="Platform Icon" />
+                    
+                <span asp-asp-validation-for="Product.OTT.Icon" class="text-danger"></span>
                 </div>
             </div>
         </div>
