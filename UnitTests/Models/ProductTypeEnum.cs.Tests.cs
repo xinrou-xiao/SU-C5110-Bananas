@@ -23,5 +23,17 @@ namespace UnitTests.Models
             // Assert
             Assert.That(displayName, Is.EqualTo("Hand Made Items"));
         }
+        [Test]
+        public void DisplayName_Should_Return_Correct_DisplayName_For_Antique()
+        {
+            // Arrange
+            var productType = ProductTypeEnum.Antique;
+
+            // Act
+            var displayName = productType.DisplayName();
+
+            // Assert
+            Assert.That(displayName, Is.EqualTo("Antiques"));
+        }
     }
 }
