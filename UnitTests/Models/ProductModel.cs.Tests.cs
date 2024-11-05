@@ -115,6 +115,19 @@ namespace UnitTests.Models
             // Assert
             Assert.That(productModel.Trailer, Is.EqualTo(expectedTrailer));
         }
+        [Test]
+        public void OTT_Property_Should_Be_Set_And_Retrieved_Correctly()
+        {
+            // Arrange
+            var productModel = new ProductModel();
+            var expectedOTT = new List<OTTModel> { new OTTModel { Platform = "Netflix" } };
+
+            // Act
+            productModel.OTT = expectedOTT;
+
+            // Assert
+            Assert.That(productModel.OTT, Is.EqualTo(expectedOTT));
+        }
 
 
     }
