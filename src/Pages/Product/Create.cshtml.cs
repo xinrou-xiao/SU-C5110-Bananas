@@ -45,7 +45,7 @@ namespace ContosoCrafts.WebSite.Pages.Product
             // Return to update page if model state is invalid
             if (!ModelState.IsValid)
             {
-                return Page();
+                return RedirectToPage("/Error");
             }
 
             Product.Id = System.Guid.NewGuid().ToString(); // set up id
