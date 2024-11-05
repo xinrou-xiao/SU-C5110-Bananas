@@ -544,3 +544,14 @@ ul {
     /* Underline the text when the button is hovered */
     text-decoration: underline;
 }
+
+.save-btn {
+    background-color: coral;
+    color: #fff;
+    margin-right: 24px;
+}
+.save-btn:hover {
+    background-color: yellow;
+    color: black;
+    text-decoration: underline;
+}
