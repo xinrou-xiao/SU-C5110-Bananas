@@ -59,6 +59,18 @@ namespace UnitTests.Models
             // Assert
             Assert.That(displayName, Is.EqualTo("Commercial goods"));
         }
+        [Test]
+        public void DisplayName_Should_Return_Empty_String_For_Undefined()
+        {
+            // Arrange
+            var productType = ProductTypeEnum.Undefined;
+
+            // Act
+            var displayName = productType.DisplayName();
+
+            // Assert
+            Assert.That(displayName, Is.EqualTo(""));
+        }
 
     }
 }
