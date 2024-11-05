@@ -50,6 +50,19 @@ namespace UnitTests.Models
             // Assert
             Assert.That(productModel.Image, Is.EqualTo(expectedImage));
         }
+        [Test]
+        public void Url_Property_Should_Be_Set_And_Retrieved_Correctly()
+        {
+            // Arrange
+            var productModel = new ProductModel();
+            var expectedUrl = "http://example.com";
+
+            // Act
+            productModel.Url = expectedUrl;
+
+            // Assert
+            Assert.That(productModel.Url, Is.EqualTo(expectedUrl));
+        }
 
     }
 }
