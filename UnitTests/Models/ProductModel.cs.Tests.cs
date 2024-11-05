@@ -102,6 +102,20 @@ namespace UnitTests.Models
             // Assert
             Assert.That(productModel.Release, Is.EqualTo(expectedRelease));
         }
+        [Test]
+        public void Trailer_Property_Should_Be_Set_And_Retrieved_Correctly()
+        {
+            // Arrange
+            var productModel = new ProductModel();
+            var expectedTrailer = "trailer.mp4";
+
+            // Act
+            productModel.Trailer = expectedTrailer;
+
+            // Assert
+            Assert.That(productModel.Trailer, Is.EqualTo(expectedTrailer));
+        }
+
 
     }
 }
