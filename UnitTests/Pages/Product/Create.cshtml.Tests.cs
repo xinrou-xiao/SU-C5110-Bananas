@@ -270,7 +270,7 @@ namespace UnitTests.Pages.Product.Create
             Console.WriteLine(action);
             // Assert
             Assert.That(pageModel.ModelState.IsValid, Is.EqualTo(false));
-            Assert.That(action.GetType().ToString(), Is.EqualTo("\"Microsoft.AspNetCore.Mvc.RedirectToPageResult"));
+            Assert.That(action.GetType().ToString(), Is.EqualTo("Microsoft.AspNetCore.Mvc.RedirectToPageResult"));
         }
         #endregion OnPost
     }
