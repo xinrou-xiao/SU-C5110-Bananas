@@ -37,6 +37,19 @@ namespace UnitTests.Models
             // Assert
             Assert.That(ottModel.Url, Is.EqualTo(expectedUrl));
         }
+        [Test]
+        public void Icon_Property_Should_Be_Set_And_Retrieved_Correctly()
+        {
+            // Arrange
+            var ottModel = new OTTModel();
+            var expectedIcon = "netflix-icon.png";
+
+            // Act
+            ottModel.Icon = expectedIcon;
+
+            // Assert
+            Assert.That(ottModel.Icon, Is.EqualTo(expectedIcon));
+        }
 
     }
 }
