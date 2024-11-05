@@ -141,7 +141,19 @@ namespace UnitTests.Models
             // Assert
             Assert.That(productModel.Season, Is.EqualTo(expectedSeason));
         }
+        [Test]
+        public void CommentList_Property_Should_Be_Set_And_Retrieved_Correctly()
+        {
+            // Arrange
+            var productModel = new ProductModel();
+            var expectedComments = new List<CommentModel> { new CommentModel { Comment = "Great product!" } };
 
+            // Act
+            productModel.CommentList = expectedComments;
+
+            // Assert
+            Assert.That(productModel.CommentList, Is.EqualTo(expectedComments));
+        }
 
     }
 }
