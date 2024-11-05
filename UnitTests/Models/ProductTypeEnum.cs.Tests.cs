@@ -47,6 +47,18 @@ namespace UnitTests.Models
             // Assert
             Assert.That(displayName, Is.EqualTo("Collectables"));
         }
+        [Test]
+        public void DisplayName_Should_Return_Correct_DisplayName_For_Commercial()
+        {
+            // Arrange
+            var productType = ProductTypeEnum.Commercial;
+
+            // Act
+            var displayName = productType.DisplayName();
+
+            // Assert
+            Assert.That(displayName, Is.EqualTo("Commercial goods"));
+        }
 
     }
 }
