@@ -24,6 +24,20 @@ namespace UnitTests.Models
             // Assert
             Assert.That(productModel.Id, Is.EqualTo(expectedId));
         }
+        [Test]
+        public void Maker_Property_Should_Be_Set_And_Retrieved_Correctly()
+        {
+            // Arrange
+            var productModel = new ProductModel();
+            var expectedMaker = "Contoso";
+
+            // Act
+            productModel.Maker = expectedMaker;
+
+            // Assert
+            Assert.That(productModel.Maker, Is.EqualTo(expectedMaker));
+        }
+
 
     }
 }
