@@ -1,6 +1,7 @@
 ﻿using ContosoCrafts.WebSite.Controllers;
 using ContosoCrafts.WebSite.Models;
 using ContosoCrafts.WebSite.Services;
+using Microsoft.AspNetCore.Mvc;
 using Moq;
 using NUnit.Framework;
 using System;
@@ -49,6 +50,23 @@ namespace UnitTests.Controllers
 
             // Assert
             Assert.That(result, Is.EqualTo(expectedProducts));
+        }
+        [Test]
+        public void Patch_Should_Add_Rating_And_Return_Ok()
+        {
+            // Arrange
+            var request = new ProductsController.RatingRequest
+            {
+                ProductId = "1",
+                Rating = 5
+            };
+
+            // Act
+            var result = _controller.Patch(request);
+
+            // Assert
+            _mockProductService.Verify(service => service.AddRating(request.ProductId, request.Rating), Times.Once);
+            Assert.That(result, Is.InstanceOf<OkResult>());
         }
     }
 }
