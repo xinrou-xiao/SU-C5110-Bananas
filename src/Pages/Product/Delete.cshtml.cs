@@ -41,6 +41,12 @@ namespace ContosoCrafts.WebSite.Pages.Product
         // Handles POST requests to delete the specified product by ID
         public IActionResult OnPost(string id)
         {
+            // Return to update page if model state is invalid
+            if (!ModelState.IsValid)
+            {
+                return Page();
+            }
+
             // If the ID is null or empty, return to the same page without performing any action
             if (string.IsNullOrEmpty(id))
             {
