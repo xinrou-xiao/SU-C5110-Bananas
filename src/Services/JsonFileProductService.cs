@@ -124,7 +124,7 @@ namespace ContosoCrafts.WebSite.Services
             var products = GetAllData().ToList();
             var existingProduct = products.FirstOrDefault(x => x.Id.Equals(updatedProduct.Id));
 
-            if (existingProduct !=null)
+            if (existingProduct is not null)
             {
                 existingProduct.Title = updatedProduct.Title;
                 existingProduct.Description = updatedProduct.Description.Trim();
