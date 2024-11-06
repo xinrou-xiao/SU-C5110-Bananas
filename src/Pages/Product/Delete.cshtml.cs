@@ -21,7 +21,7 @@ namespace ContosoCrafts.WebSite.Pages.Product
         // Holds the product to be deleted, fetched by ID in the OnGet method
         public ProductModel Product 
         { 
-            get; private set; 
+            get; set; 
         }
 
         // Handles GET requests to display product information for deletion
