@@ -118,6 +118,31 @@ namespace UnitTests.Pages.Product.Delete
 
         }
 
+        [Test]
+        public void OnPost_ID_Null_Should_Return_Page()
+        {
+            // Arrange
+            PageModel.OnGet("jenlooper-cactus");
+
+            // Act
+            var result = PageModel.OnPost(null);
+
+            // Assert
+            Assert.That(result, Is.TypeOf<PageResult>());
+        }
+
+        [Test]
+        public void OnGet_ID_Null_Should_Set_Product_To_Null()
+        {
+            // Arrange
+
+            // Act
+            PageModel.OnGet(null);
+
+            // Assert
+            Assert.That(PageModel.Product, Is.EqualTo(null));
+        }
+
         #endregion OnGet Tests
 
         #region OnPost Tests
