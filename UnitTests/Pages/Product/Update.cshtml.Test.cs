@@ -185,17 +185,20 @@ namespace UnitTests.Pages.Product.Update
         [Test]
         public void OnPost_Product_Is_Null_Should_Return_Redirect_Page()
         {
-
             // Arrange
+            // Initialize the Product property of the PageModel with a new ProductModel instance.
             PageModel.Product = new ProductModel();
             PageModel.Product.Id = "test";
 
             // Act
+            // Call the OnPost method of the PageModel. This method is expected to handle the post request logic.
             var data = PageModel.OnPost();
 
             // Assert
+            // Verify that the result of the OnPost method is a RedirectToPageResult
             Assert.That(data.GetType().ToString(), Is.EqualTo("Microsoft.AspNetCore.Mvc.RedirectToPageResult"));
         }
+
 
         #endregion OnPost
     }
