@@ -1,10 +1,5 @@
 ﻿using ContosoCrafts.WebSite.Models;
 using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace UnitTests.Models
 {
@@ -36,8 +31,20 @@ namespace UnitTests.Models
 
             // Assert
             Assert.That(comment.Comment, Is.EqualTo(expectedComment), "Expected Comment property to be set and retrieved correctly.");
+        }
 
+        [Test]
+        public void Id_Property_Should_Be_Set_And_Retrieved_Correctly()
+        {
+            // Arrange
+            var comment = new CommentModel();
+            var expectedId = "test-id";
 
+            // Act
+            comment.Id = expectedId;
+
+            // Assert
+            Assert.That(comment.Id, Is.EqualTo(expectedId), "Expected Id property to be set and retrieved correctly.");
         }
     }
 }
