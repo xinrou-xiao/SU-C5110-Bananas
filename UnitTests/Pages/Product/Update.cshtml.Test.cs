@@ -182,6 +182,20 @@ namespace UnitTests.Pages.Product.Update
             // Verify that it redirects to the product index page
             Assert.That(result.PageName, Is.EqualTo("/Product/Index"));
         }
+        [Test]
+        public void OnPost_Product_Is_Null_Should_Return_Redirect_Page()
+        {
+
+            // Arrange
+            PageModel.Product = new ProductModel();
+            PageModel.Product.Id = "test";
+
+            // Act
+            var data = PageModel.OnPost();
+
+            // Assert
+            Assert.That(data.GetType().ToString(), Is.EqualTo("Microsoft.AspNetCore.Mvc.RedirectToPageResult"));
+        }
 
         #endregion OnPost
     }
