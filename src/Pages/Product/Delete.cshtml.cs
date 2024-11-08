@@ -1,6 +1,8 @@
 using System.Collections.Generic;
+
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+
 using ContosoCrafts.WebSite.Models;
 using ContosoCrafts.WebSite.Services;
 
@@ -9,7 +11,10 @@ namespace ContosoCrafts.WebSite.Pages.Product
     // DeleteModel class for handling delete operations on product data
     public class DeleteModel : PageModel
     {
-        /// Constructor that initializes the ProductService dependency
+        /// <summary>
+        /// Constructor that initializes the ProductService dependency.
+        /// </summary>
+        /// <param name="productService">Service for accessing and manipulating product data.</param>
         public DeleteModel(JsonFileProductService productService)
         {
             ProductService = productService;
@@ -19,12 +24,15 @@ namespace ContosoCrafts.WebSite.Pages.Product
         public JsonFileProductService ProductService { get; }
 
         // Holds the product to be deleted, fetched by ID in the OnGet method
-        public ProductModel Product 
-        { 
-            get; set; 
+        public ProductModel Product
+        {
+            get; set;
         }
 
-        // Handles GET requests to display product information for deletion
+        /// <summary>
+        /// Handles GET requests to display product information for deletion.
+        /// </summary>
+        /// <param name="id">The ID of the product to delete.</param>
         public void OnGet(string id)
         {
             // If no ID is provided, set Product to null and return early
@@ -38,7 +46,11 @@ namespace ContosoCrafts.WebSite.Pages.Product
             Product = ProductService.GetOneDataById(id);
         }
 
-        // Handles POST requests to delete the specified product by ID
+        /// <summary>
+        /// Handles POST requests to delete the specified product by ID.
+        /// </summary>
+        /// <param name="id">The ID of the product to delete.</param>
+        /// <returns>Redirects to the Index page after deletion.</returns>
         public IActionResult OnPost(string id)
         {
             // Return to update page if model state is invalid
