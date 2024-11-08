@@ -22,12 +22,11 @@ namespace ContosoCrafts.WebSite.Pages
         /// </summary>
         /// <param name="logger">The logger used for logging information.</param>
         /// <param name="productService">Service to retrieve product data.</param>
-        public IndexModel(ILogger<IndexModel> logger,
-
-            JsonFileProductService productService)
+        public IndexModel(ILogger<IndexModel> logger, JsonFileProductService productService)
         {
             // Assign the logger
             _logger = logger;
+
             // Assign the product service
             ProductService = productService;
         }
@@ -35,12 +34,18 @@ namespace ContosoCrafts.WebSite.Pages
         /// <summary>
         /// Gets the product service used to access product data.
         /// </summary>
-        public JsonFileProductService ProductService { get; }
+        public JsonFileProductService ProductService
+        {
+            get;
+        }
 
         /// <summary>
         /// Collection of products to be displayed on the Index page.
         /// </summary>
-        public IEnumerable<ProductModel> Products { get; private set; }
+        public IEnumerable<ProductModel> Products
+        {
+            get; private set;
+        }
 
         /// <summary>
         /// Method called on GET requests to retrieve product data.
