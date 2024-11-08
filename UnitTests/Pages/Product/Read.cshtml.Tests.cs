@@ -15,12 +15,12 @@ using ContosoCrafts.WebSite.Services;
 using ContosoCrafts.WebSite.Models;
 using System.Collections.Generic;
 
-
 namespace UnitTests.Pages.Product.Read
 {
     internal class ReadTests
     {
         #region TestSetup
+
         // Setting up necessary components for testing
         public static IUrlHelperFactory urlHelperFactory;
         public static DefaultHttpContext httpContextDefault;
@@ -68,6 +68,7 @@ namespace UnitTests.Pages.Product.Read
 
             // Mocking the logger for ReadModel
             var MockLoggerDirect = Mock.Of<ILogger<ReadModel>>();
+
             // Service to interact with product data
             JsonFileProductService productService;
 
@@ -78,16 +79,16 @@ namespace UnitTests.Pages.Product.Read
             pageModel = new ReadModel(productService)
             {
                 // Add necessary initializations for the page model if needed
-
             };
         }
 
         #endregion TestSetup
 
         #region OnGet
+
         /// <summary>
-        /// Test pass the first product id in product.json to OnGet method,
-        ///  Product should be the one we retreived before.
+        /// Test pass the first product id in product.json to OnGet method.
+        /// Product should be the one we retrieved before.
         /// </summary>
         [Test]
         public void OnGet_Valid_Id_Should_Set_Product_To_Correct_Product_And_Page_Is_Valid()
@@ -99,8 +100,6 @@ namespace UnitTests.Pages.Product.Read
             // Act
             pageModel.OnGet(data.Id);
 
-            // Reset
-
             // Assert
             // Verifying that the model state is valid and the retrieved product matches
             Assert.That(pageModel.ModelState.IsValid, Is.EqualTo(true));
@@ -108,19 +107,15 @@ namespace UnitTests.Pages.Product.Read
         }
 
         /// <summary>
-        /// Test pass a not exists id to OnGet method,
-        /// Product should be null, and page should still valid.
+        /// Test passing a non-existing id to the OnGet method.
+        /// Product should be null, and page should still be valid.
         /// </summary>
         [Test]
         public void OnGet_NotExists_Id_Should_Set_Product_To_Null_And_Page_Still_Valid()
         {
-            // Arrange
-
             // Act
             // Attempting to retrieve a product using an invalid ID
-            pageModel.OnGet("test, test, I don't exists.");
-
-            // Reset
+            pageModel.OnGet("test, test, I don't exist.");
 
             // Assert
             // Checking that the model state remains valid and product is null
@@ -129,25 +124,22 @@ namespace UnitTests.Pages.Product.Read
         }
 
         /// <summary>
-        /// Test pass a null to OnGet method,
-        /// Product should be null, and page should still valid.
+        /// Test passing a null ID to the OnGet method.
+        /// Product should be null, and page should still be valid.
         /// </summary>
         [Test]
         public void OnGet_Id_Null_Should_Set_Product_To_Null_And_Page_Still_Valid()
         {
-            // Arrange
-
             // Act
             // Calling OnGet with a null ID
             pageModel.OnGet(null);
-
-            // Reset
 
             // Assert
             // Verifying that the model state is still valid and product is null
             Assert.That(pageModel.ModelState.IsValid, Is.EqualTo(true));
             Assert.That(pageModel.Product, Is.EqualTo(null));
         }
+
         #endregion OnGet
     }
 }
