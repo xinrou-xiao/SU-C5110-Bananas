@@ -18,7 +18,7 @@ namespace UnitTests.Components
         [SetUp]
         public void TestInitialize()
         {
-        // Currently, nothing to initialize, but method is here if setup is needed later
+            // Currently, nothing to initialize, but method is here if setup is needed later
         }
 
         #endregion TestSetup
@@ -34,7 +34,7 @@ namespace UnitTests.Components
             // Rendering the ProductList component and storing the result
             var page = RenderComponent<ProductList>();
 
-            // Get the Cards retrned
+            // Get the cards returned
             var result = page.Markup;
 
             // Assert
