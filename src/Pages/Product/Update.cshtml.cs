@@ -11,10 +11,7 @@ namespace ContosoCrafts.WebSite.Pages.Product
     /// </summary>
     public class UpdateModel : PageModel
     {
-
-        /// <summary>
-        /// Service used to retrieve, update, and save product details.
-        /// </summary>
+        // Service used to retrieve, update, and save product details.
         private readonly JsonFileProductService _productService;
 
         /// <summary>
@@ -33,7 +30,6 @@ namespace ContosoCrafts.WebSite.Pages.Product
         [BindProperty]
         public ProductModel Product { get; set; }
 
-
         /// <summary>
         /// Handles GET requests to load product details for editing by product ID.
         /// </summary>
@@ -41,15 +37,15 @@ namespace ContosoCrafts.WebSite.Pages.Product
         /// <returns>Redirects to error page if product not found, otherwise loads page with product data</returns>
         public IActionResult OnGet(string id)
         {
-
             // Retrieve product details by ID to prepare for editing
             Product = _productService.GetOneDataById(id);
 
             // Redirect to error page if the product is not found
-            if (Product ==null)
+            if (Product == null)
             {
                 return RedirectToPage("/Error");
             }
+
             return Page();
         }
 
@@ -59,7 +55,6 @@ namespace ContosoCrafts.WebSite.Pages.Product
         /// <returns>Redirects to error page if update fails, otherwise navigates to product index page on success</returns>
         public IActionResult OnPost()
         {
-
             // Return to update page if model state is invalid
             if (!ModelState.IsValid)
             {
@@ -68,7 +63,8 @@ namespace ContosoCrafts.WebSite.Pages.Product
 
             // Attempt to update product details with provided data
             var updatedProduct = _productService.UpdateData(Product);
-            if (updatedProduct ==null)
+
+            if (updatedProduct == null)
             {
                 return RedirectToPage("/Error");
             }
