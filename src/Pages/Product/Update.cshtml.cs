@@ -67,7 +67,7 @@ namespace ContosoCrafts.WebSite.Pages.Product
                 return Page();
             }
 
-            product.Genre = new string[] { };
+            product.Genre = null;
             product.OTT = new System.Collections.Generic.List<OTTModel>();
 
             if (genre_dynamic.Length > 0) // if genre_dynamic has data inside
