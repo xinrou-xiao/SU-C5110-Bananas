@@ -43,6 +43,8 @@ namespace ContosoCrafts.WebSite
             services.AddControllers();
             // Register Service
             services.AddTransient<JsonFileProductService>();
+            services.AddHttpContextAccessor();
+            services.AddScoped<CookieService>();
         }
 
         /// <summary>
