@@ -3,9 +3,15 @@ using NUnit.Framework;
 
 namespace UnitTests.Models
 {
+    /// <summary>
+    /// Unit tests for the CommentModel class, ensuring properties and constructors function as expected.
+    /// </summary>
     [TestFixture]
     public class CommentModelTests
     {
+        /// <summary>
+        /// Verifies that the constructor initializes each instance of CommentModel with a unique, non-null, non-empty Id.
+        /// </summary>
         [Test]
         public void Constructor_Should_Initialize_Id_With_Unique_Value()
         {
@@ -19,6 +25,9 @@ namespace UnitTests.Models
             Assert.That(comment1.Id, Is.Not.EqualTo(comment2.Id), "Expected each instance to have a unique Id.");
         }
 
+        /// <summary>
+        /// Tests that the Comment property can be set and retrieved correctly.
+        /// </summary>
         [Test]
         public void Comment_Property_Should_Be_Set_And_Retrieved_Correctly()
         {
@@ -33,6 +42,9 @@ namespace UnitTests.Models
             Assert.That(comment.Comment, Is.EqualTo(expectedComment), "Expected Comment property to be set and retrieved correctly.");
         }
 
+        /// <summary>
+        /// Verifies that the Id property can be set and retrieved as expected.
+        /// </summary>
         [Test]
         public void Id_Property_Should_Be_Set_And_Retrieved_Correctly()
         {
