@@ -73,15 +73,19 @@
             @foreach (var OTT in Model.Product.OTT)
             {
                 <div class="white-font">Platform @i</div>
+
                 <div class="form-group">
                     <input asp-for="@OTT.Icon" type="text" class="form-control" readonly />
                 </div>
+
                 <div class="form-group">
                     <input asp-for="@OTT.Platform" type="text" class="form-control" readonly />
                 </div>
+
                 <div class="form-group">
                     <input asp-for="@OTT.Url" type="text" class="form-control" readonly />
                 </div>
+
                 i++;
             }
         </div>
