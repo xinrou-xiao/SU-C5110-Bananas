@@ -52,8 +52,14 @@ namespace ContosoCrafts.WebSite.Pages.Product
         /// <summary>
         /// Handles POST requests to submit updates to product details.
         /// </summary>
+        /// <param name="product">The product to create.</param>
+        /// <param name="genre_dynamic">Genre string array.</param>
+        /// <param name="OTT_dynamic_platform">Platform name string array.</param>
+        /// <param name="OTT_dynamic_url">Platform URL string array.</param>
+        /// <param name="OTT_dynamic_icon">Platform icon string array.</param>
         /// <returns>Redirects to error page if update fails, otherwise navigates to product index page on success</returns>
-        public IActionResult OnPost()
+        public IActionResult OnPost(ProductModel product, string[] genre_dynamic,
+            string[] OTT_dynamic_platform, string[] OTT_dynamic_url, string[] OTT_dynamic_icon)
         {
             // Return to update page if model state is invalid
             if (!ModelState.IsValid)
@@ -61,8 +67,53 @@ namespace ContosoCrafts.WebSite.Pages.Product
                 return Page();
             }
 
+            product.Genre = new string[] { };
+            product.OTT = new System.Collections.Generic.List<OTTModel>();
+
+            if (genre_dynamic.Length > 0) // if genre_dynamic has data inside
+            {
+                int count_Valid = 0; // to count how many valid gnere are valid
+                for (int i = 0; i < genre_dynamic.Length; i++)
+                {
+                    // if genre is not null, count++
+                    if (genre_dynamic[i] != null)
+                    {
+                        count_Valid++;
+                    }
+                }
+
+                // set up Product.Genre to a correct length's array
+                product.Genre = new string[count_Valid];
+                var index = 0; // position in Gnere
+
+                for (int i = 0; i < genre_dynamic.Length; i++)
+                {
+                    if (genre_dynamic[i] != null)
+                    {
+                        product.Genre[index] = genre_dynamic[i];
+                        index++;
+                    }
+                }
+            }
+
+            // if platform name has data inside
+            if (OTT_dynamic_platform.Length > 0)
+            {
+                for (int i = 0; i < OTT_dynamic_platform.Length; i++)
+                {
+                    if (OTT_dynamic_platform[i] != null) // must at least provide platform name
+                    {
+                        OTTModel OTT = new OTTModel();
+                        OTT.Platform = OTT_dynamic_platform[i];
+                        OTT.Url = OTT_dynamic_url[i];
+                        OTT.Icon = OTT_dynamic_icon[i];
+                        product.OTT.Add(OTT);
+                    }
+                }
+            }
+
             // Attempt to update product details with provided data
-            var updatedProduct = _productService.UpdateData(Product);
+            var updatedProduct = _productService.UpdateData(product);
 
             if (updatedProduct == null)
             {
