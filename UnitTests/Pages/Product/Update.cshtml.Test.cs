@@ -166,6 +166,7 @@ namespace UnitTests.Pages.Product.Update
                 Release = "2023",
                 Trailer = "http://example.com/trailer",
                 Season = 1,
+                Genre = new string[] { "Action" },
                 OTT = new List<OTTModel>
                 {
                     new OTTModel { Icon = "icon1", Platform = "Platform1", Url = "http://platform1.com" }
@@ -173,7 +174,10 @@ namespace UnitTests.Pages.Product.Update
             };
 
             // Act
-            var result = PageModel.OnPost() as RedirectToPageResult;
+            var result = PageModel.OnPost(PageModel.Product, PageModel.Product.Genre,
+                new string[] { PageModel.Product.OTT[0].Platform },
+                new string[] { PageModel.Product.OTT[0].Icon },
+                new string[] { PageModel.Product.OTT[0].Url }) as RedirectToPageResult;
 
             // Assert
             // Check that the model state is valid after posting
@@ -181,6 +185,7 @@ namespace UnitTests.Pages.Product.Update
             // Verify that it redirects to the product index page
             Assert.That(result.PageName, Is.EqualTo("/Product/Index"));
         }
+
         [Test]
         public void OnPost_Product_Is_Null_Should_Return_Redirect_Page()
         {
