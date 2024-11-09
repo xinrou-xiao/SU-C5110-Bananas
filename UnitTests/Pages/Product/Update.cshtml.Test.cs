@@ -207,6 +207,32 @@ namespace UnitTests.Pages.Product.Update
         }
 
 
+        /// <summary>
+        /// Test OnPost by giving a valid product, empty genre_dynamic and valid string array for the rest arguments,
+        /// expected the last item's Id in json should equal to product's Id,
+        /// and the last item's Genre in json should be null,
+        /// </summary>
+        [Test]
+        public void OnPost_Valid_Product_Empty_Genre_Dynamic_Should_Create_Valid_Page_And_Last_Data_Id_Is_Equal_To_New_Added_Product_And_Genre_Is_Null()
+        {
+            // Arrange
+            var data = PageModel._productService.GetAllData().Last();
+
+            // empty genre_dynamic array
+            string[] genre_dynamic = new string[] { };
+            string[] OTT_dynamic_platform = new string[] { "Netflex", "Prime" };
+            string[] OTT_dynamic_url = new string[] { "Netflex.com", "Prime.com" };
+            string[] OTT_dynamic_icon = new string[] { "Netflex.png", "Prime.png" };
+
+            // Act
+            PageModel.OnPost(data, genre_dynamic, OTT_dynamic_platform, OTT_dynamic_url, OTT_dynamic_icon);
+            var result = PageModel._productService.GetAllData().Last();
+
+            // Assert
+            Assert.That(PageModel.ModelState.IsValid, Is.EqualTo(true));
+            Assert.That(data.Id, Is.EqualTo(result.Id));
+            Assert.That(result.Genre, Is.EqualTo(null));
+        }
 
         #endregion OnPost
     }
