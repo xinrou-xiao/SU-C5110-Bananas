@@ -5,35 +5,72 @@ using NUnit.Framework;
 
 namespace UnitTests.Pages.Startup
 {
+    /// <summary>
+    /// Unit tests for the Startup class in the ContosoCrafts.WebSite project.
+    /// Verifies that the application configuration and services setup function as expected.
+    /// </summary>
     public class StartupTests
     {
         #region TestSetup
 
+        /// <summary>
+        /// Initializes any resources or setup required before each test.
+        /// </summary>
         [SetUp]
         public void TestInitialize()
         {
         }
 
+        /// <summary>
+        /// Mock Startup class inheriting from the main application Startup class.
+        /// Allows tests to interact with application configurations without starting the full application.
+        /// </summary>
         public class Startup : ContosoCrafts.WebSite.Startup
         {
             public Startup(IConfiguration config) : base(config) { }
         }
+
         #endregion TestSetup
 
         #region ConfigureServices
+
+        /// <summary>
+        /// Tests if the services are configured correctly by the Startup class.
+        /// Should pass if the web host is created without any issues.
+        /// </summary>
         [Test]
         public void Startup_ConfigureServices_Valid_Defaut_Should_Pass()
         {
+            // Arrange
             var webHost = Microsoft.AspNetCore.WebHost.CreateDefaultBuilder().UseStartup<Startup>().Build();
+
+            // Act
+
+            // Reset
+
+            // Assert
             Assert.That(webHost, Is.Not.Null);
         }
+
         #endregion ConfigureServices
 
         #region Configure
+
+        /// <summary>
+        /// Tests if the application is configured properly when starting up.
+        /// Should pass if the web host is created successfully.
+        /// </summary>
         [Test]
         public void Startup_Configure_Valid_Defaut_Should_Pass()
         {
+            // Arrange
             var webHost = Microsoft.AspNetCore.WebHost.CreateDefaultBuilder().UseStartup<Startup>().Build();
+
+            // Act
+
+            // Reset
+
+            // Assert
             Assert.That(webHost, Is.Not.Null);
         }
 
