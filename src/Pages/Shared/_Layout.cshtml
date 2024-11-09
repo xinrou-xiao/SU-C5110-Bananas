@@ -3,17 +3,20 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Banime</title>  @*Changed website name to Banime *@
+    <title>Banime</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+
     <!-- Add Font Awesome CDN Link for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="~/css/site.css" />
+
     <!-- Added google fonts link-->
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Yellowtail&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="/Images/faviconlogo.ico">
 </head>
+
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-navbar border-bottom box-shadow mb-3">
@@ -21,13 +24,14 @@
                 @*Logo section: Displays the website logo in the header with specified dimensions*@
                 <div class="logo">
                     <img src="/Images/logo.png" alt="Website Logo" style="width: 90px; height: auto;" />
-
                 </div>
+
                 <a class="navbar-brand" asp-area="" asp-page="/Index">Banime</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
@@ -50,8 +54,8 @@
 
             </div>
         </nav>
-
     </header>
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
@@ -70,33 +74,5 @@
     <script src="~/lib/jquery/dist/jquery.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-
-    <script>const toggle = document.getElementById('theme-toggle'); // Get the toggle checkbox
-
-        // Check and apply the saved theme preference on initial load
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme === 'dark') {
-            document.body.classList.add('dark-theme'); // Apply dark theme if saved preference is dark
-            toggle.checked = true; // Set toggle to checked if dark theme was saved
-        }
-
-        // Listen for changes to the toggle switch
-        toggle.addEventListener('change', () => {
-            // Apply dark theme and save preference when toggle is checked
-            if (toggle.checked) {
-                document.body.classList.add('dark-theme');
-                localStorage.setItem('theme', 'dark');
-            }
-
-            // Remove dark theme and save preference as light when toggle is unchecked
-            if (!toggle.checked) {
-                document.body.classList.remove('dark-theme');
-                localStorage.setItem('theme', 'light');
-            }
-        });
-    </script>
-
-
-    @RenderSection("Scripts", required: false)
 </body>
 </html>
