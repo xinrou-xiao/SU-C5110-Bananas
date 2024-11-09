@@ -1,25 +1,26 @@
 ﻿@page
 @model ReadModel
 @{
-    ViewData["Title"] = "Read";
-    @* set page title to Read *@
+    ViewData["Title"] = "Read"; @* set page title to Read *@
 }
 
-
-<div class="container white-font"> <!--content container-->
+<div class="container white-font">
+    <!--content container-->
     @if (Model.Product == null)
     {
         <h5>Sorry, the data you trying to access is not exists.</h5>
         return;
     }
+
     <!--Embeded video with iframe-->
     <div class="videobox">
         <!--for responsive usage-->
         <iframe class="trailer" src="@Model.Product.Trailer" title="Official English Trailer | Naruto, Set 1 | VIZ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
+
     <h2>@Model.Product.Title</h2> <!--Product title-->
     <div class="description">@Model.Product.Description</div><!--Product description-->
-    
+
     <!--tags area, contains release year and genre-->
     <div class="padding-block">
         @if (@Model.Product.Release != null)
@@ -31,8 +32,11 @@
 
         @if (@Model.Product.Season != null)
         {
-            <span class="tags">#@Model.Product.Season Seasons</span>  <!--Product Season year-->
+            <span class="tags">#@Model.Product.Season Seasons</span>
+
+            <!--Product Season year-->
         }
+
         <!--Product genre display as tags one by one-->
         @if (Model.Product.Genre.Length > 0)
         {
@@ -42,13 +46,12 @@
             }
         }
     </div>
-    
-    <div class="padding-block"></div> <!--push some space for better look-->
 
+    <div class="padding-block"></div> <!--push some space for better look-->
     <!--OTT area-->
     <h5>Available platforms</h5><!--OTT title-->
     <div>
-        <!--Product OTT display as clickable icon one by one--> 
+        <!--Product OTT display as clickable icon one by one-->
         @foreach (var ott in Model.Product.OTT)
         {
             <a href="@ott.Url" target="_blank">
