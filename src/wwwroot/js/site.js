@@ -48,3 +48,27 @@ $("#create-OTT").click(function () {
 $(".remove-OTT").click(function () {
     $(this).parent().parent().remove()
 })
+
+/// Dark mode feature
+const toggle = document.getElementById('theme-toggle'); // Get the toggle checkbox
+const savedTheme = localStorage.getItem('theme'); // Check and apply the saved theme preference on initial load
+
+if (savedTheme === 'dark') {
+    document.body.classList.add('dark-theme'); // Apply dark theme if saved preference is dark
+    toggle.checked = true; // Set toggle to checked if dark theme was saved
+}
+
+// Listen for changes to the toggle switch
+toggle.addEventListener('change', () => {
+    // Apply dark theme and save preference when toggle is checked
+    if (toggle.checked) {
+        document.body.classList.add('dark-theme');
+        localStorage.setItem('theme', 'dark');
+    }
+
+    // Remove dark theme and save preference as light when toggle is unchecked
+    if (!toggle.checked) {
+        document.body.classList.remove('dark-theme');
+        localStorage.setItem('theme', 'light');
+    }
+});
