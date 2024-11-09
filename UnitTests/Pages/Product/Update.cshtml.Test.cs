@@ -213,7 +213,7 @@ namespace UnitTests.Pages.Product.Update
         /// and the last item's Genre in json should be null,
         /// </summary>
         [Test]
-        public void OnPost_Valid_Product_Empty_Genre_Dynamic_Should_Create_Valid_Page_And_Last_Data_Id_Is_Equal_To_New_Added_Product_And_Genre_Is_Null()
+        public void OnPost_Valid_Product_Empty_Genre_Dynamic_Should_Create_Valid_Page_And_Last_Data_Id_Is_Equal_To_Updated_Product_And_Genre_Is_Null()
         {
             // Arrange
             var data = PageModel._productService.GetAllData().Last();
