@@ -186,6 +186,9 @@ namespace UnitTests.Pages.Product.Update
             Assert.That(result.PageName, Is.EqualTo("/Product/Index"));
         }
 
+        /// <summary>
+        /// Test pass an not existing product to OnPost, should redirect to error page.
+        /// </summary>
         [Test]
         public void OnPost_Product_Is_Null_Should_Return_Redirect_Page()
         {
@@ -196,12 +199,13 @@ namespace UnitTests.Pages.Product.Update
 
             // Act
             // Call the OnPost method of the PageModel. This method is expected to handle the post request logic.
-            var data = PageModel.OnPost();
+            var data = PageModel.OnPost(PageModel.Product, new string[] { }, new string[] { }, new string[] { }, new string[] { });
 
             // Assert
             // Verify that the result of the OnPost method is a RedirectToPageResult
             Assert.That(data.GetType().ToString(), Is.EqualTo("Microsoft.AspNetCore.Mvc.RedirectToPageResult"));
         }
+
 
 
         #endregion OnPost
