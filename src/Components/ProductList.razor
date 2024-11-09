@@ -52,7 +52,7 @@
                     {
                         <span>Be the first to vote!</span>
                     }
-                    else
+                    @if (voteCount != 0)
                     {
                         <span>@voteCount @voteLabel</span>
                     }
@@ -63,12 +63,13 @@
                         {
                             <span class="fa fa-star checked" @onclick="(e => SubmitRating(currentStar))"></span>
                         }
-                        else
+                        if (i > currentRating)
                         {
                             <span class="fa fa-star" @onclick="(e => SubmitRating(currentStar))"></span>
                         }
                     }
                 </div>
+
             </div>
         </div>
     </div>
