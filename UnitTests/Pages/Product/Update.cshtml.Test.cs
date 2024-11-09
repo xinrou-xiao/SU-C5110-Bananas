@@ -263,6 +263,34 @@ namespace UnitTests.Pages.Product.Update
             Assert.That(result.Genre.Length, Is.EqualTo(2));
         }
 
+        /// <summary>
+        /// Test OnPost by giving a valid product, OTT_dynamic_platform with empty OTT_dynamic_platform
+        /// and valid string array for the rest arguments,
+        /// and the last item's Id in json should equal to updated product's Id,
+        /// and the last item's OTT should be emtpy.
+        /// </summary>
+        [Test]
+        public void OnPost_Valid_Product_Empty_OTT_Dynamic_Platform_Should_Create_Valid_Page_And_Last_Data_Id_Is_Equal_To_Updated_Product_And_OTT_Is_Empty()
+        {
+            // Arrange
+            var data = PageModel._productService.GetAllData().Last();
+
+            string[] genre_dynamic = new string[] { "Action", "Shonen" };
+            // empty OTT_dynamic_platform array
+            string[] OTT_dynamic_platform = new string[] { };
+            string[] OTT_dynamic_url = new string[] { "Netflex.com", "Prime.com" };
+            string[] OTT_dynamic_icon = new string[] { "Netflex.png", "Prime.png" };
+
+            // Act
+            PageModel.OnPost(data, genre_dynamic, OTT_dynamic_platform, OTT_dynamic_url, OTT_dynamic_icon);
+            var result = PageModel._productService.GetAllData().Last();
+
+            // Assert
+            Assert.That(PageModel.ModelState.IsValid, Is.EqualTo(true));
+            Assert.That(result.Id, Is.EqualTo(data.Id));
+            Assert.That(result.OTT.Count, Is.EqualTo(0));
+        }
+
         #endregion OnPost
     }
 }
