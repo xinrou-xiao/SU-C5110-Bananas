@@ -12,7 +12,7 @@ namespace ContosoCrafts.WebSite.Pages.Product
     public class UpdateModel : PageModel
     {
         // Service used to retrieve, update, and save product details.
-        private readonly JsonFileProductService _productService;
+        public readonly JsonFileProductService _productService;
 
         /// <summary>
         /// Constructor for UpdateModel, initializes with productService to manage 
