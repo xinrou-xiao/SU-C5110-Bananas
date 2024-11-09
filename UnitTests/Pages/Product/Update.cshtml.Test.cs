@@ -137,7 +137,7 @@ namespace UnitTests.Pages.Product.Update
             PageModel.ModelState.AddModelError("bogus", "Bogus Error");
 
             // Act
-            var result = PageModel.OnPost() as PageResult;
+            var result = PageModel.OnPost(new ProductModel(), new string[] { }, new string[] { }, new string[] { }, new string[] { }) as PageResult;
 
             // Assert
             // Check that the model state is invalid
@@ -145,7 +145,6 @@ namespace UnitTests.Pages.Product.Update
             // Ensure the result is not null
             Assert.That(result, Is.Not.Null);
         }
-
 
         /// <summary>
         /// Test case to check if a valid product can be updated and redirects correctly
