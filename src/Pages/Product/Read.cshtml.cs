@@ -1,8 +1,4 @@
-using System.Collections.Generic;
-
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-
 using ContosoCrafts.WebSite.Models;
 using ContosoCrafts.WebSite.Services;
 
@@ -43,6 +39,7 @@ namespace ContosoCrafts.WebSite.Pages.Product
                 Product = null;
                 return;
             }
+
             Product = ProductService.GetOneDataById(id);
         }
     }
