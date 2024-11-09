@@ -30,7 +30,7 @@
             <!--Product Release year-->
         }
 
-        @if (@Model.Product.Season != null)
+        @if (@Model.Product.Season != 0)
         {
             <span class="tags">#@Model.Product.Season Seasons</span>
 
@@ -55,7 +55,7 @@
         @foreach (var ott in Model.Product.OTT)
         {
             <a href="@ott.Url" target="_blank">
-                <img class="OTT-Icon" src="@ott.Icon" alt="@ott.Platform"></img>
+                <img class="OTT-Icon" src="@ott.Icon" alt="@ott.Platform">
             </a>
         }
     </div>
