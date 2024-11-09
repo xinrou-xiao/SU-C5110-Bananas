@@ -238,7 +238,7 @@ namespace UnitTests.Pages.Product.Update
         /// <summary>
         /// Test OnPost by giving a valid product, genre_dynamic with an null inside the array
         /// and valid string array for the rest arguments,
-        /// and the last item's Id in json should equal to new product's Id,
+        /// and the last item's Id in json should equal to updated product's Id,
         /// and the last item's Genre in json should have length = 2(skip null).
         /// </summary>
         [Test]
