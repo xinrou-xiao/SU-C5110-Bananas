@@ -99,13 +99,11 @@ namespace ContosoCrafts.WebSite.Services
             // Check to see if the rating exist, if there are none, then create the array
             if(data.Ratings == null)
             {
-                data.Ratings = new int[] { };
+                data.Ratings = new List<int>();
             }
 
             // Add the Rating to the Array
-            var ratings = data.Ratings.ToList();
-            ratings.Add(rating);
-            data.Ratings = ratings.ToArray();
+            data.Ratings.Add(rating);
 
             // Save the data back to the data store
             SaveData(products);
