@@ -41,11 +41,11 @@ namespace ContosoCrafts.WebSite.Models
     // </summary>
     public static class ProductTypeEnumExtensions
     {
-        /// <summary>
-        /// Gets the display name for each ProductTypeEnum value.
-        /// </summary>
-        /// <param name="data">The product type enum value.</param>
-        /// <returns>String representing the display name of the product type.</returns>
+        // <summary>
+        // Gets the display name for each ProductTypeEnum value.
+        // </summary>
+        // <param name="data">The product type enum value.</param>
+        // <returns>String representing the display name of the product type.</returns>
         public static string DisplayName(this ProductTypeEnum data)
         {
             return data switch
