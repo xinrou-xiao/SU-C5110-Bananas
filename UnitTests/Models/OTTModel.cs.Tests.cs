@@ -5,12 +5,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace UnitTests.Models
 {
+    /// <summary>
+    /// Unit tests for the OTTModel class.
+    /// </summary>
     [TestFixture]
     public class OTTModelTests
     {
+        /// <summary>
+        /// Test to verify that the Platform property can be set and retrieved correctly.
+        /// </summary>
         [Test]
         public void Platform_Property_Should_Be_Set_And_Retrieved_Correctly()
         {
