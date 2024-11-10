@@ -45,6 +45,9 @@ namespace UnitTests.Models
             // Assert
             Assert.That(ottModel.Url, Is.EqualTo(expectedUrl));
         }
+        /// <summary>
+        /// Test to verify that the Icon property can be set and retrieved correctly.
+        /// </summary>
         [Test]
         public void Icon_Property_Should_Be_Set_And_Retrieved_Correctly()
         {
