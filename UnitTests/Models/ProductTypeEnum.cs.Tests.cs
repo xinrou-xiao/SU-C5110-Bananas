@@ -92,6 +92,9 @@ namespace UnitTests.Models
             // Assert
             Assert.That(displayName, Is.EqualTo(""));
         }
+        /// <summary>
+        /// Test to verify that the DisplayName method returns an empty string for an unknown value.
+        /// </summary>
         [Test]
         public void DisplayName_Should_Return_Empty_String_For_Unknown_Value()
         {
