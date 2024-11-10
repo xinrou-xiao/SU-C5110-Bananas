@@ -5,19 +5,19 @@ using System.Threading.Tasks;
 
 namespace ContosoCrafts.WebSite.Models
 {
-    /// <summary>
-    /// Types of products available.
-    /// </summary>
+    // <summary>
+    // Types of products available.
+    // </summary>
     public enum ProductTypeEnum
     {
-        /// <summary>
-        /// Default undefined product type.
-        /// </summary>
+        // <summary>
+        // Default undefined product type.
+        // </summary>
         Undefined = 0,
 
-        /// <summary>
-        /// Represents amateur, handmade items.
-        /// </summary>
+        // <summary>
+        // Represents amateur, handmade items.
+        // </summary>
         Amature = 1,
 
         /// <summary>
