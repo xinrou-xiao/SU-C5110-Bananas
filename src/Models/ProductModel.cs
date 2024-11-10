@@ -31,7 +31,7 @@ namespace ContosoCrafts.WebSite.Models
         public string Description { get; set; }
 
         // Map Ratings field in product.json to ProductModel's Ratings array
-        public int Ratings { get; set; }
+        public List<int> Ratings { get; set; }
 
         // Map Genre field in product.json to ProductModel's Genre
         public string[] Genre { get; set; }
