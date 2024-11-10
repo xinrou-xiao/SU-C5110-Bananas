@@ -46,6 +46,9 @@ namespace UnitTests.Models
             Assert.That(displayName, Is.EqualTo("Antiques"));
         }
 
+        /// <summary>
+        /// Test to verify that the DisplayName method returns the correct display name for Collectable.
+        /// </summary>
         [Test]
         public void DisplayName_Should_Return_Correct_DisplayName_For_Collectable()
         {
