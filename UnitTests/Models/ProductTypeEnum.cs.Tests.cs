@@ -77,6 +77,9 @@ namespace UnitTests.Models
             Assert.That(displayName, Is.EqualTo("Commercial goods"));
         }
 
+        /// <summary>
+        /// Test to verify that the DisplayName method returns an empty string for Undefined.
+        /// </summary>
         [Test]
         public void DisplayName_Should_Return_Empty_String_For_Undefined()
         {
