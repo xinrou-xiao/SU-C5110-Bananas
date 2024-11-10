@@ -5,13 +5,17 @@ using ContosoCrafts.WebSite.Services; // Importing the services used for product
 
 namespace ContosoCrafts.WebSite.Controllers // Defining the namespace for the controller
 {
-    // Specifying that this class is an API controller
+    /// <summary>
+    /// API controller for managing products.
+    /// </summary>
     [ApiController]
-    // Defining the route for the controller, which will be prefixed with "products"
     [Route("[controller]")]
     public class ProductsController : ControllerBase // Inheriting from ControllerBase for API functionality
     {
-        // Constructor that takes a JsonFileProductService as a dependency
+        /// <summary>
+        /// Constructor that takes a JsonFileProductService as a dependency.
+        /// </summary>
+        /// <param name="productService">The product service instance.</param>
         public ProductsController(JsonFileProductService productService)
         {
             ProductService = productService; // Assigning the injected service to a property
@@ -20,7 +24,10 @@ namespace ContosoCrafts.WebSite.Controllers // Defining the namespace for the co
         // Property to hold the product service instance
         public JsonFileProductService ProductService { get; }
 
-        // HTTP GET method to retrieve all products
+        /// <summary>
+        /// HTTP GET method to retrieve all products.
+        /// </summary>
+        /// <returns>An IEnumerable of ProductModel.</returns>
         [HttpGet]
         public IEnumerable<ProductModel> Get()
         {
