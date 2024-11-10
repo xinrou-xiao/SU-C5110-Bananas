@@ -36,25 +36,16 @@ namespace ContosoCrafts.WebSite.Models
         // Map Genre field in product.json to ProductModel's Genre
         public string Genre { get; set; }
 
-
-        /// <summary>
-        /// Map Release field in product.json to ProductModel's Release
-        /// </summary>
+        // Map Release field in product.json to ProductModel's Release
         public string Release { get; set; }
 
-        /// <summary>
-        /// Map Trailor field in product.json to ProductModel's Trailor
-        /// </summary>
+        // Map Trailer field in product.json to ProductModel's Trailer
         public string Trailer { get; set; }
 
-        /// <summary>
-        /// Map OTT field in product.json to ProductModel's OTT list
-        /// </summary>
-        public List<OTTModel> OTT { get; set; } = new List<OTTModel> ();
+        // Map OTT field in product.json to ProductModel's OTT list
+        public List<OTTModel> OTT { get; set; } = new List<OTTModel>();
 
-        /// <summary>
-        /// Map Season field in product.json to ProductModel's Season
-        /// </summary>
+        // Map Season field in product.json to ProductModel's Season
         public int Season { get; set; }
 
         // Store the Comments entered by the users on this product
@@ -64,7 +55,6 @@ namespace ContosoCrafts.WebSite.Models
         /// Serialize ProductModel instance to JSON format for display
         /// </summary>
         public override string ToString() => JsonSerializer.Serialize<ProductModel>(this);
-
-
     }
 }
+
