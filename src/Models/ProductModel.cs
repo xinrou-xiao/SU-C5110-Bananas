@@ -34,7 +34,7 @@ namespace ContosoCrafts.WebSite.Models
         public int Ratings { get; set; }
 
         // Map Genre field in product.json to ProductModel's Genre
-        public string Genre { get; set; }
+        public string[] Genre { get; set; }
 
         // Map Release field in product.json to ProductModel's Release
         public string Release { get; set; }
@@ -57,4 +57,3 @@ namespace ContosoCrafts.WebSite.Models
         public override string ToString() => JsonSerializer.Serialize<ProductModel>(this);
     }
 }
-
