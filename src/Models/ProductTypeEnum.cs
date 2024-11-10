@@ -36,12 +36,11 @@ namespace ContosoCrafts.WebSite.Models
         Commercial = 55,
     }
 
-    /// <summary>
-    /// Extension methods for the ProductTypeEnum to provide additional functionality.
-    /// </summary>
+    // <summary>
+    // Extension methods for the ProductTypeEnum to provide additional functionality.
+    // </summary>
     public static class ProductTypeEnumExtensions
     {
-
         /// <summary>
         /// Gets the display name for each ProductTypeEnum value.
         /// </summary>
