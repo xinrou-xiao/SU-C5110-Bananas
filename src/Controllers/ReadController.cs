@@ -2,7 +2,9 @@
 
 namespace ContosoCrafts.WebSite.Controllers // Defining the namespace for the controller
 {
-    // Controller for handling read page requests
+    /// <summary>
+    /// Controller for handling read page requests.
+    /// </summary>
     public class ReadController : Controller
     {
         /// <summary>
