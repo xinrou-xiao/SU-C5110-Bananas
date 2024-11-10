@@ -8,9 +8,15 @@ using System.Threading.Tasks;
 
 namespace UnitTests.Models
 {
+    /// <summary>
+    /// Unit tests for the ProductTypeEnum class and its extension methods.
+    /// </summary>
     [TestFixture]
     public class ProductTypeEnumTests
     {
+        /// <summary>
+        /// Test to verify that the DisplayName method returns the correct display name for Amature.
+        /// </summary>
         [Test]
         public void DisplayName_Should_Return_Correct_DisplayName_For_Amature()
         {
@@ -23,6 +29,10 @@ namespace UnitTests.Models
             // Assert
             Assert.That(displayName, Is.EqualTo("Hand Made Items"));
         }
+
+        /// <summary>
+        /// Test to verify that the DisplayName method returns the correct display name for Antique.
+        /// </summary>
         [Test]
         public void DisplayName_Should_Return_Correct_DisplayName_For_Antique()
         {
@@ -35,6 +45,7 @@ namespace UnitTests.Models
             // Assert
             Assert.That(displayName, Is.EqualTo("Antiques"));
         }
+
         [Test]
         public void DisplayName_Should_Return_Correct_DisplayName_For_Collectable()
         {
