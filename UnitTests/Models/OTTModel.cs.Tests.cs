@@ -29,6 +29,9 @@ namespace UnitTests.Models
             // Assert
             Assert.That(ottModel.Platform, Is.EqualTo(expectedPlatform));
         }
+        /// <summary>
+        /// Test to verify that the Url property can be set and retrieved correctly.
+        /// </summary>
         [Test]
         public void Url_Property_Should_Be_Set_And_Retrieved_Correctly()
         {
