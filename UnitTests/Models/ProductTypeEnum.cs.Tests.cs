@@ -61,6 +61,9 @@ namespace UnitTests.Models
             // Assert
             Assert.That(displayName, Is.EqualTo("Collectables"));
         }
+        /// <summary>
+        /// Test to verify that the DisplayName method returns the correct display name for Commercial.
+        /// </summary>
         [Test]
         public void DisplayName_Should_Return_Correct_DisplayName_For_Commercial()
         {
@@ -73,6 +76,7 @@ namespace UnitTests.Models
             // Assert
             Assert.That(displayName, Is.EqualTo("Commercial goods"));
         }
+
         [Test]
         public void DisplayName_Should_Return_Empty_String_For_Undefined()
         {
