@@ -35,7 +35,11 @@ namespace ContosoCrafts.WebSite.Controllers // Defining the namespace for the co
             return ProductService.GetAllData();
         }
 
-        // HTTP PATCH method to update the rating of a product
+        /// <summary>
+        /// HTTP PATCH method to update the rating of a product.
+        /// </summary>
+        /// <param name="request">The rating request containing product ID and rating.</param>
+        /// <returns>An ActionResult indicating the result of the operation.</returns>
         [HttpPatch]
         public ActionResult Patch([FromBody] RatingRequest request)
         {
@@ -46,11 +50,14 @@ namespace ContosoCrafts.WebSite.Controllers // Defining the namespace for the co
             return Ok();
         }
 
-        // Inner class to represent the request body for rating updates
+        /// <summary>
+        /// Inner class to represent the request body for rating updates.
+        /// </summary>
         public class RatingRequest
         {
             // Property to hold the product ID
             public string ProductId { get; set; }
+
             // Property to hold the rating value
             public int Rating { get; set; }
         }
