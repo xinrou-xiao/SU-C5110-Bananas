@@ -20,19 +20,19 @@ namespace ContosoCrafts.WebSite.Models
         // </summary>
         Amature = 1,
 
-        /// <summary>
-        /// Represents antique items.
-        /// </summary>
+        // <summary>
+        // Represents antique items.
+        // </summary>
         Antique = 5,
 
-        /// <summary>
-        /// Represents collectible items.
-        /// </summary>
+        // <summary>
+        // Represents collectible items.
+        // </summary>
         Collectable = 130,
 
-        /// <summary>
-        /// Represents commercial goods.
-        /// </summary>
+        // <summary>
+        // Represents commercial goods.
+        // </summary>
         Commercial = 55,
     }
 
