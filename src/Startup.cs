@@ -3,12 +3,10 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-
 using ContosoCrafts.WebSite.Services;
 
 namespace ContosoCrafts.WebSite
 {
-
     /// <summary>
     /// Configures services and the request pipeline for the web application.
     /// </summary>
@@ -27,21 +25,25 @@ namespace ContosoCrafts.WebSite
         // Configuration property
         public IConfiguration Configuration { get; }
 
-        /// <summary>
-        /// Method called by the runtime to add services to the DI container.
-        /// </summary>
+       /// <summary>
+       /// Method called by the runtime to add services to the DI container. 
+       /// </summary>
+       /// <param name="services">Service collection for dependency</param>
         public void ConfigureServices(IServiceCollection services)
         {
-            // Add Razor Pages
-            // Enable runtime compilation
+            // Add Razor Pages with runtime compilation
             services.AddRazorPages().AddRazorRuntimeCompilation();
+
             // Add Blazor support
             services.AddServerSideBlazor();
+
             // Add HTTP Client
             services.AddHttpClient();
+
             // Add MVC controllers
             services.AddControllers();
-            // Register Service
+
+            // Register application Service
             services.AddTransient<JsonFileProductService>();
             services.AddHttpContextAccessor();
             services.AddScoped<CookieService>();
@@ -61,16 +63,19 @@ namespace ContosoCrafts.WebSite
             }
                 // Production error handler
                 app.UseExceptionHandler("/Error");
+
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
 
             // Redirect HTTP requests to HTTPS
             app.UseHttpsRedirection();
+
             // Enable serving static files
             app.UseStaticFiles();
 
             // Set up request routing
             app.UseRouting();
+
             // Enable authorization middleware
             app.UseAuthorization();
 
@@ -79,11 +84,14 @@ namespace ContosoCrafts.WebSite
             {
                 // Route for Razor Pages
                 endpoints.MapRazorPages();
+
                 // Route for API controllers
                 endpoints.MapControllers();
+
                 // Route for Blazor Hub
                 endpoints.MapBlazorHub();
 
+                // Uncomment to provide custom endpoint for product data
                 // endpoints.MapGet("/products", (context) => 
                 // {
                 //     var products = app.ApplicationServices.GetService<JsonFileProductService>().GetProducts();
