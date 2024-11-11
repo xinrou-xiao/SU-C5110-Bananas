@@ -1,5 +1,4 @@
 ﻿using System.Linq;
-
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Routing;
@@ -9,20 +8,20 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Logging;
-
 using Moq;
-
 using NUnit.Framework;
-
 using ContosoCrafts.WebSite.Pages.Product;
 using ContosoCrafts.WebSite.Services;
 
 namespace UnitTests.Pages.Product.Index
 {
+    /// <summary>
+    /// Unit tests for the Index page of the Product section.
+    /// </summary>
     public class IndexTests
     {
         #region TestSetup
-        // Declared the necessary components for setting up the test environment
+        // Components required for setting up the test environment
         public static IUrlHelperFactory urlHelperFactory;
         public static DefaultHttpContext httpContextDefault;
         public static IWebHostEnvironment webHostEnvironment;
@@ -33,24 +32,22 @@ namespace UnitTests.Pages.Product.Index
         public static TempDataDictionary tempData;
         public static PageContext pageContext;
 
-        // Define a PageModel instance for testing the Index page
+        // PageModel instance for testing the Index page
         public static IndexModel pageModel;
 
-        // This method initializes the necessary setup before each test
+        /// <summary>
+        /// Initializes the necessary setup before each test.
+        /// </summary>
         [SetUp]
         public void TestInitialize()
         {
-
-            // Create a new HttpContext instance for simulating HTTP requests
-            httpContextDefault = new DefaultHttpContext()
-            {
-                //RequestServices = serviceProviderMock.Object,
-            };
+            // Create a new HttpContext instance to simulate HTTP requests
+            httpContextDefault = new DefaultHttpContext();
 
             // Initialize a new ModelStateDictionary instance
             modelState = new ModelStateDictionary();
 
-            // Setup ActionContext with httpContext and route data
+            // Setup ActionContext with HttpContext and route data
             actionContext = new ActionContext(httpContextDefault, httpContextDefault.GetRouteData(), new PageActionDescriptor(), modelState);
 
             // Initialize a model metadata provider and set up ViewData and TempData
@@ -78,27 +75,24 @@ namespace UnitTests.Pages.Product.Index
             productService = new JsonFileProductService(mockWebHostEnvironment.Object);
 
             // Instantiate the IndexModel with the product service
-            pageModel = new IndexModel(productService)
-            {
-            };
+            pageModel = new IndexModel(productService);
         }
 
         #endregion TestSetup
 
         #region OnGet
         /// <summary>
-        /// This test checks if OnGet() fetches products correctly
+        /// Tests that OnGet() fetches products correctly and verifies the first product's ID.
         /// </summary>
         [Test]
-
         public void OnGet_Valid_Should_Return_Products_First_Product_Id_Should_Be_Correct()
         {
-            // Arrange: No setup is needed here as OnGet() doesn’t take parameters
+            // Arrange: No additional setup is needed as OnGet() doesn’t take parameters
 
             // Act: Call the OnGet method to fetch products
             pageModel.OnGet();
 
-            // Assert: Ensure that the model state is valid and first item's id should be jenlooper-cactus
+            // Assert: Verify that the model state is valid and the first product's ID is as expected
             Assert.That(pageModel.ModelState.IsValid, Is.EqualTo(true));
             Assert.That(pageModel.Products.First().Id, Is.EqualTo("jenlooper-cactus"));
         }
