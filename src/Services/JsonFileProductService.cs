@@ -10,28 +10,47 @@ using Microsoft.AspNetCore.Hosting;
 
 namespace ContosoCrafts.WebSite.Services
 {
-   public class JsonFileProductService
+    /// <summary>
+    /// Service for handling operations related to products stored in a JSON file.
+    /// </summary>
+    public class JsonFileProductService
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="JsonFileProductService"/> class.
+        /// </summary>
+        /// <param name="webHostEnvironment">Provides information about the web hosting environment.</param>
         public JsonFileProductService(IWebHostEnvironment webHostEnvironment)
         {
             WebHostEnvironment = webHostEnvironment;
         }
 
+        /// <summary>
+        /// Gets the web host environment.
+        /// </summary>
         public IWebHostEnvironment WebHostEnvironment { get; }
 
+        /// <summary>
+        /// Gets the path to the JSON file containing product data.
+        /// </summary>
         private string JsonFileName
         {
             get { return Path.Combine(WebHostEnvironment.WebRootPath, "data", "products.json"); }
         }
 
+        /// <summary>
+        /// Retrieves all product data from the JSON file.
+        /// </summary>
+        /// <returns>An enumerable collection of <see cref="ProductModel"/> objects.</returns>
         public IEnumerable<ProductModel> GetAllData()
         {
-            using(var jsonFileReader = File.OpenText(JsonFileName))
+            // Open the JSON file for reading
+            using (var jsonFileReader = File.OpenText(JsonFileName))
             {
+                // Deserialize the JSON content into an array of ProductModel objects
                 return JsonSerializer.Deserialize<ProductModel[]>(jsonFileReader.ReadToEnd(),
                     new JsonSerializerOptions
                     {
-                        PropertyNameCaseInsensitive = true
+                        PropertyNameCaseInsensitive = true // Allows case-insensitive property matching
                     });
             }
         }
