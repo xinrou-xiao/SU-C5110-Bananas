@@ -1,7 +1,7 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.AspNetCore.Hosting;
-
 using NUnit.Framework;
+using Moq;
 
 namespace UnitTests.Pages.Startup
 {
@@ -75,5 +75,29 @@ namespace UnitTests.Pages.Startup
         }
 
         #endregion Configure
+
+        #region Configuration 
+
+        /// <summary>
+        /// Tests that the Configuration property is set correctly in the Startup class.
+        /// This verifies that the IConfiguration object passed into the constructor
+        /// is assigned to the Configuration property as expected.
+        /// </summary>
+        [Test]
+        public void Startup_Configuration_Should_Be_Set()
+        {
+            // Arrange - Create a mock IConfiguration
+            var configMock = new Mock<IConfiguration>();
+
+            // Act
+            var startup = new Startup(configMock.Object);
+
+            // Reset
+
+            // Assert - Configuration in startup should be set to configMock 
+            Assert.That(startup.Configuration, Is.EqualTo(configMock.Object));
+        }
+
+        #endregion Configuration
     }
 }
