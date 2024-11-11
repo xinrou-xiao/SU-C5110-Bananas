@@ -1,19 +1,16 @@
 using System.Diagnostics;
-
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 
 namespace ContosoCrafts.WebSite.Pages
 {
-
     /// <summary>
     /// Model for handling error pages and displaying error information.
     /// </summary>
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public class ErrorModel : PageModel
     {
-
         /// <summary>
         /// Gets or sets the unique identifier for the current request.
         /// </summary>
