@@ -11,11 +11,6 @@
      <form id="deleteForm" method="post">
         <input type="hidden" asp-for="Product.Id" />
 
-        <div class="form-group">
-            <label class="white-font" asp-for="Product.Title">Title</label>
-            <input asp-for="Product.Title" class="form-control" readonly />
-        </div>
-
         @Html.HiddenFor(x => x.Product.Id)
         <input type="hidden" asp-for="Product.Id" />
         <input type="hidden" asp-for="Product.Maker" />
