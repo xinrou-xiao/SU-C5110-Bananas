@@ -17,27 +17,37 @@ namespace UnitTests
     /// </summary>
     public static class TestHelper
     {
-        // Mock of the IWebHostEnvironment to simulate the web hosting environment.
+        // Mock of the IWebHostEnvironment to simulate the web hosting environment
         public static Mock<IWebHostEnvironment> MockWebHostEnvironment;
-        // Factory to create URL helpers for routing purposes.
+
+        // to create URL helpers for routing purposes
         public static IUrlHelperFactory UrlHelperFactory;
-        // Default HttpContext used in the tests.
+
+        // Default HttpContext used in the tests
         public static DefaultHttpContext HttpContextDefault;
-        // Actual IWebHostEnvironment used in the application.
+
+        // Actual IWebHostEnvironment used in the application
         public static IWebHostEnvironment WebHostEnvironment;
-        // Model state to track validation errors for the model binding.
+
+        // Model state to track validation errors for the model binding
         public static ModelStateDictionary ModelState;
-        // Action context that holds the request context for a particular action method.
+
+        // Action context that holds the request context for a particular action method
         public static ActionContext ActionContext;
-        // Provider for model metadata (metadata about model properties, etc.).
+
+        // Provider for model metadata 
         public static EmptyModelMetadataProvider ModelMetadataProvider;
-        // ViewData dictionary to hold data that needs to be passed to the view.
+
+        // ViewData dictionary to hold data that needs to be passed to the view
         public static ViewDataDictionary ViewData;
-        // TempData dictionary for storing temporary data between requests.
+
+        // TempData dictionary for storing temporary data between requests
         public static TempDataDictionary TempData;
-        // Page context that provides all necessary information for Razor Pages processing.
+
+        // Page context that provides all necessary information for Razor Pages processing
         public static PageContext PageContext;
-        // Service for interacting with product data (mocked as needed in tests).
+
+        // Service for interacting with product data (mocked as needed in tests)
         public static JsonFileProductService ProductService;
 
         /// <summary>
@@ -45,23 +55,26 @@ namespace UnitTests
         /// </summary>
         static TestHelper()
         {
-            // Set up the mock for IWebHostEnvironment to simulate web host environment details.
+            // Set up the mock for IWebHostEnvironment to simulate web host environment details
             MockWebHostEnvironment = new Mock<IWebHostEnvironment>();
             MockWebHostEnvironment.Setup(m => m.EnvironmentName).Returns("Hosting:UnitTestEnvironment");
             MockWebHostEnvironment.Setup(m => m.WebRootPath).Returns(TestFixture.DataWebRootPath);
             MockWebHostEnvironment.Setup(m => m.ContentRootPath).Returns(TestFixture.DataContentRootPath);
 
-            // Initialize the default HttpContext with a trace identifier.
+            // Initialize the default HttpContext with a trace identifier
             HttpContextDefault = new DefaultHttpContext()
             {
                 TraceIdentifier = "trace",
             };
+
             HttpContextDefault.HttpContext.TraceIdentifier = "trace";
 
-            // Create a new instance of ModelStateDictionary for tracking model state.
+            // Create a new instance of ModelStateDictionary for tracking model state
             ModelState = new ModelStateDictionary();
-            // Create a new ActionContext that holds the current request context, including route data and model state.
+
+            // Create a new ActionContext that holds the current request context, including route data and model state
             ActionContext = new ActionContext(HttpContextDefault, HttpContextDefault.GetRouteData(), new PageActionDescriptor(), ModelState);
+
             // Create a provider for model metadata (empty in this case).
             ModelMetadataProvider = new EmptyModelMetadataProvider();
             ViewData = new ViewDataDictionary(ModelMetadataProvider, ModelState);
