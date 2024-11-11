@@ -29,6 +29,8 @@ namespace ContosoCrafts.WebSite
         /// <returns>An IHostBuilder instance configured for the application.</returns>
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
+
+                // Configure the web host to use the default settings and specified Startup class
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     // Specify the Startup class to be used for configuring services and the request pipeline
