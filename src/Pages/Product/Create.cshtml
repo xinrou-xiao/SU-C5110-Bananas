@@ -7,50 +7,50 @@
 <div class="container white-font">
     <h2 class="white-font">Create new anime</h2>
     <form method="post"> <!--Create form-->
-        <div asp-validation-asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
         <div class="form-group"> <!--Anime Title input group-->
             <label class="white-font" asp-for="Product.Title">Title</label><small>*</small>
-            <input type="text" class="form-control" asp-for="Product.Title" placeholder="Title" required/>
-            <span asp-asp-validation-for="Product.Title" class="text-danger"></span>
+            <input type="text" class="form-control" asp-for="Product.Title" placeholder="Title" required />
+            <span asp-validation-for="Product.Title" class="text-danger"></span>
         </div>
 
         <div class="form-group"> <!--Anime Description input group-->
             <label class="white-font" asp-for="Product.Description">Description</label>
             <textarea class="form-control" asp-for="Product.Description" placeholder="Descrption"></textarea>
-            <span asp-asp-validation-for="Product.Description" class="text-danger"></span>
+            <span asp-validation-for="Product.Description" class="text-danger"></span>
         </div>
 
         <div class="form-group"> <!--Anime Image input group-->
             <label class="white-font" asp-for="Product.Image">Image</label>
             <input class="form-control" type="text" asp-for="Product.Image" placeholder="image" />
-            <span asp-asp-validation-for="Product.Image" class="text-danger"></span>
+            <span asp-validation-for="Product.Image" class="text-danger"></span>
         </div>
 
         <div class="form-group"> <!--Anime Url input group-->
             <label class="white-font" asp-for="Product.Url">Url</label>
             <input class="form-control" type="text" asp-for="Product.Url" placeholder="related webstie URL" />
-            <span asp-asp-validation-for="Product.Url" class="text-danger"></span>
+            <span asp-validation-for="Product.Url" class="text-danger"></span>
         </div>
 
         <div class="row form-group">
             <div class="col"> <!--Anime Release input group-->
                 <label class="white-font" asp-for="Product.Release">Release Year</label>
                 <input class="form-control" type="number" asp-for="Product.Release" placeholder="Release year" min="1000" max="9999" />
-                <span asp-asp-validation-for="Product.Release" class="text-danger"></span>
+                <span asp-validation-for="Product.Release" class="text-danger"></span>
             </div>
 
             <div class="col"> <!--Anime Season input group-->
                 <label class="white-font" asp-for="Product.Season">Total Season</label>
                 <input class="form-control" type="number" asp-for="Product.Season" placeholder="Total Season" min="1" value="1" />
-                <span asp-asp-validation-for="Product.Season" class="text-danger"></span>
+                <span asp-validation-for="Product.Season" class="text-danger"></span>
             </div>
         </div>
 
         <div class="form-group"> <!--Anime Trailer input group-->
             <label class="white-font" asp-for="Product.Trailer">Trailer URL</label>
             <input class="form-control" type="text" asp-for="Product.Trailer" placeholder="Trailer URL" />
-            <span asp-asp-validation-for="Product.Trailer" class="text-danger"></span>
+            <span asp-validation-for="Product.Trailer" class="text-danger"></span>
         </div>
 
         <div class="form-group"> <!--Anime Genre input group-->
@@ -59,7 +59,7 @@
             <div class="form-group form-inline">
                 <input class="form-control" type="text" name="genre_dynamic" placeholder="Genre" />
                 <button class="btn btn-danger custom-btn remove-genre" type="button">-</button>
-                <span asp-asp-validation-for="Product.Genre" class="text-danger"></span>
+                <span asp-validation-for="Product.Genre" class="text-danger"></span>
             </div>
         </div>
 
@@ -72,20 +72,20 @@
                     <label class="white-font">Platform</label>
                     <button class="btn btn-danger custom-btn remove-OTT" type="button">-</button>
                     <input class="form-control" type="text" name="OTT_dynamic_platform" placeholder="Platform" />
-                    <span asp-asp-validation-for="Product.OTT.Platform" class="text-danger"></span>
+                    <span asp-validation-for="@Model.Product.OTT[0].Platform" class="text-danger"></span>
                 </div>
 
                 <div class="form-group">
                     <label class="white-font">Url</label>
                     <input class="form-control" type="text" name="OTT_dynamic_url" placeholder="Platform URL" />
-                    <span asp-asp-validation-for="Product.OTT.Url" class="text-danger"></span>
+                    <span asp-validation-for="@Model.Product.OTT[0].Url" class="text-danger"></span>
                 </div>
 
                 <div class="form-group">
                     <label class="white-font">Icon</label>
                     <input class="form-control" type="text" name="OTT_dynamic_icon" placeholder="Platform Icon" />
-                    
-                <span asp-asp-validation-for="Product.OTT.Icon" class="text-danger"></span>
+
+                    <span asp-validation-for="@Model.Product.OTT[0].Icon" class="text-danger"></span>
                 </div>
             </div>
         </div>
