@@ -1,9 +1,6 @@
 using System.Linq;
-
 using Microsoft.AspNetCore.Mvc;
-
 using NUnit.Framework;
-
 using ContosoCrafts.WebSite.Models;
 
 namespace UnitTests.Pages.Product.AddRating
@@ -105,7 +102,6 @@ namespace UnitTests.Pages.Product.AddRating
             Assert.That(result, Is.EqualTo(false));
         }
 
-
         /// <summary>
         /// Test with rating value less than 0, expect to return false
         /// </summary>
@@ -151,7 +147,6 @@ namespace UnitTests.Pages.Product.AddRating
         /// create an array of rating, add the rating to array, function should return true,
         /// the length should equal to 1 and last rating should be 3.
         /// </summary>
-
         [Test]
         public void AddRating_Rating_In_Json_Is_Null_Should_Create_Array_And_Add_Rate_And_Retrun_True()
         {
@@ -173,14 +168,15 @@ namespace UnitTests.Pages.Product.AddRating
             Assert.That(dataNewList.Ratings.Count, Is.EqualTo(1));
             Assert.That(dataNewList.Ratings.Last(), Is.EqualTo(3));
         }
+
         #endregion AddRating
 
         #region CreateData
+
         /// <summary>
         /// Test CreateData by passing a normal product,
         /// expected it append the data in the product.json and the length should add by one.
         /// </summary>
-
         [Test]
         public void CreateData_Should_Increase_Size_by_One_To_Json_And_Return_Data_And_Last_Item_In_New_List_Should_Equal_To_New_Data()
         {
@@ -234,11 +230,11 @@ namespace UnitTests.Pages.Product.AddRating
         #endregion CreateData
 
         #region DeleteData
+
         /// <summary>
         /// Test DeleteData, expected it to delete the data from the product.json 
         /// and the length should decrease by one.
         /// </summary>
-
         [Test]
         public void DeleteData_Valid_Id_Should_Decrease_Size_By_One_And_Return_Deleted_Data()
         {
@@ -257,6 +253,7 @@ namespace UnitTests.Pages.Product.AddRating
             Assert.That(result.ToString(), Is.EqualTo(data.Last().ToString()));
             Assert.That(dataNewList.Count(), Is.EqualTo(data.Count() - 1));
         }
+
         #endregion DeleteData
     }
 }
