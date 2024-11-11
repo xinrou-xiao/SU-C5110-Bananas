@@ -24,7 +24,8 @@ namespace ContosoCrafts.WebSite.Models
         public string Url { get; set; }
 
         // Map Title field in product.json to ProductModel's Title with validation
-        [StringLength(maximumLength: 200, MinimumLength = 1, ErrorMessage = "The Title should have a length of more than {2} and less than {1}")]
+        [Required(ErrorMessage = "Title is required.")]
+        [StringLength(50, MinimumLength = 1, ErrorMessage = "The Title should have a length between 1 and 200 characters.")]
         public string Title { get; set; }
 
         // Map Description field in product.json to ProductModel's Description
