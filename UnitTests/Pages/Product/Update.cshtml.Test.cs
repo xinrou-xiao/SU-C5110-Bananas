@@ -32,14 +32,12 @@ namespace UnitTests.Pages.Product.Update
         public static ViewDataDictionary viewData;
         public static TempDataDictionary tempData;
         public static PageContext pageContext;
-
         public static UpdateModel PageModel;
 
         // This method runs before each test to initialize the test environment
         [SetUp]
         public void TestInitialize()
         {
-
             // Creating a new default HTTP context for isolation
             httpContextDefault = new DefaultHttpContext();
 
@@ -52,6 +50,7 @@ namespace UnitTests.Pages.Product.Update
             // Setting up the metadata provider for models
             modelMetadataProvider = new EmptyModelMetadataProvider();
             viewData = new ViewDataDictionary(modelMetadataProvider, modelState);
+
             // Setting up TempData to store data across requests
             tempData = new TempDataDictionary(httpContextDefault, Mock.Of<ITempDataProvider>());
 
@@ -115,10 +114,13 @@ namespace UnitTests.Pages.Product.Update
             // Assert
             // Verify the result type is PageResult
             Assert.That(result, Is.InstanceOf<PageResult>());
+
             // Check if model state is valid
             Assert.That(PageModel.ModelState.IsValid, Is.EqualTo(true));
+
             // Ensure the product is loaded
             Assert.That(PageModel.Product, Is.Not.Null);
+
             // Confirm the product ID matches
             Assert.That(PageModel.Product.Id, Is.EqualTo(productId));
         }
@@ -143,6 +145,7 @@ namespace UnitTests.Pages.Product.Update
             // Assert
             // Check that the model state is invalid
             Assert.That(PageModel.ModelState.IsValid, Is.EqualTo(false));
+
             // Ensure the result is not null
             Assert.That(result, Is.Not.Null);
         }
@@ -183,6 +186,7 @@ namespace UnitTests.Pages.Product.Update
             // Assert
             // Check that the model state is valid after posting
             Assert.That(PageModel.ModelState.IsValid, Is.EqualTo(true));
+
             // Verify that it redirects to the product index page
             Assert.That(result.PageName, Is.EqualTo("/Product/Index"));
         }
