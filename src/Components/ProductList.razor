@@ -3,7 +3,6 @@
 @using Microsoft.AspNetCore.Components.Web
 @inject JsonFileProductService ProductService
 
-
 <div class="card-columns">
     @foreach (var product in ProductService.GetAllData())
     {
@@ -14,15 +13,13 @@
                 <h5 class="card-title">@product.Title</h5>
             </div>
             <div class="card-footer">
-                
-                    <div class="d-flex justify-content-between">
-            <button @onclick="(e => SelectProduct(product.Id))"
-                data-toggle="modal" data-target="#productModal" class="btn btn-primary">
-                More Info
-            </button>
-            <a href="@product.Trailer" target="_blank" class="btn btn-secondary btn-watch-trailer"> Watch Trailer</a>
-            </div>
-                
+                <div class="d-flex justify-content-between">
+                    <button @onclick="(e => SelectProduct(product.Id))"
+                            data-toggle="modal" data-target="#productModal" class="btn btn-primary">
+                        More Info
+                    </button>
+                    <a href="@product.Trailer" target="_blank" class="btn btn-secondary btn-watch-trailer"> Watch Trailer</a>
+                </div>
             </div>
         </div>
     }
@@ -36,7 +33,7 @@
                 <div class="modal-header">
                     <h5 class="modal-title" id="productTitle">@selectedProduct.Title</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
+                        <span aria-hidden="true">×</span>
                     </button>
                 </div>
                 <div class="modal-body">
@@ -70,7 +67,6 @@
                         }
                     }
                 </div>
-
             </div>
         </div>
     </div>
@@ -82,6 +78,7 @@
 {
     ProductModel selectedProduct = new ProductModel();
     string selectedProductId;
+    Dictionary<string, bool> voteTracker = new Dictionary<string, bool>();
 
     void SelectProduct(string productId)
     {
@@ -113,8 +110,26 @@
 
     void SubmitRating(int rating)
     {
-        System.Console.WriteLine($"Rating received for {selectedProduct.Id}: {rating}");
-        ProductService.AddRating(selectedProductId, rating);
-        SelectProduct(selectedProductId);
+        if (!voteTracker.ContainsKey(selectedProductId))
+        {
+            System.Console.WriteLine($"Rating received for {selectedProduct.Id}: {rating}");
+            ProductService.AddRating(selectedProductId, rating);
+            voteTracker[selectedProductId] = true;
+            SelectProduct(selectedProductId);
+        }
+
+        if (voteTracker.ContainsKey(selectedProductId) && !voteTracker[selectedProductId])
+        {
+            System.Console.WriteLine($"Rating received for {selectedProduct.Id}: {rating}");
+            ProductService.AddRating(selectedProductId, rating);
+            voteTracker[selectedProductId] = true;
+            SelectProduct(selectedProductId);
+        }
+
+        if (voteTracker.ContainsKey(selectedProductId) && voteTracker[selectedProductId])
+        {
+            voteLabel = "You already voted";
+            System.Console.WriteLine(voteLabel);
+        }
     }
 }
