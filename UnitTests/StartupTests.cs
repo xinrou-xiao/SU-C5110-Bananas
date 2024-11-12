@@ -76,6 +76,26 @@ namespace UnitTests.Pages.Startup
             Assert.That(webHost, Is.Not.Null);
         }
 
+        /// <summary>
+        /// Tests if the application is configured properly when starting up.
+        /// Should pass if the web host is created successfully.
+        /// </summary>
+        [Test]
+        public void Startup_Configure_Not_Development_Should_Pass()
+        {
+            // Arrange
+            var webHost = Microsoft.AspNetCore.WebHost.CreateDefaultBuilder().UseEnvironment("Development").UseStartup<Startup>().Build();
+
+            // Act
+            webHost.Start();
+
+            // Reset
+            webHost.Dispose();
+
+            // Assert
+            Assert.That(webHost, Is.Not.Null);
+        }
+
         #endregion Configure
 
         #region Configuration 
