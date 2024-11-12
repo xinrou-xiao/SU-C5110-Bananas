@@ -57,29 +57,25 @@ namespace UnitTests.Pages.Startup
         #region Configure
 
         /// <summary>
-        /// Tests if the application is configured properly when starting up.
-        /// Should pass if the web host is created successfully.
+        /// Tests the startup configuration of the application to ensure it runs successfully in the default environment.
         /// </summary>
         [Test]
         public void Startup_Configure_Valid_Defaut_Should_Pass()
         {
-            // Arrange
+            // Arrange: Create a webHost instance and configure it with the Startup class for the application
             var webHost = Microsoft.AspNetCore.WebHost.CreateDefaultBuilder().UseStartup<Startup>().Build();
 
-            // Act
+            // Act: Start the webHost, which initializes and runs the application
             webHost.Start();
 
-            // Reset
+            // Reset: Clean up by stopping the webHost and disposing of its resources
             webHost.Dispose();
 
-            // Assert
+            // Assert: Ensure the webHost is not null, confirming that the application started without errors
             Assert.That(webHost, Is.Not.Null);
         }
 
-        /// <summary>
-        /// Tests if the application is configured properly when starting up.
-        /// Should pass if the web host is created successfully.
-        /// </summary>
+        
         [Test]
         public void Startup_Configure_Not_Development_Should_Pass()
         {
