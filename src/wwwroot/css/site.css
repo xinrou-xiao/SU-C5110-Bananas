@@ -560,3 +560,86 @@ ul {
     color: black;
     text-decoration: underline;
 }
+/* Button Group Styling */
+.button-group {
+    display: flex;
+    justify-content: space-around; /* Space buttons evenly */
+    flex-wrap: wrap; /* Allow buttons to wrap to the next line */
+    margin-bottom: 20px; /* Space below the button group */
+    padding: 10px; /* Add padding for better touch targets */
+}
+
+/* Button Styles */
+.read-btn, .update-btn, .delete-btn {
+    flex: 1 1 30%; /* Allow buttons to grow and shrink, set base width */
+    margin: 5px; /* Add margin for spacing */
+    padding: 10px 20px; /* Add padding for larger click area */
+    font-size: 16px; /* Increase font size for readability */
+    border: none;
+    border-radius: 5px; /* Rounded corners for aesthetics */
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 600px) {
+    .button-group {
+        flex-direction: column; /* Stack buttons vertically on mobile */
+        align-items: center; /* Center align buttons */
+    }
+
+    .read-btn, .update-btn, .delete-btn {
+        width: 80%; /* Full width for easier clicking */
+    }
+}
+
+/* Read Button Styles */
+.read-btn {
+    background-color: #00A36C; /* Teal color for Read */
+    color: #fff;
+}
+
+    .read-btn:hover {
+        background-color: #c1e899; /* Light green on hover */
+        color: black;
+        text-decoration: underline;
+    }
+
+/* Update Button Styles */
+.update-btn {
+    background-color: coral; /* Coral color for Update */
+    color: #fff;
+    /* Remove left and right margins to align with other buttons */
+    margin: 5px;
+}
+
+    .update-btn:hover {
+        background-color: yellow; /* Yellow on hover */
+        color: black;
+        text-decoration: underline;
+    }
+
+/* Delete Button Styles */
+.delete-btn {
+    background-color: #eeb2b2; /* Light red for Delete */
+    color: #d11a2a;
+}
+
+    .delete-btn:hover {
+        background-color: #d11a2a; /* Darker red on hover */
+        color: black;
+        text-decoration: underline;
+    }
+
+/* Save Button Styles */
+.save-btn {
+    background-color: coral;
+    color: #fff;
+    margin: 5px;
+}
+
+    .save-btn:hover {
+        background-color: yellow;
+        color: black;
+        text-decoration: underline;
+    }
