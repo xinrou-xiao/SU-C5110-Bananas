@@ -75,20 +75,22 @@ namespace UnitTests.Pages.Startup
             Assert.That(webHost, Is.Not.Null);
         }
 
-        
         [Test]
+        /// <summary>
+        /// Tests the startup configuration of the application to ensure it runs successfully in the "Development" environment.
+        /// </summary>
         public void Startup_Configure_Not_Development_Should_Pass()
         {
-            // Arrange
+            // Arrange: Create a webHost instance and set the environment to "Development", then configure it with the Startup class
             var webHost = Microsoft.AspNetCore.WebHost.CreateDefaultBuilder().UseEnvironment("Development").UseStartup<Startup>().Build();
 
-            // Act
+            // Act: Start the webHost, which initializes and runs the application
             webHost.Start();
 
-            // Reset
+            // Reset: Clean up by stopping the webHost and disposing of its resources
             webHost.Dispose();
 
-            // Assert
+            // Assert: Ensure the webHost is not null, confirming that the application started without errors
             Assert.That(webHost, Is.Not.Null);
         }
 
