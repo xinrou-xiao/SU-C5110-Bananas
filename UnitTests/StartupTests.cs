@@ -67,8 +67,10 @@ namespace UnitTests.Pages.Startup
             var webHost = Microsoft.AspNetCore.WebHost.CreateDefaultBuilder().UseStartup<Startup>().Build();
 
             // Act
+            webHost.Start();
 
             // Reset
+            webHost.Dispose();
 
             // Assert
             Assert.That(webHost, Is.Not.Null);
