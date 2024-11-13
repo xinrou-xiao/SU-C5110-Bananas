@@ -643,3 +643,51 @@ ul {
         color: black;
         text-decoration: underline;
     }
+.genre-container {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center align items vertically */
+    width: 100%; /* Full width for responsiveness */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    padding: 5px; /* Add padding for better touch targets */
+}
+
+.genre-input {
+    flex-grow: 1; /* Allow input to take up remaining space */
+    padding: 10px; /* Add padding for larger click area */
+    font-size: 16px; /* Increase font size for readability */
+    border: 1px solid #ccc; /* Border for input */
+    border-radius: 5px; /* Rounded corners for aesthetics */
+    margin-right: 10px; /* Space between input and buttons */
+}
+
+.add-btn, .remove-btn {
+    padding: 10px 20px; /* Add padding for larger click area */
+    font-size: 16px; /* Increase font size for readability */
+    border: none;
+    border-radius: 5px; /* Rounded corners for aesthetics */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.add-btn {
+    background-color: #4CAF50; /* Green color for Add */
+    color: #fff; /* White text color */
+    margin-right: 10px; /* Space between Add and Remove buttons */
+}
+
+    .add-btn:hover {
+        background-color: #45a049; /* Darker green on hover */
+    }
+
+.remove-btn {
+    background-color: #d11a2a; /* Red color for Remove */
+    color: #fff; /* White text color */
+}
+
+    .remove-btn:hover {
+        background-color: #a00; /* Darker red on hover */
+    }
+
+.form-inline {
+    flex-flow: nowrap;
+}
