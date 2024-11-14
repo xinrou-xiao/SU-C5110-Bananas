@@ -10,12 +10,22 @@ using ContosoCrafts.WebSite.Pages;
 
 namespace UnitTests.Pages.Index
 {
+    /// <summary>
+    /// Unit test class for testing the Index page model (Index.cshtml.cs).
+    /// This class verifies the behavior of the OnGet method in various scenarios.
+    /// </summary>
     public class IndexTests
     {
         #region TestSetup
+
         // Setting up the test environment for IndexModel
         public static IndexModel pageModel;
 
+        /// <summary>
+        /// Sets up the test environment for IndexModel tests by initializing 
+        /// a mock logger and configuring required page context and TempData properties.
+        /// This method is executed before each test.
+        /// </summary>
         [SetUp]
         public void TestInitialize()
         {
@@ -32,6 +42,7 @@ namespace UnitTests.Pages.Index
         #endregion TestSetup
 
         #region OnGet
+
         // Test to check if OnGet() method in IndexModel works as expected
         [Test]
         public void OnGet_Valid_Should_Return_Products()
@@ -47,6 +58,7 @@ namespace UnitTests.Pages.Index
             // Check if the Products list is populated (has at least one item)
             Assert.That(pageModel.Products.ToList().Any(), Is.EqualTo(true));
         }
+
         #endregion OnGet
     }
 }
