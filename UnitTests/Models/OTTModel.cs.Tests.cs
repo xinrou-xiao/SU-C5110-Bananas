@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace UnitTests.Models
 {
     /// <summary>
-    /// Unit tests for the OTTModel class.
+    /// Unit tests for the OTTModel class
     /// </summary>
     [TestFixture]
     public class OTTModelTests
