@@ -1,4 +1,15 @@
 ﻿@page
+@model ContosoCrafts.WebSite.Pages.MerchModel
 @{
+    ViewData["Title"] = "Merchandise";
 }
 
+<div class="container merch-page">
+    <!-- Add stars dynamically -->
+    <div class="stars">
+        @for (int i = 0; i < 100; i++)
+        {
+            <div class="star" style="top:@(new Random().Next(0, 100))%; left:@(new Random().Next(0, 100))%;"></div>
+        }
+    </div>
+</div>
