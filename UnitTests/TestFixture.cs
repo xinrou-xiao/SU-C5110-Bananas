@@ -1,5 +1,4 @@
 using System.IO;
-
 using NUnit.Framework;
 
 namespace UnitTests
@@ -13,6 +12,10 @@ namespace UnitTests
         // Path to the data folder for the content
         public static string DataContentRootPath = "./data/";
 
+        /// <summary>
+        /// This method runs once before any tests are executed.
+        /// It sets up the necessary data by copying the latest version of the database files.
+        /// </summary>
         [OneTimeSetUp]
         public void RunBeforeAnyTests()
         {
@@ -24,18 +27,16 @@ namespace UnitTests
             // C:\repos\5110\ClassBaseline\src\wwwroot\data
             // C:\repos\5110\ClassBaseline\src\bin\Debug\net5.0\wwwroot\data
 
-
-
             var DataWebPath = "../../../../src/bin/Debug/net7.0/wwwroot/data";
             var DataUTDirectory = "wwwroot";
             var DataUTPath = DataUTDirectory + "/data";
 
-            // Delete the Detination folder
+            // Delete the destination folder
             if (Directory.Exists(DataUTDirectory))
             {
                 Directory.Delete(DataUTDirectory, true);
             }
-            
+
             // Make the directory
             Directory.CreateDirectory(DataUTPath);
 
@@ -50,6 +51,10 @@ namespace UnitTests
             }
         }
 
+        /// <summary>
+        /// This method runs once after all tests have been executed.
+        /// It can be used to clean up any resources used during testing.
+        /// </summary>
         [OneTimeTearDown]
         public void RunAfterAnyTests()
         {
