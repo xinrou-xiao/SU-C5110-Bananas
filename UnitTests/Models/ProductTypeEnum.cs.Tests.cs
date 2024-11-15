@@ -21,6 +21,7 @@ namespace UnitTests.Models
         public void DisplayName_Should_Return_Correct_DisplayName_For_Amature()
         {
             // Arrange
+            // Hand Made Items
             var productType = ProductTypeEnum.Amature;
 
             // Act
@@ -37,6 +38,7 @@ namespace UnitTests.Models
         public void DisplayName_Should_Return_Correct_DisplayName_For_Antique()
         {
             // Arrange
+            // Antiques
             var productType = ProductTypeEnum.Antique;
 
             // Act
@@ -53,6 +55,7 @@ namespace UnitTests.Models
         public void DisplayName_Should_Return_Correct_DisplayName_For_Collectable()
         {
             // Arrange
+            // Collectables
             var productType = ProductTypeEnum.Collectable;
 
             // Act
@@ -61,6 +64,7 @@ namespace UnitTests.Models
             // Assert
             Assert.That(displayName, Is.EqualTo("Collectables"));
         }
+
         /// <summary>
         /// Test to verify that the DisplayName method returns the correct display name for Commercial.
         /// </summary>
@@ -68,6 +72,7 @@ namespace UnitTests.Models
         public void DisplayName_Should_Return_Correct_DisplayName_For_Commercial()
         {
             // Arrange
+            // Commercial goods
             var productType = ProductTypeEnum.Commercial;
 
             // Act
@@ -84,6 +89,7 @@ namespace UnitTests.Models
         public void DisplayName_Should_Return_Empty_String_For_Undefined()
         {
             // Arrange
+            // Undefined
             var productType = ProductTypeEnum.Undefined;
 
             // Act
@@ -92,6 +98,7 @@ namespace UnitTests.Models
             // Assert
             Assert.That(displayName, Is.EqualTo(""));
         }
+
         /// <summary>
         /// Test to verify that the DisplayName method returns an empty string for an unknown value.
         /// </summary>
@@ -99,7 +106,8 @@ namespace UnitTests.Models
         public void DisplayName_Should_Return_Empty_String_For_Unknown_Value()
         {
             // Arrange
-            var productType = (ProductTypeEnum)999; // An unknown value not defined in the enum
+            // An unknown value not defined in the enum
+            var productType = (ProductTypeEnum)999;
 
             // Act
             var displayName = productType.DisplayName();
@@ -107,6 +115,5 @@ namespace UnitTests.Models
             // Assert
             Assert.That(displayName, Is.EqualTo(""));
         }
-
     }
 }
