@@ -1,4 +1,6 @@
-﻿@page
+﻿@page "{id}"
+@using ContosoCrafts.WebSite.Services
+@inject JsonFileProductService ProductService
 @model ReadModel
 @{
     ViewData["Title"] = "Read"; @* set page title to Read *@
