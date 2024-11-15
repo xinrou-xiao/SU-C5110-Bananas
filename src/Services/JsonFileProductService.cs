@@ -144,7 +144,7 @@ namespace ContosoCrafts.WebSite.Services
                 existingProduct.Title = updatedProduct.Title;
                 if (existingProduct.Description != null)
                 {
-                    updatedProduct.Description = updatedProduct.Description.Trim();
+                    existingProduct.Description = existingProduct.Description.Trim();
                 }
                 existingProduct.Description = updatedProduct.Description;
                 existingProduct.Url = updatedProduct.Url;
