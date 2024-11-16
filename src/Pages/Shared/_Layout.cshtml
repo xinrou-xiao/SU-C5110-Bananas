@@ -82,5 +82,12 @@
     <script src="~/js/site.js" asp-append-version="true"></script>
 
     @RenderSection("Scripts", required: false)
+
+    <script>
+        // Scroll to top on page refresh
+        window.onbeforeunload = function () {
+            window.scrollTo(0, 0);
+        };
+    </script>
 </body>
 </html>
