@@ -1,8 +1,6 @@
 using System.Collections.Generic;
-
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-
 using ContosoCrafts.WebSite.Models;
 using ContosoCrafts.WebSite.Services;
 
@@ -27,9 +25,15 @@ namespace ContosoCrafts.WebSite.Pages.Product
         }
 
         // Holds the product to be deleted, fetched by ID in the OnGet method
-        public ProductModel Product
+        public ProductModel Product 
+        { 
+            get; set; 
+        }
+
+        // Property to hold error message
+        public string ErrorMessage 
         {
-            get; set;
+            get; set; 
         }
 
         /// <summary>
@@ -42,11 +46,18 @@ namespace ContosoCrafts.WebSite.Pages.Product
             if (id == null)
             {
                 Product = null;
+                ErrorMessage = "Sorry, the data you are trying to access does not exist.";
                 return;
             }
 
             // Retrieve the product with the specified ID
             Product = ProductService.GetOneDataById(id);
+
+            // If the product is not found, set the error message
+            if (Product == null)
+            {
+                ErrorMessage = "Sorry, the data you are trying to access does not exist.";
+            }
         }
 
         /// <summary>
