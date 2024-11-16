@@ -14,6 +14,8 @@ namespace ContosoCrafts.WebSite.Pages
                 new MerchandiseItem
                 {
                     Title = "Luffy Straw Hat",
+                    Description = "More than just headwear.. join the straw hat crew.",
+
                 },
             };
         }
