@@ -9,7 +9,13 @@ namespace ContosoCrafts.WebSite.Pages
 
         public void OnGet()
         {
-
+            Merchandise = new List<MerchandiseItem>
+            {
+                new MerchandiseItem
+                {
+                    Title = "Luffy Straw Hat",
+                },
+            };
         }
     }
     public class MerchandiseItem
