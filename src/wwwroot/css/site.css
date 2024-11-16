@@ -286,6 +286,12 @@ body {
         color: #e6d375; /* Even darker green on hover */
 }
 
+/*Merch page: Styling for price element*/
+.price {
+    font-size: 1rem;
+    margin-right: 0.2rem;
+    color: #fff; /* White text for better visibility */
+}
 
 /* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
