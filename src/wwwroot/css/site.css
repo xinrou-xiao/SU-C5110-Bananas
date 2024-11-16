@@ -304,6 +304,18 @@ body {
     animation: shimmer 5s infinite ease-in-out;
 }
 
+/* Animation for stars */
+@keyframes shimmer {
+    0%, 100% {
+        opacity: 0.8;
+        transform: translateY(0);
+    }
+
+    50% {
+        opacity: 0.3;
+        transform: translateY(-10px);
+    }
+}
 
 /* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
