@@ -345,6 +345,10 @@ body {
     color: black;
 }
 
+body.dark-theme .hashtags span {
+    background-color: #d0aef2 !important; /* Set a new background color for individual hashtags */
+}
+
 .badge {
     margin-right: 5px; /* Space between badges */
     background-color: #ddeda8 !important;
