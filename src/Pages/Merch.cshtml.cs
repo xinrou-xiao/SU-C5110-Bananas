@@ -12,4 +12,8 @@ namespace ContosoCrafts.WebSite.Pages
 
         }
     }
+    public class MerchandiseItem
+    {
+
+    }
 }
