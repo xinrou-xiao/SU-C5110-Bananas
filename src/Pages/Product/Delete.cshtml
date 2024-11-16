@@ -1,4 +1,4 @@
-﻿@page
+﻿@page "{id}"
 @using ContosoCrafts.WebSite.Services
 @inject JsonFileProductService ProductService
 @model ContosoCrafts.WebSite.Pages.Product.DeleteModel
@@ -8,7 +8,7 @@
 
 <div class="container">
     <h2 class="white-font">Delete Anime Information</h2>
-     <form id="deleteForm" method="post">
+    <form id="deleteForm" method="post">
         <input type="hidden" asp-for="Product.Id" />
 
         @Html.HiddenFor(x => x.Product.Id)
@@ -85,7 +85,7 @@
             }
         </div>
 
-        <button type="submit" class="btn delete-btn";">Delete</button>
+        <button type="submit" class="btn delete-btn">Delete</button>
         <a asp-page="/Product/Index" class="btn btn-secondary">Cancel</a>
     </form>
 </div>
