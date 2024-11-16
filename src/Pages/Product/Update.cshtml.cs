@@ -7,7 +7,7 @@ namespace ContosoCrafts.WebSite.Pages.Product
 {
     /// <summary>
     /// UpdateModel class handles update operations for product details, 
-    /// allowing users to modify and save changes to existing products,
+    /// allowing users to modify and save changes to existing products.
     /// </summary>
     public class UpdateModel : PageModel
     {
@@ -18,7 +18,7 @@ namespace ContosoCrafts.WebSite.Pages.Product
         /// Constructor for UpdateModel, initializes with productService to manage 
         /// update operations for product details.
         /// </summary>
-        /// <param name="productService">Service to handle product data and updates</param>
+        /// <param name="productService">Service to handle product data and updates.</param>
         public UpdateModel(JsonFileProductService productService)
         {
             _productService = productService;
@@ -33,14 +33,14 @@ namespace ContosoCrafts.WebSite.Pages.Product
         /// <summary>
         /// Handles GET requests to load product details for editing by product ID.
         /// </summary>
-        /// <param name="id">The ID of the product to be updated</param>
-        /// <returns>Redirects to error page if product not found, otherwise loads page with product data</returns>
+        /// <param name="id">The ID of the product to be updated.</param>
+        /// <returns>Redirects to error page if product not found, otherwise loads page with product data.</returns>
         public IActionResult OnGet(string id)
         {
-            // Retrieve product details by ID to prepare for editing
+            // Retrieve product details by ID to prepare for editing.
             Product = _productService.GetOneDataById(id);
 
-            // Redirect to error page if the product is not found
+            // Redirect to error page if the product is not found.
             if (Product == null)
             {
                 return RedirectToPage("/Error");
@@ -52,39 +52,45 @@ namespace ContosoCrafts.WebSite.Pages.Product
         /// <summary>
         /// Handles POST requests to submit updates to product details.
         /// </summary>
-        /// <param name="product">The product to create.</param>
-        /// <param name="genre_dynamic">Genre string array.</param>
-        /// <param name="OTT_dynamic_platform">Platform name string array.</param>
-        /// <param name="OTT_dynamic_url">Platform URL string array.</param>
-        /// <param name="OTT_dynamic_icon">Platform icon string array.</param>
-        /// <returns>Redirects to error page if update fails, otherwise navigates to product index page on success</returns>
+        /// <param name="product">The product to update.</param>
+        /// <param name="genre_dynamic">Array of genre strings.</param>
+        /// <param name="OTT_dynamic_platform">Array of platform name strings.</param>
+        /// <param name="OTT_dynamic_url">Array of platform URL strings.</param>
+        /// <param name="OTT_dynamic_icon">Array of platform icon strings.</param>
+        /// <returns>Redirects to error page if update fails, otherwise navigates to product index page on success.</returns>
         public IActionResult OnPost(ProductModel product, string[] genre_dynamic,
             string[] OTT_dynamic_platform, string[] OTT_dynamic_url, string[] OTT_dynamic_icon)
         {
-            // Return to update page if model state is invalid
+            // Return to update page if model state is invalid.
             if (!ModelState.IsValid)
             {
                 return Page();
             }
 
+            // Initialize product genre and OTT list.
             product.Genre = null;
             product.OTT = new System.Collections.Generic.List<OTTModel>();
 
-            if (genre_dynamic.Length > 0) // if genre_dynamic has data inside
+            // Process genre_dynamic array to populate product.Genre.
+            if (genre_dynamic.Length > 0)
             {
-                int count_Valid = 0; // to count how many valid gnere are valid
+                // Count valid genres.
+                int count_Valid = 0;
+
                 for (int i = 0; i < genre_dynamic.Length; i++)
                 {
-                    // if genre is not null, count++
+                    // Increment count if genre is not null.
                     if (genre_dynamic[i] != null)
                     {
                         count_Valid++;
                     }
                 }
 
-                // set up Product.Genre to a correct length's array
+                // Initialize product.Genre with the correct length.
                 product.Genre = new string[count_Valid];
-                var index = 0; // position in Gnere
+
+                // Position in Genre array.
+                var index = 0;
 
                 for (int i = 0; i < genre_dynamic.Length; i++)
                 {
@@ -96,12 +102,13 @@ namespace ContosoCrafts.WebSite.Pages.Product
                 }
             }
 
-            // if platform name has data inside
+            // Process OTT_dynamic arrays to populate product.OTT.
             if (OTT_dynamic_platform.Length > 0)
             {
                 for (int i = 0; i < OTT_dynamic_platform.Length; i++)
                 {
-                    if (OTT_dynamic_platform[i] != null) // must at least provide platform name
+                    // Ensure platform name is provided.
+                    if (OTT_dynamic_platform[i] != null)
                     {
                         OTTModel OTT = new OTTModel();
                         OTT.Platform = OTT_dynamic_platform[i];
@@ -112,15 +119,16 @@ namespace ContosoCrafts.WebSite.Pages.Product
                 }
             }
 
-            // Attempt to update product details with provided data
+            // Attempt to update product details with provided data.
             var updatedProduct = _productService.UpdateData(product);
 
+            // Redirect to error page if update fails.
             if (updatedProduct == null)
             {
                 return RedirectToPage("/Error");
             }
 
-            // Redirect to the main product index page on successful update
+            // Redirect to the main product index page on successful update.
             return RedirectToPage("/Product/Index");
         }
     }
