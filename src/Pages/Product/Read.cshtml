@@ -25,6 +25,11 @@
 
     <!--tags area, contains release year and genre-->
     <div class="padding-block">
+        @if (Model.AverageRating.HasValue)
+        {
+            <span class="tags">Average Rating : @Model.AverageRating.Value.ToString("0.0")</span>
+        }
+
         @if (@Model.Product.Release != null)
         {
             <span class="tags">#@Model.Product.Release</span>
