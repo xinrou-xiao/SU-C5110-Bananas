@@ -141,5 +141,108 @@ namespace UnitTests.Pages.Product.Read
         }
 
         #endregion OnGet
+
+        #region AverageRating
+
+        /// <summary>
+        /// Test AverageRating when Product is null.
+        /// AverageRating should return null.
+        /// </summary>
+        [Test]
+        public void AverageRating_Should_Return_Null_When_Product_Is_Null()
+        {
+            // Arrange
+            pageModel.Product = null;
+
+            // Act
+            var result = pageModel.AverageRating;
+
+            // Assert
+            Assert.That(result, Is.Null);
+        }
+
+        /// <summary>
+        /// Test AverageRating when Ratings is null.
+        /// AverageRating should return null.
+        /// </summary>
+        [Test]
+        public void AverageRating_Should_Return_Null_When_Ratings_Is_Null()
+        {
+            // Arrange
+            pageModel.Product = new ProductModel
+            {
+                Ratings = null
+            };
+
+            // Act
+            var result = pageModel.AverageRating;
+
+            // Assert
+            Assert.That(result, Is.Null);
+        }
+
+        /// <summary>
+        /// Test AverageRating when Ratings is empty.
+        /// AverageRating should return null.
+        /// </summary>
+        [Test]
+        public void AverageRating_Should_Return_Null_When_Ratings_Are_Empty()
+        {
+            // Arrange
+            pageModel.Product = new ProductModel
+            {
+                Ratings = new List<int>()
+            };
+
+            // Act
+            var result = pageModel.AverageRating;
+
+            // Assert
+            Assert.That(result, Is.Null);
+        }
+
+        /// <summary>
+        /// Test AverageRating when Ratings contains valid values.
+        /// AverageRating should return the correct average.
+        /// </summary>
+        [Test]
+        public void AverageRating_Should_Return_Correct_Average_When_Ratings_Are_Valid()
+        {
+            // Arrange
+            pageModel.Product = new ProductModel
+            {
+                Ratings = new List<int> { 3, 5, 4 }
+            };
+
+            // Act
+            var result = pageModel.AverageRating;
+
+            // Assert
+            Assert.That(result, Is.EqualTo(4.0)); // (3+5+4)/3 = 4.0
+        }
+
+
+        /// <summary>
+        /// Test AverageRating when Ratings contains a single value.
+        /// AverageRating should return that value.
+        /// </summary>
+        [Test]
+        public void AverageRating_Should_Return_Single_Value_When_One_Rating_Exists()
+        {
+            // Arrange
+            pageModel.Product = new ProductModel
+            {
+                Ratings = new List<int> { 5 }
+            };
+
+            // Act
+            var result = pageModel.AverageRating;
+
+            // Assert
+            Assert.That(result, Is.EqualTo(5.0));
+        }
+
+        #endregion AverageRating
+
     }
 }
