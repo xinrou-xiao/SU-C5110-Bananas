@@ -18,6 +18,7 @@ namespace ContosoCrafts.WebSite.Pages
                     ImageUrl = "https://store.crunchyroll.com/on/demandware.static/-/Sites-crunchyroll-master-catalog/default/dw043745ff/images/3665361049524_one-piece-luffy-straw-hat_01.jpg",
                     Hashtags = new List<string> { "OnePiece", "Pirate", "hat" },
                     BuyLink = "https://store.crunchyroll.com/products/one-piece-luffy-straw-hat-3665361049524.html",
+                    Price = 19.99m
                 },
             };
         }
