@@ -93,7 +93,12 @@ namespace UnitTests.Pages.Product.Delete
             // Arrange
 
             // Act
-            PageModel.OnGet("jenlooper-cactus");
+            ProductModel data = PageModel.ProductService.GetAllData().First();
+
+            // Act
+            PageModel.OnGet(data.Id);
+
+            //PageModel.OnGet("jenlooper-cactus");
 
             // Assert
             Assert.That(PageModel.ModelState.IsValid, Is.EqualTo(true));
