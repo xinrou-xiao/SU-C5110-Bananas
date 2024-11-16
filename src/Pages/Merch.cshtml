@@ -12,5 +12,31 @@
             <div class="star" style="top:@(new Random().Next(0, 100))%; left:@(new Random().Next(0, 100))%;"></div>
         }
     </div>
+    <h1 class="merch-title">@ViewData["Title"]</h1>
+    <div class="row">
+        @foreach (var merch in Model.Merchandise)
+        {
+            <div class="col-md-3 mb-4">
+                <!-- Each card takes 1/4 of the row -->
+                <div class="card">
+                    <img src="@merch.ImageUrl" class="card-img-top" alt="@merch.Title" />
+                    <div class="card-body">
+                        <h5 class="card-title">@merch.Title</h5>
+                        <p class="card-text">@merch.Description</p>
+                        <div class="hashtags">
+                            @foreach (var hashtag in merch.Hashtags)
+                            {
+                                <span class="badge bg-secondary">#@hashtag</span>
+                            }
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-2">
+                            <span style="font-size: 1rem; margin-right: 0.2rem;"> $@merch.Price</span>
+                            <a href="@merch.BuyLink" class="btn btn-primary" target="_blank">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    
 </div>
-<h1 class="merch-title">@ViewData["Title"]</h1>
