@@ -21,7 +21,10 @@ namespace ContosoCrafts.WebSite.Pages.Product
         }
 
         // Service for accessing and manipulating product data
-        public JsonFileProductService ProductService { get; }
+        public JsonFileProductService ProductService 
+        { 
+            get; 
+        }
 
         // Holds the product to be deleted, fetched by ID in the OnGet method
         public ProductModel Product
