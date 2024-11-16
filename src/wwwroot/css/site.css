@@ -321,6 +321,10 @@ body {
     color: white !important; /* This changes the heading color to white */
 }
 
+.quick-links-box p {
+    color: white !important; /* White text color for better visibility */
+}
+
 /* Styling for Merchandise Page cards*/
 .card {
     background-color: #f5f5f5; /* Light grey background */
