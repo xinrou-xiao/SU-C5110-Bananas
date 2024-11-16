@@ -15,8 +15,8 @@ namespace ContosoCrafts.WebSite.Pages
                 {
                     Title = "Luffy Straw Hat",
                     Description = "More than just headwear.. join the straw hat crew.",
-                    ImageUrl = "https://store.crunchyroll.com/on/demandware.static/-/Sites-crunchyroll-master-catalog/default/dw043745ff/images/3665361049524_one-piece-luffy-straw-hat_01.jpg", 
-
+                    ImageUrl = "https://store.crunchyroll.com/on/demandware.static/-/Sites-crunchyroll-master-catalog/default/dw043745ff/images/3665361049524_one-piece-luffy-straw-hat_01.jpg",
+                    Hashtags = new List<string> { "OnePiece", "Pirate", "hat" },
                 },
             };
         }
