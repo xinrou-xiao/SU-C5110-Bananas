@@ -3,8 +3,9 @@
 @{
     ViewData["Title"] = "Developers";
 }
-
-<h2>Developer Information</h2>
+<div class="privacy-page-text">
+    <h2>Developer Information</h2>
+</div>
 
 <div class="tile-container">
     @foreach (var developer in Model.Developers)
@@ -14,7 +15,7 @@
             <div class="image-container">
                 <img src="@developer.ImageUrl" alt="Developer Image" class="developer-image" />
             </div>
-            <a href="mailto:@developer.Email" class="btn btn-primary">Contact @developer.Name</a>
+            <a href="mailto:@developer.Email" class="btn btn-primary">Email : @developer.Name</a>
         </div>
     }
 </div>
