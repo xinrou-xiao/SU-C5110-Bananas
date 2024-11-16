@@ -149,7 +149,7 @@ namespace UnitTests.Pages.Product.Read
         /// AverageRating should return null.
         /// </summary>
         [Test]
-        public void AverageRating_Should_Return_Null_When_Product_Is_Null()
+        public void AverageRating_ProductIsNull_Should_ReturnNull()
         {
             // Arrange
             pageModel.Product = null;
@@ -166,7 +166,7 @@ namespace UnitTests.Pages.Product.Read
         /// AverageRating should return null.
         /// </summary>
         [Test]
-        public void AverageRating_Should_Return_Null_When_Ratings_Is_Null()
+        public void AverageRating_RatingsAreNull_Should_ReturnNull()
         {
             // Arrange
             pageModel.Product = new ProductModel
@@ -186,7 +186,7 @@ namespace UnitTests.Pages.Product.Read
         /// AverageRating should return null.
         /// </summary>
         [Test]
-        public void AverageRating_Should_Return_Null_When_Ratings_Are_Empty()
+        public void AverageRating_RatingsAreEmpty_Should_ReturnNull()
         {
             // Arrange
             pageModel.Product = new ProductModel
@@ -206,7 +206,7 @@ namespace UnitTests.Pages.Product.Read
         /// AverageRating should return the correct average.
         /// </summary>
         [Test]
-        public void AverageRating_Should_Return_Correct_Average_When_Ratings_Are_Valid()
+        public void AverageRating_RatingsAreValid_Should_ReturnCorrectAverage()
         {
             // Arrange
             pageModel.Product = new ProductModel
@@ -221,13 +221,12 @@ namespace UnitTests.Pages.Product.Read
             Assert.That(result, Is.EqualTo(4.0)); // (3+5+4)/3 = 4.0
         }
 
-
         /// <summary>
         /// Test AverageRating when Ratings contains a single value.
         /// AverageRating should return that value.
         /// </summary>
         [Test]
-        public void AverageRating_Should_Return_Single_Value_When_One_Rating_Exists()
+        public void AverageRating_OneRatingExists_Should_ReturnThatValue()
         {
             // Arrange
             pageModel.Product = new ProductModel
