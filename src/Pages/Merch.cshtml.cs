@@ -27,7 +27,7 @@ namespace ContosoCrafts.WebSite.Pages
                     ImageUrl = "https://makotoswords.com/cdn/shop/files/Kamado_Tanjirou3_4156966b-6411-453d-b7f9-a5a5279a0b77_1080x.jpg?v=1690178718",
                     Hashtags = new List<string> { "DemonSlayer", "Katana"},
                     BuyLink = "https://makotoswords.com/products/handmade-katana-cosplay-replica-anime-swords?currency=USD&variant=44377331433686&utm_source=google&utm_medium=cpc&utm_campaign=Google%20Shopping&stkn=dcd0a93543e3&gad_source=1&gclid=Cj0KCQiA_9u5BhCUARIsABbMSPvGIUPfQp0mWSr2Hw9mqSwMWbFXq0uQWRQwot6i7JxkEtwCF1GNggUaAh-gEALw_wcB",
-                    Price = 19.99m
+                    Price = 149.99m
                 },
                 new MerchandiseItem
                 {
@@ -37,6 +37,15 @@ namespace ContosoCrafts.WebSite.Pages
                     Hashtags = new List<string> { "JujutsuKaisen", "Gojo"},
                     BuyLink = "https://makotoswords.com/products/handmade-katana-cosplay-replica-anime-swords?currency=USD&variant=44377331433686&utm_source=google&utm_medium=cpc&utm_campaign=Google%20Shopping&stkn=dcd0a93543e3&gad_source=1&gclid=Cj0KCQiA_9u5BhCUARIsABbMSPvGIUPfQp0mWSr2Hw9mqSwMWbFXq0uQWRQwot6i7JxkEtwCF1GNggUaAh-gEALw_wcB",
                     Price = 3.00m
+                },
+                new MerchandiseItem
+                {
+                     Title = "Hunter x Hunter License",
+                     Description = "Prove your Hunter status with this sleek license card.",
+                     ImageUrl = "https://i.etsystatic.com/30827093/r/il/5cdc55/6311016041/il_1588xN.6311016041_qot7.jpg",
+                     Hashtags = new List<string> { "HunterxHunter", "License" },
+                     BuyLink = "https://www.etsy.com/listing/1773719044/hunter-x-hunter-license-card-plastic?gpla=1&gao=1&&utm_source=google&utm_medium=cpc&utm_campaign=shopping_us_c-paper_and_party_supplies&utm_custom1=_k_Cj0KCQiA_9u5BhCUARIsABbMSPusWv2u_QZa7teAuEUUnjZQdntJbUMdD7_eMaexKUqNweLv_3KLQ-8aAg5NEALw_wcB_k_&utm_content=go_21500568603_167985816239_716809480513_aud-2079782229334:pla-314261241107_c__1773719044_12768591&utm_custom2=21500568603&gad_source=1&gclid=Cj0KCQiA_9u5BhCUARIsABbMSPusWv2u_QZa7teAuEUUnjZQdntJbUMdD7_eMaexKUqNweLv_3KLQ-8aAg5NEALw_wcB",
+                     Price = 6.61m
                 },
 
             };
