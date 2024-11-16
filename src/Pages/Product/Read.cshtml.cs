@@ -23,7 +23,7 @@ namespace ContosoCrafts.WebSite.Pages.Product
         public JsonFileProductService ProductService { get; }
 
         // Product data
-        public ProductModel Product { get; private set; }
+        public ProductModel Product { get; set; }
 
         /// <summary>
         /// Rest OnGet, require id as parameter, 
