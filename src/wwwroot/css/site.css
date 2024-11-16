@@ -321,6 +321,54 @@ body {
     color: white !important; /* This changes the heading color to white */
 }
 
+/* Styling for Merchandise Page cards*/
+.card {
+    background-color: #f5f5f5; /* Light grey background */
+    border: 1px solid #ddd; /* Border around cards */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Hide overflow for rounded corners */
+    transition: transform 0.2s; /* Animation effect on hover */
+    /*height: 420px;  Fixed card height */
+}
+
+    .card:hover {
+        transform: scale(1.05); /* Slightly increase the size on hover */
+    }
+
+.card-img-top {
+    height: 200px; /* Fixed height for images */
+    object-fit: cover; /* Cover to maintain aspect ratio */
+}
+
+.hashtags {
+    margin-top: 10px; /* Spacing for hashtags */
+    color: black;
+}
+
+.badge {
+    margin-right: 5px; /* Space between badges */
+    background-color: #ddeda8 !important;
+}
+
+.merch-title {
+    color: white;
+    margin-bottom: 3px;
+    text-align: center;
+    animation: titleAnimation 2s infinite; /* Add animation */
+}
+
+.card-title {
+    font-size: 18px;
+    margin-bottom: 2px;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: black;
+}
+
 /* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 .card-columns .card:hover .card-img {
