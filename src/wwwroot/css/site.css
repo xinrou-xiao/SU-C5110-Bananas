@@ -351,10 +351,12 @@ body {
 }
 
 .merch-title {
+    font-size: 2rem;
     color: white;
     margin-bottom: 3px;
     text-align: center;
     animation: titleAnimation 2s infinite; /* Add animation */
+    margin-bottom: 30px;
 }
 
 .card-title {
