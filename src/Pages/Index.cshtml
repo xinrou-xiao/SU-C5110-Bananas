@@ -5,6 +5,8 @@
     ViewData["Title"] = "Home page";
 }
 
+@(await Html.RenderComponentAsync<ProductList>(RenderMode.ServerPrerendered))
+
 <!--JavaScript for Audio Control and Display Logic-->
 <script>
     // Reference to the audio element in the HTML
@@ -59,7 +61,5 @@
 
     // Load the first song on initial page load
     loadSong(currentSongIndex);</script>
-
-@(await Html.RenderComponentAsync<ProductList>(RenderMode.ServerPrerendered))
 
 <script src="_framework/blazor.server.js"></script>
