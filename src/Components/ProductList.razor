@@ -372,48 +372,13 @@
     }
 
     /// <summary>
-    /// Updates the sorting of the products based on the selected sorting criteria
+    /// Updates selectedSort's value
     /// </summary>
     /// <param name="e"></param>
     public void UpdateSort(ChangeEventArgs e)
     {
         selectedSort = e.Value.ToString();
-        Search();  // Perform search again with updated sorting criteria
-
-        // Sort products in ascending order by title
-        if (selectedSort.Equals("asc"))
-        {
-            Products = Products.OrderBy(p => p.Title);
-            return;
-        }
-
-        // Sort products in descending order by title
-        if (selectedSort.Equals("desc"))
-        {
-            Products = Products.OrderByDescending(p => p.Title);
-            return;
-        }
-
-        // Sort products by the newest release date (descending)
-        if (selectedSort.Equals("newest"))
-        {
-            Products = Products.OrderByDescending(p => p.Release);
-            return;
-        }
-        
-        // Sort products by the oldest release date (ascending)
-        if (selectedSort.Equals("oldest"))
-        {
-            Products = Products.OrderBy(p => p.Release);
-            return;
-        }
-
-        // Sort products by the oldest release date (ascending)
-        if (selectedSort.Equals("rating"))
-        {
-            Products = Products.OrderByDescending(p => p.Ratings?.Average() ?? 0);
-            return;
-        }
+        Sort();
     }
 
     /// <summary>
