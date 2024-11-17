@@ -74,6 +74,33 @@
     </a>
 </div>
 
+<!-- Audio Element for Background Music -->
+<audio id="bg-music" autoplay loop>
+    <!-- Specifying the path and type of audio file -->
+    <source src="Audio/Warrior.mp3" type="audio/mp3">
+    <!-- Fallback message for browsers that do not support the audio element -->
+    Your browser does not support the audio element.
+</audio>
+
+<!-- Music Controls for Play/Pause and Next Song -->
+<div id="audio-controls">
+    <!-- Play Icon: Starts playing the currently loaded audio when clicked -->
+    <i class="fas fa-play" onclick="playAudio()" id="play-icon" style="cursor: pointer;"></i>
+    <!-- Pause Icon: Pauses the currently playing audio when clicked -->
+    <i class="fas fa-pause" onclick="pauseAudio()" id="pause-icon" style="cursor: pointer;"></i>
+    <span id="music-label">Music</span>
+    <!-- Next Song Icon: Advances to the next song in the playlist when clicked -->
+    <i class="fas fa-forward" onclick="nextSong()" id="next-song-icon"></i>
+</div>
+
+<!-- Floating Display for Current Song Name -->
+<div id="song-name-display" style="position: fixed; bottom: 10px; right: 10px; background-color: rgba(0,0,0,0.7); color: white; padding: 5px 10px; border-radius: 5px; display: none;">
+    <!-- Music Icon: Visual indicator that music is currently playing -->
+    <i class="fas fa-music"></i>
+    <!-- Element to Show Song Name -->
+    <span id="song-name"></span>
+</div>
+
 <div class="card-columns">
     @foreach (var product in ProductService.GetAllData())
     {
