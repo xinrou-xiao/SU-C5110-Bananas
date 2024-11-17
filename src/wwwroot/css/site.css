@@ -6,6 +6,11 @@
     font-weight: bold;
 }
 
+body.dark-theme .sort-select {
+    background-color: #272727;
+    color: white;
+}
+
 .sort-select {
     padding: 0 10px;
     height: 35px;
