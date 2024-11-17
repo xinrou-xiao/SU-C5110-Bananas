@@ -1,4 +1,8 @@
 ﻿
+.search-div, .search-input {
+    border-color: #303030;
+}
+
 .search-btn, .search-btn:hover {
     background-color: #d6d5d5;
     padding-left: 30px;
