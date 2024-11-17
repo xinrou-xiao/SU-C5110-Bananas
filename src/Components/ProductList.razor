@@ -115,6 +115,19 @@
     <span id="song-name"></span>
 </div>
 
+<!-- Genre section -->
+<div class="input-group mb-3 badge-bar">
+    @foreach (var genre in GenreList)
+    {
+        string buttonClass = "genre-unselected";
+        if (genre.Equals(selectedGenre))
+        {
+            buttonClass = "genre-selected";
+        }
+        <button @onclick="(() => UpdateGenre(genre))" class=@buttonClass type="button">@genre</button>
+    }
+</div>
+
 <div class="card-columns">
     @foreach (var product in ProductService.GetAllData())
     {
