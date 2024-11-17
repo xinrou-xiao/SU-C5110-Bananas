@@ -352,7 +352,14 @@
     public void UpdateGenre(string genre)
     {
         selectedGenre = genre;
-        Search();  // Perform search again with updated genre filter
+
+        if (searchKeywords == null)
+        {
+            // If search keywords are null, fetch all data
+            Products = ProductService.GetAllData();
+        }
+        // Filter products by title containing the search keywords (case-insensitive)
+        Products = ProductService.GetAllData().Where(p => p.Title.Contains(searchKeywords, StringComparison.OrdinalIgnoreCase));
 
         // If "All" genre is selected, skip further filtering
         if (genre.Equals("All"))
