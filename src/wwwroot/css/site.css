@@ -1,4 +1,8 @@
 ﻿
+.sort-select > option {
+    font-weight: bold;
+}
+
 .sort-select {
     padding: 0 10px;
     height: 35px;
