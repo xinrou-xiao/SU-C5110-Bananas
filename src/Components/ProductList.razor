@@ -214,6 +214,21 @@
     string selectedProductId;
     Dictionary<string, bool> voteTracker = new Dictionary<string, bool>();
 
+    // A collection of products, initially empty. This will hold the filtered or sorted product data.
+    IEnumerable<ProductModel> Products = new List<ProductModel>();
+
+    // A string to store the current search keywords. Initially empty, it is used to filter products by title.
+    string searchKeywords = string.Empty;
+
+    // A list to store the available genres for filtering products.
+    List<string> GenreList = new List<string>();
+
+    // The selected genre for filtering products. Default is "All", meaning no genre filter is applied initially.
+    string selectedGenre = "All";
+
+    // The selected sorting option. Initially empty, this will define how products are sorted (e.g., by title or release date).
+    string selectedSort = string.Empty;
+
     void SelectProduct(string productId)
     {
         selectedProductId = productId;
