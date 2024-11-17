@@ -369,6 +369,11 @@
 
         // Filter products by the selected genre
         Products = Products.Where(p => p.Genre.Contains(genre));
+
+        if (selectedSort.Length > 0)
+        {
+            Sort(); // Perform sort again with updated genre filter
+        }
     }
 
     /// <summary>
