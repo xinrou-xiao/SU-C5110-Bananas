@@ -1,4 +1,10 @@
 ﻿
+.search-input, .search-input:focus {
+    background-color: white !important;
+    border-left: none;
+    color: black;
+}
+
 .search-div, .search-input {
     border-color: #303030;
 }
