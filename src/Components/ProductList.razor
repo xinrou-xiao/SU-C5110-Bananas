@@ -326,4 +326,19 @@
     {
         searchKeywords = String.Empty;
     }
+
+    ///<summary>
+    /// Performs a search based on the current search keywords. If no keywords are provided,
+    /// it retrieves all product data. Otherwise, it filters products based on the search keywords.
+    /// </summary>
+    public void Search()
+    {
+        if (searchKeywords == null)
+        {
+            // If search keywords are null, fetch all data
+            Products = ProductService.GetAllData();
+        }
+        // Filter products by title containing the search keywords (case-insensitive)
+        Products = ProductService.GetAllData().Where(p => p.Title.Contains(searchKeywords, StringComparison.OrdinalIgnoreCase));
+    }
 }
