@@ -1,4 +1,10 @@
 ﻿
+body.dark-theme .search-input, body.dark-theme .search-input:focus {
+    background-color: #121212 !important;
+    border-left: none;
+    color: white;
+}
+
 body.dark-theme .search-div, body.dark-theme .search-input {
     border-color: #303030;
 }
