@@ -1,4 +1,8 @@
 ﻿
+body.dark-theme .genre-unselected:hover {
+    background-color: #3d3d3d;
+}
+
 .genre-selected {
     padding: 5px 10px;
     border-radius: 5px;
