@@ -1,4 +1,8 @@
 ﻿
+body.dark-theme .search-div, body.dark-theme .search-input {
+    border-color: #303030;
+}
+
 body.dark-theme .search-btn, body.dark-theme .search-btn:hover {
     background-color: #222222;
     padding-left: 30px;
