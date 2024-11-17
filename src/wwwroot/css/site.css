@@ -1,4 +1,7 @@
-﻿
+﻿.badge-bar {
+    align-items: center;
+}
+
 .sort-select > option {
     font-weight: bold;
 }
