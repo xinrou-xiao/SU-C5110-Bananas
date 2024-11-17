@@ -1,4 +1,14 @@
 ﻿
+.sort-select {
+    padding: 0 10px;
+    height: 35px;
+    width: max-content;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    color: #00a36c;
+    font-weight: bold;
+}
+
 body.dark-theme .genre-unselected {
     background-color: #272727;
     color: white;
