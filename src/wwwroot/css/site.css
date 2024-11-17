@@ -1,4 +1,11 @@
 ﻿
+body.dark-theme .search-icon {
+    background-color: #121212;
+    border-right: none;
+    border-color: #303030;
+    color: #d6d5d5;
+}
+
 body.dark-theme .search-input, body.dark-theme .search-input:focus {
     background-color: #121212 !important;
     border-left: none;
