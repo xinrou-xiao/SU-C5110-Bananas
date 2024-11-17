@@ -1,4 +1,11 @@
 ﻿
+.search-btn, .search-btn:hover {
+    background-color: #d6d5d5;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: black;
+}
+
 body.dark-theme .search-icon {
     background-color: #121212;
     border-right: none;
