@@ -390,11 +390,18 @@
             Products = Products.OrderByDescending(p => p.Release);
             return;
         }
-
+        
         // Sort products by the oldest release date (ascending)
         if (selectedSort.Equals("oldest"))
         {
             Products = Products.OrderBy(p => p.Release);
+            return;
+        }
+
+        // Sort products by the oldest release date (ascending)
+        if (selectedSort.Equals("rating"))
+        {
+            Products = Products.OrderByDescending(p => p.Ratings?.Average() ?? 0);
             return;
         }
     }
