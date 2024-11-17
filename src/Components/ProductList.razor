@@ -3,6 +3,20 @@
 @using Microsoft.AspNetCore.Components.Web
 @inject JsonFileProductService ProductService
 
+<!-- Search section -->
+<div>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text search-icon" id="basic-addon1"><i class="fa-solid fa-magnifying-glass"></i></span>
+        </div>
+        <input @bind="searchKeywords" type="text" class="form-control search-input" placeholder="Seach">
+        <div class="input-group-append">
+            <button @onclick="CleanSearchInput" class="btn search-input" type="button"><i class="fa-solid fa-xmark"></i></button>
+            <button @onclick="Search" class="btn search-btn" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+    </div>
+</div>
+
 <!-- Banner Carousel Section: A slideshow of anime banners that automatically cycles -->
 <div id="animeCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators for switching between banners -->
