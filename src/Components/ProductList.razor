@@ -229,6 +229,43 @@
     // The selected sorting option. Initially empty, this will define how products are sorted (e.g., by title or release date).
     string selectedSort = string.Empty;
 
+    /// <summary>
+    /// This method is called during the component's initialization lifecycle to set up initial data.
+    /// </summary> 
+    protected override void OnInitialized()
+    {
+        // Retrieve all product data from the product service and store it in the Products collection.
+        Products = ProductService.GetAllData();
+
+        // Create a sorted set to store unique genres, ensuring no duplicates and sorting them alphabetically.
+        SortedSet<string> GenreSet = new SortedSet<string>();
+
+        // Loop through each product to extract genres and add them to the GenreSet.
+        foreach (var product in Products)
+        {
+            // If the product has no genre, return early (this will stop further processing for this product).
+            if (product.Genre == null)
+            {
+                return;
+            }
+
+            // Loop through the product's genres and add each genre to the GenreSet.
+            foreach (var genre in product.Genre)
+            {
+                GenreSet.Add(genre);
+            }
+        }
+
+        // Add a default "All" genre to the list, representing no genre filter.
+        GenreList.Add("All");
+
+        // Add each unique genre from the GenreSet to the GenreList for filtering options.
+        foreach (var genre in GenreSet)
+        {
+            GenreList.Add(genre);
+        }
+    }
+
     void SelectProduct(string productId)
     {
         selectedProductId = productId;
