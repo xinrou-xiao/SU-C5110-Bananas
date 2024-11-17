@@ -115,7 +115,7 @@
     <span id="song-name"></span>
 </div>
 
-<!-- Genre section -->
+<!-- Genre and Sort section -->
 <div class="input-group mb-3 badge-bar">
     @foreach (var genre in GenreList)
     {
@@ -126,6 +126,15 @@
         }
         <button @onclick="(() => UpdateGenre(genre))" class=@buttonClass type="button">@genre</button>
     }
+    <span>
+        <select class="sort-select" @onchange="UpdateSort">
+            <option value="" disabled selected hidden>Sort by</option>
+            <option value="asc">A - Z</option>
+            <option value="desc">Z - A</option>
+            <option value="newest">Newest</option>
+            <option value="oldest">Oldest</option>
+        </select>
+    </span>
 </div>
 
 <div class="card-columns">
