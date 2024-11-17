@@ -341,4 +341,24 @@
         // Filter products by title containing the search keywords (case-insensitive)
         Products = ProductService.GetAllData().Where(p => p.Title.Contains(searchKeywords, StringComparison.OrdinalIgnoreCase));
     }
+
+    ///<summary>
+    /// Updates the selected genre and filters the products based on the chosen genre.
+    /// If the genre is "All", no filtering is applied.
+    /// </summary>
+    public void UpdateGenre(string genre)
+    {
+        selectedGenre = genre;
+        Search();  // Perform search again with updated genre filter
+
+        // If "All" genre is selected, skip further filtering
+        if (genre.Equals("All"))
+        {
+            return;
+        }
+
+        // Filter products by the selected genre
+        Products = Products.Where(p => p.Genre.Contains(genre));
+    }
+
 }
