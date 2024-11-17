@@ -232,7 +232,7 @@
 
     /// <summary>
     /// This method is called during the component's initialization lifecycle to set up initial data.
-    /// </summary> 
+    /// </summary>
     protected override void OnInitialized()
     {
         // Retrieve all product data from the product service and store it in the Products collection.
@@ -343,6 +343,11 @@
         }
         // Filter products by title containing the search keywords (case-insensitive)
         Products = ProductService.GetAllData().Where(p => p.Title.Contains(searchKeywords, StringComparison.OrdinalIgnoreCase));
+
+        if (selectedSort.Length > 0)
+        {
+            Sort(); // Perform sort again with updated genre filter
+        }
     }
 
     ///<summary>
@@ -377,7 +382,7 @@
     }
 
     /// <summary>
-    /// Updates selectedSort's value
+    /// Updates the sorting of the products based on the selected sorting criteria
     /// </summary>
     /// <param name="e"></param>
     public void UpdateSort(ChangeEventArgs e)
@@ -386,9 +391,6 @@
         Sort();
     }
 
-    /// <summary>
-    /// Updates the sorting of the products based on the selected sorting criteria
-    /// </summary>
     public void Sort()
     {
         // Sort products in ascending order by title
