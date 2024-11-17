@@ -1,4 +1,8 @@
 ﻿
+.genre-unselected:hover {
+    background-color: white;
+}
+
 .search-icon {
     background-color: white;
     border-right: none;
