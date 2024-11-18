@@ -49,7 +49,7 @@ namespace UnitTests.Models
         /// Test to verify that the Icon property can be set and retrieved correctly.
         /// </summary>
         [Test]
-        public void Icon_Property_Should_Be_Set_And_Retrieved_Correctly()
+        public void Icon_SetAndRetrieve_Should_Work_Correctly()
         {
             // Arrange
             var ottModel = new OTTModel();
