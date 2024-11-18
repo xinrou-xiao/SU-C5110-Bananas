@@ -18,10 +18,9 @@ namespace UnitTests.Models
         /// Test to verify that the DisplayName method returns the correct display name for Amature.
         /// </summary>
         [Test]
-        public void DisplayName_Should_Return_Correct_DisplayName_For_Amature()
+        public void DisplayName_Amature_Valid_Should_Return_HandMadeItems()
         {
             // Arrange
-            // Hand Made Items
             var productType = ProductTypeEnum.Amature;
 
             // Act
@@ -35,10 +34,9 @@ namespace UnitTests.Models
         /// Test to verify that the DisplayName method returns the correct display name for Antique.
         /// </summary>
         [Test]
-        public void DisplayName_Should_Return_Correct_DisplayName_For_Antique()
+        public void DisplayName_Antique_Valid_Should_Return_Antiques()
         {
             // Arrange
-            // Antiques
             var productType = ProductTypeEnum.Antique;
 
             // Act
@@ -52,10 +50,9 @@ namespace UnitTests.Models
         /// Test to verify that the DisplayName method returns the correct display name for Collectable.
         /// </summary>
         [Test]
-        public void DisplayName_Should_Return_Correct_DisplayName_For_Collectable()
+        public void DisplayName_Collectable_Valid_Should_Return_Collectables()
         {
             // Arrange
-            // Collectables
             var productType = ProductTypeEnum.Collectable;
 
             // Act
@@ -69,10 +66,9 @@ namespace UnitTests.Models
         /// Test to verify that the DisplayName method returns the correct display name for Commercial.
         /// </summary>
         [Test]
-        public void DisplayName_Should_Return_Correct_DisplayName_For_Commercial()
+        public void DisplayName_Commercial_Valid_Should_Return_CommercialGoods()
         {
             // Arrange
-            // Commercial goods
             var productType = ProductTypeEnum.Commercial;
 
             // Act
@@ -86,10 +82,9 @@ namespace UnitTests.Models
         /// Test to verify that the DisplayName method returns an empty string for Undefined.
         /// </summary>
         [Test]
-        public void DisplayName_Should_Return_Empty_String_For_Undefined()
+        public void DisplayName_Undefined_Valid_Should_Return_EmptyString()
         {
             // Arrange
-            // Undefined
             var productType = ProductTypeEnum.Undefined;
 
             // Act
@@ -103,10 +98,9 @@ namespace UnitTests.Models
         /// Test to verify that the DisplayName method returns an empty string for an unknown value.
         /// </summary>
         [Test]
-        public void DisplayName_Should_Return_Empty_String_For_Unknown_Value()
+        public void DisplayName_UnknownValue_Invalid_Should_Return_EmptyString()
         {
             // Arrange
-            // An unknown value not defined in the enum
             var productType = (ProductTypeEnum)999;
 
             // Act
