@@ -19,11 +19,10 @@
         </thead>
 
         <tbody>
-
             @foreach (var product in Model.Products)
             {
                 <tr>
-                    <td>
+                    <td class="align-middle">
                         <!-- Link to read product details -->
                         <a asp-page="/Product/Read" asp-route-id="@product.Id">@product.Title</a>
                     </td>
@@ -39,7 +38,6 @@
                     </td>
                 </tr>
             }
-
         </tbody>
     </table>
 </div>
