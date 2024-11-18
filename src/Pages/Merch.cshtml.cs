@@ -4,12 +4,23 @@ using static System.Net.WebRequestMethods;
 
 namespace ContosoCrafts.WebSite.Pages
 {
+    /// <summary>
+    /// The MerchModel class handles the display of merchandise items on the website.
+    /// It stores and provides the list of available merchandise items.
+    /// </summary>
     public class MerchModel : PageModel
     {
+        /// <summary>
+        /// Gets or sets the list of merchandise items.
+        /// </summary>
         public List<MerchandiseItem> Merchandise { get; set; }
-
+        /// <summary>
+        /// OnGet method is called when the page is first accessed.
+        /// It initializes the Merchandise list with predefined items.
+        /// </summary>
         public void OnGet()
         {
+            // Initialize the Merchandise list with merchandise items.
             Merchandise = new List<MerchandiseItem>
             {
                 new MerchandiseItem
@@ -88,13 +99,39 @@ namespace ContosoCrafts.WebSite.Pages
             };
         }
     }
+    /// <summary>
+    /// Represents an individual merchandise item.
+    /// </summary>
     public class MerchandiseItem
     {
+        /// <summary>
+        /// Gets or sets the title of the merchandise item.
+        /// </summary>
         public string Title { get; set; }
+
+        /// <summary>
+        /// Gets or sets the description of the merchandise item.
+        /// </summary>
         public string Description { get; set; }
+
+        /// <summary>
+        /// Gets or sets the URL of the merchandise image.
+        /// </summary>
         public string ImageUrl { get; set; }
+
+        /// <summary>
+        /// Gets or sets a list of hashtags related to the merchandise item.
+        /// </summary>
         public List<string> Hashtags { get; set; }
+
+        /// <summary>
+        /// Gets or sets the URL to purchase the merchandise item.
+        /// </summary>
         public string BuyLink { get; set; }
+
+        /// <summary>
+        /// Gets or sets the price of the merchandise item.
+        /// </summary>
         public decimal Price { get; set; } 
 
     }
