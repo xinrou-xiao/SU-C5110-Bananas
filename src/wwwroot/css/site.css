@@ -938,3 +938,26 @@ body.dark-theme .card-text {
     font-size: 14px;
     margin-bottom: 5px;
 }
+
+body.dark-theme .card-footer {
+    background-color: #1f1f1f; /* Match footer background to card body */
+    border-top: 1px solid #333; /* Border for separation */
+    color: #f0f0f0; /* Light text color for footer */
+}
+
+body.dark-theme .hashtags {
+    margin-top: 10px; /* Spacing for hashtags */
+    color: #d0aef2; /* Light purple for hashtags */
+}
+
+body.dark-theme .badge {
+    margin-right: 5px; /* Space between badges */
+    background-color: #3a3a3a; /* Darker background for badges */
+    color: #f0f0f0; /* Light text color for badges */
+}
+
+body.dark-theme .price {
+    color: #bb86fc; /* Light purple for price to stand out */
+    font-size: 1rem;
+    margin-right: 0.2rem;
+}
