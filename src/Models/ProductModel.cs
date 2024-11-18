@@ -11,11 +11,9 @@ namespace ContosoCrafts.WebSite.Models
     public class ProductModel
     {
         // Map Id field in product.json to ProductModel's Id
-        
         public string Id { get; set; }
 
         // Map Maker field in product.json to ProductModel's Maker
-        
         [StringLength(100, ErrorMessage = "Maker cannot exceed 100 characters.")]
         public string Maker { get; set; }
 
