@@ -171,7 +171,7 @@ namespace UnitTests.Models
         /// Tests that the Season property can be set and retrieved correctly.
         /// </summary>
         [Test]
-        public void Season_Property_Should_Be_Set_And_Retrieved_Correctly()
+        public void Season_SetAndRetrieve_Should_Work_Correctly()
         {
             // Arrange: Create a new ProductModel instance and define the expected Season value.
             var productModel = new ProductModel();
@@ -188,7 +188,7 @@ namespace UnitTests.Models
         /// Tests that the CommentList property can be set and retrieved correctly.
         /// </summary>
         [Test]
-        public void CommentList_Property_Should_Be_Set_And_Retrieved_Correctly()
+        public void CommentList_SetAndRetrieve_Should_Work_Correctly()
         {
             // Arrange: Create a new ProductModel instance and define the expected CommentList value.
             var productModel = new ProductModel();
@@ -205,7 +205,7 @@ namespace UnitTests.Models
         /// Tests that the ToString method serializes the ProductModel to JSON correctly.
         /// </summary>
         [Test]
-        public void ToString_Should_Serialize_ProductModel_To_JSON()
+        public void ToString_Serialize_Should_Work_Correctly()
         {
             // Arrange: Create a new ProductModel instance with various properties set.
             var productModel = new ProductModel
