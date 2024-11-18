@@ -69,7 +69,7 @@ namespace UnitTests.Models
         /// Tests that the Url property can be set and retrieved correctly.
         /// </summary>
         [Test]
-        public void Url_Property_Should_Be_Set_And_Retrieved_Correctly()
+        public void Url_SetAndRetrieve_Should_Work_Correctly()
         {
             // Arrange: Create a new ProductModel instance and define the expected Url value.
             var productModel = new ProductModel();
@@ -86,7 +86,7 @@ namespace UnitTests.Models
         /// Tests that the Title property can be set and retrieved correctly.
         /// </summary>
         [Test]
-        public void Title_Property_Should_Be_Set_And_Retrieved_Correctly()
+        public void Title_SetAndRetrieve_Should_Work_Correctly()
         {
             // Arrange: Create a new ProductModel instance and define the expected Title value.
             var productModel = new ProductModel();
@@ -103,7 +103,7 @@ namespace UnitTests.Models
         /// Tests that the Description property can be set and retrieved correctly.
         /// </summary>
         [Test]
-        public void Description_Property_Should_Be_Set_And_Retrieved_Correctly()
+        public void Description_SetAndRetrieve_Should_Work_Correctly()
         {
             // Arrange: Create a new ProductModel instance and define the expected Description value.
             var productModel = new ProductModel();
