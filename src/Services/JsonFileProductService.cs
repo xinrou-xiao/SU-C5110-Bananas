@@ -89,7 +89,7 @@ namespace ContosoCrafts.WebSite.Services
             // If the ProductID is invalid, return
             if (string.IsNullOrEmpty(productId))
             {
-                return false;
+                return false; // Fast fail for invalid productId
             }
 
             var products = GetAllData();
@@ -98,19 +98,13 @@ namespace ContosoCrafts.WebSite.Services
             var data = products.FirstOrDefault(x => x.Id.Equals(productId));
             if (data == null)
             {
-                return false;
+                return false; // Fast fail for product not found
             }
 
-            // Check Rating for boundaries, do not allow ratings below 0
-            if (rating < 0)
+            // Check Rating for boundaries, do not allow ratings below 0 and above 5 
+            if (rating < 0 || rating > 5)
             {
-                return false;
-            }
-
-            // Check Rating for boundaries, do not allow ratings above 5
-            if (rating > 5)
-            {
-                return false;
+                return false; // Fast fail for invalid rating
             }
 
             // Check to see if the rating exist, if there are none, then create the array
@@ -139,8 +133,8 @@ namespace ContosoCrafts.WebSite.Services
             var products = GetAllData().ToList();
             var existingProduct = products.FirstOrDefault(x => x.Id.Equals(updatedProduct.Id));
 
-            if (existingProduct is not null)
-            {
+                if (existingProduct is not null)
+                {
                 existingProduct.Title = updatedProduct.Title;
                 if (existingProduct.Description != null)
                 {
