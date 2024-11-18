@@ -25,23 +25,23 @@ $(".remove-genre").click(function () {
 /// bind remove function to remove button for new Added input group
 $("#create-OTT").click(function () {
     $(this).after('<div class="form-group border border-light border-right-0 border-left-0 rounded OTT-group">' +
-        '<div class= "form-group"> ' +
-        '<label class="white-font" >Platform</label>' +
+        '<div class="form-group">' +
+        '<label class="white-font">Platform</label>' +
         '<button class="btn btn-danger custom-btn remove-OTT" type="button">-</button>' +
         '<input class="form-control" type="text" name="OTT_dynamic_platform" placeholder="Platform"/>' +
         '<span class="text-danger field-validation-valid" data-valmsg-for="Product.OTT[0].Platform" data-valmsg-replace="true"></span>' +
-        ' </div >' +
-        ' <div class="form-group">' +
+        '</div>' +
+        '<div class="form-group">' +
         '<label class="white-font">Url</label>' +
         '<input class="form-control" type="text" name="OTT_dynamic_url" placeholder="Platform URL" />' +
-        '<span class="text-danger field-validation-valid" data-valmsg-for="Product.OTT[0].Url" data-valmsg-replace="true"></span>' -
+        '<span class="text-danger field-validation-valid" data-valmsg-for="Product.OTT[0].Url" data-valmsg-replace="true"></span>' +
         '</div>' +
         '<div class="form-group">' +
         '<label class="white-font">Icon</label>' +
-        '<input class="form-control" type="text" name="OTT_dynamic_icon" placeholder="Platform Icon" />' + 
+        '<input class="form-control" type="text" name="OTT_dynamic_icon" placeholder="Platform Icon" />' +
         '<span class="text-danger field-validation-valid" data-valmsg-for="Product.OTT[0].Icon" data-valmsg-replace="true"></span>' +
         '</div>' +
-        '</div >')
+        '</div>')
     $(".remove-OTT").click(function () {
         $(this).parent().parent().remove()
     })
