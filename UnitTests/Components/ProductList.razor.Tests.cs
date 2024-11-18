@@ -41,5 +41,29 @@ namespace UnitTests.Components
             // Verifying that the rendered markup contains a specific product title, "Naruto: The Journey of a Ninja Dreamer"
             Assert.That(result.Contains("Naruto: The Journey of a Ninja Dreamer"), Is.EqualTo(true));
         }
+
+        [Test]
+        public void SelectedProduct_Valid_ID_jenlooper_Should_Return_Content()
+        {
+            // Arrange
+            Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
+            var id = "MoreInfoButton_jenlooper-cactus";
+            var page = RenderComponent<ProductList>();
+
+            // Find the Buttons (more info)
+            var buttonList = page.FindAll("Button");
+
+            // Find the one that matches the ID looking for and click it 
+            var button = buttonList.First(m => m.OuterHtml.Contains(id));
+
+            // Act
+            button.Click();
+
+            // Get the markup to use for the assert
+            var pageMarkup = page.Markup;
+
+            // Assert 
+            Assert.That(pageMarkup.Contains("Naruto is an action-packed anime about Naruto Uzumaki, a young ninja aspiring to become Hokage, exploring themes of perseverance, friendship, and identity."), Is.EqualTo(true));
+        }
     }
 }
