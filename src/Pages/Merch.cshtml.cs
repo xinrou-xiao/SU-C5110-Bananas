@@ -14,6 +14,7 @@ namespace ContosoCrafts.WebSite.Pages
         /// Gets or sets the list of merchandise items.
         /// </summary>
         public List<MerchandiseItem> Merchandise { get; set; }
+
         /// <summary>
         /// OnGet method is called when the page is first accessed.
         /// It initializes the Merchandise list with predefined items.
@@ -99,6 +100,7 @@ namespace ContosoCrafts.WebSite.Pages
             };
         }
     }
+
     /// <summary>
     /// Represents an individual merchandise item.
     /// </summary>
