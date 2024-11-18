@@ -120,7 +120,7 @@ namespace UnitTests.Models
         /// Tests that the Release property can be set and retrieved correctly.
         /// </summary>
         [Test]
-        public void Release_Property_Should_Be_Set_And_Retrieved_Correctly()
+        public void Release_SetAndRetrieve_Should_Work_Correctly()
         {
             // Arrange: Create a new ProductModel instance and define the expected Release value.
             var productModel = new ProductModel();
@@ -137,7 +137,7 @@ namespace UnitTests.Models
         /// Tests that the Trailer property can be set and retrieved correctly.
         /// </summary>
         [Test]
-        public void Trailer_Property_Should_Be_Set_And_Retrieved_Correctly()
+        public void Trailer_SetAndRetrieve_Should_Work_Correctly()
         {
             // Arrange: Create a new ProductModel instance and define the expected Trailer value.
             var productModel = new ProductModel();
@@ -154,7 +154,7 @@ namespace UnitTests.Models
         /// Tests that the OTT property can be set and retrieved correctly.
         /// </summary>
         [Test]
-        public void OTT_Property_Should_Be_Set_And_Retrieved_Correctly()
+        public void OTT_SetAndRetrieve_Should_Work_Correctly()
         {
             // Arrange: Create a new ProductModel instance and define the expected OTT value.
             var productModel = new ProductModel();
