@@ -29,7 +29,7 @@ namespace UnitTests.Models
         /// Tests that the Comment property can be set and retrieved correctly.
         /// </summary>      
         [Test]
-        public void Comment_Property_Should_Be_Set_And_Retrieved_Correctly()
+        public void Comment_SetAndRetrieve_Should_Work_Correctly()
         {
             // Arrange
             var comment = new CommentModel();
