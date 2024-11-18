@@ -208,6 +208,10 @@ namespace ContosoCrafts.WebSite.Services
             // Get the current set, and append the new record to it
             var dataSet = GetAllData();
             var data = dataSet.FirstOrDefault(m => m.Id.Equals(id));
+            if (data == null)
+            {
+                return data; // Fast fail for product not found
+            }
             if (data != null)
             {
                 var newDataSet = dataSet.Where(m => m.Id != id);
