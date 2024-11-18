@@ -13,7 +13,7 @@ namespace UnitTests.Models
         /// Verifies that the constructor initializes each instance of CommentModel with a unique, non-null, non-empty Id.
         /// </summary>
         [Test]
-        public void Constructor_Should_Initialize_Id_With_Unique_Value()
+        public void Constructor_Initialization_Should_Set_Unique_NonNull_NonEmpty_Id()
         {
             // Arrange & Act
             var comment1 = new CommentModel();
@@ -27,7 +27,7 @@ namespace UnitTests.Models
 
         /// <summary>
         /// Tests that the Comment property can be set and retrieved correctly.
-        /// </summary>
+        /// </summary>      
         [Test]
         public void Comment_Property_Should_Be_Set_And_Retrieved_Correctly()
         {
