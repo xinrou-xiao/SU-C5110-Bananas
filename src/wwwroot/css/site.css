@@ -569,439 +569,442 @@ for details on configuring this project to bundle and minify static web assets. 
     border-bottom-right-radius: 50px !important;
 }
 
-
-a.navbar-brand {
-    white-space: normal;
-    font-family: 'Yellowtail', cursive;
-    font-size: xx-large;
-    text-align: center;
-    word-break: break-all;
-}
-
-/* Provide sufficient contrast against white background */
-a {
-   color: #0366d6;
-}
-
-.btn-primary {
-    color: #fff;
-    background-color: #252152;
-    border-color: #252152;
-    /*added border radius to the button*/
-}
-.btn-primary:hover {
-    color: #fff;
-    background-color: #00A36C;
-    border-color: #00A36C; /*Changed Product button hover color*/
-    /*added border radius to the button*/
-}
-
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
-}
-
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  font-size: 14px;
-}
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.border-top {
-  border-top: 1px solid #e5e5e5;
-}
-.border-bottom {
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
-}
-
-button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
-}
-
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  position: relative;
-  min-height: 100%;
-}
-
-body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
-}
-p {
-    font-family: 'poppins-light', sans-serif;
-}
-h1 {
-    font-family: 'poppins-light', sans-serif;
-}
-ul {
-    font-family: 'poppins-light', sans-serif;
-}
-.footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    white-space: nowrap;
-    line-height: 60px; /* Vertically center the text there */
-    font-family: 'poppins-light' !important; /* changed footer font to poppins */
-}
-/*Backgrounds*/
-.bg-navbar {
-    background: -webkit-linear-gradient(110deg, #c1e899 60%, #00A36C 60%); /* Changed header colour to green and light green */
-    background: -o-linear-gradient(110deg, #c1e899 60%, #00A36C 60%); /* Changed header colour to green and light green */
-    background: -moz-linear-gradient(110deg, #c1e899 60%, #00A36C 60%); /* Changed header colour to green and light green */
-    background: linear-gradient(110deg, #c1e899 60%, #00A36C 60%); /* Changed header colour to green and light green */
-}
-.bg-footer {
-    background: -webkit-linear-gradient(110deg, #00A36C 60%, #c1e899 60%);
-    background: -o-linear-gradient(110deg, #00A36C 60%, #c1e899 60%);
-    background: -moz-linear-gradient(110deg, #00A36C 60%, #c1e899 60%);
-    background: linear-gradient(110deg, #00A36C 60%, #c1e899 60%); /* changed footer color to new green color */
-}
-
-.footer-text {
-    color: #212529;
-}
-/*Footer Text color*/
-
-.privacy-page-text {
-    color: #fff;/*Privacy page font color*/
-    font-family: 'poppins-light', sans-serif;
-}
-
-/*Watch Trailor Button CSS*/
-.btn-watch-trailer {
-    background-color: #252152;
-    color: white;
-    border: none;
-    text-decoration: underline;
-    /*added border radius to the button*/
-    border-radius: 10px;
-}
-/* Style for the trailer watch button when hovered */
-.btn-watch-trailer:hover {
-    /* Change the background color to coral on hover */
-    background-color: coral;
-
-    /* Change the text color to black on hover */
-    color: black;
-
-    /* Underline the text when the button is hovered */
-    text-decoration: underline;
-
-    /* Added border radius to the button for rounded corners */
-    border-radius: 10px;
-}
-
-/* Base styles for the delete button */
-.delete-btn {
-    /* Set background color to a light red shade */
-    background-color: #eeb2b2;
-
-    /* Set text color to a darker red */
-    color: #d11a2a;
-}
-
-/* Style for the delete button when hovered */
-.delete-btn:hover {
-    /* Change background color to a darker red on hover */
-    background-color: #d11a2a;
-
-    /* Change text color to black on hover */
-    color: black;
-
-    /* Underline the text when the button is hovered */
-    text-decoration: underline;
-}
-
-/* Base styles for the update button */
-.update-btn {
-    /* Set background color to coral */
-    background-color: coral;
-
-    /* Set text color to white */
-    color: #fff;
-
-    /* Add left margin for spacing */
-    margin-left: 24px;
-
-    /* Add right margin for spacing */
-    margin-right: 24px;
-}
-
-/* Style for the update button when hovered */
-.update-btn:hover {
-    /* Change background color to yellow on hover */
-    background-color: yellow;
-
-    /* Change text color to black on hover */
-    color: black;
-
-    /* Underline the text when the button is hovered */
-    text-decoration: underline;
-}
-
-/* Base styles for the read button */
-.read-btn {
-    /* Set background color to a teal shade */
-    background-color: #00A36C;
-
-    /* Set text color to white */
-    color: #fff;
-}
-
-/* Style for the read button when hovered */
-.read-btn:hover {
-    /* Change background color to a light green on hover */
-    background-color: #c1e899;
-
-    /* Change text color to black on hover */
-    color: black;
-
-    /* Underline the text when the button is hovered */
-    text-decoration: underline;
-}
-
-.save-btn {
-    background-color: coral;
-    color: #fff;
-    margin-right: 24px;
-}
-.save-btn:hover {
-    background-color: yellow;
-    color: black;
-    text-decoration: underline;
-}
-/* Button Group Styling */
-.button-group {
-    display: flex;
-    justify-content: space-around; /* Space buttons evenly */
-    flex-wrap: wrap; /* Allow buttons to wrap to the next line */
-    margin-bottom: 20px; /* Space below the button group */
-    padding: 10px; /* Add padding for better touch targets */
-}
-
-/* Button Styles */
-.read-btn, .update-btn, .delete-btn {
-    flex: 1 1 30%; /* Allow buttons to grow and shrink, set base width */
-    margin: 5px; /* Add margin for spacing */
-    padding: 10px 20px; /* Add padding for larger click area */
-    font-size: 16px; /* Increase font size for readability */
-    border: none;
-    border-radius: 5px; /* Rounded corners for aesthetics */
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
-}
-
-/* Responsive adjustments for mobile */
 @media (max-width: 600px) {
-    .button-group {
-        flex-direction: column; /* Stack buttons vertically on mobile */
-        align-items: center; /* Center align buttons */
-    }
-
-    .read-btn, .update-btn, .delete-btn {
-        width: 80%; /* Full width for easier clicking */
+    .card-columns {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
     }
 }
 
-/* Read Button Styles */
-.read-btn {
-    background-color: #00A36C; /* Teal color for Read */
-    color: #fff;
-}
-
-    .read-btn:hover {
-        background-color: #c1e899; /* Light green on hover */
-        color: black;
-        text-decoration: underline;
+    a.navbar-brand {
+        white-space: normal;
+        font-family: 'Yellowtail', cursive;
+        font-size: xx-large;
+        text-align: center;
+        word-break: break-all;
     }
 
-/* Update Button Styles */
-.update-btn {
-    background-color: coral; /* Coral color for Update */
-    color: #fff;
-    /* Remove left and right margins to align with other buttons */
-    margin: 5px;
-}
-
-    .update-btn:hover {
-        background-color: yellow; /* Yellow on hover */
-        color: black;
-        text-decoration: underline;
+    /* Provide sufficient contrast against white background */
+    a {
+        color: #0366d6;
     }
 
-/* Delete Button Styles */
-.delete-btn {
-    background-color: #eeb2b2; /* Light red for Delete */
-    color: #d11a2a;
-}
-
-    .delete-btn:hover {
-        background-color: #d11a2a; /* Darker red on hover */
-        color: black;
-        text-decoration: underline;
+    .btn-primary {
+        color: #fff;
+        background-color: #252152;
+        border-color: #252152;
+        /*added border radius to the button*/
     }
 
-/* Save Button Styles */
-.save-btn {
-    background-color: coral;
-    color: #fff;
-    margin: 5px;
-}
-
-    .save-btn:hover {
-        background-color: yellow;
-        color: black;
-        text-decoration: underline;
-    }
-.genre-container {
-    display: flex; /* Use flexbox for layout */
-    align-items: center; /* Center align items vertically */
-    width: 100%; /* Full width for responsiveness */
-    box-sizing: border-box; /* Include padding and border in element's total width and height */
-    padding: 5px; /* Add padding for better touch targets */
-}
-
-.genre-input {
-    flex-grow: 1; /* Allow input to take up remaining space */
-    padding: 10px; /* Add padding for larger click area */
-    font-size: 16px; /* Increase font size for readability */
-    border: 1px solid #ccc; /* Border for input */
-    border-radius: 5px; /* Rounded corners for aesthetics */
-    margin-right: 10px; /* Space between input and buttons */
-}
-
-.add-btn, .remove-btn {
-    padding: 10px 20px; /* Add padding for larger click area */
-    font-size: 16px; /* Increase font size for readability */
-    border: none;
-    border-radius: 5px; /* Rounded corners for aesthetics */
-    cursor: pointer;
-    transition: background-color 0.3s ease; /* Smooth transition for hover effects */
-}
-
-.add-btn {
-    background-color: #4CAF50; /* Green color for Add */
-    color: #fff; /* White text color */
-    margin-right: 10px; /* Space between Add and Remove buttons */
-}
-
-    .add-btn:hover {
-        background-color: #45a049; /* Darker green on hover */
-    }
-
-.remove-btn {
-    background-color: #d11a2a; /* Red color for Remove */
-    color: #fff; /* White text color */
-}
-
-    .remove-btn:hover {
-        background-color: #a00; /* Darker red on hover */
-    }
-
-.form-inline {
-    flex-flow: nowrap;
-}
-/* Dark Theme Styles for Product Cards */
-body.dark-theme .card {
-    background-color: #1f1f1f; /* Dark background for cards */
-    border: 1px solid #333; /* Darker border for better definition */
-    color: #f0f0f0; /* Light text color for readability */
-    transition: transform 0.2s, background-color 0.3s; /* Smooth transition for hover effects */
-}
-
-    body.dark-theme .card:hover {
-        transform: scale(1.05); /* Slightly increase the size on hover */
-        background-color: #2a2a2a; /* Slightly lighter background on hover */
-    }
-
-body.dark-theme .card-title {
-    color: #bb86fc; /* Light purple for titles to stand out */
-    font-size: 18px;
-    margin-bottom: 2px;
-    font-weight: bold;
-}
-
-body.dark-theme .card-text {
-    color: #d6d5d5; /* Light grey for text to ensure readability */
-    font-size: 14px;
-    margin-bottom: 5px;
-}
-
-body.dark-theme .card-footer {
-    background-color: #1f1f1f; /* Match footer background to card body */
-    border-top: 1px solid #333; /* Border for separation */
-    color: #f0f0f0; /* Light text color for footer */
-}
-
-body.dark-theme .hashtags {
-    margin-top: 10px; /* Spacing for hashtags */
-    color: #d0aef2; /* Light purple for hashtags */
-}
-
-body.dark-theme .badge {
-    margin-right: 5px; /* Space between badges */
-    background-color: #3a3a3a; /* Darker background for badges */
-    color: #f0f0f0; /* Light text color for badges */
-}
-
-body.dark-theme .price {
-    color: #bb86fc; /* Light purple for price to stand out */
-    font-size: 1rem;
-    margin-right: 0.2rem;
-}
-/* Light Mode Styles for Error and Development Pages */
-body.light-theme .error-page, body.light-theme .development-page {
-    background-color: #f9f9f9; /* Light grey background for better contrast */
-    color: #333; /* Dark text color for readability */
-    padding: 20px; /* Add padding for better layout */
-    font-family: 'poppins-light', sans-serif; /* Consistent font family */
-}
-
-    body.light-theme .error-page h1, body.light-theme .development-page h1 {
-        color: #d11a2a; /* Red color for error titles to stand out */
-        font-size: 2rem; /* Larger font size for titles */
-        margin-bottom: 10px; /* Space below titles */
-    }
-
-    body.light-theme .error-page p, body.light-theme .development-page p {
-        color: #555; /* Medium grey for paragraph text */
-        font-size: 1rem; /* Standard font size for readability */
-        line-height: 1.5; /* Line height for better readability */
-    }
-
-    body.light-theme .error-page a, body.light-theme .development-page a {
-        color: #0366d6; /* Blue color for links */
-        text-decoration: underline; /* Underline links for visibility */
-    }
-
-        body.light-theme .error-page a:hover, body.light-theme .development-page a:hover {
-            color: #024ea2; /* Darker blue on hover for links */
+        .btn-primary:hover {
+            color: #fff;
+            background-color: #00A36C;
+            border-color: #00A36C; /*Changed Product button hover color*/
+            /*added border radius to the button*/
         }
 
-    body.light-theme .error-page .button, body.light-theme .development-page .button {
-        background-color: #00A36C; /* Teal color for buttons */
-        color: #fff; /* White text color for buttons */
-        padding: 10px 20px; /* Padding for buttons */
-        border: none; /* No border for buttons */
-        border-radius: 5px; /* Rounded corners for buttons */
-        cursor: pointer; /* Pointer cursor for buttons */
+    .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+        color: #fff;
+        background-color: #1b6ec2;
+        border-color: #1861ac;
+    }
+
+    /* Sticky footer styles
+-------------------------------------------------- */
+    html {
+        font-size: 14px;
+    }
+
+    @media (min-width: 768px) {
+        html {
+            font-size: 16px;
+        }
+    }
+
+    .border-top {
+        border-top: 1px solid #e5e5e5;
+    }
+
+    .border-bottom {
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+    .box-shadow {
+        box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+    }
+
+    button.accept-policy {
+        font-size: 1rem;
+        line-height: inherit;
+    }
+
+    /* Sticky footer styles
+-------------------------------------------------- */
+    html {
+        position: relative;
+        min-height: 100%;
+    }
+
+    body {
+        /* Margin bottom by footer height */
+        margin-bottom: 60px;
+    }
+
+    p {
+        font-family: 'poppins-light', sans-serif;
+    }
+
+    h1 {
+        font-family: 'poppins-light', sans-serif;
+    }
+
+    ul {
+        font-family: 'poppins-light', sans-serif;
+    }
+
+    .footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        white-space: nowrap;
+        line-height: 60px; /* Vertically center the text there */
+        font-family: 'poppins-light' !important; /* changed footer font to poppins */
+    }
+    /*Backgrounds*/
+    .bg-navbar {
+        background: -webkit-linear-gradient(110deg, #c1e899 60%, #00A36C 60%); /* Changed header colour to green and light green */
+        background: -o-linear-gradient(110deg, #c1e899 60%, #00A36C 60%); /* Changed header colour to green and light green */
+        background: -moz-linear-gradient(110deg, #c1e899 60%, #00A36C 60%); /* Changed header colour to green and light green */
+        background: linear-gradient(110deg, #c1e899 60%, #00A36C 60%); /* Changed header colour to green and light green */
+    }
+
+    .bg-footer {
+        background: -webkit-linear-gradient(110deg, #00A36C 60%, #c1e899 60%);
+        background: -o-linear-gradient(110deg, #00A36C 60%, #c1e899 60%);
+        background: -moz-linear-gradient(110deg, #00A36C 60%, #c1e899 60%);
+        background: linear-gradient(110deg, #00A36C 60%, #c1e899 60%); /* changed footer color to new green color */
+    }
+
+    .footer-text {
+        color: #212529;
+    }
+    /*Footer Text color*/
+
+    .privacy-page-text {
+        color: #fff; /*Privacy page font color*/
+        font-family: 'poppins-light', sans-serif;
+    }
+
+    /*Watch Trailor Button CSS*/
+    .btn-watch-trailer {
+        background-color: #252152;
+        color: white;
+        border: none;
+        text-decoration: underline;
+        /*added border radius to the button*/
+        border-radius: 10px;
+    }
+        /* Style for the trailer watch button when hovered */
+        .btn-watch-trailer:hover {
+            /* Change the background color to coral on hover */
+            background-color: coral;
+            /* Change the text color to black on hover */
+            color: black;
+            /* Underline the text when the button is hovered */
+            text-decoration: underline;
+            /* Added border radius to the button for rounded corners */
+            border-radius: 10px;
+        }
+
+    /* Base styles for the delete button */
+    .delete-btn {
+        /* Set background color to a light red shade */
+        background-color: #eeb2b2;
+        /* Set text color to a darker red */
+        color: #d11a2a;
+    }
+
+        /* Style for the delete button when hovered */
+        .delete-btn:hover {
+            /* Change background color to a darker red on hover */
+            background-color: #d11a2a;
+            /* Change text color to black on hover */
+            color: black;
+            /* Underline the text when the button is hovered */
+            text-decoration: underline;
+        }
+
+    /* Base styles for the update button */
+    .update-btn {
+        /* Set background color to coral */
+        background-color: coral;
+        /* Set text color to white */
+        color: #fff;
+        /* Add left margin for spacing */
+        margin-left: 24px;
+        /* Add right margin for spacing */
+        margin-right: 24px;
+    }
+
+        /* Style for the update button when hovered */
+        .update-btn:hover {
+            /* Change background color to yellow on hover */
+            background-color: yellow;
+            /* Change text color to black on hover */
+            color: black;
+            /* Underline the text when the button is hovered */
+            text-decoration: underline;
+        }
+
+    /* Base styles for the read button */
+    .read-btn {
+        /* Set background color to a teal shade */
+        background-color: #00A36C;
+        /* Set text color to white */
+        color: #fff;
+    }
+
+        /* Style for the read button when hovered */
+        .read-btn:hover {
+            /* Change background color to a light green on hover */
+            background-color: #c1e899;
+            /* Change text color to black on hover */
+            color: black;
+            /* Underline the text when the button is hovered */
+            text-decoration: underline;
+        }
+
+    .save-btn {
+        background-color: coral;
+        color: #fff;
+        margin-right: 24px;
+    }
+
+        .save-btn:hover {
+            background-color: yellow;
+            color: black;
+            text-decoration: underline;
+        }
+    /* Button Group Styling */
+    .button-group {
+        display: flex;
+        justify-content: space-around; /* Space buttons evenly */
+        flex-wrap: wrap; /* Allow buttons to wrap to the next line */
+        margin-bottom: 20px; /* Space below the button group */
+        padding: 10px; /* Add padding for better touch targets */
+    }
+
+    /* Button Styles */
+    .read-btn, .update-btn, .delete-btn {
+        flex: 1 1 30%; /* Allow buttons to grow and shrink, set base width */
+        margin: 5px; /* Add margin for spacing */
+        padding: 10px 20px; /* Add padding for larger click area */
+        font-size: 16px; /* Increase font size for readability */
+        border: none;
+        border-radius: 5px; /* Rounded corners for aesthetics */
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
+    }
+
+    /* Responsive adjustments for mobile */
+    @media (max-width: 600px) {
+        .button-group {
+            flex-direction: column; /* Stack buttons vertically on mobile */
+            align-items: center; /* Center align buttons */
+        }
+
+        .read-btn, .update-btn, .delete-btn {
+            width: 80%; /* Full width for easier clicking */
+        }
+    }
+
+    /* Read Button Styles */
+    .read-btn {
+        background-color: #00A36C; /* Teal color for Read */
+        color: #fff;
+    }
+
+        .read-btn:hover {
+            background-color: #c1e899; /* Light green on hover */
+            color: black;
+            text-decoration: underline;
+        }
+
+    /* Update Button Styles */
+    .update-btn {
+        background-color: coral; /* Coral color for Update */
+        color: #fff;
+        /* Remove left and right margins to align with other buttons */
+        margin: 5px;
+    }
+
+        .update-btn:hover {
+            background-color: yellow; /* Yellow on hover */
+            color: black;
+            text-decoration: underline;
+        }
+
+    /* Delete Button Styles */
+    .delete-btn {
+        background-color: #eeb2b2; /* Light red for Delete */
+        color: #d11a2a;
+    }
+
+        .delete-btn:hover {
+            background-color: #d11a2a; /* Darker red on hover */
+            color: black;
+            text-decoration: underline;
+        }
+
+    /* Save Button Styles */
+    .save-btn {
+        background-color: coral;
+        color: #fff;
+        margin: 5px;
+    }
+
+        .save-btn:hover {
+            background-color: yellow;
+            color: black;
+            text-decoration: underline;
+        }
+
+    .genre-container {
+        display: flex; /* Use flexbox for layout */
+        align-items: center; /* Center align items vertically */
+        width: 100%; /* Full width for responsiveness */
+        box-sizing: border-box; /* Include padding and border in element's total width and height */
+        padding: 5px; /* Add padding for better touch targets */
+    }
+
+    .genre-input {
+        flex-grow: 1; /* Allow input to take up remaining space */
+        padding: 10px; /* Add padding for larger click area */
+        font-size: 16px; /* Increase font size for readability */
+        border: 1px solid #ccc; /* Border for input */
+        border-radius: 5px; /* Rounded corners for aesthetics */
+        margin-right: 10px; /* Space between input and buttons */
+    }
+
+    .add-btn, .remove-btn {
+        padding: 10px 20px; /* Add padding for larger click area */
+        font-size: 16px; /* Increase font size for readability */
+        border: none;
+        border-radius: 5px; /* Rounded corners for aesthetics */
+        cursor: pointer;
         transition: background-color 0.3s ease; /* Smooth transition for hover effects */
     }
 
-        body.light-theme .error-page .button:hover, body.light-theme .development-page .button:hover {
-            background-color: #029362; /* Darker teal on hover for buttons */
+    .add-btn {
+        background-color: #4CAF50; /* Green color for Add */
+        color: #fff; /* White text color */
+        margin-right: 10px; /* Space between Add and Remove buttons */
+    }
+
+        .add-btn:hover {
+            background-color: #45a049; /* Darker green on hover */
         }
+
+    .remove-btn {
+        background-color: #d11a2a; /* Red color for Remove */
+        color: #fff; /* White text color */
+    }
+
+        .remove-btn:hover {
+            background-color: #a00; /* Darker red on hover */
+        }
+
+    .form-inline {
+        flex-flow: nowrap;
+    }
+    /* Dark Theme Styles for Product Cards */
+    body.dark-theme .card {
+        background-color: #1f1f1f; /* Dark background for cards */
+        border: 1px solid #333; /* Darker border for better definition */
+        color: #f0f0f0; /* Light text color for readability */
+        transition: transform 0.2s, background-color 0.3s; /* Smooth transition for hover effects */
+    }
+
+        body.dark-theme .card:hover {
+            transform: scale(1.05); /* Slightly increase the size on hover */
+            background-color: #2a2a2a; /* Slightly lighter background on hover */
+        }
+
+    body.dark-theme .card-title {
+        color: #bb86fc; /* Light purple for titles to stand out */
+        font-size: 18px;
+        margin-bottom: 2px;
+        font-weight: bold;
+    }
+
+    body.dark-theme .card-text {
+        color: #d6d5d5; /* Light grey for text to ensure readability */
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    body.dark-theme .card-footer {
+        background-color: #1f1f1f; /* Match footer background to card body */
+        border-top: 1px solid #333; /* Border for separation */
+        color: #f0f0f0; /* Light text color for footer */
+    }
+
+    body.dark-theme .hashtags {
+        margin-top: 10px; /* Spacing for hashtags */
+        color: #d0aef2; /* Light purple for hashtags */
+    }
+
+    body.dark-theme .badge {
+        margin-right: 5px; /* Space between badges */
+        background-color: #3a3a3a; /* Darker background for badges */
+        color: #f0f0f0; /* Light text color for badges */
+    }
+
+    body.dark-theme .price {
+        color: #bb86fc; /* Light purple for price to stand out */
+        font-size: 1rem;
+        margin-right: 0.2rem;
+    }
+    /* Light Mode Styles for Error and Development Pages */
+    body.light-theme .error-page, body.light-theme .development-page {
+        background-color: #f9f9f9; /* Light grey background for better contrast */
+        color: #333; /* Dark text color for readability */
+        padding: 20px; /* Add padding for better layout */
+        font-family: 'poppins-light', sans-serif; /* Consistent font family */
+    }
+
+        body.light-theme .error-page h1, body.light-theme .development-page h1 {
+            color: #d11a2a; /* Red color for error titles to stand out */
+            font-size: 2rem; /* Larger font size for titles */
+            margin-bottom: 10px; /* Space below titles */
+        }
+
+        body.light-theme .error-page p, body.light-theme .development-page p {
+            color: #555; /* Medium grey for paragraph text */
+            font-size: 1rem; /* Standard font size for readability */
+            line-height: 1.5; /* Line height for better readability */
+        }
+
+        body.light-theme .error-page a, body.light-theme .development-page a {
+            color: #0366d6; /* Blue color for links */
+            text-decoration: underline; /* Underline links for visibility */
+        }
+
+            body.light-theme .error-page a:hover, body.light-theme .development-page a:hover {
+                color: #024ea2; /* Darker blue on hover for links */
+            }
+
+        body.light-theme .error-page .button, body.light-theme .development-page .button {
+            background-color: #00A36C; /* Teal color for buttons */
+            color: #fff; /* White text color for buttons */
+            padding: 10px 20px; /* Padding for buttons */
+            border: none; /* No border for buttons */
+            border-radius: 5px; /* Rounded corners for buttons */
+            cursor: pointer; /* Pointer cursor for buttons */
+            transition: background-color 0.3s ease; /* Smooth transition for hover effects */
+        }
+
+            body.light-theme .error-page .button:hover, body.light-theme .development-page .button:hover {
+                background-color: #029362; /* Darker teal on hover for buttons */
+            }
