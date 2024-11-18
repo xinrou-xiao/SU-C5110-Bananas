@@ -44,7 +44,7 @@ namespace ContosoCrafts.WebSite.Models
         public string[] Genre { get; set; }
 
         // Map Release field in product.json to ProductModel's Release
-        [StringLength(10, ErrorMessage = "Release date should be in a valid format.")]
+        [StringLength(4, ErrorMessage = "Release date should be in a valid format.")]
         public string Release { get; set; }
 
         // Map Trailer field in product.json to ProductModel's Trailer
@@ -52,6 +52,7 @@ namespace ContosoCrafts.WebSite.Models
         public string Trailer { get; set; }
 
         // Map OTT field in product.json to ProductModel's OTT list
+        [Required(ErrorMessage = "OTT is required.")]
         public List<OTTModel> OTT { get; set; } = new List<OTTModel>();
 
         // Map Season field in product.json to ProductModel's Season
