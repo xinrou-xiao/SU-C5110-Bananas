@@ -133,7 +133,11 @@ namespace ContosoCrafts.WebSite.Services
             var products = GetAllData().ToList();
             var existingProduct = products.FirstOrDefault(x => x.Id.Equals(updatedProduct.Id));
 
-                if (existingProduct is not null)
+            if (existingProduct == null)
+            {
+                return existingProduct; // Fast fail for product not found
+            }
+            if (existingProduct is not null)
                 {
                 existingProduct.Title = updatedProduct.Title;
                 if (existingProduct.Description != null)
