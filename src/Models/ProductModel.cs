@@ -11,11 +11,11 @@ namespace ContosoCrafts.WebSite.Models
     public class ProductModel
     {
         // Map Id field in product.json to ProductModel's Id
-        [Required(ErrorMessage = "Id is required.")]
+        
         public string Id { get; set; }
 
         // Map Maker field in product.json to ProductModel's Maker
-        [Required(ErrorMessage = "Maker is required.")]
+        
         [StringLength(100, ErrorMessage = "Maker cannot exceed 100 characters.")]
         public string Maker { get; set; }
 
@@ -52,7 +52,7 @@ namespace ContosoCrafts.WebSite.Models
         public string Trailer { get; set; }
 
         // Map OTT field in product.json to ProductModel's OTT list
-        [Required(ErrorMessage = "OTT is required.")]
+        
         public List<OTTModel> OTT { get; set; } = new List<OTTModel>();
 
         // Map Season field in product.json to ProductModel's Season
