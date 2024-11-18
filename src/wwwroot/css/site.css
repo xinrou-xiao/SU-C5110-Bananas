@@ -913,3 +913,28 @@ ul {
 .form-inline {
     flex-flow: nowrap;
 }
+/* Dark Theme Styles for Product Cards */
+body.dark-theme .card {
+    background-color: #1f1f1f; /* Dark background for cards */
+    border: 1px solid #333; /* Darker border for better definition */
+    color: #f0f0f0; /* Light text color for readability */
+    transition: transform 0.2s, background-color 0.3s; /* Smooth transition for hover effects */
+}
+
+    body.dark-theme .card:hover {
+        transform: scale(1.05); /* Slightly increase the size on hover */
+        background-color: #2a2a2a; /* Slightly lighter background on hover */
+    }
+
+body.dark-theme .card-title {
+    color: #bb86fc; /* Light purple for titles to stand out */
+    font-size: 18px;
+    margin-bottom: 2px;
+    font-weight: bold;
+}
+
+body.dark-theme .card-text {
+    color: #d6d5d5; /* Light grey for text to ensure readability */
+    font-size: 14px;
+    margin-bottom: 5px;
+}
