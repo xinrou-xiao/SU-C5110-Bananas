@@ -961,3 +961,45 @@ body.dark-theme .price {
     font-size: 1rem;
     margin-right: 0.2rem;
 }
+/* Light Mode Styles for Error and Development Pages */
+body.light-theme .error-page, body.light-theme .development-page {
+    background-color: #f9f9f9; /* Light grey background for better contrast */
+    color: #333; /* Dark text color for readability */
+    padding: 20px; /* Add padding for better layout */
+    font-family: 'poppins-light', sans-serif; /* Consistent font family */
+}
+
+    body.light-theme .error-page h1, body.light-theme .development-page h1 {
+        color: #d11a2a; /* Red color for error titles to stand out */
+        font-size: 2rem; /* Larger font size for titles */
+        margin-bottom: 10px; /* Space below titles */
+    }
+
+    body.light-theme .error-page p, body.light-theme .development-page p {
+        color: #555; /* Medium grey for paragraph text */
+        font-size: 1rem; /* Standard font size for readability */
+        line-height: 1.5; /* Line height for better readability */
+    }
+
+    body.light-theme .error-page a, body.light-theme .development-page a {
+        color: #0366d6; /* Blue color for links */
+        text-decoration: underline; /* Underline links for visibility */
+    }
+
+        body.light-theme .error-page a:hover, body.light-theme .development-page a:hover {
+            color: #024ea2; /* Darker blue on hover for links */
+        }
+
+    body.light-theme .error-page .button, body.light-theme .development-page .button {
+        background-color: #00A36C; /* Teal color for buttons */
+        color: #fff; /* White text color for buttons */
+        padding: 10px 20px; /* Padding for buttons */
+        border: none; /* No border for buttons */
+        border-radius: 5px; /* Rounded corners for buttons */
+        cursor: pointer; /* Pointer cursor for buttons */
+        transition: background-color 0.3s ease; /* Smooth transition for hover effects */
+    }
+
+        body.light-theme .error-page .button:hover, body.light-theme .development-page .button:hover {
+            background-color: #029362; /* Darker teal on hover for buttons */
+        }
