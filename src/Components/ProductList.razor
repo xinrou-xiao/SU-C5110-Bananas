@@ -213,7 +213,7 @@
 {
     ProductModel selectedProduct = new ProductModel();
     string selectedProductId;
-    Dictionary<string, bool> voteTracker = new Dictionary<string, bool>();
+    public Dictionary<string, bool> voteTracker = new Dictionary<string, bool>();
 
     // A collection of products, initially empty. This will hold the filtered or sorted product data.
     IEnumerable<ProductModel> Products = new List<ProductModel>();
@@ -295,7 +295,7 @@
         System.Console.WriteLine($"Current rating for {selectedProduct.Id}: {currentRating}");
     }
 
-    void SubmitRating(int rating)
+    public void SubmitRating(int rating)
     {
         if (!voteTracker.ContainsKey(selectedProductId))
         {
@@ -305,18 +305,21 @@
             SelectProduct(selectedProductId);
         }
 
-        if (voteTracker.ContainsKey(selectedProductId) && !voteTracker[selectedProductId])
+        if (voteTracker.ContainsKey(selectedProductId))
         {
-            System.Console.WriteLine($"Rating received for {selectedProduct.Id}: {rating}");
-            ProductService.AddRating(selectedProductId, rating);
-            voteTracker[selectedProductId] = true;
-            SelectProduct(selectedProductId);
-        }
+            if (!voteTracker[selectedProductId])
+            {
+                System.Console.WriteLine($"Rating received for {selectedProduct.Id}: {rating}");
+                ProductService.AddRating(selectedProductId, rating);
+                voteTracker[selectedProductId] = true;
+                SelectProduct(selectedProductId);
+            }
 
-        if (voteTracker.ContainsKey(selectedProductId) && voteTracker[selectedProductId])
-        {
-            voteLabel = "You already voted";
-            System.Console.WriteLine(voteLabel);
+            if (voteTracker[selectedProductId])
+            {
+                voteLabel = "You already voted";
+                System.Console.WriteLine(voteLabel);
+            }
         }
     }
 
