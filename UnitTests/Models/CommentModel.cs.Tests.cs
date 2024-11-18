@@ -46,7 +46,7 @@ namespace UnitTests.Models
         /// Verifies that the Id property can be set and retrieved as expected.
         /// </summary>
         [Test]
-        public void Id_Property_Should_Be_Set_And_Retrieved_Correctly()
+        public void Id_SetAndRetrieve_Should_Work_Correctly()
         {
             // Arrange
             var comment = new CommentModel();
