@@ -32,12 +32,10 @@ namespace UnitTests.Pages
         [SetUp]
         public void TestInitialize()
         {
+            // Arrange: Set up the necessary context and dependencies for the PageModel
             httpContextDefault = new DefaultHttpContext();
-
             modelState = new ModelStateDictionary();
-
             actionContext = new ActionContext(httpContextDefault, httpContextDefault.GetRouteData(), new PageActionDescriptor(), modelState);
-
             modelMetadataProvider = new EmptyModelMetadataProvider();
             viewData = new ViewDataDictionary(modelMetadataProvider, modelState);
             tempData = new TempDataDictionary(httpContextDefault, Mock.Of<ITempDataProvider>());
@@ -47,6 +45,7 @@ namespace UnitTests.Pages
                 ViewData = viewData,
             };
 
+            // Initialize the PageModel with the prepared context
             PageModel = new MerchModel()
             {
                 PageContext = pageContext,
@@ -55,6 +54,7 @@ namespace UnitTests.Pages
         }
 
         #endregion TestSetup
+
         #region OnGet Tests
 
         /// <summary>
