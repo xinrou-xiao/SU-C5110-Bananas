@@ -90,18 +90,21 @@ namespace UnitTests.Pages
         [Test]
         public void MerchandiseItem_Should_Have_Correct_Properties()
         {
-            // Act
+            // Arrange: Prepare the PageModel for testing
+            // (No additional setup required as it's done in TestInitialize)
+
+            // Act: Call the OnGet method to initialize the Merchandise list
             PageModel.OnGet();
 
-            // Assert
+            // Assert: Verify that each merchandise item has the correct properties
             foreach (var item in PageModel.Merchandise)
             {
-                Assert.That(item.Title, Is.Not.Null);
-                Assert.That(item.Description, Is.Not.Null);
-                Assert.That(item.ImageUrl, Is.Not.Null);
-                Assert.That(item.Hashtags, Is.Not.Null);
-                Assert.That(item.BuyLink, Is.Not.Null);
-                Assert.That(item.Price, Is.GreaterThan(0));
+                Assert.That(item.Title, Is.Not.Null, "Item title should not be.");
+                Assert.That(item.Description, Is.Not.Null, "Item description should not be.");
+                Assert.That(item.ImageUrl, Is.Not.Null, "Item image URL should not be.");
+                Assert.That(item.Hashtags, Is.Not.Null, "Item hashtags should not be.");
+                Assert.That(item.BuyLink, Is.Not.Null, "Item buy link should not be.");
+                Assert.That(item.Price, Is.GreaterThan(0), "Item price should be greater than 0.");
             }
         }
 
