@@ -18,7 +18,7 @@ namespace UnitTests.Models
         /// Tests that the Id property can be set and retrieved correctly.
         /// </summary>
         [Test]
-        public void Id_Property_Should_Be_Set_And_Retrieved_Correctly()
+        public void Id_SetAndRetrieve_Should_Work_Correctly()
         {
             // Arrange: Create a new ProductModel instance and define the expected Id value.
             var productModel = new ProductModel();
@@ -35,7 +35,7 @@ namespace UnitTests.Models
         /// Tests that the Maker property can be set and retrieved correctly.
         /// </summary>
         [Test]
-        public void Maker_Property_Should_Be_Set_And_Retrieved_Correctly()
+        public void Maker_SetAndRetrieve_Should_Work_Correctly()
         {
             // Arrange: Create a new ProductModel instance and define the expected Maker value.
             var productModel = new ProductModel();
@@ -52,7 +52,7 @@ namespace UnitTests.Models
         /// Tests that the Image property can be set and retrieved correctly.
         /// </summary>
         [Test]
-        public void Image_Property_Should_Be_Set_And_Retrieved_Correctly()
+        public void Image_SetAndRetrieve_Should_Work_Correctly()
         {
             // Arrange: Create a new ProductModel instance and define the expected Image value.
             var productModel = new ProductModel();
