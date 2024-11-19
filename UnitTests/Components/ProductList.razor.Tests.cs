@@ -315,5 +315,74 @@ namespace UnitTests.Components
         }
 
         #endregion Search
+
+        #region UpdateGenre
+
+        /// <summary>
+        /// Tests the UpdateGenre functionality of the ProductList component.
+        /// Verifies that when the user selects the "Action" genre, the component fetches and displays the correct products.
+        /// </summary>
+        [Test]
+        public void UpdateGenre_Valid_Genre_Should_Fetch_Action_Anime()
+        {
+            // Arrange
+            // Initialize a Bunit test context and configure the service dependency.
+            using var context = new Bunit.TestContext();
+            context.Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
+
+            // Render the ProductList component and set initial properties.
+            var component = context.RenderComponent<ProductList>();
+            component.Instance.searchKeywords = null; // Set search to null for testing.
+            component.Instance.selectedSort = "newest"; // Set the sorting to "newest".
+
+            // Act
+            // Locate the "Action" genre button and simulate a click event to filter products by the selected genre.
+            var genreBtn = component.FindAll("button.genre-unselected").First();
+            genreBtn.Click();
+
+            // Reset
+
+            // Assert
+            // Verify that the genre button clicked is "Action".
+            Assert.That(genreBtn.TextContent == "Action", Is.True);
+
+            // Verify that the number of products displayed is correct for the "Action" genre.
+            Assert.That(component.Instance.Products.Count() == 8, Is.True);
+        }
+
+        /// <summary>
+        /// Tests the UpdateGenre functionality of the ProductList component.
+        /// Verifies that when the user selects the "All" genre, all products are fetched and displayed.
+        /// </summary>
+        [Test]
+        public void UpdateGenre_Valid_All_Genre_Should_Fetch_All()
+        {
+            // Arrange
+            // Initialize a Bunit test context and configure the service dependency.
+            using var context = new Bunit.TestContext();
+            context.Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
+
+            // Render the ProductList component and set initial properties.
+            var component = context.RenderComponent<ProductList>();
+            component.Instance.searchKeywords = null; // Set search to null for testing.
+            component.Instance.selectedSort = "newest"; // Set the sorting to "newest".
+
+            // Act
+            // Locate the "All" genre button and simulate a click event to display all products.
+            var genreBtn = component.FindAll("button.genre-selected").First();
+            genreBtn.Click();
+
+            // Reset
+
+            // Assert
+            // Verify that the genre button clicked is "All".
+            Assert.That(genreBtn.TextContent == "All", Is.True);
+
+            // Verify that the number of products displayed is correct for the "All" genre.
+            Assert.That(component.Instance.Products.Count() == 15, Is.True);
+        }
+
+
+        #endregion UpdateGenre
     }
 }
