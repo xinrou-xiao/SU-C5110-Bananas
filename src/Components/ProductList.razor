@@ -278,6 +278,10 @@
     int voteCount = 0;
     string voteLabel;
 
+    /// <summary>
+    /// Calculates and updates the current rating and vote count for the selected product.
+    /// If the product has no ratings, it sets the current rating and vote count to 0.
+    /// </summary>
     void GetCurrentRating()
     {
         if (selectedProduct.Ratings == null)
