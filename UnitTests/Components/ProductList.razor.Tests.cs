@@ -177,5 +177,27 @@ namespace UnitTests.Components
             Assert.That(ratings.Equals(1), Is.EqualTo(true));
         }
 
+
+        #region OnInitialized
+        [Test]
+        public void OnInitialized_Valid_Should_Initialize_Products_And_GenreList_Correctly()
+        {
+            // Arrange
+            using var context = new Bunit.TestContext();
+            context.Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
+
+            // Act
+            var component = context.RenderComponent<ProductList>();
+
+            // Reset
+
+            // Assert
+            Assert.That(component.Instance.Products, Is.Not.Null);
+            Assert.That(component.Instance.Products.Count() > 0, Is.True);
+            Assert.That(component.Instance.GenreList, Is.Not.Null);
+            Assert.That(component.Instance.GenreList.Count() > 0, Is.True);
+        }
+        #endregion OnInitialized
+
     }
 }
