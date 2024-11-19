@@ -29,6 +29,8 @@ namespace UnitTests.Components
 
         #endregion TestSetup
 
+        #region ProductList
+
         /// <summary>
         /// Verifies that the ProductList component renders correctly with the default products 
         /// and returns content containing a specific product title.
@@ -48,6 +50,10 @@ namespace UnitTests.Components
             // Assert
             Assert.That(result.Contains("Naruto: The Journey of a Ninja Dreamer"), Is.EqualTo(true));
         }
+
+        #endregion ProductList
+
+        #region SelectedProduct
 
         /// <summary>
         /// Verifies that clicking the "More Info" button for a product with a specific ID (jenlooper) 
@@ -76,6 +82,10 @@ namespace UnitTests.Components
             // Assert 
             Assert.That(pageMarkup.Contains("Naruto is an action-packed anime about Naruto Uzumaki, a young ninja aspiring to become Hokage, exploring themes of perseverance, friendship, and identity."), Is.EqualTo(true));
         }
+
+        #endregion SelectedProduct
+
+        #region SubmitRating
 
         /// <summary>
         /// Verifies that clicking an unstarred rating for a product increments the vote count 
@@ -191,6 +201,7 @@ namespace UnitTests.Components
             Assert.That(ratings.Equals(1), Is.EqualTo(true));
         }
 
+        #endregion SubmitRating
 
         #region OnInitialized
 
