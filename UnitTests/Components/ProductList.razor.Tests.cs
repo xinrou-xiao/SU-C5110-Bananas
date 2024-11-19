@@ -402,8 +402,8 @@ namespace UnitTests.Components
 
             // Act
             // Locate the first sorting option ("asc") and simulate a click event to select it.
-            var sortBtn = component.FindAll("option").First();
-            sortBtn.Click();
+            var sortSelect = component.Find("select.sort-select");
+            sortSelect.Change("asc");
 
             // Reset
 
