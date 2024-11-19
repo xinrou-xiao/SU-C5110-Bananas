@@ -380,7 +380,39 @@ namespace UnitTests.Components
             Assert.That(component.Instance.Products.Count() == 15, Is.True);
         }
 
-
         #endregion UpdateGenre
+
+        #region UpdateSort
+
+        /// <summary>
+        /// Tests the UpdateSort functionality of the ProductList component.
+        /// Verifies that when a valid sorting option (e.g., "asc") is selected from the dropdown, 
+        /// the selectedSort property is updated correctly.
+        /// </summary>
+        [Test]
+        public void UpdateSort_Valid_Select_Option_Should_Update_SelectSort()
+        {
+            // Arrange
+            // Initialize a Bunit test context and configure the service dependency.
+            using var context = new Bunit.TestContext();
+            context.Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
+
+            // Render the ProductList component to trigger the component lifecycle and initial state.
+            var component = context.RenderComponent<ProductList>();
+
+            // Act
+            // Locate the first sorting option ("asc") and simulate a click event to select it.
+            var sortBtn = component.FindAll("option").First();
+            sortBtn.Click();
+
+            // Reset
+
+            // Assert
+            // Verify that the selectedSort property is updated to "asc" after the selection.
+            Assert.That(component.Instance.selectedSort == "asc", Is.True);
+        }
+
+
+        #endregion UpdateSort
     }
 }
