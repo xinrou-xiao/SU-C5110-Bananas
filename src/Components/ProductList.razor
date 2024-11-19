@@ -307,19 +307,8 @@
 
         if (voteTracker.ContainsKey(selectedProductId))
         {
-            if (!voteTracker[selectedProductId])
-            {
-                System.Console.WriteLine($"Rating received for {selectedProduct.Id}: {rating}");
-                ProductService.AddRating(selectedProductId, rating);
-                voteTracker[selectedProductId] = true;
-                SelectProduct(selectedProductId);
-            }
-
-            if (voteTracker[selectedProductId])
-            {
                 voteLabel = "You already voted";
                 System.Console.WriteLine(voteLabel);
-            }
         }
     }
 
