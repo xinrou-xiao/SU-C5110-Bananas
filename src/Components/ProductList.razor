@@ -211,9 +211,15 @@
 
 @code
 {
+    // Represents the currently selected product.
     ProductModel selectedProduct = new ProductModel();
+
+    // Holds the ID of the selected product.
     string selectedProductId;
+
+    // A dictionary that tracks whether a user has voted for a specific product.
     public Dictionary<string, bool> voteTracker = new Dictionary<string, bool>();
+
 
     // A collection of products, initially empty. This will hold the filtered or sorted product data.
     public IEnumerable<ProductModel> Products = new List<ProductModel>();
@@ -274,8 +280,13 @@
         GetCurrentRating();
     }
 
+    // Stores the calculated average rating for the selected product.
     int currentRating = 0;
+
+    // Keeps track of the total number of ratings (votes) the selected product has received.
     int voteCount = 0;
+
+    // Holds the label text that represents the number of votes.
     string voteLabel;
 
     /// <summary>
