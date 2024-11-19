@@ -204,24 +204,36 @@ namespace UnitTests.Components
 
         #region CleanSearchInput
 
+        /// <summary>
+        /// Tests the CleanSearchInput functionality of the ProductList component.
+        /// Verifies that when the clean search input button is clicked, 
+        /// the searchKeywords property is reset to an empty string.
+        /// </summary>
         [Test]
         public void CleanSearchInput_Valid_Should_Reset_SearchKeywords_Empty()
         {
             // Arrange
+            // Initialize a Bunit test context and configure the service dependency.
             using var context = new Bunit.TestContext();
             context.Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
+
+            // Render the ProductList component and set an initial value for searchKeywords.
             var component = context.RenderComponent<ProductList>();
-            component.Instance.searchKeywords = "test";
+            component.Instance.searchKeywords = "test"; // Set a non-empty initial value.
 
             // Act
+            // Locate the clean search input button in the rendered component and simulate a click event.
             var cleanBtn = component.FindAll("button.btn.search-input").First();
             cleanBtn.Click();
 
             // Reset
+            // No specific reset actions are needed here.
 
             // Assert
+            // Verify that the searchKeywords property is reset to an empty string after the button click.
             Assert.That(component.Instance.searchKeywords.Length == 0, Is.True);
         }
+
 
         #endregion CleanSearchInput
 
