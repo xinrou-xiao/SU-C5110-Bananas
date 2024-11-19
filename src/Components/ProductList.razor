@@ -295,6 +295,11 @@
         System.Console.WriteLine($"Current rating for {selectedProduct.Id}: {currentRating}");
     }
 
+    /// <summary>
+    /// Submits a rating for the selected product if it hasn't been rated yet.
+    /// The rating is only submitted once per product. If a rating has already been submitted for the product,
+    /// a message is displayed indicating that the user has already voted.
+    /// </summary>
     public void SubmitRating(int rating)
     {
         if (!voteTracker.ContainsKey(selectedProductId))
