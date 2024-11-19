@@ -10,6 +10,7 @@ using ContosoCrafts.WebSite.Services;
 using ContosoCrafts.WebSite.Models;
 using Moq;
 using System.Collections.Generic;
+using Bunit.Extensions;
 
 namespace UnitTests.Components
 {
@@ -223,5 +224,73 @@ namespace UnitTests.Components
         }
 
         #endregion CleanSearchInput
+
+        #region Search
+
+        /// <summary>
+        /// Tests the Search functionality with a valid keyword.
+        /// Verifies that the correct product is returned when a valid keyword is provided 
+        /// and the search button is clicked.
+        [Test]
+        public void Search_Valid_Keyword_Should_Find_Correct_Item()
+        {
+            // Arrange
+            // Initialize a Bunit test context and configure the service dependency.
+            using var context = new Bunit.TestContext();
+            context.Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
+
+            // Render the ProductList component.
+            var component = context.RenderComponent<ProductList>();
+
+            // Set up the search keyword and sorting option on the component instance.
+            component.Instance.searchKeywords = "Naruto"; // Search for products with the title "Naruto".
+            component.Instance.selectedSort = "newest";   // Apply the "newest" sorting option.
+
+            // Act
+            // Locate the search button in the rendered component and simulate a click event.
+            var searchBtn = component.FindAll("button.btn.search-btn").First();
+            searchBtn.Click();
+
+            // Reset
+
+            // Assert
+            // Verify that only one product matches the search criteria and appears in the filtered list.
+            Assert.That(component.Instance.Products.Count() == 1, Is.True);
+        }
+
+        [Test]
+        /// <summary>
+        /// Tests the Search functionality when the search keyword is null.
+        /// Verifies that all products are returned in the absence of a specific search keyword
+        /// when the search button is clicked.
+        /// </summary>
+        public void Search_InValid_Null_Keyword_Should_Fetch_All_Data()
+        {
+            // Arrange
+            // Initialize a Bunit test context and configure the service dependency.
+            using var context = new Bunit.TestContext();
+            context.Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
+
+            // Render the ProductList component.
+            var component = context.RenderComponent<ProductList>();
+
+            // Act
+            // Set the search keyword to null and trigger the search action by clicking the button.
+            component.Instance.searchKeywords = null; // No search keyword specified.
+            var searchBtn = component.FindAll("button.btn.search-btn").First();
+            searchBtn.Click();
+
+            // Reset
+
+            // Assert
+            // Verify that all valid products (with non-null titles) are returned.
+            Assert.That(
+                component.Instance.Products.Count() ==
+                TestHelper.ProductService.GetAllData().Where(p => !p.Title.IsNullOrEmpty()).Count(),
+                Is.True
+            );
+        }
+
+        #endregion Search
     }
 }
