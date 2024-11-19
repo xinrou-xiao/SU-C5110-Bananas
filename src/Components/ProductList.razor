@@ -387,6 +387,15 @@
         Sort();
     }
 
+    /// <summary>
+    /// Sorts the products based on the selected sorting option in the `selectedSort` property.
+    /// The sorting is applied in the following order:
+    /// 1. Ascending order by product title if "asc" is selected.
+    /// 2. Descending order by product title if "desc" is selected.
+    /// 3. Descending order by product release date if "newest" is selected.
+    /// 4. Ascending order by product release date if "oldest" is selected.
+    /// 5. Descending order by average product rating if "rating" is selected.
+    /// </summary>
     public void Sort()
     {
         // Sort products in ascending order by title
