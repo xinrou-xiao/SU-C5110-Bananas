@@ -199,7 +199,6 @@ namespace UnitTests.Components
             var component = context.RenderComponent<ProductList>();
 
             // Reset
-            // No specific reset actions are needed here.
 
             // Assert
             // Verify that the Products property is not null and contains one or more products.
