@@ -237,7 +237,6 @@ namespace UnitTests.Components
             cleanBtn.Click();
 
             // Reset
-            // No specific reset actions are needed here.
 
             // Assert
             // Verify that the searchKeywords property is reset to an empty string after the button click.
