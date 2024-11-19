@@ -7,6 +7,9 @@ using NUnit.Framework;
 
 using ContosoCrafts.WebSite.Components;
 using ContosoCrafts.WebSite.Services;
+using ContosoCrafts.WebSite.Models;
+using Moq;
+using System.Collections.Generic;
 
 namespace UnitTests.Components
 {
@@ -69,57 +72,110 @@ namespace UnitTests.Components
         [Test]
         public void SubmitRating_null_ID_Click_Unstared_Should_Increment_Count_And_Check_Star()
         {
-            Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
-            var id = "MoreInfoButton_sailorhg-bubblesortpic";
+            // Arrange
+            // Registering JsonFileProductService as a singleton service, so it can be used in the test
+            Services.AddSingleton(TestHelper.ProductService);
+            var id = "MoreInfoButton_jenlooper-light";
+
+            // Rendering the ProductList component and storing the result
             var page = RenderComponent<ProductList>();
+
+            // Finding all buttons on the page
             var buttonList = page.FindAll("Button");
+
+            // Finding the button that matches the specified ID and clicking it
             var button = buttonList.First(m => m.OuterHtml.Contains(id));
             button.Click();
-            var buttonMarkup = page.Markup;
-            var starButtonList = page.FindAll("span");
-            var preVoteCountSpan = starButtonList[1];
 
+            // Getting the markup after clicking the button
+            var buttonMarkup = page.Markup;
+
+            // Finding all span elements (stars) on the page
+            var starButtonList = page.FindAll("span");
+
+            // Storing the outer HTML of the vote count span before clicking the star
+            var preVoteCountSpan = starButtonList[1];
             var preVoteCoutString = preVoteCountSpan.OuterHtml;
 
+            // Finding the first star button that is not checked and storing its outer HTML
             var starButton = starButtonList.First(m => !string.IsNullOrEmpty(m.ClassName) && m.ClassName.Contains("fa fa-star"));
             var preStarChange = starButton.OuterHtml;
+
+            // Clicking the star button
             starButton.Click();
 
+            // Getting the markup after clicking the star button
             buttonMarkup = page.Markup;
-            starButtonList = page.FindAll("span");
-            var postVoteCountSpan = starButtonList[1];
 
+            // Finding all span elements (stars) on the page again
+            starButtonList = page.FindAll("span");
+
+            // Storing the outer HTML of the vote count span after clicking the star
+            var postVoteCountSpan = starButtonList[1];
             var postVoteCoutString = postVoteCountSpan.OuterHtml;
+
+            // Finding the first star button that is checked and storing its outer HTML
             starButton = starButtonList.First(m => !string.IsNullOrEmpty(m.ClassName) && m.ClassName.Contains("fa fa-star checked"));
             var postStarChange = starButton.OuterHtml;
+
+            JsonFileProductService productService = Services.GetService<JsonFileProductService>();
+            var ratings = productService.GetAllData().First(x => x.Id == "jenlooper-light").Ratings.Last();
+            Assert.That(ratings.Equals(1), Is.EqualTo(true));
         }
 
         [Test]
         public void SubmitRating_Valid_ID_Click_Unstared_Should_Increment_Count_And_Check_Star()
         {
-            Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
+            // Arrange
+            // Registering JsonFileProductService as a singleton service, so it can be used in the test
+            Services.AddSingleton(TestHelper.ProductService);
             var id = "MoreInfoButton_jenlooper-cactus";
+
+            // Rendering the ProductList component and storing the result
             var page = RenderComponent<ProductList>();
+
+            // Finding all buttons on the page
             var buttonList = page.FindAll("Button");
+
+            // Finding the button that matches the specified ID and clicking it
             var button = buttonList.First(m => m.OuterHtml.Contains(id));
             button.Click();
-            var buttonMarkup = page.Markup;
-            var starButtonList = page.FindAll("span");
-            var preVoteCountSpan = starButtonList[1];
 
+            // Getting the markup after clicking the button
+            var buttonMarkup = page.Markup;
+
+            // Finding all span elements (stars) on the page
+            var starButtonList = page.FindAll("span");
+
+            // Storing the outer HTML of the vote count span before clicking the star
+            var preVoteCountSpan = starButtonList[1];
             var preVoteCoutString = preVoteCountSpan.OuterHtml;
 
+            // Finding the first star button that is not checked and storing its outer HTML
             var starButton = starButtonList.First(m => !string.IsNullOrEmpty(m.ClassName) && m.ClassName.Contains("fa fa-star"));
             var preStarChange = starButton.OuterHtml;
+
+            // Clicking the star button
             starButton.Click();
 
+            // Getting the markup after clicking the star button
             buttonMarkup = page.Markup;
-            starButtonList = page.FindAll("span");
-            var postVoteCountSpan = starButtonList[1];
 
+            // Finding all span elements (stars) on the page again
+            starButtonList = page.FindAll("span");
+
+            // Storing the outer HTML of the vote count span after clicking the star
+            var postVoteCountSpan = starButtonList[1];
             var postVoteCoutString = postVoteCountSpan.OuterHtml;
+
+            // Finding the first star button that is checked and storing its outer HTML
             starButton = starButtonList.First(m => !string.IsNullOrEmpty(m.ClassName) && m.ClassName.Contains("fa fa-star checked"));
             var postStarChange = starButton.OuterHtml;
+
+            JsonFileProductService productService = Services.GetService<JsonFileProductService>();
+            var ratings = productService.GetAllData().First(x => x.Id == "jenlooper-cactus").Ratings.Last();
+            Assert.That(ratings.Equals(1), Is.EqualTo(true));
         }
+
     }
 }
