@@ -273,6 +273,12 @@
         }
     }
 
+    /// <summary>
+    /// Selects a product based on its ID. This method retrieves the product from the data service
+    /// and assigns it to the selectedProduct variable. It also updates the selectedProductId
+    /// and calculates the current rating for the selected product.
+    /// </summary>
+    /// <param name="productId">The ID of the product to select.</param>
     void SelectProduct(string productId)
     {
         selectedProductId = productId;
