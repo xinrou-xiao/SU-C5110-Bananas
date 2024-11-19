@@ -179,6 +179,7 @@ namespace UnitTests.Components
 
 
         #region OnInitialized
+
         [Test]
         public void OnInitialized_Valid_Should_Initialize_Products_And_GenreList_Correctly()
         {
@@ -197,7 +198,30 @@ namespace UnitTests.Components
             Assert.That(component.Instance.GenreList, Is.Not.Null);
             Assert.That(component.Instance.GenreList.Count() > 0, Is.True);
         }
+
         #endregion OnInitialized
 
+        #region CleanSearchInput
+
+        [Test]
+        public void CleanSearchInput_Valid_Should_Reset_SearchKeywords_Empty()
+        {
+            // Arrange
+            using var context = new Bunit.TestContext();
+            context.Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
+            var component = context.RenderComponent<ProductList>();
+            component.Instance.searchKeywords = "test";
+
+            // Act
+            var cleanBtn = component.FindAll("button.btn.search-input").First();
+            cleanBtn.Click();
+
+            // Reset
+
+            // Assert
+            Assert.That(component.Instance.searchKeywords.Length == 0, Is.True);
+        }
+
+        #endregion CleanSearchInput
     }
 }
