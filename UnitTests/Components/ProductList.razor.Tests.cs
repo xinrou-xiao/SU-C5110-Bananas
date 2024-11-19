@@ -181,21 +181,32 @@ namespace UnitTests.Components
 
         #region OnInitialized
 
+        /// <summary>
+        /// Tests the OnInitialized lifecycle method of the ProductList component.
+        /// Verifies that when the component is initialized, the Products and GenreList properties are correctly set,
+        /// with Products containing valid data and GenreList being populated with available genres.
+        /// </summary>
         [Test]
         public void OnInitialized_Valid_Should_Initialize_Products_And_GenreList_Correctly()
         {
             // Arrange
+            // Initialize a Bunit test context and configure the service dependency.
             using var context = new Bunit.TestContext();
             context.Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
 
             // Act
+            // Render the ProductList component to trigger the OnInitialized lifecycle method.
             var component = context.RenderComponent<ProductList>();
 
             // Reset
+            // No specific reset actions are needed here.
 
             // Assert
+            // Verify that the Products property is not null and contains one or more products.
             Assert.That(component.Instance.Products, Is.Not.Null);
             Assert.That(component.Instance.Products.Count() > 0, Is.True);
+
+            // Verify that the GenreList property is not null and contains one or more genres.
             Assert.That(component.Instance.GenreList, Is.Not.Null);
             Assert.That(component.Instance.GenreList.Count() > 0, Is.True);
         }
