@@ -412,7 +412,143 @@ namespace UnitTests.Components
             Assert.That(component.Instance.selectedSort == "asc", Is.True);
         }
 
-
         #endregion UpdateSort
+
+        #region Sort
+
+        /// <summary>
+        /// Tests the UpdateSort functionality in the ProductList component.
+        /// Verifies that selecting "asc" in the sorting dropdown orders products in ascending order based on title.
+        /// </summary>
+        [Test]
+        public void UpdateSort_Valid_Select_Asc_Should_Order_Products_By_Ascending()
+        {
+            // Arrange
+            using var context = new Bunit.TestContext();
+            context.Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
+            var component = context.RenderComponent<ProductList>();
+
+            // Act
+            component.Instance.searchKeywords = null;
+            var searchBtn = component.FindAll("button.btn.search-btn").First();
+            searchBtn.Click();
+
+            var sortSelect = component.Find("select.sort-select");
+            sortSelect.Change("asc");
+
+            // Reset
+
+            // Assert
+            Assert.That(component.Instance.Products.First().Title.CompareTo(component.Instance.Products.Last().Title) == -1, Is.True);
+        }
+
+        /// <summary>
+        /// Tests the UpdateSort functionality in the ProductList component.
+        /// Verifies that selecting "desc" in the sorting dropdown orders products in descending order based on title.
+        /// </summary>
+        [Test]
+        public void UpdateSort_Valid_Select_Desc_Should_Order_Products_By_Descending()
+        {
+            // Arrange
+            using var context = new Bunit.TestContext();
+            context.Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
+            var component = context.RenderComponent<ProductList>();
+
+            // Act
+            component.Instance.searchKeywords = null;
+            var searchBtn = component.FindAll("button.btn.search-btn").First();
+            searchBtn.Click();
+
+            var sortSelect = component.Find("select.sort-select");
+            sortSelect.Change("desc");
+
+            // Reset
+
+            // Assert
+            Assert.That(component.Instance.Products.First().Title.CompareTo(component.Instance.Products.Last().Title) == 1, Is.True);
+        }
+
+        /// <summary>
+        /// Tests the UpdateSort functionality in the ProductList component.
+        /// Verifies that selecting "newest" in the sorting dropdown orders products by release year from new to old.
+        /// </summary>
+        [Test]
+        public void UpdateSort_Valid_Select_Newest_Should_Order_Products_By_Release_Year_New_To_Old()
+        {
+            // Arrange
+            using var context = new Bunit.TestContext();
+            context.Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
+            var component = context.RenderComponent<ProductList>();
+
+            // Act
+            component.Instance.searchKeywords = null;
+            var searchBtn = component.FindAll("button.btn.search-btn").First();
+            searchBtn.Click();
+
+            var sortSelect = component.Find("select.sort-select");
+            sortSelect.Change("newest");
+
+            // Reset
+
+            // Assert
+            Assert.That(component.Instance.Products.First().Release.CompareTo(component.Instance.Products.Last().Release) == 1, Is.True);
+        }
+
+        /// <summary>
+        /// Tests the UpdateSort functionality in the ProductList component.
+        /// Verifies that selecting "oldest" in the sorting dropdown orders products by release year from old to new.
+        /// </summary>
+        [Test]
+        public void UpdateSort_Valid_Select_Oldest_Should_Order_Products_By_Release_Year_Old_To_New()
+        {
+            // Arrange
+            using var context = new Bunit.TestContext();
+            context.Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
+            var component = context.RenderComponent<ProductList>();
+
+            // Act
+            component.Instance.searchKeywords = null;
+            var searchBtn = component.FindAll("button.btn.search-btn").First();
+            searchBtn.Click();
+
+            var sortSelect = component.Find("select.sort-select");
+            sortSelect.Change("oldest");
+
+            // Reset
+
+            // Assert
+            Assert.That(component.Instance.Products.First().Release.CompareTo(component.Instance.Products.Last().Release) == -1, Is.True);
+        }
+
+        /// <summary>
+        /// Tests the UpdateSort functionality in the ProductList component.
+        /// Verifies that selecting "rating" in the sorting dropdown orders products by rating from high to low.
+        /// </summary>
+        [Test]
+        public void UpdateSort_Valid_Select_Rating_Should_Order_Products_By_Rating_High_To_Low()
+        {
+            // Arrange
+            using var context = new Bunit.TestContext();
+            context.Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
+            var component = context.RenderComponent<ProductList>();
+
+            // Act
+            component.Instance.searchKeywords = null;
+            var searchBtn = component.FindAll("button.btn.search-btn").First();
+            searchBtn.Click();
+
+            var sortSelect = component.Find("select.sort-select");
+            sortSelect.Change("rating");
+
+            var firstRatingAvg = component.Instance.Products.First().Ratings.Average();
+            var secondRatingAvg = component.Instance.Products.ElementAt(1).Ratings.Average();
+
+            // Reset
+
+            // Assert
+            Assert.That(firstRatingAvg > secondRatingAvg, Is.True);
+        }
+
+        #endregion Sort
     }
 }
