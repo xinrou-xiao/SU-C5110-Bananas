@@ -333,6 +333,7 @@
             // If search keywords are null, reset searchKeywords
             searchKeywords = string.Empty;
         }
+
         // Filter products by not null and title containing the search keywords (case-insensitive)
         Products = ProductService.GetAllData().Where(p => !string.IsNullOrEmpty(p.Title));
         Products = Products.Where(p => p.Title.Contains(searchKeywords, StringComparison.OrdinalIgnoreCase));
