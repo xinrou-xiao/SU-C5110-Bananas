@@ -29,25 +29,30 @@ namespace UnitTests.Components
 
         #endregion TestSetup
 
+        /// <summary>
+        /// Verifies that the ProductList component renders correctly with the default products 
+        /// and returns content containing a specific product title.
+        /// </summary>
         [Test]
         public void ProductList_Valid_Default_Should_Return_Content()
         {
             // Arrange
-            // Registering JsonFileProductService as a singleton service, so it can be used in the test
             Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
 
             // Act
-            // Rendering the ProductList component and storing the result
             var page = RenderComponent<ProductList>();
 
             // Get the cards returned
             var result = page.Markup;
 
             // Assert
-            // Verifying that the rendered markup contains a specific product title, "Naruto: The Journey of a Ninja Dreamer"
             Assert.That(result.Contains("Naruto: The Journey of a Ninja Dreamer"), Is.EqualTo(true));
         }
 
+        /// <summary>
+        /// Verifies that clicking the "More Info" button for a product with a specific ID (jenlooper) 
+        /// returns the correct product description in the content.
+        /// </summary>
         [Test]
         public void SelectedProduct_Valid_ID_jenlooper_Should_Return_Content()
         {
@@ -72,11 +77,14 @@ namespace UnitTests.Components
             Assert.That(pageMarkup.Contains("Naruto is an action-packed anime about Naruto Uzumaki, a young ninja aspiring to become Hokage, exploring themes of perseverance, friendship, and identity."), Is.EqualTo(true));
         }
 
+        /// <summary>
+        /// Verifies that clicking an unstarred rating for a product increments the vote count 
+        /// and updates the star to a checked state. Also ensures that the rating is correctly added to the product.
+        /// </summary>
         [Test]
         public void SubmitRating_null_ID_Click_Unstared_Should_Increment_Count_And_Check_Star()
         {
             // Arrange
-            // Registering JsonFileProductService as a singleton service, so it can be used in the test
             Services.AddSingleton(TestHelper.ProductService);
             var id = "MoreInfoButton_jenlooper-light";
 
@@ -126,11 +134,14 @@ namespace UnitTests.Components
             Assert.That(ratings.Equals(1), Is.EqualTo(true));
         }
 
+        /// <summary>
+        /// Verifies that clicking an unstarred rating for a product increments the vote count 
+        /// and updates the star to a checked state, and ensures that the rating is correctly added to the product.
+        /// </summary>
         [Test]
         public void SubmitRating_Valid_ID_Click_Unstared_Should_Increment_Count_And_Check_Star()
         {
             // Arrange
-            // Registering JsonFileProductService as a singleton service, so it can be used in the test
             Services.AddSingleton(TestHelper.ProductService);
             var id = "MoreInfoButton_jenlooper-cactus";
 
