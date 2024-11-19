@@ -960,45 +960,86 @@ body.dark-theme .price {
     font-size: 1rem;
     margin-right: 0.2rem;
 }
-/* Light Mode Styles for Error and Development Pages */
-body.light-theme .error-page, body.light-theme .development-page {
-    background-color: #f9f9f9; /* Light grey background for better contrast */
-    color: #333; /* Dark text color for readability */
-    padding: 20px; /* Add padding for better layout */
-    font-family: 'poppins-light', sans-serif; /* Consistent font family */
+/* Light mode styles for the error page */
+.error-page {
+    background-color: #092144; /* Light background */
+    color: #76c7c0; /* Dark text for contrast */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-    body.light-theme .error-page h1, body.light-theme .development-page h1 {
-        color: #d11a2a; /* Red color for error titles to stand out */
-        font-size: 2rem; /* Larger font size for titles */
-        margin-bottom: 10px; /* Space below titles */
+h1.text-danger {
+    color: #d9534f; /* Bootstrap's default danger color */
+}
+h2.text-danger {
+    color: #d9534f; /* Bootstrap's default danger color */
+}
+.info-heading {
+    color: #f0f0f0; /* Bootstrap's default info color */
+    font-weight: bold;
+}
+
+.info-text {
+    color: #f0f0f0; /* Ensure text is dark enough for light background */
+}
+
+.warning-text {
+    color: #f0f0f0; /* Bootstrap's default warning color */
+    font-weight: bold;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #007bff; /* Bootstrap's default primary color */
+    color: #ffffff; /* White text for contrast */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+    .button:hover {
+        background-color: #0056b3; /* Darker shade for hover effect */
     }
 
-    body.light-theme .error-page p, body.light-theme .development-page p {
-        color: #555; /* Medium grey for paragraph text */
-        font-size: 1rem; /* Standard font size for readability */
-        line-height: 1.5; /* Line height for better readability */
+/* Light mode styles for hashtags */
+.hashtags {
+    margin-top: 10px; /* Spacing for hashtags */
+    color: black; /* Text color for hashtags */
+}
+
+/* Dark mode styles for the error page */
+body.dark-theme .error-page {
+    background-color: #121212; /* Dark background */
+    color: #d6d5d5; /* Light text for contrast */
+}
+
+body.dark-theme .text-danger {
+    color: #d9534f; /* Lighter danger color for dark mode */
+}
+
+body.dark-theme .info-heading {
+    color: #f0f0f0; /* Lighter info color for dark mode */
+}
+
+body.dark-theme .info-text,
+body.dark-theme .warning-text {
+    color: #d6d5d5; /* Light text for readability */
+}
+
+body.dark-theme .button {
+    background-color: #0056b3; /* Darker primary color for dark mode */
+    color: #ffffff; /* White text for contrast */
+}
+
+    body.dark-theme .button:hover {
+        background-color: #003d7a; /* Even darker shade for hover effect */
     }
 
-    body.light-theme .error-page a, body.light-theme .development-page a {
-        color: #0366d6; /* Blue color for links */
-        text-decoration: underline; /* Underline links for visibility */
-    }
-
-        body.light-theme .error-page a:hover, body.light-theme .development-page a:hover {
-            color: #024ea2; /* Darker blue on hover for links */
-        }
-
-    body.light-theme .error-page .button, body.light-theme .development-page .button {
-        background-color: #00A36C; /* Teal color for buttons */
-        color: #fff; /* White text color for buttons */
-        padding: 10px 20px; /* Padding for buttons */
-        border: none; /* No border for buttons */
-        border-radius: 5px; /* Rounded corners for buttons */
-        cursor: pointer; /* Pointer cursor for buttons */
-        transition: background-color 0.3s ease; /* Smooth transition for hover effects */
-    }
-
-        body.light-theme .error-page .button:hover, body.light-theme .development-page .button:hover {
-            background-color: #029362; /* Darker teal on hover for buttons */
-        }
+/* Dark mode styles for hashtags */
+body.dark-theme .hashtags span {
+    background-color: #d0aef2 !important; /* Background color for individual hashtags in dark mode */
+    color: black !important; /* Text color for hashtags in dark mode */
+}
