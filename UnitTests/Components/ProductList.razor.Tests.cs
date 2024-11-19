@@ -18,7 +18,9 @@ namespace UnitTests.Components
     {
         #region TestSetup
 
-        // Method to set up any initial configurations or services needed for tests
+        /// <summary>
+        /// Method to set up any initial configurations or services needed for tests
+        /// </summary>
         [SetUp]
         public void TestInitialize()
         {
