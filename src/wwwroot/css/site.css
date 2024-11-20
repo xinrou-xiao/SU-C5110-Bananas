@@ -1043,3 +1043,14 @@ body.dark-theme .hashtags span {
     background-color: #d0aef2 !important; /* Background color for individual hashtags in dark mode */
     color: black !important; /* Text color for hashtags in dark mode */
 }
+
+.card-columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 576px) {
+    .card-columns {
+        display: block;
+    }
+}
