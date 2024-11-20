@@ -1045,12 +1045,12 @@ body.dark-theme .hashtags span {
 }
 
 .card-columns {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: grid; /* Use CSS Grid to layout the cards */
+    grid-template-columns: repeat(3, 1fr); /* Create a grid with 3 equal columns */
 }
 
 @media (max-width: 576px) {
     .card-columns {
-        display: block;
+        display: block; /* Switch to block display for smaller screens */
     }
 }
