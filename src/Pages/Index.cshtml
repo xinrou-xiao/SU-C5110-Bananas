@@ -5,7 +5,6 @@
     ViewData["Title"] = "Home page";
 }
 
-@(await Html.RenderComponentAsync<ProductList>(RenderMode.ServerPrerendered))
 <!-- Banner Carousel Section: A slideshow of anime banners that automatically cycles -->
 <div id="animeCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators for switching between banners -->
@@ -158,4 +157,5 @@
     // Load the first song on initial page load
     loadSong(currentSongIndex);</script>
 
+@(await Html.RenderComponentAsync<ProductList>(RenderMode.ServerPrerendered))
 <script src="_framework/blazor.server.js"></script>
