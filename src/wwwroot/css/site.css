@@ -1,4 +1,8 @@
-﻿.badge-bar {
+﻿body.dark-theme .close {
+    color: white;
+}
+
+.badge-bar {
     align-items: center;
 }
 
