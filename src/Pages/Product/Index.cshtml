@@ -22,7 +22,7 @@
             @foreach (var product in Model.Products)
             {
                 <tr>
-                    <td class="align-middle">
+                    <td class="align-middle title-in-table">
                         <!-- Link to read product details -->
                         <a asp-page="/Product/Read" asp-route-id="@product.Id">@product.Title</a>
                     </td>
