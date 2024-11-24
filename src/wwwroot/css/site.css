@@ -1,4 +1,10 @@
-﻿body.dark-theme .close {
+﻿.title-in-table {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px;
+}
+
+body.dark-theme .close {
     color: white;
 }
 
