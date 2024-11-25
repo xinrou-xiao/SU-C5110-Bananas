@@ -1,4 +1,8 @@
-﻿.title-in-table {
+﻿.title-msg {
+    color: #dc3545;
+}
+
+.title-in-table {
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 200px;
