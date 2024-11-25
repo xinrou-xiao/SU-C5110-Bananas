@@ -159,3 +159,35 @@
 
 @(await Html.RenderComponentAsync<ProductList>(RenderMode.ServerPrerendered))
 <script src="_framework/blazor.server.js"></script>
+<script>
+    /// if url contains genre parameter, click on corresponding genre filter button.
+    document.addEventListener('DOMContentLoaded', function () {
+        var urlParams = new URLSearchParams(window.location.search);
+        var genre = urlParams.get('genre');
+
+        if (genre) {
+            var attempts = 0;
+            var maxAttempts = 50;
+            var interval = 100;
+
+            // try every 100 ms, until event binded and clickable
+            var checkInterval = setInterval(function () {
+                attempts++;
+
+                var buttons = document.querySelectorAll('.genre-unselected');
+                var success = false;
+
+                buttons.forEach(function (button) {
+                    if (button.textContent.trim() === genre && button.classList.contains('genre-unselected')) {
+                        button.click();
+                        success = true;
+                    }
+                });
+
+                if (success || attempts >= maxAttempts) {
+                    clearInterval(checkInterval);
+                }
+            }, interval);
+        }
+    });
+</script>
