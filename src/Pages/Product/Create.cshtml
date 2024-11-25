@@ -10,8 +10,9 @@
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
         <div class="form-group"> <!--Anime Title input group-->
-            <label class="white-font" asp-for="Product.Title">Title</label><small>*</small>
-            <input type="text" class="form-control" asp-for="Product.Title" placeholder="Title"/>
+            <label class="white-font" asp-for="Product.Title">Title</label> 
+            <input id="title-input" type="text" class="form-control" asp-for="Product.Title" placeholder="Title" />
+            <span id="title-msg" class="title-msg"></span>
             <span asp-validation-for="Product.Title" class="text-danger"></span>
         </div>
 
@@ -101,3 +102,21 @@
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
 }
+
+<script src="/lib/jquery/dist/jquery.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('#title-input').on('input', function () {
+            var data = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(Model.ProductService.GetAllData()));
+            var title = $(this).val();
+            console.log("title=" + title);
+            console.log("duplicate=" + data.some(p => p.Title === title));
+            if (data.some(p => p.Title === title)) {
+                $("#title-msg").text("Duplicate title.");
+                return;
+            }
+            $("#title-msg").text(""); 
+        });
+    });
+</script>
