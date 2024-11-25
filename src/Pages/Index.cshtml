@@ -162,20 +162,20 @@
 <script>
     /// if url contains genre parameter, click on corresponding genre filter button.
     document.addEventListener('DOMContentLoaded', function () {
-        var urlParams = new URLSearchParams(window.location.search);
-        var genre = urlParams.get('genre');
+        var urlParams = new URLSearchParams(window.location.search);  // get current url
+        var genre = urlParams.get('genre');  // get genre parameter value in url
 
         if (genre) {
-            var attempts = 0;
-            var maxAttempts = 50;
-            var interval = 100;
+            var attempts = 0;  // attempt times
+            var maxAttempts = 50;  // maximun attempt times
+            var interval = 100; // try every 100 ms
 
             // try every 100 ms, until event binded and clickable
             var checkInterval = setInterval(function () {
                 attempts++;
 
-                var buttons = document.querySelectorAll('.genre-unselected');
-                var success = false;
+                var buttons = document.querySelectorAll('.genre-unselected');  // fetch all genre button
+                var success = false;  // if click is binded and clicked
 
                 buttons.forEach(function (button) {
                     if (button.textContent.trim() === genre && button.classList.contains('genre-unselected')) {
