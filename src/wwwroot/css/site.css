@@ -1,4 +1,8 @@
-﻿.title-msg {
+﻿.clickable {
+    cursor: pointer;
+}
+
+.title-msg {
     color: #dc3545;
 }
 
