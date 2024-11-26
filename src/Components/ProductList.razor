@@ -89,7 +89,7 @@
                     }
                     @if (voteCount != 0)
                     {
-                        <span>@voteCount @voteLabel</span>
+                        <span>@voteLabel</span>
                     }
                     @for (int i = 1; i < 6; i++)
                     {
@@ -102,7 +102,7 @@
                         {
                             <span class="fa fa-star" @onclick="(e => SubmitRating(currentStar))"></span>
                         }
-                    }
+                    } <span>@voteCount</span>
                 </div>
             </div>
         </div>
@@ -235,7 +235,7 @@
 
         if (voteTracker.ContainsKey(selectedProductId))
         {
-                voteLabel = "You already voted";
+                voteLabel = "You already voted! ";
                 System.Console.WriteLine(voteLabel);
         }
     }

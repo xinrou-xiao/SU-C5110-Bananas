@@ -6,8 +6,22 @@
     "Url": "https://naruto-official.com/en",
     "Title": "Naruto: The Journey of a Ninja Dreamer",
     "Description": "Naruto is an action-packed anime about Naruto Uzumaki, a young ninja aspiring to become Hokage, exploring themes of perseverance, friendship, and identity.",
-    "Ratings": [ 5, 5, 3, 2, 1, 5, 4, 5, 3 ],
-    "Genre": [ "Action", "Romance" ],
+    "Ratings": [
+      5,
+      5,
+      3,
+      2,
+      1,
+      5,
+      4,
+      5,
+      3,
+      5
+    ],
+    "Genre": [
+      "Action",
+      "Romance"
+    ],
     "Release": "1999",
     "Trailer": "https://www.youtube.com/embed/yeUpnIKt6k4",
     "OTT": [
@@ -18,8 +32,8 @@
       },
       {
         "Platform": "Prime",
-        "Url": "https://www.amazon.com/Amazon-Video/b/?&node=2858778011&ref=dvm_MLP_ROWNA_US_1",
-        "Icon": "https://assets.aboutamazon.com/dims4/default/59e4166/2147483647/strip/true/crop/4454x2634+0+0/resize/365x216!/format/webp/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2F4b%2F7f%2F4a4a80724a5e9a6b4a1931e8bf99%2Fprime-logo-rgb-prime-blue-master.png"
+        "Url": "https://www.amazon.com/Amazon-Video/b/?\u0026node=2858778011\u0026ref=dvm_MLP_ROWNA_US_1",
+        "Icon": "https://assets.aboutamazon.com/dims4/default/59e4166/2147483647/strip/true/crop/4454x2634\u002B0\u002B0/resize/365x216!/format/webp/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2F4b%2F7f%2F4a4a80724a5e9a6b4a1931e8bf99%2Fprime-logo-rgb-prime-blue-master.png"
       }
     ],
     "Season": 5,
@@ -28,19 +42,24 @@
   {
     "Id": "jenlooper-light",
     "Maker": "jenlooper",
-    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlOVO11YgmcGp6YaAa1qaVgyPQ_vSM1GNYvgR7hIKKq3a5tH0NUd5vnEFn2zEM&s=10",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlOVO11YgmcGp6YaAa1qaVgyPQ_vSM1GNYvgR7hIKKq3a5tH0NUd5vnEFn2zEM\u0026s=10",
     "Url": "https://www.adultswim.com/videos/rick-and-morty",
     "Title": "Rick and Morty",
     "Description": "Rick and Morty: The Anime explores the chaotic and interdimensional adventures of a mad scientist and his good-hearted but easily influenced grandson, blending sci-fi, humor, and existential themes.",
-    "Ratings": null,
-    "Genre": [ "Sci-Fi", "Sitcom" ],
+    "Ratings": [
+      5
+    ],
+    "Genre": [
+      "Sci-Fi",
+      "Sitcom"
+    ],
     "Release": "2013",
     "Trailer": "https://www.youtube.com/embed/PkZtVBNkmso",
     "OTT": [
       {
         "Platform": "Prime",
-        "Url": "https://www.amazon.com/gp/video/detail/amzn1.dv.gti.40d53867-afdd-40da-b65f-9046f74dafd4?autoplay=0&ref_=atv_cf_strg_wb",
-        "Icon": "https://assets.aboutamazon.com/dims4/default/59e4166/2147483647/strip/true/crop/4454x2634+0+0/resize/365x216!/format/webp/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2F4b%2F7f%2F4a4a80724a5e9a6b4a1931e8bf99%2Fprime-logo-rgb-prime-blue-master.png"
+        "Url": "https://www.amazon.com/gp/video/detail/amzn1.dv.gti.40d53867-afdd-40da-b65f-9046f74dafd4?autoplay=0\u0026ref_=atv_cf_strg_wb",
+        "Icon": "https://assets.aboutamazon.com/dims4/default/59e4166/2147483647/strip/true/crop/4454x2634\u002B0\u002B0/resize/365x216!/format/webp/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2F4b%2F7f%2F4a4a80724a5e9a6b4a1931e8bf99%2Fprime-logo-rgb-prime-blue-master.png"
       }
     ],
     "Season": 7,
@@ -54,7 +73,10 @@
     "Title": "Darker than Black",
     "Description": "Darker than Black is a mysterious and action-packed anime set in a world where individuals known as Contractors wield supernatural powers, following the enigmatic Hei as he navigates a web of espionage and intrigue.",
     "Ratings": null,
-    "Genre": [ "Action", "Sci-Fi" ],
+    "Genre": [
+      "Action",
+      "Sci-Fi"
+    ],
     "Release": "2007",
     "Trailer": "https://www.youtube.com/embed/goYEIQT5m8U",
     "OTT": [
@@ -75,19 +97,22 @@
     "Title": "Dragon Ball Z",
     "Description": "Dragon Ball Z is a legendary anime series that chronicles the adventures of Goku and his friends as they defend Earth from powerful foes, exploring themes of friendship, perseverance, and the quest for ultimate strength.",
     "Ratings": null,
-    "Genre": [ "Adventure", "Action" ],
+    "Genre": [
+      "Adventure",
+      "Action"
+    ],
     "Release": "1989",
     "Trailer": "https://www.youtube.com/embed/sxufB6DxXk0",
     "OTT": [
       {
         "Platform": "Crunchyroll",
-        "Url": "https://www.crunchyroll.com/series/G9VHN9PPW/dragon-ball-z?utm_campaign=media_actions&utm_medium=deep_link&utm_source=google",
+        "Url": "https://www.crunchyroll.com/series/G9VHN9PPW/dragon-ball-z?utm_campaign=media_actions\u0026utm_medium=deep_link\u0026utm_source=google",
         "Icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Crunchyroll.svg/768px-Crunchyroll.svg.png"
       },
       {
         "Platform": "Prime",
-        "Url": "https://www.amazon.com/gp/video/detail/amzn1.dv.gti.3ed1b2dc-b5a2-45c1-aa3e-b4a97dc470f9?autoplay=0&ref_=atv_cf_strg_wb",
-        "Icon": "https://assets.aboutamazon.com/dims4/default/59e4166/2147483647/strip/true/crop/4454x2634+0+0/resize/365x216!/format/webp/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2F4b%2F7f%2F4a4a80724a5e9a6b4a1931e8bf99%2Fprime-logo-rgb-prime-blue-master.png"
+        "Url": "https://www.amazon.com/gp/video/detail/amzn1.dv.gti.3ed1b2dc-b5a2-45c1-aa3e-b4a97dc470f9?autoplay=0\u0026ref_=atv_cf_strg_wb",
+        "Icon": "https://assets.aboutamazon.com/dims4/default/59e4166/2147483647/strip/true/crop/4454x2634\u002B0\u002B0/resize/365x216!/format/webp/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2F4b%2F7f%2F4a4a80724a5e9a6b4a1931e8bf99%2Fprime-logo-rgb-prime-blue-master.png"
       }
     ],
     "Season": 9,
@@ -101,13 +126,16 @@
     "Title": "Death Note",
     "Description": "Death Note is a thrilling anime that follows high school student Light Yagami as he discovers a mysterious notebook with the power to kill anyone whose name is written in it, leading to a high-stakes battle of wits with the enigmatic detective L.",
     "Ratings": null,
-    "Genre": [ "Mystery", "Thriller" ],
+    "Genre": [
+      "Mystery",
+      "Thriller"
+    ],
     "Release": "2006",
     "Trailer": "https://www.youtube.com/embed/NlJZ-YgAt-c",
     "OTT": [
       {
         "Platform": "tubitv",
-        "Url": "https://tubitv.com/series/1630/death-note-subtitled?start=true&tracking=google-feed&utm_source=google-feed",
+        "Url": "https://tubitv.com/series/1630/death-note-subtitled?start=true\u0026tracking=google-feed\u0026utm_source=google-feed",
         "Icon": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Tubi_logo_2024_purple.svg"
       }
     ],
@@ -120,9 +148,14 @@
     "img": "https://assets-prd.ignimgs.com/2022/09/22/demonslayer-1663870772245.jpg",
     "Url": "https://demonslayer-anime.com/",
     "Title": "Demon Slayer: Kimetsu no Yaiba",
-    "Description": "Demon Slayer follows Tanjiro Kamado's quest for vengeance and a cure for his demon-turned sister in Taisho-era Japan, featuring stunning animation and intense battles.",
-    "Ratings": [ 4 ],
-    "Genre": [ "Adventure", "Action" ],
+    "Description": "Demon Slayer follows Tanjiro Kamado\u0027s quest for vengeance and a cure for his demon-turned sister in Taisho-era Japan, featuring stunning animation and intense battles.",
+    "Ratings": [
+      4
+    ],
+    "Genre": [
+      "Adventure",
+      "Action"
+    ],
     "Release": "2019",
     "Trailer": "https://www.youtube.com/embed/VQGCKyvzIM4",
     "OTT": [
@@ -133,12 +166,12 @@
       },
       {
         "Platform": "Prime",
-        "Url": "https://www.amazon.com/gp/video/detail/amzn1.dv.gti.36d4a3eb-9885-48c5-ba96-6fa087ef51ec?autoplay=0&ref_=atv_cf_strg_wb",
-        "Icon": "https://assets.aboutamazon.com/dims4/default/59e4166/2147483647/strip/true/crop/4454x2634+0+0/resize/365x216!/format/webp/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2F4b%2F7f%2F4a4a80724a5e9a6b4a1931e8bf99%2Fprime-logo-rgb-prime-blue-master.png"
+        "Url": "https://www.amazon.com/gp/video/detail/amzn1.dv.gti.36d4a3eb-9885-48c5-ba96-6fa087ef51ec?autoplay=0\u0026ref_=atv_cf_strg_wb",
+        "Icon": "https://assets.aboutamazon.com/dims4/default/59e4166/2147483647/strip/true/crop/4454x2634\u002B0\u002B0/resize/365x216!/format/webp/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2F4b%2F7f%2F4a4a80724a5e9a6b4a1931e8bf99%2Fprime-logo-rgb-prime-blue-master.png"
       },
       {
         "Platform": "Crunchyroll",
-        "Url": "https://www.crunchyroll.com/series/GY5P48XEY/demon-slayer-kimetsu-no-yaiba?utm_campaign=media_actions&utm_medium=deep_link&utm_source=google",
+        "Url": "https://www.crunchyroll.com/series/GY5P48XEY/demon-slayer-kimetsu-no-yaiba?utm_campaign=media_actions\u0026utm_medium=deep_link\u0026utm_source=google",
         "Icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Crunchyroll.svg/768px-Crunchyroll.svg.png"
       }
     ],
@@ -151,21 +184,24 @@
     "img": "https://wallpapers.com/images/high/attack-on-titan-logo-portrait-ka1uktrjzusfr3de.webp",
     "Url": "https://www.koeitecmoamerica.com/attackontitan/",
     "Title": "Attack on Titan",
-    "Description": "Attack on Titan is a gripping anime series that follows humanity's desperate struggle for survival against giant humanoid creatures known as Titans, exploring themes of freedom, sacrifice, and the human spirit.",
+    "Description": "Attack on Titan is a gripping anime series that follows humanity\u0027s desperate struggle for survival against giant humanoid creatures known as Titans, exploring themes of freedom, sacrifice, and the human spirit.",
     "Ratings": null,
-    "Genre": [ "Sohen-Manga", "Dark Fantasy" ],
+    "Genre": [
+      "Sohen-Manga",
+      "Dark Fantasy"
+    ],
     "Release": "2013",
     "Trailer": "https://www.youtube.com/embed/MGRm4IzK1SQ",
     "OTT": [
       {
         "Platform": "Crunchyroll",
-        "Url": "https://www.crunchyroll.com/series/GR751KNZY/attack-on-titan?utm_campaign=media_actions&utm_medium=deep_link&utm_source=google",
+        "Url": "https://www.crunchyroll.com/series/GR751KNZY/attack-on-titan?utm_campaign=media_actions\u0026utm_medium=deep_link\u0026utm_source=google",
         "Icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Crunchyroll.svg/768px-Crunchyroll.svg.png"
       },
       {
         "Platform": "Prime",
-        "Url": "https://www.amazon.com/gp/video/detail/amzn1.dv.gti.885b9a80-8923-4653-8711-0945f560d867?autoplay=0&ref_=atv_cf_strg_wb",
-        "Icon": "https://assets.aboutamazon.com/dims4/default/59e4166/2147483647/strip/true/crop/4454x2634+0+0/resize/365x216!/format/webp/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2F4b%2F7f%2F4a4a80724a5e9a6b4a1931e8bf99%2Fprime-logo-rgb-prime-blue-master.png"
+        "Url": "https://www.amazon.com/gp/video/detail/amzn1.dv.gti.885b9a80-8923-4653-8711-0945f560d867?autoplay=0\u0026ref_=atv_cf_strg_wb",
+        "Icon": "https://assets.aboutamazon.com/dims4/default/59e4166/2147483647/strip/true/crop/4454x2634\u002B0\u002B0/resize/365x216!/format/webp/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2F4b%2F7f%2F4a4a80724a5e9a6b4a1931e8bf99%2Fprime-logo-rgb-prime-blue-master.png"
       }
     ],
     "Season": 4,
@@ -179,7 +215,11 @@
     "Title": "One Piece",
     "Description": "One Piece is an epic adventure anime that follows Monkey D. Luffy and his diverse crew of pirates as they journey across the Grand Line in search of the legendary treasure known as the One Piece, aiming to become the Pirate King.",
     "Ratings": null,
-    "Genre": [ "Action", "Comedy", "Sohen Manga" ],
+    "Genre": [
+      "Action",
+      "Comedy",
+      "Sohen Manga"
+    ],
     "Release": "1999",
     "Trailer": "https://www.youtube.com/embed/TbHtbzAnZJ4",
     "OTT": [
@@ -190,12 +230,12 @@
       },
       {
         "Platform": "Prime",
-        "Url": "https://www.amazon.com/gp/video/detail/amzn1.dv.gti.517439fa-e265-4c8d-a2a6-e3e609183f3c?autoplay=0&ref_=atv_cf_strg_wb",
-        "Icon": "https://assets.aboutamazon.com/dims4/default/59e4166/2147483647/strip/true/crop/4454x2634+0+0/resize/365x216!/format/webp/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2F4b%2F7f%2F4a4a80724a5e9a6b4a1931e8bf99%2Fprime-logo-rgb-prime-blue-master.png"
+        "Url": "https://www.amazon.com/gp/video/detail/amzn1.dv.gti.517439fa-e265-4c8d-a2a6-e3e609183f3c?autoplay=0\u0026ref_=atv_cf_strg_wb",
+        "Icon": "https://assets.aboutamazon.com/dims4/default/59e4166/2147483647/strip/true/crop/4454x2634\u002B0\u002B0/resize/365x216!/format/webp/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2F4b%2F7f%2F4a4a80724a5e9a6b4a1931e8bf99%2Fprime-logo-rgb-prime-blue-master.png"
       },
       {
         "Platform": "Crunchyroll",
-        "Url": "https://www.crunchyroll.com/series/GRMG8ZQZR/one-piece?utm_campaign=media_actions&utm_medium=deep_link&utm_source=google",
+        "Url": "https://www.crunchyroll.com/series/GRMG8ZQZR/one-piece?utm_campaign=media_actions\u0026utm_medium=deep_link\u0026utm_source=google",
         "Icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Crunchyroll.svg/768px-Crunchyroll.svg.png"
       }
     ],
@@ -210,19 +250,21 @@
     "Title": "Fullmetal Alchemist: Brotherhood",
     "Description": "Fullmetal Alchemist: Brotherhood is a gripping anime that follows brothers Edward and Alphonse Elric on their quest to restore their bodies after a failed alchemical experiment, exploring themes of sacrifice, redemption, and the pursuit of truth.",
     "Ratings": null,
-    "Genre": [ "Adventure" ],
+    "Genre": [
+      "Adventure"
+    ],
     "Release": "2009",
     "Trailer": "https://www.youtube.com/embed/RNwNA1M8A94",
     "OTT": [
       {
         "Platform": "Crunchyroll",
-        "Url": "https://www.crunchyroll.com/series/GRGGPG93R/fullmetal-alchemist-brotherhood?utm_campaign=media_actions&utm_medium=deep_link&utm_source=google",
+        "Url": "https://www.crunchyroll.com/series/GRGGPG93R/fullmetal-alchemist-brotherhood?utm_campaign=media_actions\u0026utm_medium=deep_link\u0026utm_source=google",
         "Icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Crunchyroll.svg/768px-Crunchyroll.svg.png"
       },
       {
         "Platform": "Prime",
-        "Url": "https://www.amazon.com/gp/video/detail/amzn1.dv.gti.7c48c831-78d8-42aa-852f-caefb01963cc?autoplay=0&ref_=atv_cf_strg_wb",
-        "Icon": "https://assets.aboutamazon.com/dims4/default/59e4166/2147483647/strip/true/crop/4454x2634+0+0/resize/365x216!/format/webp/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2F4b%2F7f%2F4a4a80724a5e9a6b4a1931e8bf99%2Fprime-logo-rgb-prime-blue-master.png"
+        "Url": "https://www.amazon.com/gp/video/detail/amzn1.dv.gti.7c48c831-78d8-42aa-852f-caefb01963cc?autoplay=0\u0026ref_=atv_cf_strg_wb",
+        "Icon": "https://assets.aboutamazon.com/dims4/default/59e4166/2147483647/strip/true/crop/4454x2634\u002B0\u002B0/resize/365x216!/format/webp/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2F4b%2F7f%2F4a4a80724a5e9a6b4a1931e8bf99%2Fprime-logo-rgb-prime-blue-master.png"
       }
     ],
     "Season": 1,
@@ -236,19 +278,21 @@
     "Title": "Psycho-Pass",
     "Description": "Psycho-Pass is a futuristic anime that delves into a society where a powerful surveillance system measures mental states to maintain order, raising profound questions about justice and free will.",
     "Ratings": null,
-    "Genre": [ "Sci-Fi" ],
+    "Genre": [
+      "Sci-Fi"
+    ],
     "Release": "2012",
     "Trailer": "https://www.youtube.com/embed/UOJbcihluGc",
     "OTT": [
       {
         "Platform": "Crunchyroll",
-        "Url": "https://www.crunchyroll.com/series/GR75253JY/psycho-pass?utm_campaign=media_actions&utm_medium=deep_link&utm_source=google",
+        "Url": "https://www.crunchyroll.com/series/GR75253JY/psycho-pass?utm_campaign=media_actions\u0026utm_medium=deep_link\u0026utm_source=google",
         "Icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Crunchyroll.svg/768px-Crunchyroll.svg.png"
       },
       {
         "Platform": "Prime",
-        "Url": "https://www.amazon.com/gp/video/detail/amzn1.dv.gti.e0b8865e-3a1b-a455-7839-11d406373026?autoplay=0&ref_=atv_cf_strg_wb",
-        "Icon": "https://assets.aboutamazon.com/dims4/default/59e4166/2147483647/strip/true/crop/4454x2634+0+0/resize/365x216!/format/webp/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2F4b%2F7f%2F4a4a80724a5e9a6b4a1931e8bf99%2Fprime-logo-rgb-prime-blue-master.png"
+        "Url": "https://www.amazon.com/gp/video/detail/amzn1.dv.gti.e0b8865e-3a1b-a455-7839-11d406373026?autoplay=0\u0026ref_=atv_cf_strg_wb",
+        "Icon": "https://assets.aboutamazon.com/dims4/default/59e4166/2147483647/strip/true/crop/4454x2634\u002B0\u002B0/resize/365x216!/format/webp/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2F4b%2F7f%2F4a4a80724a5e9a6b4a1931e8bf99%2Fprime-logo-rgb-prime-blue-master.png"
       }
     ],
     "Season": 3,
@@ -262,7 +306,9 @@
     "Title": "Haikyuu",
     "Description": "Haikyuu is an inspiring sports anime that chronicles the journey of Shoyo Hinata and his high school volleyball team as they strive to reach the top, overcoming personal and team challenges with determination and teamwork.",
     "Ratings": null,
-    "Genre": [ "Drama" ],
+    "Genre": [
+      "Drama"
+    ],
     "Release": "2014",
     "Trailer": "https://www.youtube.com/embed/yeUpnIKt6k4",
     "OTT": [
@@ -273,8 +319,8 @@
       },
       {
         "Platform": "Prime",
-        "Url": "https://www.amazon.com/gp/video/detail/amzn1.dv.gti.4201c6f0-7026-44e5-a28e-ef75569e285e?autoplay=0&ref_=atv_cf_strg_wb",
-        "Icon": "https://assets.aboutamazon.com/dims4/default/59e4166/2147483647/strip/true/crop/4454x2634+0+0/resize/365x216!/format/webp/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2F4b%2F7f%2F4a4a80724a5e9a6b4a1931e8bf99%2Fprime-logo-rgb-prime-blue-master.png"
+        "Url": "https://www.amazon.com/gp/video/detail/amzn1.dv.gti.4201c6f0-7026-44e5-a28e-ef75569e285e?autoplay=0\u0026ref_=atv_cf_strg_wb",
+        "Icon": "https://assets.aboutamazon.com/dims4/default/59e4166/2147483647/strip/true/crop/4454x2634\u002B0\u002B0/resize/365x216!/format/webp/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2F4b%2F7f%2F4a4a80724a5e9a6b4a1931e8bf99%2Fprime-logo-rgb-prime-blue-master.png"
       }
     ],
     "Season": 4,
@@ -288,7 +334,9 @@
     "Title": "The Eminence in Shadow",
     "Description": "The Eminence in Shadow is a captivating anime that follows a young boy who dreams of becoming a mastermind behind the scenes, only to find himself inadvertently leading a secret organization against a real-world shadowy threat.",
     "Ratings": null,
-    "Genre": [ "Action"],
+    "Genre": [
+      "Action"
+    ],
     "Release": "2022",
     "Trailer": "https://www.youtube.com/embed/yeUpnIKt6k4",
     "OTT": [
@@ -299,8 +347,8 @@
       },
       {
         "Platform": "Prime",
-        "Url": "https://www.amazon.com/gp/video/detail/amzn1.dv.gti.a2753000-003a-4be0-ad2f-079758f058c6?autoplay=0&ref_=atv_cf_strg_wb",
-        "Icon": "https://assets.aboutamazon.com/dims4/default/59e4166/2147483647/strip/true/crop/4454x2634+0+0/resize/365x216!/format/webp/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2F4b%2F7f%2F4a4a80724a5e9a6b4a1931e8bf99%2Fprime-logo-rgb-prime-blue-master.png"
+        "Url": "https://www.amazon.com/gp/video/detail/amzn1.dv.gti.a2753000-003a-4be0-ad2f-079758f058c6?autoplay=0\u0026ref_=atv_cf_strg_wb",
+        "Icon": "https://assets.aboutamazon.com/dims4/default/59e4166/2147483647/strip/true/crop/4454x2634\u002B0\u002B0/resize/365x216!/format/webp/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2F4b%2F7f%2F4a4a80724a5e9a6b4a1931e8bf99%2Fprime-logo-rgb-prime-blue-master.png"
       }
     ],
     "Season": 2,
@@ -314,7 +362,10 @@
     "Title": "Jujutsu Kaisen",
     "Description": "Yuji Itadori enters the dangerous world of curses after consuming a powerful cursed object, facing dark forces alongside skilled Jujutsu sorcerers.",
     "Ratings": null,
-    "Genre": [ "Action", "Fantasy" ],
+    "Genre": [
+      "Action",
+      "Fantasy"
+    ],
     "Release": "2021",
     "Trailer": "https://www.youtube.com/embed/pkKu9hLT-t8",
     "OTT": [
@@ -325,8 +376,8 @@
       },
       {
         "Platform": "Prime",
-        "Url": "https://www.amazon.com/gp/video/detail/amzn1.dv.gti.e102ba07-c404-4ee5-abf9-fbaefe8c6fc2?autoplay=0&ref_=atv_cf_strg_wb",
-        "Icon": "https://assets.aboutamazon.com/dims4/default/59e4166/2147483647/strip/true/crop/4454x2634+0+0/resize/365x216!/format/webp/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2F4b%2F7f%2F4a4a80724a5e9a6b4a1931e8bf99%2Fprime-logo-rgb-prime-blue-master.png"
+        "Url": "https://www.amazon.com/gp/video/detail/amzn1.dv.gti.e102ba07-c404-4ee5-abf9-fbaefe8c6fc2?autoplay=0\u0026ref_=atv_cf_strg_wb",
+        "Icon": "https://assets.aboutamazon.com/dims4/default/59e4166/2147483647/strip/true/crop/4454x2634\u002B0\u002B0/resize/365x216!/format/webp/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2F4b%2F7f%2F4a4a80724a5e9a6b4a1931e8bf99%2Fprime-logo-rgb-prime-blue-master.png"
       }
     ],
     "Season": 1,
@@ -340,19 +391,21 @@
     "Title": "Hellsing Ultimate",
     "Description": "Hellsing Ultimate is a dark and intense anime that follows the Hellsing Organization, led by the powerful vampire Alucard, as they battle supernatural forces and protect humanity from the undead and other sinister threats.",
     "Ratings": null,
-    "Genre": [ "Horror" ],
+    "Genre": [
+      "Horror"
+    ],
     "Release": "2001",
     "Trailer": "https://www.youtube.com/embed/7CQKMDFAKMk",
     "OTT": [
       {
         "Platform": "Crunchyroll",
-        "Url": "https://www.crunchyroll.com/series/G649DPXQY/hellsing?utm_campaign=media_actions&utm_medium=deep_link&utm_source=google",
+        "Url": "https://www.crunchyroll.com/series/G649DPXQY/hellsing?utm_campaign=media_actions\u0026utm_medium=deep_link\u0026utm_source=google",
         "Icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Crunchyroll.svg/768px-Crunchyroll.svg.png"
       },
       {
         "Platform": "Prime",
-        "Url": "https://www.amazon.com/gp/video/detail/amzn1.dv.gti.c2a9f75d-b5a2-3405-31e6-50a573b7a97d?autoplay=0&ref_=atv_cf_strg_wb",
-        "Icon": "https://assets.aboutamazon.com/dims4/default/59e4166/2147483647/strip/true/crop/4454x2634+0+0/resize/365x216!/format/webp/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2F4b%2F7f%2F4a4a80724a5e9a6b4a1931e8bf99%2Fprime-logo-rgb-prime-blue-master.png"
+        "Url": "https://www.amazon.com/gp/video/detail/amzn1.dv.gti.c2a9f75d-b5a2-3405-31e6-50a573b7a97d?autoplay=0\u0026ref_=atv_cf_strg_wb",
+        "Icon": "https://assets.aboutamazon.com/dims4/default/59e4166/2147483647/strip/true/crop/4454x2634\u002B0\u002B0/resize/365x216!/format/webp/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2F4b%2F7f%2F4a4a80724a5e9a6b4a1931e8bf99%2Fprime-logo-rgb-prime-blue-master.png"
       }
     ],
     "Season": 1,
@@ -363,10 +416,13 @@
     "Maker": "selinazawacki",
     "img": "https://m.media-amazon.com/images/M/MV5BMjAzMjUyNDQ1NF5BMl5BanBnXkFtZTgwMjAwMTQ0NjE@._V1_.jpg",
     "Url": "https://jojo-portal.com/en/news/anime/4/",
-    "Title": "JoJo's Bizarre Adventure",
-    "Description": "JoJo's Bizarre Adventure is an epic anime saga that chronicles the extraordinary and supernatural adventures of the Joestar family across generations, filled with unique powers, eccentric characters, and thrilling battles.",
+    "Title": "JoJo\u0027s Bizarre Adventure",
+    "Description": "JoJo\u0027s Bizarre Adventure is an epic anime saga that chronicles the extraordinary and supernatural adventures of the Joestar family across generations, filled with unique powers, eccentric characters, and thrilling battles.",
     "Ratings": null,
-    "Genre": [ "Action", "Adventure" ],
+    "Genre": [
+      "Action",
+      "Adventure"
+    ],
     "Release": "2012",
     "Trailer": "https://www.youtube.com/embed/yeUpnIKt6k4",
     "OTT": [
@@ -377,12 +433,12 @@
       },
       {
         "Platform": "Prime",
-        "Url": "https://www.amazon.com/gp/video/detail/amzn1.dv.gti.1b222ab2-de0e-4d4e-b189-cd5896a5da3b?autoplay=0&ref_=atv_cf_strg_wb",
-        "Icon": "https://assets.aboutamazon.com/dims4/default/59e4166/2147483647/strip/true/crop/4454x2634+0+0/resize/365x216!/format/webp/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2F4b%2F7f%2F4a4a80724a5e9a6b4a1931e8bf99%2Fprime-logo-rgb-prime-blue-master.png"
+        "Url": "https://www.amazon.com/gp/video/detail/amzn1.dv.gti.1b222ab2-de0e-4d4e-b189-cd5896a5da3b?autoplay=0\u0026ref_=atv_cf_strg_wb",
+        "Icon": "https://assets.aboutamazon.com/dims4/default/59e4166/2147483647/strip/true/crop/4454x2634\u002B0\u002B0/resize/365x216!/format/webp/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2F4b%2F7f%2F4a4a80724a5e9a6b4a1931e8bf99%2Fprime-logo-rgb-prime-blue-master.png"
       },
       {
         "Platform": "Crunchyroll",
-        "Url": "https://www.crunchyroll.com/series/GYP8DP1MY/jojos-bizarre-adventure?utm_campaign=media_actions&utm_medium=deep_link&utm_source=google",
+        "Url": "https://www.crunchyroll.com/series/GYP8DP1MY/jojos-bizarre-adventure?utm_campaign=media_actions\u0026utm_medium=deep_link\u0026utm_source=google",
         "Icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Crunchyroll.svg/768px-Crunchyroll.svg.png"
       }
     ],
