@@ -113,7 +113,6 @@ namespace ContosoCrafts.WebSite.Services
                 return false; // Fast fail for rating above 5
             }
 
-
             // Check to see if the rating exist, if there are none, then create the array
             if (data.Ratings == null)
             {
