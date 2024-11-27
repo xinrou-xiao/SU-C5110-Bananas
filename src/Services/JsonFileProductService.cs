@@ -101,14 +101,21 @@ namespace ContosoCrafts.WebSite.Services
                 return false; // Fast fail for product not found
             }
 
-            // Check Rating for boundaries, do not allow ratings below 0 and above 5 
-            if (rating < 0 || rating > 5)
+            // Check Rating for boundaries, do not allow ratings below 0
+            if (rating < 0)
             {
-                return false; // Fast fail for invalid rating
+                return false; // Fast fail for rating below 0
             }
 
+            // Do not allow ratings above 5
+            if (rating > 5)
+            {
+                return false; // Fast fail for rating above 5
+            }
+
+
             // Check to see if the rating exist, if there are none, then create the array
-            if(data.Ratings == null)
+            if (data.Ratings == null)
             {
                 data.Ratings = new List<int>();
             }
