@@ -219,11 +219,9 @@ namespace ContosoCrafts.WebSite.Services
                 return data;  //Fast fail for product not found
             }
 
-            if (data != null)
-            {
                 var newDataSet = dataSet.Where(m => m.Id != id);
                 SaveData(newDataSet);
-            }
+            
             return data;
         }
 
