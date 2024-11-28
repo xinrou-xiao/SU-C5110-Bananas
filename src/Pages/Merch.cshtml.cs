@@ -95,7 +95,6 @@ namespace ContosoCrafts.WebSite.Pages
                 BuyLink = "https://etsy.com/listing/1802539733/hardcover-notebookdiary-death-note",
                 Price = 18.98m
                 }
-
             };
         }
     }
@@ -134,6 +133,5 @@ namespace ContosoCrafts.WebSite.Pages
         /// Gets or sets the price of the merchandise item.
         /// </summary>
         public decimal Price { get; set; } 
-
     }
 }
