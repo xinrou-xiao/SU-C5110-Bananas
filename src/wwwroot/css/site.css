@@ -211,6 +211,27 @@ h1, h2, h3, h4, h5 {
             transform: translateX(25px); /* Shift text further to the right */
 }
 
+/* Anime Character */
+.quiz-button::before {
+        content: '';
+        position: absolute;
+        width: 80px; /* Reduced width for smaller button */
+        height: 80px; /* Reduced height for smaller button */
+        top: 50%;
+        left: -100px; /* Adjusted to ensure full animation */
+        background: url('/Images/Anya.png') no-repeat center center / contain;
+        transform: translateY(-50%);
+        transition: left 0.4s ease, transform 0.4s ease;
+        z-index: -1; /* Ensures it is behind the button */
+}
+
+/* Character Animation on Hover */
+.quiz-button:hover::before {
+        left: -20px; /* Bring character fully into view */
+        transform: translateY(-50%) rotate(10deg); /* Adds a slight playful rotation */
+}
+
+
  /* Dark Theme Styles */
  body .dark-theme .modal-content.black-bg {
  background-color: black !important;
