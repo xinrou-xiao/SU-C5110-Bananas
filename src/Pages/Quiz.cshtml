@@ -1,4 +1,11 @@
 ﻿@page
 @model ContosoCrafts.WebSite.Pages.QuizModel
 @{
-    }
+    ViewData["Title"] = "Anime Personality Quiz";
+}
+<div class="container quiz-page">
+    @if (!Model.IsSubmitted)
+        {
+        <h1 class="quiz-title">Anime Personality Quiz</h1>
+        }
+</div>
