@@ -3,6 +3,7 @@
 @{
     ViewData["Title"] = "Anime Personality Quiz";
 }
+
 <div class="container quiz-page">
     @if (!Model.IsSubmitted)
     {
@@ -22,7 +23,6 @@
             <button type="submit" class="btn btn-primary">Next</button>
         </form>
     }
-
     @if (Model.IsSubmitted)
         {
         <div class="result-container">
@@ -33,6 +33,9 @@
             </video>
             <h2>@Model.ResultName</h2>
             <p>@Html.Raw(Model.ResultDescription)</p>
+            <form method="get">
+                <button type="submit" class="btn btn-secondary">Retake Quiz</button>
+            </form>
         </div>
         }
  </div>
