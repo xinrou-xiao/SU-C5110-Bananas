@@ -24,17 +24,9 @@
     ],
     "Release": "1999",
     "Trailer": "https://www.youtube.com/embed/yeUpnIKt6k4",
-    "OTT": [
-      {
-        "Platform": "Netflix",
-        "Url": "https://www.netflix.com/",
-        "Icon": "https://images.ctfassets.net/y2ske730sjqp/1aONibCke6niZhgPxuiilC/2c401b05a07288746ddf3bd3943fbc76/BrandAssets_Logos_01-Wordmark.jpg?w=940"
-      },
-      {
-        "Platform": "Prime",
-        "Url": "https://www.amazon.com/Amazon-Video/b/?\u0026node=2858778011\u0026ref=dvm_MLP_ROWNA_US_1",
-        "Icon": "https://assets.aboutamazon.com/dims4/default/59e4166/2147483647/strip/true/crop/4454x2634\u002B0\u002B0/resize/365x216!/format/webp/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2F4b%2F7f%2F4a4a80724a5e9a6b4a1931e8bf99%2Fprime-logo-rgb-prime-blue-master.png"
-      }
+    "Ott": [
+      3,
+      7
     ],
     "Season": 5,
     "CommentList": []
@@ -55,12 +47,8 @@
     ],
     "Release": "2013",
     "Trailer": "https://www.youtube.com/embed/PkZtVBNkmso",
-    "OTT": [
-      {
-        "Platform": "Prime",
-        "Url": "https://www.amazon.com/gp/video/detail/amzn1.dv.gti.40d53867-afdd-40da-b65f-9046f74dafd4?autoplay=0\u0026ref_=atv_cf_strg_wb",
-        "Icon": "https://assets.aboutamazon.com/dims4/default/59e4166/2147483647/strip/true/crop/4454x2634\u002B0\u002B0/resize/365x216!/format/webp/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2F4b%2F7f%2F4a4a80724a5e9a6b4a1931e8bf99%2Fprime-logo-rgb-prime-blue-master.png"
-      }
+    "Ott": [
+      7
     ],
     "Season": 7,
     "CommentList": []
@@ -79,12 +67,8 @@
     ],
     "Release": "2007",
     "Trailer": "https://www.youtube.com/embed/goYEIQT5m8U",
-    "OTT": [
-      {
-        "Platform": "Crunchyroll",
-        "Url": "https://www.crunchyroll.com/series/GRQ4VDD3Y/darker-than-black?srsltid=AfmBOop1ieLb1-cSnt23PjgaJ0sKyAjkRQ6xeeQ4c5zvttpC1hJsDNtS",
-        "Icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Crunchyroll.svg/768px-Crunchyroll.svg.png"
-      }
+    "Ott": [
+      15
     ],
     "Season": 2,
     "CommentList": []
@@ -103,17 +87,9 @@
     ],
     "Release": "1989",
     "Trailer": "https://www.youtube.com/embed/sxufB6DxXk0",
-    "OTT": [
-      {
-        "Platform": "Crunchyroll",
-        "Url": "https://www.crunchyroll.com/series/G9VHN9PPW/dragon-ball-z?utm_campaign=media_actions\u0026utm_medium=deep_link\u0026utm_source=google",
-        "Icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Crunchyroll.svg/768px-Crunchyroll.svg.png"
-      },
-      {
-        "Platform": "Prime",
-        "Url": "https://www.amazon.com/gp/video/detail/amzn1.dv.gti.3ed1b2dc-b5a2-45c1-aa3e-b4a97dc470f9?autoplay=0\u0026ref_=atv_cf_strg_wb",
-        "Icon": "https://assets.aboutamazon.com/dims4/default/59e4166/2147483647/strip/true/crop/4454x2634\u002B0\u002B0/resize/365x216!/format/webp/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2F4b%2F7f%2F4a4a80724a5e9a6b4a1931e8bf99%2Fprime-logo-rgb-prime-blue-master.png"
-      }
+    "Ott": [
+      7,
+      15
     ],
     "Season": 9,
     "CommentList": []
@@ -132,12 +108,8 @@
     ],
     "Release": "2006",
     "Trailer": "https://www.youtube.com/embed/NlJZ-YgAt-c",
-    "OTT": [
-      {
-        "Platform": "tubitv",
-        "Url": "https://tubitv.com/series/1630/death-note-subtitled?start=true\u0026tracking=google-feed\u0026utm_source=google-feed",
-        "Icon": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Tubi_logo_2024_purple.svg"
-      }
+    "Ott": [
+      21
     ],
     "Season": 1,
     "CommentList": []
@@ -158,22 +130,10 @@
     ],
     "Release": "2019",
     "Trailer": "https://www.youtube.com/embed/VQGCKyvzIM4",
-    "OTT": [
-      {
-        "Platform": "Netflix",
-        "Url": "https://www.netflix.com/title/81091393?source=35",
-        "Icon": "https://images.ctfassets.net/y2ske730sjqp/1aONibCke6niZhgPxuiilC/2c401b05a07288746ddf3bd3943fbc76/BrandAssets_Logos_01-Wordmark.jpg?w=940"
-      },
-      {
-        "Platform": "Prime",
-        "Url": "https://www.amazon.com/gp/video/detail/amzn1.dv.gti.36d4a3eb-9885-48c5-ba96-6fa087ef51ec?autoplay=0\u0026ref_=atv_cf_strg_wb",
-        "Icon": "https://assets.aboutamazon.com/dims4/default/59e4166/2147483647/strip/true/crop/4454x2634\u002B0\u002B0/resize/365x216!/format/webp/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2F4b%2F7f%2F4a4a80724a5e9a6b4a1931e8bf99%2Fprime-logo-rgb-prime-blue-master.png"
-      },
-      {
-        "Platform": "Crunchyroll",
-        "Url": "https://www.crunchyroll.com/series/GY5P48XEY/demon-slayer-kimetsu-no-yaiba?utm_campaign=media_actions\u0026utm_medium=deep_link\u0026utm_source=google",
-        "Icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Crunchyroll.svg/768px-Crunchyroll.svg.png"
-      }
+    "Ott": [
+      3,
+      7,
+      15
     ],
     "Season": 3,
     "CommentList": []
@@ -192,17 +152,9 @@
     ],
     "Release": "2013",
     "Trailer": "https://www.youtube.com/embed/MGRm4IzK1SQ",
-    "OTT": [
-      {
-        "Platform": "Crunchyroll",
-        "Url": "https://www.crunchyroll.com/series/GR751KNZY/attack-on-titan?utm_campaign=media_actions\u0026utm_medium=deep_link\u0026utm_source=google",
-        "Icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Crunchyroll.svg/768px-Crunchyroll.svg.png"
-      },
-      {
-        "Platform": "Prime",
-        "Url": "https://www.amazon.com/gp/video/detail/amzn1.dv.gti.885b9a80-8923-4653-8711-0945f560d867?autoplay=0\u0026ref_=atv_cf_strg_wb",
-        "Icon": "https://assets.aboutamazon.com/dims4/default/59e4166/2147483647/strip/true/crop/4454x2634\u002B0\u002B0/resize/365x216!/format/webp/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2F4b%2F7f%2F4a4a80724a5e9a6b4a1931e8bf99%2Fprime-logo-rgb-prime-blue-master.png"
-      }
+    "Ott": [
+      7,
+      15
     ],
     "Season": 4,
     "CommentList": []
@@ -222,22 +174,10 @@
     ],
     "Release": "1999",
     "Trailer": "https://www.youtube.com/embed/TbHtbzAnZJ4",
-    "OTT": [
-      {
-        "Platform": "Netflix",
-        "Url": "https://www.netflix.com/title/80107103?source=35",
-        "Icon": "https://images.ctfassets.net/y2ske730sjqp/1aONibCke6niZhgPxuiilC/2c401b05a07288746ddf3bd3943fbc76/BrandAssets_Logos_01-Wordmark.jpg?w=940"
-      },
-      {
-        "Platform": "Prime",
-        "Url": "https://www.amazon.com/gp/video/detail/amzn1.dv.gti.517439fa-e265-4c8d-a2a6-e3e609183f3c?autoplay=0\u0026ref_=atv_cf_strg_wb",
-        "Icon": "https://assets.aboutamazon.com/dims4/default/59e4166/2147483647/strip/true/crop/4454x2634\u002B0\u002B0/resize/365x216!/format/webp/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2F4b%2F7f%2F4a4a80724a5e9a6b4a1931e8bf99%2Fprime-logo-rgb-prime-blue-master.png"
-      },
-      {
-        "Platform": "Crunchyroll",
-        "Url": "https://www.crunchyroll.com/series/GRMG8ZQZR/one-piece?utm_campaign=media_actions\u0026utm_medium=deep_link\u0026utm_source=google",
-        "Icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Crunchyroll.svg/768px-Crunchyroll.svg.png"
-      }
+    "Ott": [
+      3,
+      7,
+      15
     ],
     "Season": 20,
     "CommentList": []
@@ -255,17 +195,9 @@
     ],
     "Release": "2009",
     "Trailer": "https://www.youtube.com/embed/RNwNA1M8A94",
-    "OTT": [
-      {
-        "Platform": "Crunchyroll",
-        "Url": "https://www.crunchyroll.com/series/GRGGPG93R/fullmetal-alchemist-brotherhood?utm_campaign=media_actions\u0026utm_medium=deep_link\u0026utm_source=google",
-        "Icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Crunchyroll.svg/768px-Crunchyroll.svg.png"
-      },
-      {
-        "Platform": "Prime",
-        "Url": "https://www.amazon.com/gp/video/detail/amzn1.dv.gti.7c48c831-78d8-42aa-852f-caefb01963cc?autoplay=0\u0026ref_=atv_cf_strg_wb",
-        "Icon": "https://assets.aboutamazon.com/dims4/default/59e4166/2147483647/strip/true/crop/4454x2634\u002B0\u002B0/resize/365x216!/format/webp/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2F4b%2F7f%2F4a4a80724a5e9a6b4a1931e8bf99%2Fprime-logo-rgb-prime-blue-master.png"
-      }
+    "Ott": [
+      7,
+      15
     ],
     "Season": 1,
     "CommentList": []
@@ -283,17 +215,9 @@
     ],
     "Release": "2012",
     "Trailer": "https://www.youtube.com/embed/UOJbcihluGc",
-    "OTT": [
-      {
-        "Platform": "Crunchyroll",
-        "Url": "https://www.crunchyroll.com/series/GR75253JY/psycho-pass?utm_campaign=media_actions\u0026utm_medium=deep_link\u0026utm_source=google",
-        "Icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Crunchyroll.svg/768px-Crunchyroll.svg.png"
-      },
-      {
-        "Platform": "Prime",
-        "Url": "https://www.amazon.com/gp/video/detail/amzn1.dv.gti.e0b8865e-3a1b-a455-7839-11d406373026?autoplay=0\u0026ref_=atv_cf_strg_wb",
-        "Icon": "https://assets.aboutamazon.com/dims4/default/59e4166/2147483647/strip/true/crop/4454x2634\u002B0\u002B0/resize/365x216!/format/webp/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2F4b%2F7f%2F4a4a80724a5e9a6b4a1931e8bf99%2Fprime-logo-rgb-prime-blue-master.png"
-      }
+    "Ott": [
+      7,
+      15
     ],
     "Season": 3,
     "CommentList": []
@@ -311,17 +235,9 @@
     ],
     "Release": "2014",
     "Trailer": "https://www.youtube.com/embed/yeUpnIKt6k4",
-    "OTT": [
-      {
-        "Platform": "Netflix",
-        "Url": "https://www.netflix.com/title/80090673?source=35",
-        "Icon": "https://images.ctfassets.net/y2ske730sjqp/1aONibCke6niZhgPxuiilC/2c401b05a07288746ddf3bd3943fbc76/BrandAssets_Logos_01-Wordmark.jpg?w=940"
-      },
-      {
-        "Platform": "Prime",
-        "Url": "https://www.amazon.com/gp/video/detail/amzn1.dv.gti.4201c6f0-7026-44e5-a28e-ef75569e285e?autoplay=0\u0026ref_=atv_cf_strg_wb",
-        "Icon": "https://assets.aboutamazon.com/dims4/default/59e4166/2147483647/strip/true/crop/4454x2634\u002B0\u002B0/resize/365x216!/format/webp/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2F4b%2F7f%2F4a4a80724a5e9a6b4a1931e8bf99%2Fprime-logo-rgb-prime-blue-master.png"
-      }
+    "Ott": [
+      3,
+      7
     ],
     "Season": 4,
     "CommentList": []
@@ -339,17 +255,9 @@
     ],
     "Release": "2022",
     "Trailer": "https://www.youtube.com/embed/yeUpnIKt6k4",
-    "OTT": [
-      {
-        "Platform": "Hulu",
-        "Url": "https://www.hulu.com/series/66f37cf4-dba5-4511-ae26-e4092df1668b",
-        "Icon": "https://greenhouse.hulu.com/app/uploads/sites/12/2023/10/logo-gradient-3up.svg"
-      },
-      {
-        "Platform": "Prime",
-        "Url": "https://www.amazon.com/gp/video/detail/amzn1.dv.gti.a2753000-003a-4be0-ad2f-079758f058c6?autoplay=0\u0026ref_=atv_cf_strg_wb",
-        "Icon": "https://assets.aboutamazon.com/dims4/default/59e4166/2147483647/strip/true/crop/4454x2634\u002B0\u002B0/resize/365x216!/format/webp/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2F4b%2F7f%2F4a4a80724a5e9a6b4a1931e8bf99%2Fprime-logo-rgb-prime-blue-master.png"
-      }
+    "Ott": [
+      7,
+      29
     ],
     "Season": 2,
     "CommentList": []
@@ -368,17 +276,9 @@
     ],
     "Release": "2021",
     "Trailer": "https://www.youtube.com/embed/pkKu9hLT-t8",
-    "OTT": [
-      {
-        "Platform": "Netflix",
-        "Url": "https://www.netflix.com/title/81602834?source=35",
-        "Icon": "https://images.ctfassets.net/y2ske730sjqp/1aONibCke6niZhgPxuiilC/2c401b05a07288746ddf3bd3943fbc76/BrandAssets_Logos_01-Wordmark.jpg?w=940"
-      },
-      {
-        "Platform": "Prime",
-        "Url": "https://www.amazon.com/gp/video/detail/amzn1.dv.gti.e102ba07-c404-4ee5-abf9-fbaefe8c6fc2?autoplay=0\u0026ref_=atv_cf_strg_wb",
-        "Icon": "https://assets.aboutamazon.com/dims4/default/59e4166/2147483647/strip/true/crop/4454x2634\u002B0\u002B0/resize/365x216!/format/webp/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2F4b%2F7f%2F4a4a80724a5e9a6b4a1931e8bf99%2Fprime-logo-rgb-prime-blue-master.png"
-      }
+    "Ott": [
+      3,
+      7
     ],
     "Season": 1,
     "CommentList": []
@@ -396,17 +296,9 @@
     ],
     "Release": "2001",
     "Trailer": "https://www.youtube.com/embed/7CQKMDFAKMk",
-    "OTT": [
-      {
-        "Platform": "Crunchyroll",
-        "Url": "https://www.crunchyroll.com/series/G649DPXQY/hellsing?utm_campaign=media_actions\u0026utm_medium=deep_link\u0026utm_source=google",
-        "Icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Crunchyroll.svg/768px-Crunchyroll.svg.png"
-      },
-      {
-        "Platform": "Prime",
-        "Url": "https://www.amazon.com/gp/video/detail/amzn1.dv.gti.c2a9f75d-b5a2-3405-31e6-50a573b7a97d?autoplay=0\u0026ref_=atv_cf_strg_wb",
-        "Icon": "https://assets.aboutamazon.com/dims4/default/59e4166/2147483647/strip/true/crop/4454x2634\u002B0\u002B0/resize/365x216!/format/webp/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2F4b%2F7f%2F4a4a80724a5e9a6b4a1931e8bf99%2Fprime-logo-rgb-prime-blue-master.png"
-      }
+    "Ott": [
+      7,
+      15
     ],
     "Season": 1,
     "CommentList": []
@@ -418,29 +310,19 @@
     "Url": "https://jojo-portal.com/en/news/anime/4/",
     "Title": "JoJo\u0027s Bizarre Adventure",
     "Description": "JoJo\u0027s Bizarre Adventure is an epic anime saga that chronicles the extraordinary and supernatural adventures of the Joestar family across generations, filled with unique powers, eccentric characters, and thrilling battles.",
-    "Ratings": null,
+    "Ratings": [
+      5
+    ],
     "Genre": [
       "Action",
       "Adventure"
     ],
     "Release": "2012",
     "Trailer": "https://www.youtube.com/embed/yeUpnIKt6k4",
-    "OTT": [
-      {
-        "Platform": "Netflix",
-        "Url": "https://www.netflix.com/title/80179831?source=35",
-        "Icon": "https://images.ctfassets.net/y2ske730sjqp/1aONibCke6niZhgPxuiilC/2c401b05a07288746ddf3bd3943fbc76/BrandAssets_Logos_01-Wordmark.jpg?w=940"
-      },
-      {
-        "Platform": "Prime",
-        "Url": "https://www.amazon.com/gp/video/detail/amzn1.dv.gti.1b222ab2-de0e-4d4e-b189-cd5896a5da3b?autoplay=0\u0026ref_=atv_cf_strg_wb",
-        "Icon": "https://assets.aboutamazon.com/dims4/default/59e4166/2147483647/strip/true/crop/4454x2634\u002B0\u002B0/resize/365x216!/format/webp/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2F4b%2F7f%2F4a4a80724a5e9a6b4a1931e8bf99%2Fprime-logo-rgb-prime-blue-master.png"
-      },
-      {
-        "Platform": "Crunchyroll",
-        "Url": "https://www.crunchyroll.com/series/GYP8DP1MY/jojos-bizarre-adventure?utm_campaign=media_actions\u0026utm_medium=deep_link\u0026utm_source=google",
-        "Icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Crunchyroll.svg/768px-Crunchyroll.svg.png"
-      }
+    "Ott": [
+      3,
+      7,
+      15
     ],
     "Season": 5,
     "CommentList": []
