@@ -27,10 +27,12 @@
         {
         <div class="result-container">
             <h1>Your Anime Personality:</h1>
-            <video autoplay muted loop class="result-video">
+            <div class="video-container">
+              <video autoplay muted loop class="result-video">
                 <source src="@Model.ResultVideoUrl" type="video/mp4">
                 Your browser does not support the video tag.
-            </video>
+              </video>
+            </div>
             <h2>@Model.ResultName</h2>
             <p>@Html.Raw(Model.ResultDescription)</p>
             <form method="get">
