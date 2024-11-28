@@ -78,6 +78,45 @@ namespace ContosoCrafts.WebSite.Pages
                 _ => "A Unique Character"
             };
 
+            ResultDescription = ResultName switch
+            {
+                "Naruto Uzumaki" => "You're energetic, optimistic, and never give up on your dreams. You inspire others with your determination and your unwavering belief in the power of friendship." +
+                                    "<br/><br/><strong>Pros:</strong><ul>" +
+                                    "<li>Boundless energy and optimism.</li>" +
+                                    "<li>Inspires loyalty and camaraderie.</li>" +
+                                    "<li>Unshakable determination to achieve your goals.</li></ul>" +
+                                    "<br/><strong>Cool Factor:</strong> You're the underdog who rises to greatness, proving that anything is possible with hard work and belief!",
+                "Luffy D. Monkey" => "You're adventurous, carefree, and a born leader. You live for freedom and thrive in the vast unknown, with your friends by your side as your greatest treasure." +
+                                             "<br/><br/><strong>Pros:</strong><ul>" +
+                                             "<li>Infectious enthusiasm and courage.</li>" +
+                                             "<li>Unyielding loyalty to your crew and loved ones.</li>" +
+                                             "<li>Fearless explorer with a big dream to achieve.</li></ul>" +
+                                             "<br/><strong>Cool Factor:</strong> You're the embodiment of freedom and resilience, inspiring others to chase their dreams!",
+
+                "Tanjiro Kamado" => "You're compassionate, kind, and deeply protective of those you care about. Your resilience and determination to do what's right make you a true hero." +
+                                    "<br/><br/><strong>Pros:</strong><ul>" +
+                                    "<li>Empathy and kindness in the face of adversity.</li>" +
+                                    "<li>Unyielding determination and resilience.</li>" +
+                                    "<li>Strong sense of justice and loyalty to loved ones.</li></ul>" +
+                                    "<br/><strong>Cool Factor:</strong> You're the perfect balance of strength and heart, inspiring everyone with your heroic journey!",
+
+                "Roronoa Zoro" => "You're fiercely determined and focused, never wavering from your goals. Your loyalty to those you care about is unbreakable, and you're always striving to be the best version of yourself." +
+                                  "<br/><br/><strong>Pros:</strong><ul>" +
+                                  "<li>Unyielding focus and perseverance.</li>" +
+                                  "<li>Incredible strength and discipline.</li>" +
+                                  "<li>Quietly protective and fiercely loyal.</li></ul>" +
+                                  "<br/><strong>Cool Factor:</strong> You're the strong, silent type who can back up every word with action—cool, confident, and unstoppable!",
+
+                _ => "You have a unique personality that defies conventional categories. Your individuality shines in ways that can't be boxed into one description. " +
+                                   "<br/><br/><strong>Pros:</strong><ul>" +
+                                   "<li>Adaptable and resourceful in any situation.</li>" +
+                                   "<li>Creative thinker with a unique perspective on life.</li>" +
+                                   "<li>Unpredictable and full of surprises, keeping others intrigued.</li>" +
+                                   "<li>Open-minded and welcoming to diverse ideas and people.</li>" +
+                                   "</ul>" +
+                                    "<br/><strong>Cool Factor:</strong> You're a trendsetter with a vibe that's entirely your own. People admire your authenticity and your ability to stay true to yourself, no matter what!"
+            };
+
         }
     }
 }
