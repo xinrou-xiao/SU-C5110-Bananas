@@ -9,6 +9,7 @@ namespace ContosoCrafts.WebSite.Pages
     public class QuizModel : PageModel
     {
         public int CurrentQuestion { get; set; } = 0;
+        public bool IsSubmitted { get; set; } = false;
         public string[] Questions { get; set; } = new[]
         {
             "What is your favorite type of environment?",
