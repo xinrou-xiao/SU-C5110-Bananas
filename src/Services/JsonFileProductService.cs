@@ -223,10 +223,5 @@ namespace ContosoCrafts.WebSite.Services
             
             return data;
         }
-
-        //internal void UpdateProduct(ProductModel product)
-        //{
-        //    throw new NotImplementedException();
-        //}
     }
 }
