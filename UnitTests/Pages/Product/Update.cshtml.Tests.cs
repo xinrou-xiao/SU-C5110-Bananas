@@ -202,7 +202,6 @@ namespace UnitTests.Pages.Product.Update
             Assert.That(data.GetType().ToString(), Is.EqualTo("Microsoft.AspNetCore.Mvc.RedirectToPageResult"));
         }
 
-
         /// <summary>
         /// Test OnPost by giving a valid product with a Null in Genre,
         /// expected the last item's Id in json should equal to product's Id,
@@ -224,7 +223,6 @@ namespace UnitTests.Pages.Product.Update
             Assert.That(data.Id, Is.EqualTo(result.Id));
             Assert.That(result.Genre.Length, Is.EqualTo(2));
         }
-
 
         /// <summary>
         /// Test OnPost by giving a valid product and all valid Genre,
