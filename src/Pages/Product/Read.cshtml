@@ -1,5 +1,6 @@
 ﻿@page "{id}"
 @using ContosoCrafts.WebSite.Services
+@using ContosoCrafts.WebSite.Models
 @inject JsonFileProductService ProductService
 @model ReadModel
 @{
@@ -22,7 +23,6 @@
 
     <h2>@Model.Product.Title</h2> <!--Product title-->
     <div class="description">@Model.Product.Description</div><!--Product description-->
-
     <!--tags area, contains release year and genre-->
     <div class="padding-block">
         @if (Model.AverageRating.HasValue)
@@ -59,10 +59,10 @@
     <h5>Available platforms</h5><!--OTT title-->
     <div>
         <!--Product OTT display as clickable icon one by one-->
-        @foreach (var ott in Model.Product.OTT)
+        @foreach (var platform in Model.Product.Ott)
         {
-            <a href="@ott.Url" target="_blank">
-                <img class="OTT-Icon" src="@ott.Icon" alt="@ott.Platform">
+            <a href="@platform.GetUrl()" target="_blank">
+                <img class="OTT-Icon" src="@platform.GetIcon()" alt="@platform">
             </a>
         }
     </div>
