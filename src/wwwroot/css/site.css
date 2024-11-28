@@ -295,6 +295,22 @@ h1, h2, h3, h4, h5 {
     z-index: 1; /* Ensure form is above background effects */
 }
 
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+    .quiz-button {
+        font-size: 16px; /* Smaller font size */
+        padding: 8px 20px; /* Adjusted padding */
+        margin-right: 10px; /* Reduce margin for better fit */
+    }
+
+        .quiz-button:hover {
+            transform: scale(1.02); /* Subtle hover scaling for smaller size */
+        }
+    .theme-toggle {
+        margin-top: 10px; /* Add spacing above dark mode button */
+    }
+}
+   
  /* Dark Theme Styles */
  body .dark-theme .modal-content.black-bg {
  background-color: black !important;
