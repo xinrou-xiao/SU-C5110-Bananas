@@ -57,6 +57,13 @@ namespace ContosoCrafts.WebSite.Pages
                 CalculateResult();
             }
         }
+        public void OnGet()
+        {
+            IsSubmitted = false;
+            CurrentQuestion = 0;
+            Answers.Clear();
+        }
+
 
     }
 }
