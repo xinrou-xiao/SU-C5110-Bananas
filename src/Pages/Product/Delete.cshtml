@@ -1,5 +1,6 @@
 ﻿@page "{id}"
 @using ContosoCrafts.WebSite.Services
+@using ContosoCrafts.WebSite.Models
 @inject JsonFileProductService ProductService
 @model ContosoCrafts.WebSite.Pages.Product.DeleteModel
 @{
@@ -68,28 +69,18 @@
         </div>
 
         <div class="form-group">
-            <label class="white-font" asp-for="Product.OTT">OTT Platforms </label>
-            @{
-                int i = 1;
-            }
-            @foreach (var OTT in Model.Product.OTT)
-            {
-                <div class="white-font">Platform @i</div>
-
-                <div class="form-group">
-                    <input asp-for="@OTT.Icon" type="text" class="form-control" readonly />
-                </div>
-
-                <div class="form-group">
-                    <input asp-for="@OTT.Platform" type="text" class="form-control" readonly />
-                </div>
-
-                <div class="form-group">
-                    <input asp-for="@OTT.Url" type="text" class="form-control" readonly />
-                </div>
-
-                i++;
-            }
+            <label class="white-font" asp-for="Product.Genre">OTT platform</label>
+            <div>
+                @foreach (OttTypeEnum platform in Model.Product.Ott)
+                {
+                    if (platform != 0)
+                    {
+                        <a href="@platform.GetUrl()" target="_blank">
+                            <img class="OTT-Icon" src="@platform.GetIcon()" alt="@platform">
+                        </a>
+                    }
+                }
+            </div>
         </div>
 
         <button type="submit" class="btn delete-btn">Delete</button>
@@ -99,8 +90,7 @@
 
 @section Scripts {
     <script>
-        function redirectToIndex() 
-        {
+        function redirectToIndex() {
             // After form submission, redirect to the Index page
             window.location.href = '@Url.Page("/Product/Index")';
         }
