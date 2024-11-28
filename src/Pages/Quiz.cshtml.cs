@@ -36,5 +36,9 @@ namespace ContosoCrafts.WebSite.Pages
             new[] { "The leader who guides the group", "The supportive and dependable friend", "The troublemaker who keeps things exciting", "The thinker who analyzes every situation" },
             new[] { "A powerful dragon with untold strength", "A graceful phoenix that symbolizes rebirth", "A magical unicorn representing purity", "A fierce griffin that commands the skies" }
     };
+        private List<int> Answers { get; set; } = new List<int>();
+        public string ResultName { get; set; }
+        public string ResultDescription { get; set; }
+        public string ResultVideoUrl { get; set; }
     }
 }
