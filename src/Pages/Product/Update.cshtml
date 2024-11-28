@@ -64,7 +64,7 @@
             @foreach (var genre in Model.Product.Genre)
             {
                 <div class="form-group form-inline">
-                    <input class="form-control" name="genre_dynamic" class="form-control" value="@genre" />
+                    <input class="form-control" name="genre_dynamic" class="form-control" value="@genre" name="Product.Genre"/>
                     <button class="btn btn-danger custom-btn remove-genre" type="button">-</button>
                     <span asp-validation-for="Product.Genre" class="text-danger"></span>
                 </div>
@@ -78,7 +78,7 @@
                 if (platform != 0)
                 {
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="@((int)platform)" id="@platform" @(Array.Exists(Model.Product.Ott, p => p == platform) ? "checked" : "")>
+                        <input class="form-check-input" type="checkbox" value="@((int)platform)" id="@platform" name="Product.Ott" @(Array.Exists(Model.Product.Ott, p => p == platform) ? "checked" : "")>
                         <label class="form-check-label white-font" for="@platform">
                             <a href="@platform.GetUrl()" target="_blank">
                                 <img class="OTT-Icon" src="@platform.GetIcon()" alt="@platform">
