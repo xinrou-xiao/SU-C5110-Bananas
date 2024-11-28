@@ -244,6 +244,28 @@ h1, h2, h3, h4, h5 {
     cursor: pointer;
 }
 
+/* Center text for results if needed */
+.result-container {
+    text-align: left;
+    margin: 20px auto;
+}
+
+    /* Adjust result headings and images */
+    .result-container h2 {
+        font-size: 1.5rem;
+        margin: 10px 0;
+    }
+
+.result-video,
+.result-image {
+    width: 100%;
+    max-width: 700px; /* Adjust this value to control the size */
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    object-fit: cover; /* Ensures the video/image scales nicely */
+}
+
  /* Dark Theme Styles */
  body .dark-theme .modal-content.black-bg {
  background-color: black !important;
