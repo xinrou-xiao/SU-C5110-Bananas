@@ -158,13 +158,13 @@ namespace UnitTests.Models
         {
             // Arrange: Create a new ProductModel instance and define the expected OTT value.
             var productModel = new ProductModel();
-            var expectedOTT = new List<OTTModel> { new OTTModel { Platform = "Netflix" } };
+            var expectedOTT = new OttTypeEnum[] { OttTypeEnum.Netflix };
 
             // Act: Set the OTT property.
-            productModel.OTT = expectedOTT;
+            productModel.Ott = expectedOTT;
 
             // Assert: Verify that the OTT property was set correctly.
-            Assert.That(productModel.OTT, Is.EqualTo(expectedOTT));
+            Assert.That(productModel.Ott, Is.EqualTo(expectedOTT));
         }
 
         /// <summary>
@@ -218,7 +218,7 @@ namespace UnitTests.Models
                 Description = "This is a product description.",
                 Release = "2023",
                 Trailer = "trailer.mp4",
-                OTT = new List<OTTModel> { new OTTModel { Platform = "Netflix" } },
+                Ott = new OttTypeEnum[] { OttTypeEnum.Netflix },
                 Season = 2,
                 CommentList = new List<CommentModel> { new CommentModel { Comment = "Great product!" } }
             };
