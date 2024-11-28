@@ -231,6 +231,18 @@ h1, h2, h3, h4, h5 {
         transform: translateY(-50%) rotate(10deg); /* Adds a slight playful rotation */
 }
 
+/* Ensure buttons retain their styles */
+.quiz-form button {
+    margin-top: 20px;
+    margin-right: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
  /* Dark Theme Styles */
  body .dark-theme .modal-content.black-bg {
