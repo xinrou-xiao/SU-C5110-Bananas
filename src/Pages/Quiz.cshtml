@@ -5,7 +5,11 @@
 }
 <div class="container quiz-page">
     @if (!Model.IsSubmitted)
-        {
+    {
         <h1 class="quiz-title">Anime Personality Quiz</h1>
-        }
-</div>
+        <form method="post" class="quiz-form">
+            <h2>Question @(Model.CurrentQuestion + 1):</h2>
+            <p>@Model.Questions[Model.CurrentQuestion]</p>
+            </form>
+     }
+    </div>
