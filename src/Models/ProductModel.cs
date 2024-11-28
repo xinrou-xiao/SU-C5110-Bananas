@@ -39,7 +39,7 @@ namespace ContosoCrafts.WebSite.Models
         public List<int> Ratings { get; set; }
 
         // Map Genre field in product.json to ProductModel's Genre
-        public string[] Genre { get; set; }
+        public string[] Genre { get; set; } = new string[] { };
 
         // Map Release field in product.json to ProductModel's Release
         [StringLength(4, ErrorMessage = "Release date should be in a valid format.")]
