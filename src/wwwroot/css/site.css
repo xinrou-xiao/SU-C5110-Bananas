@@ -266,6 +266,23 @@ h1, h2, h3, h4, h5 {
     object-fit: cover; /* Ensures the video/image scales nicely */
 }
 
+.quiz-page {
+    position: relative;
+    overflow: hidden;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: left;
+    color: white; /* Ensures all text is readable */
+    z-index: 0; /* Ensure the quiz form is on top */
+}
+
+/* Ensure quiz form elements are clickable */
+.quiz-form {
+    position: relative; /* Ensure form is correctly positioned inside the container */
+    z-index: 1; /* Ensure form is above background effects */
+}
+
  /* Dark Theme Styles */
  body .dark-theme .modal-content.black-bg {
  background-color: black !important;
