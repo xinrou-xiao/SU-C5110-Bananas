@@ -6,6 +6,8 @@
 }
 
 <!-- Banner Carousel Section: A slideshow of anime banners that automatically cycles -->
+<body onload="loadSong(currentSongIndex)">
+
 <div id="animeCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators for switching between banners -->
     <!-- Each 'li' represents an indicator dot for a specific slide (0-3) -->
@@ -103,59 +105,69 @@
     <span id="song-name"></span>
 </div>
 
-<!--JavaScript for Audio Control and Display Logic-->
-<script>// Reference to the audio element in the HTML
-    const bgMusic = document.getElementById('bg-music');
-    // Reference to the floating display that shows the current song name
-    const songNameDisplay = document.getElementById('song-name-display');
-    // Text element for displaying the name of the currently playing song
-    const songNameText = document.getElementById('song-name');
-    // Variable to track the index of the currently playing song in the playlist
-    let currentSongIndex = 0;
+    @section Scripts {
+        <script>
+            // Get references to HTML elements
+            var bgMusic = document.getElementById('bg-music');
+            var songNameDisplay = document.getElementById('song-name-display');
+            var songNameText = document.getElementById('song-name');
+            var currentSongIndex = 0;
 
-    // List of songs with their file paths and names
-    const songs = [
-        { src: "Audio/Warrior.mp3", name: "Warrior" },
-        { src: "Audio/Dragon Castle.mp3", name: "Dragon Castle" },
-        { src: "Audio/Peach House.mp3", name: "Peach House" },
-        { src: "Audio/kamado_tanjiro_no_uta.mp3", name: "Tanjiro" },
-        { src: "Audio/Yugen.mp3", name: "Yugen" }
-    ];
+            // List of songs
+            var songs = [
+                { src: "Audio/kamado_tanjiro_no_uta.mp3", name: "Tanjiro" },
+                { src: "Audio/Peach House.mp3", name: "Peach House" },
+                { src: "Audio/Warrior.mp3", name: "Warrior" },
+                { src: "Audio/Dragon Castle.mp3", name: "Dragon Castle" },
+                { src: "Audio/Yugen.mp3", name: "Yugen" }
+            ];
 
-    // Load the selected song and update display
-    function loadSong(index) {
-        // Update the audio source to the file path of the selected song
-        bgMusic.src = songs[index].src;
-        // Update the text content to display the name of the currently selected song
-        songNameText.textContent = songs[index].name;
-        // Make the song name display visible to the user
-        songNameDisplay.style.display = 'block';
-        // Start playing the selected song
-        bgMusic.play();
+            // Load and play a song by index
+            function loadSong(index) {
+                bgMusic.src = songs[index].src;
+                songNameText.textContent = songs[index].name;
+                songNameDisplay.style.display = 'block';
+                bgMusic.play();
+            }
+
+            // Play the audio
+            function playAudio() {
+                bgMusic.play();
+            }
+
+            // Pause the audio
+            function pauseAudio() {
+                bgMusic.pause();
+            }
+
+            // Move to the next song in the playlist
+            function nextSong() {
+                currentSongIndex = (currentSongIndex + 1) % songs.length;
+                loadSong(currentSongIndex);
+            }
+
+            // Ensure the first song plays on page load
+            document.addEventListener('DOMContentLoaded', function () {
+                loadSong(currentSongIndex);
+            });
+        </script>
     }
+</body>
 
-    // Play the audio
-    function playAudio() {
-        // Call the play method on the audio element to start playback
-        bgMusic.play();
+
+@functions {
+    // Property to hold the current song name
+    public string CurrentSongName { get; set; }
+    // Property to hold the current song index
+    public int CurrentSongIndex { get; set; } = 0;
+
+    // Class to represent a song
+    public class Song
+    {
+        public string Src { get; set; }
+        public string Name { get; set; }
     }
-
-    // Pause the audio
-    function pauseAudio() {
-        // Call the pause method on the audio element to stop playback
-        bgMusic.pause();
-    }
-
-    // Move to the next song in the playlist
-    function nextSong() {
-        // Increment the current song index; if it exceeds the length of the array, wrap around to 0
-        currentSongIndex = (currentSongIndex + 1) % songs.length;
-        // Load the next song based on the updated index
-        loadSong(currentSongIndex);
-    }
-
-    // Load the first song on initial page load
-    loadSong(currentSongIndex);</script>
+}
 
 @(await Html.RenderComponentAsync<ProductList>(RenderMode.ServerPrerendered))
 <script src="_framework/blazor.server.js"></script>
