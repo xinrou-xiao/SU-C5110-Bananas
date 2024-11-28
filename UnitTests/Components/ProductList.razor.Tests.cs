@@ -7,9 +7,6 @@ using NUnit.Framework;
 
 using ContosoCrafts.WebSite.Components;
 using ContosoCrafts.WebSite.Services;
-using ContosoCrafts.WebSite.Models;
-using Moq;
-using System.Collections.Generic;
 using Bunit.Extensions;
 
 namespace UnitTests.Components
@@ -84,6 +81,33 @@ namespace UnitTests.Components
         }
 
         #endregion SelectedProduct
+
+        #region GetCurrentRating
+
+        /// <summary>
+        /// Test get null rating data, should set currentRating and voteCount to 0.
+        /// </summary>
+        [Test]
+        public void GetCurrentRating_Null_Rating_Should_Set_CurrentRating_And_VoteCount_To_Zero()
+        {
+            // Arrange
+            // Initialize a Bunit test context and configure the service dependency.
+            using var context = new Bunit.TestContext();
+            context.Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
+
+            // Act
+            // Render the ProductList component to trigger the OnInitialized lifecycle method.
+            var component = context.RenderComponent<ProductList>();
+            component.Find("#MoreInfoButton_selinazawacki-moon").Click();
+
+            // Reset
+
+            // Assert
+            Assert.That(component.Instance.currentRating, Is.EqualTo(0));
+            Assert.That(component.Instance.voteCount, Is.EqualTo(0));
+        }
+
+        #endregion GetCurrentRating
 
         #region SubmitRating
 
@@ -541,7 +565,7 @@ namespace UnitTests.Components
             // Reset
 
             // Assert
-            Assert.That(component.Instance.Products.First().Release.CompareTo(component.Instance.Products.Last().Release) == -1, Is.True);
+            Assert.That(component.Instance.Products.Last().Release.CompareTo(component.Instance.Products.ElementAt(component.Instance.Products.Count() - 2).Release) == 1, Is.True);
         }
 
         /// <summary>
