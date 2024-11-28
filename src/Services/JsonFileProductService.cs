@@ -57,7 +57,6 @@ namespace ContosoCrafts.WebSite.Services
         /// same id as given id.
         /// </summary>
         /// <param name="id"></param>
-        /// <returns></returns>
         public ProductModel GetOneDataById(string id)
         {
             using (var jsonFileReader = File.OpenText(JsonFileName))
@@ -75,8 +74,6 @@ namespace ContosoCrafts.WebSite.Services
         }
 
         /// <summary>
-        /// Add Rating
-        /// 
         /// Take in the product ID and the rating
         /// If the rating does not exist, add it
         /// Save the update
@@ -142,25 +139,19 @@ namespace ContosoCrafts.WebSite.Services
             {
                 return existingProduct; // Fast fail for product not found
             }
-            if (existingProduct is not null)
-                {
-                existingProduct.Title = updatedProduct.Title;
-                if (existingProduct.Description != null)
-                {
-                    existingProduct.Description = existingProduct.Description.Trim();
-                }
-                existingProduct.Description = updatedProduct.Description;
-                existingProduct.Url = updatedProduct.Url;
-                existingProduct.Image = updatedProduct.Image;
-                existingProduct.CommentList = updatedProduct.CommentList;
-                existingProduct.Release = updatedProduct.Release;
-                existingProduct.Trailer = updatedProduct.Trailer;
-                existingProduct.Season = updatedProduct.Season;
-                existingProduct.Genre = updatedProduct.Genre;
-                existingProduct.Ott = updatedProduct.Ott;
+            
+            existingProduct.Title = updatedProduct.Title;
+            existingProduct.Description = updatedProduct.Description;
+            existingProduct.Url = updatedProduct.Url;
+            existingProduct.Image = updatedProduct.Image;
+            existingProduct.CommentList = updatedProduct.CommentList;
+            existingProduct.Release = updatedProduct.Release;
+            existingProduct.Trailer = updatedProduct.Trailer;
+            existingProduct.Season = updatedProduct.Season;
+            existingProduct.Genre = updatedProduct.Genre;
+            existingProduct.Ott = updatedProduct.Ott;
 
-                SaveData(products);
-            }
+            SaveData(products);
 
             return existingProduct;
         }
@@ -170,7 +161,6 @@ namespace ContosoCrafts.WebSite.Services
         /// </summary>
         private void SaveData(IEnumerable<ProductModel> products)
         {
-
             using (var outputStream = File.Create(JsonFileName))
             {
                 JsonSerializer.Serialize<IEnumerable<ProductModel>>(
@@ -187,7 +177,6 @@ namespace ContosoCrafts.WebSite.Services
         /// <summary>
         /// Added given product into json file
         /// </summary>
-        /// <returns></returns>
         public ProductModel CreateData(ProductModel product)
         {
             // just in case any incorrect called
@@ -195,6 +184,7 @@ namespace ContosoCrafts.WebSite.Services
             {
                 return null;
             }
+
             // Get the current set, and append the new record to it because IEnumerable does not have Add
             var dataSet = GetAllData();
             dataSet = dataSet.Append(product);
@@ -207,7 +197,6 @@ namespace ContosoCrafts.WebSite.Services
         /// <summary>
         /// Remove the item from the system
         /// </summary>
-        /// <returns></returns>
         public ProductModel DeleteData(string id)
         {
             // Get the current set, and append the new record to it
@@ -218,8 +207,8 @@ namespace ContosoCrafts.WebSite.Services
                 return data;  //Fast fail for product not found
             }
 
-                var newDataSet = dataSet.Where(m => m.Id != id);
-                SaveData(newDataSet);
+            var newDataSet = dataSet.Where(m => m.Id != id);
+            SaveData(newDataSet);
             
             return data;
         }
