@@ -64,6 +64,20 @@ namespace ContosoCrafts.WebSite.Pages
             Answers.Clear();
         }
 
+        private void CalculateResult()
+        {
+            // Calculate dominant answer based on frequency (this logic can be adjusted for better customization)
+            int dominantAnswer = Answers.GroupBy(x => x).OrderByDescending(g => g.Count()).Select(g => g.Key).First();
 
+            ResultName = dominantAnswer switch
+            {
+                0 => "Naruto Uzumaki",
+                1 => "Luffy D. Monkey",
+                2 => "Tanjiro Kamado",
+                3 => "Roronoa Zoro",
+                _ => "A Unique Character"
+            };
+
+        }
     }
 }
