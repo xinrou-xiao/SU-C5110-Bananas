@@ -158,7 +158,7 @@ namespace ContosoCrafts.WebSite.Services
                 existingProduct.Trailer = updatedProduct.Trailer;
                 existingProduct.Season = updatedProduct.Season;
                 existingProduct.Genre = updatedProduct.Genre;
-                existingProduct.OTT = updatedProduct.OTT;
+                existingProduct.Ott = updatedProduct.Ott;
 
                 SaveData(products);
             }
