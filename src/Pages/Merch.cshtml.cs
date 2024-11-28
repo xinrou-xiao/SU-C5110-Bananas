@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Collections.Generic;
-using static System.Net.WebRequestMethods;
 
 namespace ContosoCrafts.WebSite.Pages
 {
