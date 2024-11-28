@@ -116,7 +116,14 @@ namespace ContosoCrafts.WebSite.Pages
                                    "</ul>" +
                                     "<br/><strong>Cool Factor:</strong> You're a trendsetter with a vibe that's entirely your own. People admire your authenticity and your ability to stay true to yourself, no matter what!"
             };
-
+            ResultVideoUrl = ResultName switch
+            {
+                "Naruto Uzumaki" => "https://www.desktophut.com/files/dkZH0secomXUvl9_Naruto%20Artistic%20Live%20Wallpaper_2_151011.mp4",
+                "Luffy D. Monkey" => "https://motionbgs.com/media/6827/strawhat-luffy.960x540.mp4",
+                "Tanjiro Kamado" => "https://motionbgs.com/media/6009/tanjiro-water-dragon.960x540.mp4",
+                "Roronoa Zoro" => "https://motionbgs.com/media/6005/fearless-zoro.960x540.mp4",
+                _ => "https://www.desktophut.com/files/8cqM7yJhpqNnBuw_Black%20Roses%20Goku%204K_2_102359.mp4"
+            };
         }
     }
 }
