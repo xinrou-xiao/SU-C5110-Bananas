@@ -200,6 +200,17 @@ h1, h2, h3, h4, h5 {
     z-index: 1;
 }
 
+/* Hover Effect */
+.quiz-button:hover {
+        transform: scale(1.05); /* Subtle scaling on hover */
+        box-shadow: 0px 6px 15px rgba(255, 182, 193, 0.5); /* Softer shadow */
+        background: linear-gradient(45deg, #ff99cc, #ffe6f0); /* Reversed gradient for hover */
+}
+
+.quiz-button:hover span {
+            transform: translateX(25px); /* Shift text further to the right */
+}
+
  /* Dark Theme Styles */
  body .dark-theme .modal-content.black-bg {
  background-color: black !important;
