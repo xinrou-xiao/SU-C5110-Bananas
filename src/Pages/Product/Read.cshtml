@@ -3,6 +3,9 @@
 @using ContosoCrafts.WebSite.Models
 @inject JsonFileProductService ProductService
 @model ReadModel
+
+<partial name="Breadcrumb" />
+
 @{
     ViewData["Title"] = "Read"; @* set page title to Read *@
 }
