@@ -64,7 +64,7 @@
             @foreach (var genre in Model.Product.Genre)
             {
                 <div class="form-group form-inline">
-                    <input class="form-control" name="genre_dynamic" class="form-control" value="@genre" name="Product.Genre"/>
+                    <input class="form-control" class="form-control" value="@genre" name="Product.Genre"/>
                     <button class="btn btn-danger custom-btn remove-genre" type="button">-</button>
                     <span asp-validation-for="Product.Genre" class="text-danger"></span>
                 </div>
