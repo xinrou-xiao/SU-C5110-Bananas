@@ -49,9 +49,8 @@ namespace ContosoCrafts.WebSite.Models
         [Url(ErrorMessage = "Invalid URL format for Trailer.")]
         public string Trailer { get; set; }
 
-        // Map OTT field in product.json to ProductModel's OTT list
-        
-        public List<OTTModel> OTT { get; set; } = new List<OTTModel>();
+        // Map OTT field in product.json to Ott array
+        public OttTypeEnum[] Ott { get; set; } = new OttTypeEnum[] { };
 
         // Map Season field in product.json to ProductModel's Season
         [Range(1, int.MaxValue, ErrorMessage = "Season must be a positive number.")]
