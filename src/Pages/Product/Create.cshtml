@@ -99,6 +99,7 @@
 <script src="/lib/jquery/dist/jquery.js"></script>
 
 <script>
+    /// detect input event for Title to detect duplicate title
     $(document).ready(function () {
         $('#title-input').on('input', function () {
             var data = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(Model.ProductService.GetAllData()));
