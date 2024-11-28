@@ -1,4 +1,8 @@
-﻿.clickable {
+﻿.form-check-label {
+    padding-bottom: 10px;
+}
+
+.clickable {
     cursor: pointer;
 }
 
