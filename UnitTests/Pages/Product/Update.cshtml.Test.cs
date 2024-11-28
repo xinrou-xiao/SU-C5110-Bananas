@@ -13,9 +13,6 @@ using Microsoft.Extensions.Logging;
 using Moq;
 using NUnit.Framework;
 using Microsoft.AspNetCore.Mvc.Routing;
-using System.Collections.Generic;
-using static System.Runtime.InteropServices.JavaScript.JSType;
-using System;
 
 namespace UnitTests.Pages.Product.Update
 {
@@ -140,7 +137,7 @@ namespace UnitTests.Pages.Product.Update
             PageModel.ModelState.AddModelError("bogus", "Bogus Error");
 
             // Act
-            var result = PageModel.OnPost(new ProductModel(), new string[] { }, new string[] { }, new string[] { }, new string[] { }) as PageResult;
+            var result = PageModel.OnPost(new ProductModel()) as PageResult;
 
             // Assert
             // Check that the model state is invalid
@@ -171,17 +168,11 @@ namespace UnitTests.Pages.Product.Update
                 Trailer = "http://example.com/trailer",
                 Season = 1,
                 Genre = new string[] { "Action" },
-                OTT = new List<OTTModel>
-                {
-                    new OTTModel { Icon = "icon1", Platform = "Platform1", Url = "http://platform1.com" }
-                }
+                Ott = new OttTypeEnum[] { OttTypeEnum.Netflix }
             };
 
             // Act
-            var result = PageModel.OnPost(PageModel.Product, PageModel.Product.Genre,
-                new string[] { PageModel.Product.OTT[0].Platform },
-                new string[] { PageModel.Product.OTT[0].Icon },
-                new string[] { PageModel.Product.OTT[0].Url }) as RedirectToPageResult;
+            var result = PageModel.OnPost(PageModel.Product) as RedirectToPageResult;
 
             // Assert
             // Check that the model state is valid after posting
@@ -204,7 +195,7 @@ namespace UnitTests.Pages.Product.Update
 
             // Act
             // Call the OnPost method of the PageModel. This method is expected to handle the post request logic.
-            var data = PageModel.OnPost(PageModel.Product, new string[] { }, new string[] { }, new string[] { }, new string[] { });
+            var data = PageModel.OnPost(PageModel.Product);
 
             // Assert
             // Verify that the result of the OnPost method is a RedirectToPageResult
@@ -213,116 +204,47 @@ namespace UnitTests.Pages.Product.Update
 
 
         /// <summary>
-        /// Test OnPost by giving a valid product, empty genre_dynamic and valid string array for the rest arguments,
+        /// Test OnPost by giving a valid product with a Null in Genre,
         /// expected the last item's Id in json should equal to product's Id,
-        /// and the last item's Genre in json should be null,
+        /// and the last item's Genre should has length 2.
         /// </summary>
         [Test]
-        public void OnPost_Valid_Product_Empty_Genre_Dynamic_Should_Create_Valid_Page_And_Last_Data_Id_Is_Equal_To_Updated_Product_And_Genre_Is_Null()
+        public void OnPost_Valid_Product_One_Null_Genre_Should_Create_Valid_Page_And_Last_Data_Id_Is_Equal_To_Updated_Product_And_Genre_Length_Is_Two()
         {
             // Arrange
             var data = PageModel._productService.GetAllData().Last();
-
-            // empty genre_dynamic array
-            string[] genre_dynamic = new string[] { };
-            string[] OTT_dynamic_platform = new string[] { "Netflex", "Prime" };
-            string[] OTT_dynamic_url = new string[] { "Netflex.com", "Prime.com" };
-            string[] OTT_dynamic_icon = new string[] { "Netflex.png", "Prime.png" };
+            data.Genre = new string[] { "Action", null, "Romance" };
 
             // Act
-            PageModel.OnPost(data, genre_dynamic, OTT_dynamic_platform, OTT_dynamic_url, OTT_dynamic_icon);
+            PageModel.OnPost(data);
             var result = PageModel._productService.GetAllData().Last();
 
             // Assert
             Assert.That(PageModel.ModelState.IsValid, Is.EqualTo(true));
             Assert.That(data.Id, Is.EqualTo(result.Id));
-            Assert.That(result.Genre, Is.EqualTo(null));
+            Assert.That(result.Genre.Length, Is.EqualTo(2));
         }
 
 
         /// <summary>
-        /// Test OnPost by giving a valid product, genre_dynamic with an null inside the array
-        /// and valid string array for the rest arguments,
-        /// and the last item's Id in json should equal to updated product's Id,
-        /// and the last item's Genre in json should have length = 2(skip null).
+        /// Test OnPost by giving a valid product and all valid Genre,
+        /// and the last item's Genre in json should have length = 2.
         /// </summary>
         [Test]
-        public void OnPost_Valid_Product_One_Null_In_Genre_Dynamic_Should_Create_Valid_Page_And_Last_Data_Id_Is_Equal_Updated_Product_Id_And_Genre_Should_Skip_Null()
+        public void OnPost_Valid_Product_Vaid_Genre_Dynamic_Should_Create_Valid_Page_And_Last_Data_Id_Is_Equal_Updated_Product_Id_And_Genre_Is_Length_Two()
         {
             // Arrange
             var data = PageModel._productService.GetAllData().Last();
-
-            // a null is inside genre_dynamic
-            string[] genre_dynamic = new string[] { "Action", null, "Shonen" };
-            string[] OTT_dynamic_platform = new string[] { "Netflex", "Prime" };
-            string[] OTT_dynamic_url = new string[] { "Netflex.com", "Prime.com" };
-            string[] OTT_dynamic_icon = new string[] { "Netflex.png", "Prime.png" };
+            data.Genre = new string[] { "Action", "Romance" };
 
             // Act
-            PageModel.OnPost(data, genre_dynamic, OTT_dynamic_platform, OTT_dynamic_url, OTT_dynamic_icon);
+            PageModel.OnPost(data);
             var result = PageModel._productService.GetAllData().Last();
 
             // Assert
             Assert.That(PageModel.ModelState.IsValid, Is.EqualTo(true));
             Assert.That(result.Id, Is.EqualTo(data.Id));
             Assert.That(result.Genre.Length, Is.EqualTo(2));
-        }
-
-        /// <summary>
-        /// Test OnPost by giving a valid product, OTT_dynamic_platform with empty OTT_dynamic_platform
-        /// and valid string array for the rest arguments,
-        /// and the last item's Id in json should equal to updated product's Id,
-        /// and the last item's OTT should be emtpy.
-        /// </summary>
-        [Test]
-        public void OnPost_Valid_Product_Empty_OTT_Dynamic_Platform_Should_Create_Valid_Page_And_Last_Data_Id_Is_Equal_To_Updated_Product_And_OTT_Is_Empty()
-        {
-            // Arrange
-            var data = PageModel._productService.GetAllData().Last();
-
-            string[] genre_dynamic = new string[] { "Action", "Shonen" };
-            // empty OTT_dynamic_platform array
-            string[] OTT_dynamic_platform = new string[] { };
-            string[] OTT_dynamic_url = new string[] { "Netflex.com", "Prime.com" };
-            string[] OTT_dynamic_icon = new string[] { "Netflex.png", "Prime.png" };
-
-            // Act
-            PageModel.OnPost(data, genre_dynamic, OTT_dynamic_platform, OTT_dynamic_url, OTT_dynamic_icon);
-            var result = PageModel._productService.GetAllData().Last();
-
-            // Assert
-            Assert.That(PageModel.ModelState.IsValid, Is.EqualTo(true));
-            Assert.That(result.Id, Is.EqualTo(data.Id));
-            Assert.That(result.OTT.Count, Is.EqualTo(0));
-        }
-
-        /// <summary>
-        /// Test OnPost by giving a valid product, OTT_dynamic_platform with empty OTT_dynamic_platform
-        /// and valid string array for the rest arguments,
-        /// and the last item's Id in json should equal to updated product's Id,
-        /// and the last item's OTT length should be 1(skip null).
-        /// </summary>
-        [Test]
-        public void OnPost_Valid_Product_One_Null_in_OTT_Dynamic_Platform_Should_Create_Valid_Page_And_Last_Data_Id_Is_Equal_To_Updated_Product_And_OTT_Should_Skip_Null()
-        {
-            // Arrange
-            var data = PageModel._productService.GetAllData().Last();
-            Console.WriteLine(data);
-
-            string[] genre_dynamic = new string[] { "Action", "Shonen" };
-            // a null inside OTT_dynamic_platform
-            string[] OTT_dynamic_platform = new string[] { "Netflex", null };
-            string[] OTT_dynamic_url = new string[] { "Netflex.com", "Prime.com" };
-            string[] OTT_dynamic_icon = new string[] { "Netflex.png", "Prime.png" };
-
-            // Act
-            PageModel.OnPost(data, genre_dynamic, OTT_dynamic_platform, OTT_dynamic_url, OTT_dynamic_icon);
-            var result = PageModel._productService.GetAllData().Last();
-
-            // Assert
-            Assert.That(PageModel.ModelState.IsValid, Is.EqualTo(true));
-            Assert.That(result.Id, Is.EqualTo(data.Id));
-            Assert.That(result.OTT.Count, Is.EqualTo(1));
         }
 
         #endregion OnPost
