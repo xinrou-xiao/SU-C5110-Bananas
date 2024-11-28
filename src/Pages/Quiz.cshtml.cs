@@ -21,6 +21,18 @@ namespace ContosoCrafts.WebSite.Pages
             "Which role do you take in your friend group?",
             "Which mythical creature do you prefer?"
         };
-    
+        public string[][] Options { get; set; } = new[]
+        {
+            new[] { "Calm and serene mountains for reflection and peace", "Vast and endless oceans full of adventure", "Dense and mysterious forests to explore", "Hot and challenging deserts that test your limits" },
+            new[] { "Brave and always willing to take on challenges", "Calm and composed in any situation", "Cheerful and uplifting to those around you", "Mysterious and often keeping to yourself" },
+            new[] { "Early morning when the world feels fresh and new", "Afternoon when energy and activity are at their peak", "Evening when everything feels calm and reflective", "Late at night, a time for creativity and solitude" },
+            new[] { "A sharp sword that represents power and honor", "A bow and arrows to strike from a distance", "Magical spells to manipulate the world around you", "Your fists to prove your strength through physical combat" },
+            new[] { "The love and support of my family and friends", "The thrill of adventure and discovering new things", "The pursuit of knowledge and understanding", "The desire to uphold justice and honor" },
+            new[] { "Action-packed adventures filled with battles", "Lighthearted comedies to make me laugh", "Emotional dramas with deep storylines", "Mysteries that keep me guessing until the end" },
+            new[] { "A hero who protects and inspires others", "A strategist or tactician guiding from behind the scenes", "An explorer seeking out new horizons", "A mentor or teacher who helps others grow" },
+            new[] { "The blazing and intense force of fire", "The calming and adaptable flow of water", "The grounding and reliable strength of earth", "The free and untamed power of wind" },
+            new[] { "The leader who guides the group", "The supportive and dependable friend", "The troublemaker who keeps things exciting", "The thinker who analyzes every situation" },
+            new[] { "A powerful dragon with untold strength", "A graceful phoenix that symbolizes rebirth", "A magical unicorn representing purity", "A fierce griffin that commands the skies" }
+    };
     }
 }
