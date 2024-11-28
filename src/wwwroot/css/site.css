@@ -200,12 +200,18 @@ h1, h2, h3, h4, h5 {
     z-index: 1;
 }
 
+/* Inner Text Styling */
+    .quiz-button span {
+        display: inline-block;
+        transition: transform 0.4s ease;
+    }
+
 /* Hover Effect */
-.quiz-button:hover {
+    .quiz-button:hover {
         transform: scale(1.05); /* Subtle scaling on hover */
-        box-shadow: 0px 6px 15px rgba(255, 182, 193, 0.5); /* Softer shadow */
         background: linear-gradient(45deg, #ff99cc, #ffe6f0); /* Reversed gradient for hover */
-}
+        box-shadow: 0px 0px 20px 5px rgba(255, 105, 180, 0.6); /* Soft pink glow */
+    }
 
 .quiz-button:hover span {
             transform: translateX(25px); /* Shift text further to the right */
@@ -229,6 +235,11 @@ h1, h2, h3, h4, h5 {
 .quiz-button:hover::before {
         left: -20px; /* Bring character fully into view */
         transform: translateY(-50%) rotate(10deg); /* Adds a slight playful rotation */
+}
+
+.quiz-button:hover::after {
+        opacity: 1;
+        animation: wave 1.5s infinite ease-in-out;
 }
 
 /* Ensure buttons retain their styles */
