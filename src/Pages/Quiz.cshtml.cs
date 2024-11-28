@@ -40,5 +40,23 @@ namespace ContosoCrafts.WebSite.Pages
         public string ResultName { get; set; }
         public string ResultDescription { get; set; }
         public string ResultVideoUrl { get; set; }
+
+        public void OnPost()
+        {
+            if (Request.Form.ContainsKey("Answer"))
+            {
+                int answer = int.Parse(Request.Form["Answer"]);
+                CurrentQuestion = int.Parse(Request.Form["CurrentQuestion"]);
+                Answers.Add(answer);
+                CurrentQuestion++;
+            }
+
+            if (CurrentQuestion >= Questions.Length)
+            {
+                IsSubmitted = true;
+                CalculateResult();
+            }
+        }
+
     }
 }
