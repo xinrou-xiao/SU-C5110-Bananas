@@ -183,11 +183,27 @@ h1, h2, h3, h4, h5 {
         height: 100%; /* fill out the whole videobox */
         border-radius: 10px; /* set up border radius for softer look */
     }
+/* Quiz Button Styles */
+.quiz-button {
+    font-family: 'NunitoF', sans-serif;
+    font-size: 20px; /* Reduced font size */
+    padding: 10px 25px; /* Smaller padding */
+    color: black;
+    background: linear-gradient(45deg, #ffe6f0, #ff99cc); /* Lighter pink and white */
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    position: relative;
+    margin-right: 20px; /* Adds spacing on the right */
+    overflow: hidden;
+    z-index: 1;
+}
 
-/* Dark Theme Styles */
-body.dark-theme .modal-content.black-bg {
-    background-color: black !important;
-    color: white;
+ /* Dark Theme Styles */
+ body .dark-theme .modal-content.black-bg {
+ background-color: black !important;
+ color: white;
 }
 
 body.dark-theme {
