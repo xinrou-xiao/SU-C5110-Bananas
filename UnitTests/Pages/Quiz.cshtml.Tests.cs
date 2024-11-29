@@ -169,9 +169,9 @@ namespace UnitTests.Pages.Quiz
         public void Answers_One_Element_List_Should_Set_Value_To_Given_Value()
         {
             // Arrange
-            pageModel.Answers = new List<int> { 1 };
 
             // Act
+            pageModel.Answers = new List<int> { 1 };
 
             // Assert
             Assert.That(pageModel.Answers.Count(), Is.EqualTo(1));
