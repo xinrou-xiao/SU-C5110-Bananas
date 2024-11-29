@@ -10,15 +10,12 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Moq;
 using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using ContosoCrafts.WebSite.Pages;
+using Microsoft.AspNetCore.Routing;
 
-namespace UnitTests.Pages
+namespace UnitTests.Pages.Quiz
 {
-    internal class Quiz
+    internal class QuizTests
     {
         #region TestSetup
 
@@ -34,7 +31,7 @@ namespace UnitTests.Pages
         public static PageContext pageContext; // Page context for the tests
 
         // The page model being tested
-        public static CreateModel pageModel;
+        public static QuizModel pageModel;
 
         /// <summary>
         /// Initializes the test setup.
@@ -79,7 +76,7 @@ namespace UnitTests.Pages
             JsonFileProductService productService = new JsonFileProductService(mockWebHostEnvironment.Object);
 
             // Initialize the page model with the product service
-            pageModel = new CreateModel(productService);
+            pageModel = new QuizModel();
         }
 
         #endregion TestSetup
