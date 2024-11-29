@@ -178,6 +178,25 @@ namespace UnitTests.Pages.Quiz
         }
 
         #endregion Answers
+
+        #region ResultName
+
+        /// <summary>
+        /// Test ResultName's setter and getter.
+        /// </summary>
+        [Test]
+        public void ResultName_One_Element_List_Should_Set_Value_To_Given_Value()
+        {
+            // Arrange
+
+            // Act
+            pageModel.ResultName = "test";
+
+            // Assert
+            Assert.That(pageModel.ResultName, Is.EqualTo("test"));
+        }
+
+        #endregion ResultName
     }
 
 }
