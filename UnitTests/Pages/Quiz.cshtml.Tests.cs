@@ -138,5 +138,25 @@ namespace UnitTests.Pages.Quiz
         }
 
         #endregion Questions
+
+        #region Options
+
+        /// <summary>
+        /// Test Options's setter and getter.
+        /// </summary>
+        [Test]
+        public void Options_One_Element_2D_Array_Should_Set_Value_To_Given_Value()
+        {
+            // Arrange
+
+            // Act
+            pageModel.Options = new string[][] { new[] { "option" } };
+
+            // Assert
+            Assert.That(pageModel.Options.Count(), Is.EqualTo(1));
+            Assert.That(pageModel.Options[0].Count(), Is.EqualTo(1));
+        }
+
+        #endregion Options
     }
 }
