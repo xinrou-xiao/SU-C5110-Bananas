@@ -14,6 +14,7 @@ using ContosoCrafts.WebSite.Pages;
 using Microsoft.AspNetCore.Routing;
 using System.Linq;
 using System.Collections.Generic;
+using Microsoft.Extensions.Primitives;
 
 namespace UnitTests.Pages.Quiz
 {
@@ -235,6 +236,54 @@ namespace UnitTests.Pages.Quiz
         }
 
         #endregion ResultVideoUrl
+
+        #region OnPost
+
+        /// <summary>
+        /// Test OnPost simulate user answer the last question.
+        /// </summary>
+        [Test]
+        public void OnPost_Finished_Quiz_Should_Add_Answer_To_Answers_Then_Setup_ResultName_And_ResultDescription_And_ResultVideoUrl()
+        {
+            // Arrange
+            var httpContext = new DefaultHttpContext();
+            var formCollection = new FormCollection(new Dictionary<string, StringValues>
+            {
+                { "Answer", "0" },
+                { "CurrentQuestion", "9" }
+            });
+            httpContext.Request.Form = formCollection; 
+
+            var pageContext = new PageContext
+            {
+                HttpContext = httpContext
+            };
+
+            var pageModel = new QuizModel
+            {
+                PageContext = pageContext,
+                Answers = new List<int> { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+                CurrentQuestion = 9,
+                Questions = new string[10]
+            };
+
+            // Act
+            pageModel.OnPost();
+
+            // Assert
+            Assert.That(pageModel.CurrentQuestion, Is.EqualTo(10));
+            Assert.That(pageModel.IsSubmitted, Is.EqualTo(true));
+            Assert.That(pageModel.ResultName, Is.EqualTo("Naruto Uzumaki"));
+            Assert.That(pageModel.ResultDescription, Is.EqualTo("You're energetic, optimistic, and never give up on your dreams. You inspire others with your determination and your unwavering belief in the power of friendship." +
+                                    "<br/><br/><strong>Pros:</strong><ul>" +
+                                    "<li>Boundless energy and optimism.</li>" +
+                                    "<li>Inspires loyalty and camaraderie.</li>" +
+                                    "<li>Unshakable determination to achieve your goals.</li></ul>" +
+                                    "<br/><strong>Cool Factor:</strong> You're the underdog who rises to greatness, proving that anything is possible with hard work and belief!"));
+            Assert.That(pageModel.ResultVideoUrl, Is.EqualTo("https://www.desktophut.com/files/dkZH0secomXUvl9_Naruto%20Artistic%20Live%20Wallpaper_2_151011.mp4"));
+        }
+
+        #endregion OnPost
     }
 
 }
