@@ -87,7 +87,7 @@ namespace UnitTests.Pages.Quiz
         /// Test CurrentQuestion's setter and getter.
         /// </summary>
         [Test]
-        public void CurrentQuestion_Valid_Value_Should_Set_Value_To_Given_Value()
+        public void CurrentQuestion_Value_Five_Should_Set_Value_To_Five()
         {
             // Arrange
 
