@@ -13,6 +13,7 @@ using NUnit.Framework;
 using ContosoCrafts.WebSite.Pages;
 using Microsoft.AspNetCore.Routing;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace UnitTests.Pages.Quiz
 {
@@ -158,5 +159,25 @@ namespace UnitTests.Pages.Quiz
         }
 
         #endregion Options
+
+        #region Answers
+
+        /// <summary>
+        /// Test Answers's setter and getter.
+        /// </summary>
+        [Test]
+        public void Answers_One_Element_List_Should_Set_Value_To_Given_Value()
+        {
+            // Arrange
+            pageModel.Answers = new List<int> { 1 };
+
+            // Act
+
+            // Assert
+            Assert.That(pageModel.Answers.Count(), Is.EqualTo(1));
+        }
+
+        #endregion Answers
     }
+
 }
