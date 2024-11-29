@@ -197,6 +197,25 @@ namespace UnitTests.Pages.Quiz
         }
 
         #endregion ResultName
+
+        #region ResultDescription
+
+        /// <summary>
+        /// Test ResultDescription's setter and getter.
+        /// </summary>
+        [Test]
+        public void ResultDescription_Valid_String_Should_Set_Value_To_Given_Value()
+        {
+            // Arrange
+
+            // Act
+            pageModel.ResultDescription = "test";
+
+            // Assert
+            Assert.That(pageModel.ResultDescription, Is.EqualTo("test"));
+        }
+
+        #endregion ResultDescription
     }
 
 }
