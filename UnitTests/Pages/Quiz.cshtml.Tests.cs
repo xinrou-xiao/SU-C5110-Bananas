@@ -302,5 +302,187 @@ namespace UnitTests.Pages.Quiz
         }
 
         #endregion OnGet
+
+        #region OnPost
+
+        /// <summary>
+        /// Test CalculateResult function by calling onPost, simulate the quiz result has most answer with option 1.
+        /// </summary>
+        [Test]
+        public void CalculateResult_Most_Answers_Is_1_Should_Set_ResultName_And_ResultDescription_And_ResultVideoUrl_To_Correct_Value()
+        {
+            // Arrange
+            var httpContext = new DefaultHttpContext();
+            var formCollection = new FormCollection(new Dictionary<string, StringValues>
+            {
+                { "Answer", "1" },
+                { "CurrentQuestion", "9" }
+            });
+            httpContext.Request.Form = formCollection;
+
+            var pageContext = new PageContext
+            {
+                HttpContext = httpContext
+            };
+
+            var pageModel = new QuizModel
+            {
+                PageContext = pageContext,
+                Answers = new List<int> { 1, 1, 1, 1, 1, 1, 1, 1, 1 },
+                CurrentQuestion = 9,
+                Questions = new string[10]
+            };
+
+            // Act
+            pageModel.OnPost();
+
+            // Assert
+            Assert.That(pageModel.CurrentQuestion, Is.EqualTo(10));
+            Assert.That(pageModel.IsSubmitted, Is.EqualTo(true));
+            Assert.That(pageModel.ResultName, Is.EqualTo("Luffy D. Monkey"));
+            Assert.That(pageModel.ResultDescription, Is.EqualTo("You're adventurous, carefree, and a born leader. You live for freedom and thrive in the vast unknown, with your friends by your side as your greatest treasure." +
+                                             "<br/><br/><strong>Pros:</strong><ul>" +
+                                             "<li>Infectious enthusiasm and courage.</li>" +
+                                             "<li>Unyielding loyalty to your crew and loved ones.</li>" +
+                                             "<li>Fearless explorer with a big dream to achieve.</li></ul>" +
+                                             "<br/><strong>Cool Factor:</strong> You're the embodiment of freedom and resilience, inspiring others to chase their dreams!"));
+            Assert.That(pageModel.ResultVideoUrl, Is.EqualTo("https://motionbgs.com/media/6827/strawhat-luffy.960x540.mp4"));
+        }
+
+        /// <summary>
+        /// Test CalculateResult function by calling onPost, simulate the quiz result has most answer with option 2.
+        /// </summary>
+        [Test]
+        public void CalculateResult_Most_Answers_Is_2_Should_Set_ResultName_And_ResultDescription_And_ResultVideoUrl_To_Correct_Value()
+        {
+            // Arrange
+            var httpContext = new DefaultHttpContext();
+            var formCollection = new FormCollection(new Dictionary<string, StringValues>
+            {
+                { "Answer", "2" },
+                { "CurrentQuestion", "9" }
+            });
+            httpContext.Request.Form = formCollection;
+
+            var pageContext = new PageContext
+            {
+                HttpContext = httpContext
+            };
+
+            var pageModel = new QuizModel
+            {
+                PageContext = pageContext,
+                Answers = new List<int> { 2, 2, 2, 2, 2, 2, 2, 2, 2 },
+                CurrentQuestion = 9,
+                Questions = new string[10]
+            };
+
+            // Act
+            pageModel.OnPost();
+
+            // Assert
+            Assert.That(pageModel.CurrentQuestion, Is.EqualTo(10));
+            Assert.That(pageModel.IsSubmitted, Is.EqualTo(true));
+            Assert.That(pageModel.ResultName, Is.EqualTo("Tanjiro Kamado"));
+            Assert.That(pageModel.ResultDescription, Is.EqualTo("You're compassionate, kind, and deeply protective of those you care about. Your resilience and determination to do what's right make you a true hero." +
+                                    "<br/><br/><strong>Pros:</strong><ul>" +
+                                    "<li>Empathy and kindness in the face of adversity.</li>" +
+                                    "<li>Unyielding determination and resilience.</li>" +
+                                    "<li>Strong sense of justice and loyalty to loved ones.</li></ul>" +
+                                    "<br/><strong>Cool Factor:</strong> You're the perfect balance of strength and heart, inspiring everyone with your heroic journey!"));
+            Assert.That(pageModel.ResultVideoUrl, Is.EqualTo("https://motionbgs.com/media/6009/tanjiro-water-dragon.960x540.mp4"));
+        }
+
+        /// <summary>
+        /// Test CalculateResult function by calling onPost, simulate the quiz result has most answer with option 3.
+        /// </summary>
+        [Test]
+        public void CalculateResult_Most_Answers_Is_3_Should_Set_ResultName_And_ResultDescription_And_ResultVideoUrl_To_Correct_Value()
+        {
+            // Arrange
+            var httpContext = new DefaultHttpContext();
+            var formCollection = new FormCollection(new Dictionary<string, StringValues>
+            {
+                { "Answer", "3" },
+                { "CurrentQuestion", "9" }
+            });
+            httpContext.Request.Form = formCollection;
+
+            var pageContext = new PageContext
+            {
+                HttpContext = httpContext
+            };
+
+            var pageModel = new QuizModel
+            {
+                PageContext = pageContext,
+                Answers = new List<int> { 3, 3, 3, 3, 3, 3, 3, 3, 3 },
+                CurrentQuestion = 9,
+                Questions = new string[10]
+            };
+
+            // Act
+            pageModel.OnPost();
+
+            // Assert
+            Assert.That(pageModel.CurrentQuestion, Is.EqualTo(10));
+            Assert.That(pageModel.IsSubmitted, Is.EqualTo(true));
+            Assert.That(pageModel.ResultName, Is.EqualTo("Roronoa Zoro"));
+            Assert.That(pageModel.ResultDescription, Is.EqualTo("You're fiercely determined and focused, never wavering from your goals. Your loyalty to those you care about is unbreakable, and you're always striving to be the best version of yourself." +
+                                  "<br/><br/><strong>Pros:</strong><ul>" +
+                                  "<li>Unyielding focus and perseverance.</li>" +
+                                  "<li>Incredible strength and discipline.</li>" +
+                                  "<li>Quietly protective and fiercely loyal.</li></ul>" +
+                                  "<br/><strong>Cool Factor:</strong> You're the strong, silent type who can back up every word with action—cool, confident, and unstoppable!"));
+            Assert.That(pageModel.ResultVideoUrl, Is.EqualTo("https://motionbgs.com/media/6005/fearless-zoro.960x540.mp4"));
+        }
+
+        /// <summary>
+        /// Test CalculateResult function by calling onPost, simulate the quiz result have no answer in Answers.
+        /// </summary>
+        [Test]
+        public void CalculateResult_No_Expected_Answer_In_Answers_Should_Set_ResultName_And_ResultDescription_And_ResultVideoUrl_To_Correct_Value()
+        {
+            // Arrange
+            var httpContext = new DefaultHttpContext();
+            var formCollection = new FormCollection(new Dictionary<string, StringValues>
+            {
+                { "Answer", "4" },
+                { "CurrentQuestion", "9" }
+            });
+            httpContext.Request.Form = formCollection;
+
+            var pageContext = new PageContext
+            {
+                HttpContext = httpContext
+            };
+
+            var pageModel = new QuizModel
+            {
+                PageContext = pageContext,
+                Answers = new List<int> { 4, 4, 4, 4, 4, 4, 4, 4, 4 },
+                CurrentQuestion = 9,
+                Questions = new string[10]
+            };
+
+            // Act
+            pageModel.OnPost();
+
+            // Assert
+            Assert.That(pageModel.CurrentQuestion, Is.EqualTo(10));
+            Assert.That(pageModel.IsSubmitted, Is.EqualTo(true));
+            Assert.That(pageModel.ResultName, Is.EqualTo("A Unique Character"));
+            Assert.That(pageModel.ResultDescription, Is.EqualTo("You have a unique personality that defies conventional categories. Your individuality shines in ways that can't be boxed into one description. " +
+                                   "<br/><br/><strong>Pros:</strong><ul>" +
+                                   "<li>Adaptable and resourceful in any situation.</li>" +
+                                   "<li>Creative thinker with a unique perspective on life.</li>" +
+                                   "<li>Unpredictable and full of surprises, keeping others intrigued.</li>" +
+                                   "<li>Open-minded and welcoming to diverse ideas and people.</li>" +
+                                   "</ul>" +
+                                    "<br/><strong>Cool Factor:</strong> You're a trendsetter with a vibe that's entirely your own. People admire your authenticity and your ability to stay true to yourself, no matter what!"));
+            Assert.That(pageModel.ResultVideoUrl, Is.EqualTo("https://www.desktophut.com/files/8cqM7yJhpqNnBuw_Black%20Roses%20Goku%204K_2_102359.mp4"));
+        }
+
+        #endregion OnPost
     }
 }
