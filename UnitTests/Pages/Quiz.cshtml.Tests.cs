@@ -99,5 +99,24 @@ namespace UnitTests.Pages.Quiz
         }
 
         #endregion CurrentQuestion
+
+        #region IsSubmitted
+
+        /// <summary>
+        /// Test IsSubmitted's setter and getter.
+        /// </summary>
+        [Test]
+        public void IsSubmitted_True_Value_Should_Set_Value_To_Given_Value()
+        {
+            // Arrange
+
+            // Act
+            pageModel.IsSubmitted = true;
+
+            // Assert
+            Assert.That(pageModel.IsSubmitted, Is.EqualTo(true));
+        }
+
+        #endregion IsSubmitted
     }
 }
