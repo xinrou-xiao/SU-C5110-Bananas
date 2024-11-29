@@ -12,6 +12,7 @@ using Moq;
 using NUnit.Framework;
 using ContosoCrafts.WebSite.Pages;
 using Microsoft.AspNetCore.Routing;
+using System.Linq;
 
 namespace UnitTests.Pages.Quiz
 {
@@ -118,5 +119,24 @@ namespace UnitTests.Pages.Quiz
         }
 
         #endregion IsSubmitted
+
+        #region Questions
+
+        /// <summary>
+        /// Test IsSubmitted's setter and getter.
+        /// </summary>
+        [Test]
+        public void Questions_Empty_Array_Should_Set_Value_To_Given_Value()
+        {
+            // Arrange
+
+            // Act
+            pageModel.Questions = new string[] { };
+
+            // Assert
+            Assert.That(pageModel.Questions.Count(), Is.EqualTo(0));
+        }
+
+        #endregion Questions
     }
 }
