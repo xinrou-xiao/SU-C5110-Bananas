@@ -216,6 +216,25 @@ namespace UnitTests.Pages.Quiz
         }
 
         #endregion ResultDescription
+
+        #region ResultVideoUrl
+
+        /// <summary>
+        /// Test ResultVideoUrl's setter and getter.
+        /// </summary>
+        [Test]
+        public void ResultVideoUrl_Valid_String_Should_Set_Value_To_Given_Value()
+        {
+            // Arrange
+
+            // Act
+            pageModel.ResultVideoUrl = "test";
+
+            // Assert
+            Assert.That(pageModel.ResultVideoUrl, Is.EqualTo("test"));
+        }
+
+        #endregion ResultVideoUrl
     }
 
 }
