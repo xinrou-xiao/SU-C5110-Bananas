@@ -284,6 +284,23 @@ namespace UnitTests.Pages.Quiz
         }
 
         #endregion OnPost
-    }
 
+        #region OnGet
+
+        [Test]
+        public void OnGet_Valid_Called_Should_Set_IsSubmitted_To_False_CurrentQuestion_To_Zero_Answers_To_Empty()
+        {
+            // Arrange
+            pageModel.OnGet();
+
+            // Act
+
+            // Assert
+            Assert.That(pageModel.IsSubmitted, Is.EqualTo(false));
+            Assert.That(pageModel.CurrentQuestion, Is.EqualTo(0));
+            Assert.That(pageModel.Answers.Count(), Is.EqualTo(0));
+        }
+
+        #endregion OnGet
+    }
 }
