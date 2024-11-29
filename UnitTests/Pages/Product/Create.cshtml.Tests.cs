@@ -85,7 +85,9 @@ namespace UnitTests.Pages.Product.Create
         }
 
         #endregion TestSetup
+
         #region OnGet
+
         /// <summary>
         /// Initialize the Create page and set Product id to test, it should create a valid Create page and Product id should be test.
         /// </summary>
@@ -103,9 +105,11 @@ namespace UnitTests.Pages.Product.Create
             Assert.That(pageModel.ModelState.IsValid, Is.EqualTo(true));
             Assert.That(pageModel.Product.Id, Is.EqualTo("test"));
         }
+
         #endregion OnGet
 
         #region OnPost
+
         /// <summary>
         /// Test OnPost by giving a valid product, and valid string array for the rest arguments,
         /// expected the page created valid, and json length + 1,
@@ -181,6 +185,7 @@ namespace UnitTests.Pages.Product.Create
             Assert.That(pageModel.ModelState.IsValid, Is.EqualTo(false));
             Assert.That(action.GetType().ToString(), Is.EqualTo("Microsoft.AspNetCore.Mvc.RedirectToPageResult"));
         }
+
         #endregion OnPost
     }
 }
