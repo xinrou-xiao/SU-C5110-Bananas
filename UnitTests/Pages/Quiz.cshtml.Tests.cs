@@ -185,7 +185,7 @@ namespace UnitTests.Pages.Quiz
         /// Test ResultName's setter and getter.
         /// </summary>
         [Test]
-        public void ResultName_One_Element_List_Should_Set_Value_To_Given_Value()
+        public void ResultName_Valid_String_Should_Set_Value_To_Given_Value()
         {
             // Arrange
 
