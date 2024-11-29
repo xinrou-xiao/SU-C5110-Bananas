@@ -18,6 +18,9 @@ using Microsoft.Extensions.Primitives;
 
 namespace UnitTests.Pages.Quiz
 {
+    /// <summary>
+    /// Unit test class for the QuizTests page model.
+    /// </summary>
     internal class QuizTests
     {
         #region TestSetup
@@ -125,7 +128,7 @@ namespace UnitTests.Pages.Quiz
         #region Questions
 
         /// <summary>
-        /// Test IsSubmitted's setter and getter.
+        /// Test Questions's setter and getter.
         /// </summary>
         [Test]
         public void Questions_Empty_Array_Should_Set_Value_To_Given_Value()
@@ -287,6 +290,9 @@ namespace UnitTests.Pages.Quiz
 
         #region OnGet
 
+        /// <summary>
+        /// Test OnGet function.
+        /// </summary>
         [Test]
         public void OnGet_Valid_Called_Should_Set_IsSubmitted_To_False_CurrentQuestion_To_Zero_Answers_To_Empty()
         {
