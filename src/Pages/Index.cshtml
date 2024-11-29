@@ -6,7 +6,7 @@
 }
 
 <!-- Banner Carousel Section: A slideshow of anime banners that automatically cycles -->
-<body onload="loadSong(currentSongIndex)">
+
 
 <div id="animeCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators for switching between banners -->
@@ -105,54 +105,53 @@
     <span id="song-name"></span>
 </div>
 
-    @section Scripts {
-        <script>
-            // Get references to HTML elements
-            var bgMusic = document.getElementById('bg-music');
-            var songNameDisplay = document.getElementById('song-name-display');
-            var songNameText = document.getElementById('song-name');
-            var currentSongIndex = 0;
+@section Scripts {
+    <script>
+        // Get references to HTML elements
+        var bgMusic = document.getElementById('bg-music');
+        var songNameDisplay = document.getElementById('song-name-display');
+        var songNameText = document.getElementById('song-name');
+        var currentSongIndex = 0;
 
-            // List of songs
-            var songs = [
-                { src: "Audio/kamado_tanjiro_no_uta.mp3", name: "Tanjiro" },
-                { src: "Audio/Peach House.mp3", name: "Peach House" },
-                { src: "Audio/Warrior.mp3", name: "Warrior" },
-                { src: "Audio/Dragon Castle.mp3", name: "Dragon Castle" },
-                { src: "Audio/Yugen.mp3", name: "Yugen" }
-            ];
+        // List of songs
+        var songs = [
+            { src: "Audio/kamado_tanjiro_no_uta.mp3", name: "Tanjiro" },
+            { src: "Audio/Peach House.mp3", name: "Peach House" },
+            { src: "Audio/Warrior.mp3", name: "Warrior" },
+            { src: "Audio/Dragon Castle.mp3", name: "Dragon Castle" },
+            { src: "Audio/Yugen.mp3", name: "Yugen" }
+        ];
 
-            // Load and play a song by index
-            function loadSong(index) {
-                bgMusic.src = songs[index].src;
-                songNameText.textContent = songs[index].name;
-                songNameDisplay.style.display = 'block';
-                bgMusic.play();
-            }
+        // Load and play a song by index
+        function loadSong(index) {
+            bgMusic.src = songs[index].src;
+            songNameText.textContent = songs[index].name;
+            songNameDisplay.style.display = 'block';
+            bgMusic.play();
+        }
 
-            // Play the audio
-            function playAudio() {
-                bgMusic.play();
-            }
+        // Play the audio
+        function playAudio() {
+            bgMusic.play();
+        }
 
-            // Pause the audio
-            function pauseAudio() {
-                bgMusic.pause();
-            }
+        // Pause the audio
+        function pauseAudio() {
+            bgMusic.pause();
+        }
 
-            // Move to the next song in the playlist
-            function nextSong() {
-                currentSongIndex = (currentSongIndex + 1) % songs.length;
-                loadSong(currentSongIndex);
-            }
+        // Move to the next song in the playlist
+        function nextSong() {
+            currentSongIndex = (currentSongIndex + 1) % songs.length;
+            loadSong(currentSongIndex);
+        }
 
-            // Ensure the first song plays on page load
-            document.addEventListener('DOMContentLoaded', function () {
-                loadSong(currentSongIndex);
-            });
-        </script>
-    }
-</body>
+        // Ensure the first song plays on page load
+        document.addEventListener('DOMContentLoaded', function () {
+            loadSong(currentSongIndex);
+        });
+    </script>
+}
 
 
 @functions {
