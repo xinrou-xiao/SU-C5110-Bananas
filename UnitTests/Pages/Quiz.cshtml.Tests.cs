@@ -80,5 +80,24 @@ namespace UnitTests.Pages.Quiz
         }
 
         #endregion TestSetup
+
+        #region CurrentQuestion
+
+        /// <summary>
+        /// Test CurrentQuestion's setter and getter.
+        /// </summary>
+        [Test]
+        public void CurrentQuestion_Valid_Value_Should_Set_Value_To_Given_Value()
+        {
+            // Arrange
+
+            // Act
+            pageModel.CurrentQuestion = 5;
+
+            // Assert
+            Assert.That(pageModel.CurrentQuestion, Is.EqualTo(5));
+        }
+
+        #endregion CurrentQuestion
     }
 }
