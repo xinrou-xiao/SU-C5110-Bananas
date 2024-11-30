@@ -61,6 +61,12 @@
         </div>
 
         <div class="form-group">
+            <label class="white-font" asp-for="Product.Banner">Banner URL</label>
+            <input asp-for="Product.Banner" class="form-control" />
+            <span asp-validation-for="Product.Banner" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
             <label class="white-font" asp-for="Product.Genre">Genre</label>
             <button class="btn btn-success custom-btn" type="button" id="create-genre">+</button>
             @foreach (var genre in Model.Product.Genre)
