@@ -2,6 +2,7 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System;
 
 namespace ContosoCrafts.WebSite.Models
 {
@@ -68,5 +69,15 @@ namespace ContosoCrafts.WebSite.Models
         /// </summary>
         public override string ToString() => JsonSerializer.Serialize<ProductModel>(this);
 
+        // New properties for comments
+        public List<CommentModel> Comments { get; set; } = new List<CommentModel>();
+        public string NewComment { get; set; }
     }
+
+    public class CommentModel
+    {
+        public string Text { get; set; }
+        public DateTime Timestamp { get; set; }
+    }
+
 }
