@@ -150,7 +150,7 @@ namespace ContosoCrafts.WebSite.Services
             existingProduct.Season = updatedProduct.Season;
             existingProduct.Genre = updatedProduct.Genre;
             existingProduct.Ott = updatedProduct.Ott;
-
+            existingProduct.Banner = updatedProduct.Banner;
             SaveData(products);
 
             return existingProduct;
