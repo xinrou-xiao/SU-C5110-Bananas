@@ -56,6 +56,10 @@ namespace ContosoCrafts.WebSite.Models
         [Range(1, int.MaxValue, ErrorMessage = "Season must be a positive number.")]
         public int Season { get; set; }
 
+        // Map Url field in product.json to ProductModel's Banner Url
+        [Url(ErrorMessage = "Invalid URL format for Url.")]
+        public string Banner { get; set; }
+
         // Store the Comments entered by the users on this product
         public List<CommentModel> CommentList { get; set; } = new List<CommentModel>();
 
@@ -63,5 +67,6 @@ namespace ContosoCrafts.WebSite.Models
         /// Serialize ProductModel instance to JSON format for display
         /// </summary>
         public override string ToString() => JsonSerializer.Serialize<ProductModel>(this);
+
     }
 }
