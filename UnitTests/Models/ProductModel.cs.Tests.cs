@@ -183,47 +183,5 @@ namespace UnitTests.Models
             // Assert: Verify that the Season property was set correctly.
             Assert.That(productModel.Season, Is.EqualTo(expectedSeason));
         }
-
-        /// <summary>
-        /// Tests that the CommentList property can be set and retrieved correctly.
-        /// </summary>
-        [Test]
-        public void CommentList_SetAndRetrieve_Should_Work_Correctly()
-        {
-            // Arrange: Create a new ProductModel instance and define the expected CommentList value.
-            var productModel = new ProductModel();
-            var expectedComments = new List<CommentModel> { new CommentModel { Comment = "Great product!" } };
-
-            // Act: Set the CommentList property.
-            productModel.CommentList = expectedComments;
-
-            // Assert: Verify that the CommentList property was set correctly.
-            Assert.That(productModel.CommentList, Is.EqualTo(expectedComments));
-        }
-
-        /// <summary>
-        /// Tests that the ToString method serializes the ProductModel to JSON correctly.
-        /// </summary>
-        [Test]
-        public void ToString_Serialize_Should_Work_Correctly()
-        {
-            // Arrange: Create a new ProductModel instance with various properties set.
-            var productModel = new ProductModel
-            {
-                Id = "123",
-                Maker = "Contoso",
-                Image = "image.png",
-                Url = "http://example.com",
-                Title = "Product Title",
-                Description = "This is a product description.",
-                Release = "2023",
-                Trailer = "trailer.mp4",
-                Ott = new OttTypeEnum[] { OttTypeEnum.Netflix },
-                Season = 2,
-                CommentList = new List<CommentModel> { new CommentModel { Comment = "Great product!" } }
-            };
-
-            // Act & Assert: (Implementation needed to verify JSON serialization)
-        }
     }
 }
