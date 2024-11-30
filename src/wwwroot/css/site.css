@@ -309,6 +309,10 @@ h1, h2, h3, h4, h5 {
     .theme-toggle {
         margin-top: 10px; /* Add spacing above dark mode button */
     }
+    .carousel-image-container {
+        padding-top: 75%; /* Slightly taller ratio for better mobile fit */
+        max-height: none; /* Allow more flexibility on smaller screens */
+    }
 }
 
 .quiz-title {
@@ -1218,3 +1222,20 @@ body.dark-theme .hashtags span {
         display: block; /* Switch to block display for smaller screens */
     }
 }
+
+.carousel-image-container {
+    position: relative;
+    width: 100%;
+    padding-top: 66.67%;
+    overflow: hidden;
+    max-height: 560px;
+}
+
+    .carousel-image-container img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        max-height: 560px;
+        object-fit: cover;
+    }
