@@ -324,8 +324,14 @@ h1, h2, h3, h4, h5 {
     -webkit-text-fill-color: transparent; /* Makes the gradient visible */
     margin-bottom: 20px; /* Add spacing below the heading */
 }
+
 .retake-quiz-btn:hover {
     background: linear-gradient(90deg, #2E8B57, #228B22); /* Darker green gradient */
+    color: white; /* Ensure text color remains white */
+}
+
+body.dark-theme .retake-quiz-btn:hover {
+    background: linear-gradient(90deg, #6a0dad, #a4508b); /* Purple gradient */
     color: white; /* Ensure text color remains white */
 }
 
