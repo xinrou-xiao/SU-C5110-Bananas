@@ -5,8 +5,6 @@ namespace ContosoCrafts.WebSite.Pages
 {
     public class BreadcrumbModel : PageModel
     {
-        public void OnGet()
-        {
-        }
+     
     }
 }
