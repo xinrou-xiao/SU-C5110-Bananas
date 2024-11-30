@@ -4,12 +4,28 @@ using System.Linq;
 
 namespace ContosoCrafts.WebSite.Pages
 {
+    /// <summary>
+    /// Handles the logic for the Anime Personality Quiz, including storing questions,
+    /// calculating results, and managing the quiz state.
+    /// </summary>
     public class QuizModel : PageModel
     {
+        /// <summary>
+        /// The index of the current question being displayed.
+        /// </summary>
         public int CurrentQuestion { get; set; } = 0;
+
+        /// <summary>
+        /// Indicates whether the quiz has been completed and submitted.
+        /// </summary>
         public bool IsSubmitted { get; set; } = false;
+
+        /// <summary>
+        /// Array of quiz questions.
+        /// </summary>
         public string[] Questions { get; set; } = new[]
         {
+
             "What is your favorite type of environment?",
             "Which trait best describes you?",
             "What’s your favorite time of day?",
@@ -21,6 +37,10 @@ namespace ContosoCrafts.WebSite.Pages
             "Which role do you take in your friend group?",
             "Which mythical creature do you prefer?"
         };
+
+        /// <summary>
+        /// Array of answer options corresponding to each question.
+        /// </summary>
         public string[][] Options { get; set; } = new[]
         {
             new[] { "Calm and serene mountains for reflection and peace", "Vast and endless oceans full of adventure", "Dense and mysterious forests to explore", "Hot and challenging deserts that test your limits" },
@@ -34,13 +54,31 @@ namespace ContosoCrafts.WebSite.Pages
             new[] { "The leader who guides the group", "The supportive and dependable friend", "The troublemaker who keeps things exciting", "The thinker who analyzes every situation" },
             new[] { "A powerful dragon with untold strength", "A graceful phoenix that symbolizes rebirth", "A magical unicorn representing purity", "A fierce griffin that commands the skies" }
     };
+
+
+        /// <summary>
+        /// List of answers selected by the user.
+        /// </summary>
         public List<int> Answers { get; set; } = new List<int>();
+
+        /// <summary>
+        /// The name of the character that matches the user's answers.
+        /// </summary>
         public string ResultName { get; set; }
+
+        /// <summary>
+        /// The description of the character's personality and traits.
+        /// </summary>
         public string ResultDescription { get; set; }
+
+        /// <summary>
+        /// The URL of the video associated with the character result.
+        /// </summary>
         public string ResultVideoUrl { get; set; }
 
         public void OnPost()
         {
+            // Check if the request contains an answer
             if (Request.Form.ContainsKey("Answer"))
             {
                 int answer = int.Parse(Request.Form["Answer"]);
@@ -49,12 +87,17 @@ namespace ContosoCrafts.WebSite.Pages
                 CurrentQuestion++;
             }
 
+            // If all questions are answered, calculate the result
             if (CurrentQuestion >= Questions.Length)
             {
                 IsSubmitted = true;
                 CalculateResult();
             }
         }
+
+        /// <summary>
+        /// Handles GET requests to initialize the quiz.
+        /// </summary>
         public void OnGet()
         {
             IsSubmitted = false;
@@ -62,20 +105,27 @@ namespace ContosoCrafts.WebSite.Pages
             Answers.Clear();
         }
 
+        /// <summary>
+        /// Calculates the user's result based on their answers.
+        /// </summary>
         private void CalculateResult()
         {
+
             // Calculate dominant answer based on frequency (this logic can be adjusted for better customization)
             int dominantAnswer = Answers.GroupBy(x => x).OrderByDescending(g => g.Count()).Select(g => g.Key).First();
 
+            // Assign the result based on the dominant answer
             ResultName = dominantAnswer switch
             {
                 0 => "Naruto Uzumaki (Anime: Naruto)",
                 1 => "Luffy D. Monkey (Anime: One Piece)",
                 2 => "Tanjiro Kamado (Anime: Demon Slayer)",
                 3 => "Roronoa Zoro (Anime: One Piece)",
-                _ => "A Unique Character"
+                // optional fallback for unexpected cases
+                _ => "A Unique Character" 
             };
 
+            // Assign the description based on the result
             ResultDescription = ResultName switch
             {
                 "Naruto Uzumaki (Anime: Naruto)" => "You're energetic, optimistic, and never give up on your dreams. You inspire others with your determination and your unwavering belief in the power of friendship." +
@@ -115,6 +165,8 @@ namespace ContosoCrafts.WebSite.Pages
                                    "</ul>" +
                                     "<br/><strong>Cool Factor:</strong> You're a trendsetter with a vibe that's entirely your own. People admire your authenticity and your ability to stay true to yourself, no matter what!"
             };
+
+            // Assign the video URL based on the result
             ResultVideoUrl = ResultName switch
             {
                 "Naruto Uzumaki (Anime: Naruto)" => "https://www.desktophut.com/files/dkZH0secomXUvl9_Naruto%20Artistic%20Live%20Wallpaper_2_151011.mp4",
