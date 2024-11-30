@@ -186,7 +186,7 @@ h1, h2, h3, h4, h5 {
 
 /* Quiz Button Styles */
 .quiz-button {
-    font-family: 'NunitoF', sans-serif;
+    font-family:'poppins-medium';
     font-size: 20px; /* Reduced font size */
     padding: 10px 25px; /* Smaller padding */
     color: black;
