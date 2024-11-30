@@ -93,10 +93,11 @@
                     </button>
                     <a href="@product.Trailer" target="_blank" class="btn btn-secondary btn-watch-trailer"> Watch Trailer</a>
                 </div>
-            </div>
-        </div>
+                    </div>
+                </div>
     }
 </div>
+
 
 @if (selectedProduct != null)
 {
@@ -116,6 +117,33 @@
                         <div class="card-body">
                             <p class="card-text">@selectedProduct.Description</p>
                         </div>
+                    </div>
+                </div>
+                <!-- Comment Section -->
+                <div class="comment-section mt-4">
+                    <h6>Comments</h6>
+                    <!-- Display Comments -->
+                    <ul class="comment-list">
+                        @if (selectedProduct.Comments != null && selectedProduct.Comments.Any())
+                        {
+                            @foreach (var comment in selectedProduct.Comments.OrderByDescending(c => c.Timestamp))
+                            {
+                                <li class="comment-item">
+                                    <span class="comment-text">@comment.Text</span>
+                                    <span class="comment-timestamp">@comment.Timestamp.ToString("g")</span>
+                                </li>
+                            }
+                        }
+                        else
+                        {
+                            <li class="comment-item">No comments yet. Be the first to comment!</li>
+                        }
+                    </ul>
+
+                    <!-- Add Comment -->
+                    <div class="add-comment">
+                        <textarea @bind="selectedProduct.NewComment" class="form-control" placeholder="Write a comment..."></textarea>
+                        <button @onclick="AddCommentToSelectedProduct" class="btn btn-primary mt-2">Add Comment</button>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -396,5 +424,33 @@
             Products = Products.OrderByDescending(p => p.Ratings?.Average() ?? 0);
             return;
         }
+    @code {
+        // Method to add a comment to the selected product
+        void AddCommentToSelectedProduct()
+        {
+            if (selectedProduct == null || string.IsNullOrWhiteSpace(selectedProduct.NewComment))
+            {
+                return; // Do not add empty comments
+            }
+
+            // Initialize the Comments list if it is null
+            if (selectedProduct.Comments == null)
+            {
+                selectedProduct.Comments = new List<CommentModel>();
+            }
+
+            // Add the new comment to the selected product's Comments list
+            selectedProduct.Comments.Add(new CommentModel
+            {
+                Text = selectedProduct.NewComment,
+                Timestamp = DateTime.Now
+            });
+
+            // Clear the NewComment field after adding the comment
+            selectedProduct.NewComment = string.Empty;
+        }
+    }
+
+
     }
 }
