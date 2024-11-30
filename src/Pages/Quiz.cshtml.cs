@@ -69,36 +69,37 @@ namespace ContosoCrafts.WebSite.Pages
 
             ResultName = dominantAnswer switch
             {
-                0 => "Naruto Uzumaki",
-                1 => "Luffy D. Monkey",
-                2 => "Tanjiro Kamado",
-                3 => "Roronoa Zoro",
+                0 => "Naruto Uzumaki (Anime: Naruto)",
+                1 => "Luffy D. Monkey (Anime: One Piece)",
+                2 => "Tanjiro Kamado (Anime: Demon Slayer)",
+                3 => "Roronoa Zoro (Anime: One Piece)",
                 _ => "A Unique Character"
             };
 
             ResultDescription = ResultName switch
             {
-                "Naruto Uzumaki" => "You're energetic, optimistic, and never give up on your dreams. You inspire others with your determination and your unwavering belief in the power of friendship." +
+                "Naruto Uzumaki (Anime: Naruto)" => "You're energetic, optimistic, and never give up on your dreams. You inspire others with your determination and your unwavering belief in the power of friendship." +
                                     "<br/><br/><strong>Pros:</strong><ul>" +
                                     "<li>Boundless energy and optimism.</li>" +
                                     "<li>Inspires loyalty and camaraderie.</li>" +
                                     "<li>Unshakable determination to achieve your goals.</li></ul>" +
                                     "<br/><strong>Cool Factor:</strong> You're the underdog who rises to greatness, proving that anything is possible with hard work and belief!",
-                "Luffy D. Monkey" => "You're adventurous, carefree, and a born leader. You live for freedom and thrive in the vast unknown, with your friends by your side as your greatest treasure." +
+
+                "Luffy D. Monkey (Anime: One Piece)" =>"You're adventurous, carefree, and a born leader. You live for freedom and thrive in the vast unknown, with your friends by your side as your greatest treasure." +
                                              "<br/><br/><strong>Pros:</strong><ul>" +
                                              "<li>Infectious enthusiasm and courage.</li>" +
                                              "<li>Unyielding loyalty to your crew and loved ones.</li>" +
                                              "<li>Fearless explorer with a big dream to achieve.</li></ul>" +
                                              "<br/><strong>Cool Factor:</strong> You're the embodiment of freedom and resilience, inspiring others to chase their dreams!",
 
-                "Tanjiro Kamado" => "You're compassionate, kind, and deeply protective of those you care about. Your resilience and determination to do what's right make you a true hero." +
+                "Tanjiro Kamado (Anime: Demon Slayer)" => "You're compassionate, kind, and deeply protective of those you care about. Your resilience and determination to do what's right make you a true hero." +
                                     "<br/><br/><strong>Pros:</strong><ul>" +
                                     "<li>Empathy and kindness in the face of adversity.</li>" +
                                     "<li>Unyielding determination and resilience.</li>" +
                                     "<li>Strong sense of justice and loyalty to loved ones.</li></ul>" +
                                     "<br/><strong>Cool Factor:</strong> You're the perfect balance of strength and heart, inspiring everyone with your heroic journey!",
 
-                "Roronoa Zoro" => "You're fiercely determined and focused, never wavering from your goals. Your loyalty to those you care about is unbreakable, and you're always striving to be the best version of yourself." +
+                "Roronoa Zoro (Anime: One Piece)" => "You're fiercely determined and focused, never wavering from your goals. Your loyalty to those you care about is unbreakable, and you're always striving to be the best version of yourself." +
                                   "<br/><br/><strong>Pros:</strong><ul>" +
                                   "<li>Unyielding focus and perseverance.</li>" +
                                   "<li>Incredible strength and discipline.</li>" +
@@ -116,10 +117,10 @@ namespace ContosoCrafts.WebSite.Pages
             };
             ResultVideoUrl = ResultName switch
             {
-                "Naruto Uzumaki" => "https://www.desktophut.com/files/dkZH0secomXUvl9_Naruto%20Artistic%20Live%20Wallpaper_2_151011.mp4",
-                "Luffy D. Monkey" => "https://motionbgs.com/media/6827/strawhat-luffy.960x540.mp4",
-                "Tanjiro Kamado" => "https://motionbgs.com/media/6009/tanjiro-water-dragon.960x540.mp4",
-                "Roronoa Zoro" => "https://motionbgs.com/media/6005/fearless-zoro.960x540.mp4",
+                "Naruto Uzumaki (Anime: Naruto)" => "https://www.desktophut.com/files/dkZH0secomXUvl9_Naruto%20Artistic%20Live%20Wallpaper_2_151011.mp4",
+                "Luffy D. Monkey (Anime: One Piece)" => "https://motionbgs.com/media/6827/strawhat-luffy.960x540.mp4",
+                "Tanjiro Kamado (Anime: Demon Slayer)" => "https://motionbgs.com/media/6009/tanjiro-water-dragon.960x540.mp4",
+                "Roronoa Zoro (Anime: One Piece)" => "https://motionbgs.com/media/6005/fearless-zoro.960x540.mp4",
                 _ => "https://www.desktophut.com/files/8cqM7yJhpqNnBuw_Black%20Roses%20Goku%204K_2_102359.mp4"
             };
         }
