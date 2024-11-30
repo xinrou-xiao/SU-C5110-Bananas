@@ -129,8 +129,23 @@
                             @foreach (var comment in selectedProduct.Comments.OrderByDescending(c => c.Timestamp))
                             {
                                 <li class="comment-item">
-                                    <span class="comment-text">@comment.Text</span>
-                                    <span class="comment-timestamp">@comment.Timestamp.ToString("g")</span>
+                                    @if (editingComment == comment)
+                                    {
+                                        <!-- Edit Comment Form -->
+                                        <textarea @bind="editingComment.Text" class="form-control mb-2"></textarea>
+                                        <button @onclick="SaveEditedComment" class="btn btn-success btn-sm">Save</button>
+                                        <button @onclick="CancelEditComment" class="btn btn-secondary btn-sm">Cancel</button>
+                                    }
+                                    else
+                                    {
+                                        <!-- Display Comment -->
+                                        <span class="comment-text">@comment.Text</span>
+                                        <span class="comment-timestamp">@comment.Timestamp.ToString("g")</span>
+                                        <div class="comment-actions">
+                                            <button @onclick="(() => EditComment(comment))" class="btn btn-link btn-sm">Edit</button>
+                                            <button @onclick="(() => DeleteComment(comment))" class="btn btn-link btn-sm text-danger">Delete</button>
+                                        </div>
+                                    }
                                 </li>
                             }
                         }
@@ -146,6 +161,8 @@
                         <button @onclick="AddCommentToSelectedProduct" class="btn btn-primary mt-2">Add Comment</button>
                     </div>
                 </div>
+
+
                 <div class="modal-footer">
                     @if (voteCount == 0)
                     {
@@ -450,6 +467,46 @@
             selectedProduct.NewComment = string.Empty;
         }
     }
+    @code {
+        private CommentModel editingComment { get; set; } = null;
+
+        // Method to enter edit mode for a comment
+        void EditComment(CommentModel comment)
+        {
+            editingComment = comment;
+        }
+
+        // Method to save the edited comment
+        void SaveEditedComment()
+        {
+            if (editingComment != null)
+            {
+                // Save changes (if needed, you can add validation here)
+                editingComment = null; // Exit edit mode
+            }
+        }
+
+        // Method to cancel editing a comment
+        void CancelEditComment()
+        {
+            if (editingComment != null)
+            {
+                // Optionally, reset the comment text to its original value
+                editingComment = null; // Exit edit mode
+            }
+        }
+
+        // Method to delete a comment
+        void DeleteComment(CommentModel comment)
+        {
+            if (selectedProduct.Comments != null)
+            {
+                selectedProduct.Comments.Remove(comment);
+            }
+        }
+    }
+
+
 
 
     }
