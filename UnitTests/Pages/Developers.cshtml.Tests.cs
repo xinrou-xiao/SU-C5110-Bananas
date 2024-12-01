@@ -24,7 +24,7 @@ namespace UnitTests.Pages
         /// Test to verify that the Developers list is null before OnGet is called.
         /// </summary>
         [Test]
-        public void OnGet_BeforeCalling_DevelopersList_IsNull_Should_NotBePopulated()
+        public void OnGet_Before_Calling_Developers_List_IsNull_Should_Not_Be_Populated()
         {
             // Assert
             Assert.That(pageModel.Developers, Is.Null); // Verify Developers is null before OnGet
@@ -34,7 +34,7 @@ namespace UnitTests.Pages
         /// Test to verify that the OnGet method populates the Developers list with four developers.
         /// </summary>
         [Test]
-        public void OnGet_WhenCalled_DevelopersList_Should_BePopulatedWithFourDevelopers()
+        public void OnGet_When_Called_Developers_List_Should_Be_Populated_With_Four_Developers()
         {
             // Act
             pageModel.OnGet(); // Call OnGet to populate the Developers list
@@ -48,7 +48,7 @@ namespace UnitTests.Pages
         /// Test to verify that the first developer's details are populated correctly.
         /// </summary>
         [Test]
-        public void OnGet_WhenCalled_FirstDeveloperDetails_Should_BeCorrect()
+        public void OnGet_When_Called_First_Developer_Details_Should_Be_Correct()
         {
             // Act
             pageModel.OnGet(); // Call OnGet to populate the Developers list
@@ -64,7 +64,7 @@ namespace UnitTests.Pages
         /// Test to verify that the second developer's details are populated correctly.
         /// </summary>
         [Test]
-        public void OnGet_WhenCalled_SecondDeveloperDetails_Should_BeCorrect()
+        public void OnGet_When_Called_Second_Developer_Details_Should_Be_Correct()
         {
             // Act
             pageModel.OnGet(); // Call OnGet to populate the Developers list
@@ -80,7 +80,7 @@ namespace UnitTests.Pages
         /// Test to verify that the third developer's details are populated correctly.
         /// </summary>
         [Test]
-        public void OnGet_WhenCalled_ThirdDeveloperDetails_Should_BeCorrect()
+        public void OnGet_When_Called_Third_Developer_Details_Should_Be_Correct()
         {
             // Act
             pageModel.OnGet(); // Call OnGet to populate the Developers list
@@ -96,7 +96,7 @@ namespace UnitTests.Pages
         /// Test to verify that the fourth developer's details are populated correctly.
         /// </summary>
         [Test]
-        public void OnGet_WhenCalled_FourthDeveloperDetails_Should_BeCorrect()
+        public void OnGet_When_Called_Fourth_Developer_Details_Should_Be_Correct()
         {
             // Act
             pageModel.OnGet(); // Call OnGet to populate the Developers list
