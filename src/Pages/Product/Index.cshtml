@@ -4,7 +4,12 @@
     ViewData["Title"] = "Index page";
 }
 
-<partial name="Breadcrumb" />
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb" style="background: none; color: white;">
+        <li class="breadcrumb-item"><a href="/Index" style="color: white;">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Admin</li>
+    </ol>
+</nav>
 
 <div class="container">
     <div>
