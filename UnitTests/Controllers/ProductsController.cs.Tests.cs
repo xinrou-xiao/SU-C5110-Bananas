@@ -75,14 +75,14 @@ namespace UnitTests.Controllers
         }
 
         [Test]
-        public void Constructor_Should_Initialize_ProductService()
+        public void Constructor_Initialization_State_Should_Initialize_ProductService()
         {
             // Assert
             Assert.That(_controller.ProductService, Is.EqualTo(_productService), "Expected ProductService to be initialized with the provided service.");
         }
 
         [Test]
-        public void Get_Should_Return_All_Products()
+        public void Get_AnyCondition_State_Should_Return_All_Products()
         {
             // Act
             var result = _controller.Get();
@@ -92,7 +92,7 @@ namespace UnitTests.Controllers
         }
 
         [Test]
-        public void Patch_Should_Add_Rating_To_Product_And_Return_Ok()
+        public void Patch_ValidRequest_State_Should_Return_Ok_And_AddRating()
         {
             // Arrange
             var request = new ProductsController.RatingRequest
@@ -114,8 +114,8 @@ namespace UnitTests.Controllers
             // Check if the product with Id "1" exists
             Assert.That(product, Is.Not.Null, "Product with Id '1' should exist.");
 
-            // Check if the product's Ratings are not
-            Assert.That(product.Ratings, Is.Not.Null, "Product Ratings should not be.");
+            // Check if the product's Ratings are not null
+            Assert.That(product.Ratings, Is.Not.Null, "Product Ratings should not be null.");
 
             // Check if the Ratings array contains the new rating
             Assert.That(product.Ratings, Contains.Item(5), "Product Ratings should contain the new rating.");
