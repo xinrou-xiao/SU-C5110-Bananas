@@ -126,21 +126,21 @@
                     <ul class="comment-list">
                         @if (selectedProduct.Comments != null && selectedProduct.Comments.Any())
                         {
-                            @foreach (var comment in selectedProduct.Comments.OrderByDescending(c => c.Timestamp))
+                            @foreach (var comment in selectedProduct.Comments.OrderByDescending(c => c))
                             {
                                 <li class="comment-item">
                                     @if (editingComment == comment)
                                     {
                                         <!-- Edit Comment Form -->
-                                        <textarea @bind="editingComment.Text" class="form-control mb-2"></textarea>
+                                        <textarea @bind="editingComment" class="form-control mb-2"></textarea>
                                         <button @onclick="SaveEditedComment" class="btn btn-success btn-sm">Save</button>
                                         <button @onclick="CancelEditComment" class="btn btn-secondary btn-sm">Cancel</button>
                                     }
                                     else
                                     {
                                         <!-- Display Comment -->
-                                        <span class="comment-text">@comment.Text</span>
-                                        <span class="comment-timestamp">@comment.Timestamp.ToString("g")</span>
+                                        <span class="comment-text">@comment</span>
+                                        // <span class="comment-timestamp">@comment.Timestamp.ToString("g")</span>
                                         <div class="comment-actions">
                                             <button @onclick="(() => EditComment(comment))" class="btn btn-link btn-sm">Edit</button>
                                             <button @onclick="(() => DeleteComment(comment))" class="btn btn-link btn-sm text-danger">Delete</button>
@@ -442,25 +442,23 @@
             // Initialize the Comments list if it is null
             if (selectedProduct.Comments == null)
             {
-                selectedProduct.Comments = new List<CommentModel>();
+                selectedProduct.Comments = new List<string>();
             }
 
             // Add the new comment to the selected product's Comments list
-            selectedProduct.Comments.Add(new CommentModel
-            {
-                Text = selectedProduct.NewComment,
-                Timestamp = DateTime.Now
-            });
+            selectedProduct.Comments.Add(selectedProduct.NewComment);
+
+            ProductService.UpdateData(selectedProduct);
 
             // Clear the NewComment field after adding the comment
             selectedProduct.NewComment = string.Empty;
         }
     }
     @code {
-        private CommentModel editingComment { get; set; } = null;
+        private string editingComment { get; set; } = null;
 
         // Method to enter edit mode for a comment
-        void EditComment(CommentModel comment)
+        void EditComment(string comment)
         {
             editingComment = comment;
         }
@@ -486,7 +484,7 @@
         }
 
         // Method to delete a comment
-        void DeleteComment(CommentModel comment)
+        void DeleteComment(string comment)
         {
             if (selectedProduct.Comments != null)
             {
