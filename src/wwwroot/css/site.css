@@ -412,6 +412,47 @@ body.dark-theme {
     body.dark-theme ul {
         color: #f0f0f0 !important; /* Light text for better readability in dark theme */
     }
+/* Default styles for .comment-section */
+.comment-section {
+    background-color: #f9f9f9; /* Light background for default mode */
+    color: #333333; /* Dark text for readability */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+    /* Default styles for .comment-section h6 */
+    .comment-section h6 {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #333333; /* Dark text for default mode */
+    }
+
+/* Dark theme styles for .comment-section */
+body.dark-theme .comment-section {
+    background: linear-gradient(90deg, #6a0dad, #a4508b); /* Purple gradient background */
+    color: #ffffff; /* Light text for dark mode */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Slightly darker shadow */
+}
+
+    /* Dark theme styles for .comment-section h6 */
+    body.dark-theme .comment-section h6 {
+        color: #f0f0f0; /* Light text for better readability in dark mode */
+    }
+
+/* Media query for prefers-color-scheme: dark */
+@media (prefers-color-scheme: dark) {
+    .comment-section {
+        background: linear-gradient(90deg, #6a0dad, #a4508b); /* Purple gradient background */
+        color: #ffffff; /* Light text for dark mode */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Slightly darker shadow */
+    }
+
+        .comment-section h6 {
+            color: #f0f0f0; /* Light text for better readability in dark mode */
+        }
+}
 
 /* Default styles for .comment-item */
 .comment-item {
