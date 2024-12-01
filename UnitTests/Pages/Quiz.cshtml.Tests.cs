@@ -276,7 +276,7 @@ namespace UnitTests.Pages.Quiz
             // Assert
             Assert.That(pageModel.CurrentQuestion, Is.EqualTo(10));
             Assert.That(pageModel.IsSubmitted, Is.EqualTo(true));
-            Assert.That(pageModel.ResultName, Is.EqualTo("Naruto Uzumaki"));
+            Assert.That(pageModel.ResultName, Is.EqualTo("Naruto Uzumaki (Anime: Naruto)"));
             Assert.That(pageModel.ResultDescription, Is.EqualTo("You're energetic, optimistic, and never give up on your dreams. You inspire others with your determination and your unwavering belief in the power of friendship." +
                                     "<br/><br/><strong>Pros:</strong><ul>" +
                                     "<li>Boundless energy and optimism.</li>" +
@@ -345,7 +345,7 @@ namespace UnitTests.Pages.Quiz
             // Assert
             Assert.That(pageModel.CurrentQuestion, Is.EqualTo(10));
             Assert.That(pageModel.IsSubmitted, Is.EqualTo(true));
-            Assert.That(pageModel.ResultName, Is.EqualTo("Luffy D. Monkey"));
+            Assert.That(pageModel.ResultName, Is.EqualTo("Luffy D. Monkey (Anime: One Piece)"));
             Assert.That(pageModel.ResultDescription, Is.EqualTo("You're adventurous, carefree, and a born leader. You live for freedom and thrive in the vast unknown, with your friends by your side as your greatest treasure." +
                                              "<br/><br/><strong>Pros:</strong><ul>" +
                                              "<li>Infectious enthusiasm and courage.</li>" +
@@ -389,7 +389,7 @@ namespace UnitTests.Pages.Quiz
             // Assert
             Assert.That(pageModel.CurrentQuestion, Is.EqualTo(10));
             Assert.That(pageModel.IsSubmitted, Is.EqualTo(true));
-            Assert.That(pageModel.ResultName, Is.EqualTo("Tanjiro Kamado"));
+            Assert.That(pageModel.ResultName, Is.EqualTo("Tanjiro Kamado (Anime: Demon Slayer)"));
             Assert.That(pageModel.ResultDescription, Is.EqualTo("You're compassionate, kind, and deeply protective of those you care about. Your resilience and determination to do what's right make you a true hero." +
                                     "<br/><br/><strong>Pros:</strong><ul>" +
                                     "<li>Empathy and kindness in the face of adversity.</li>" +
@@ -433,7 +433,7 @@ namespace UnitTests.Pages.Quiz
             // Assert
             Assert.That(pageModel.CurrentQuestion, Is.EqualTo(10));
             Assert.That(pageModel.IsSubmitted, Is.EqualTo(true));
-            Assert.That(pageModel.ResultName, Is.EqualTo("Roronoa Zoro"));
+            Assert.That(pageModel.ResultName, Is.EqualTo("Roronoa Zoro (Anime: One Piece)"));
             Assert.That(pageModel.ResultDescription, Is.EqualTo("You're fiercely determined and focused, never wavering from your goals. Your loyalty to those you care about is unbreakable, and you're always striving to be the best version of yourself." +
                                   "<br/><br/><strong>Pros:</strong><ul>" +
                                   "<li>Unyielding focus and perseverance.</li>" +
