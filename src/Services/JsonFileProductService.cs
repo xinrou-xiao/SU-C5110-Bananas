@@ -145,6 +145,7 @@ namespace ContosoCrafts.WebSite.Services
             existingProduct.Url = updatedProduct.Url;
             existingProduct.Image = updatedProduct.Image;
             existingProduct.CommentList = updatedProduct.CommentList;
+            existingProduct.Comments = updatedProduct.Comments;
             existingProduct.Release = updatedProduct.Release;
             existingProduct.Trailer = updatedProduct.Trailer;
             existingProduct.Season = updatedProduct.Season;

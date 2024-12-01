@@ -70,7 +70,7 @@ namespace ContosoCrafts.WebSite.Models
         public override string ToString() => JsonSerializer.Serialize<ProductModel>(this);
 
         // New properties for comments
-        public List<CommentModel> Comments { get; set; } = new List<CommentModel>();
+        public List<string> Comments { get; set; } = new List<string>();
         public string NewComment { get; set; }
     }
 
