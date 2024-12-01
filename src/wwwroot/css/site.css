@@ -413,6 +413,37 @@ body.dark-theme {
         color: #f0f0f0 !important; /* Light text for better readability in dark theme */
     }
 
+/* Default styles for .comment-item */
+.comment-item {
+    color: #ffffff; /* White text */
+    background-color: #333333; /* Dark background */
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Dark theme styles for h1, p, ul */
+body.dark-theme h1,
+body.dark-theme p,
+body.dark-theme ul {
+    color: #f0f0f0 !important; /* Light text for better readability in dark theme */
+}
+
+/* Dark theme styles for .comment-item */
+body.dark-theme .comment-item {
+    background: linear-gradient(90deg, #6a0dad, #a4508b); /* Purple gradient background */
+    color: white; /* Ensure text color remains white */
+}
+
+/* Media query for prefers-color-scheme: dark */
+@media (prefers-color-scheme: dark) {
+    .comment-item {
+        background: linear-gradient(90deg, #6a0dad, #a4508b); /* Purple gradient background */
+        color: white; /* Ensure text color remains white */
+    }
+}
+
+
 
 .description {
     max-width: 1000px; /* set maximum width to 1000px */
