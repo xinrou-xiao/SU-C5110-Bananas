@@ -383,6 +383,32 @@ body.dark-theme {
     body.dark-theme .modal {
         color: #1f1f1f; /* Set modal text color for better contrast */
     }
+    /* Default styles for light mode */
+.modal-content {
+    background-color: #ffffff; /* White background for light mode */
+    color: #000000; /* Black text for readability in light mode */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for light mode */
+    border: 1px solid #dddddd; /* Light border for better visibility */
+}
+
+/* Dark theme styles for dark mode */
+body.dark-theme .modal-content {
+    background-color: #1a1a1a; /* Dark gray background for dark mode */
+    color: #ffffff; /* White text for readability in dark mode */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow for dark mode */
+    border: 1px solid #333333; /* Dark border for better visibility */
+}
+
+/* Media query for prefers-color-scheme: dark */
+@media (prefers-color-scheme: dark) {
+    .modal-content {
+        background-color: #ffffff; /* Dark gray background for dark mode */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow for dark mode */
+        border: 1px solid #333333; /* Dark border for better visibility */
+    }
+}
+
+
 
     body.dark-theme .nav-link {
         color: #f0f0f0 !important; /* Set nav link color to light for dark theme */
@@ -411,6 +437,7 @@ body.dark-theme {
     body.dark-theme p,
     body.dark-theme ul {
         color: #f0f0f0 !important; /* Light text for better readability in dark theme */
+
     }
 /* Default styles for .comment-section */
 .comment-section {
