@@ -15,8 +15,9 @@ namespace UnitTests.Controllers
             // Initialize the ReadController before each test
             _controller = new ReadController();
         }
+
         [Test]
-        public void Read_Should_Return_ViewResult()
+        public void Read_AnyCondition_State_Should_Return_ViewResult()
         {
             // Act
             var result = _controller.Read();
