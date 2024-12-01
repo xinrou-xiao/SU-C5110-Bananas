@@ -233,12 +233,6 @@
         // Loop through each product to extract genres and add them to the GenreSet.
         foreach (var product in Products)
         {
-            // If the product has no genre, just skip.
-            if (product.Genre == null)
-            {
-                continue;
-            }
-
             // Loop through the product's genres and add each genre to the GenreSet.
             foreach (var genre in product.Genre)
             {
