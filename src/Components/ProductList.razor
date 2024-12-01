@@ -489,6 +489,7 @@
             if (selectedProduct.Comments != null)
             {
                 selectedProduct.Comments.Remove(comment);
+                ProductService.UpdateData(selectedProduct);
             }
         }
     }
