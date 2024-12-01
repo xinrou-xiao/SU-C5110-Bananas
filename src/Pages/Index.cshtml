@@ -82,21 +82,6 @@
     </script>
 }
 
-
-@functions {
-    // Property to hold the current song name
-    public string CurrentSongName { get; set; }
-    // Property to hold the current song index
-    public int CurrentSongIndex { get; set; } = 0;
-
-    // Class to represent a song
-    public class Song
-    {
-        public string Src { get; set; }
-        public string Name { get; set; }
-    }
-}
-
 @(await Html.RenderComponentAsync<ProductList>(RenderMode.ServerPrerendered))
 <script src="_framework/blazor.server.js"></script>
 <script>
