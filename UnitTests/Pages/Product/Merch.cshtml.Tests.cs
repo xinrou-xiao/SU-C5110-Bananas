@@ -60,7 +60,7 @@ namespace UnitTests.Pages
         /// Test to verify that the OnGet method initializes the Merchandise list correctly.
         /// </summary>
         [Test]
-        public void OnGet_Should_Initialize_Merchandise_List_Correctly()
+        public void OnGet_AnyCondition_State_Should_Initialize_Merchandise_List_Correctly()
         {
             // Arrange: Prepare the PageModel for testing
             // (No additional setup required as it's done in TestInitialize)
@@ -69,7 +69,7 @@ namespace UnitTests.Pages
             PageModel.OnGet();
 
             // Assert: Verify that the Merchandise list is initialized correctly
-            Assert.That(PageModel.Merchandise, Is.Not.Null, "Merchandise list should not be.");
+            Assert.That(PageModel.Merchandise, Is.Not.Null, "Merchandise list should not be null.");
             Assert.That(PageModel.Merchandise.Count, Is.EqualTo(8), "Merchandise list should contain 8 items.");
 
             // Assert: Verify each merchandise item has the expected title
@@ -87,7 +87,7 @@ namespace UnitTests.Pages
         /// Test to verify that each MerchandiseItem is initialized with the correct properties.
         /// </summary>
         [Test]
-        public void MerchandiseItem_Should_Have_Correct_Properties()
+        public void MerchandiseItem_Any_Condition_State_Should_Have_Correct_Properties()
         {
             // Arrange: Prepare the PageModel for testing
             // (No additional setup required as it's done in TestInitialize)
@@ -98,11 +98,11 @@ namespace UnitTests.Pages
             // Assert: Verify that each merchandise item has the correct properties
             foreach (var item in PageModel.Merchandise)
             {
-                Assert.That(item.Title, Is.Not.Null, "Item title should not be.");
-                Assert.That(item.Description, Is.Not.Null, "Item description should not be.");
-                Assert.That(item.ImageUrl, Is.Not.Null, "Item image URL should not be.");
-                Assert.That(item.Hashtags, Is.Not.Null, "Item hashtags should not be.");
-                Assert.That(item.BuyLink, Is.Not.Null, "Item buy link should not be.");
+                Assert.That(item.Title, Is.Not.Null, "Item title should not be null.");
+                Assert.That(item.Description, Is.Not.Null, "Item description should not be null.");
+                Assert.That(item.ImageUrl, Is.Not.Null, "Item image URL should not be null.");
+                Assert.That(item.Hashtags, Is.Not.Null, "Item hashtags should not be null.");
+                Assert.That(item.BuyLink, Is.Not.Null, "Item buy link should not be null.");
                 Assert.That(item.Price, Is.GreaterThan(0), "Item price should be greater than 0.");
             }
         }
