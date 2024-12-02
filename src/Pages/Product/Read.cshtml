@@ -52,6 +52,12 @@
             <span class="tags">#@Model.Product.Release</span>
         }
 
+        <!-- Display the number of seasons if greater than 0 -->
+        @if (Model.Product.Season > 0)
+        {
+            <span class="tags">#@Model.Product.Season Seasons</span>
+        }
+
         <!-- Display the genres as clickable tags if available -->
         @if (Model.Product.Genre !=null)
         {
@@ -76,42 +82,57 @@
     <!-- Add some padding for better layout -->
     <div class="padding-block"></div>
 
-    <!--OTT area-->
-    <h5>Available platforms</h5><!--OTT title-->
+    <!-- OTT platforms section -->
+    <h5>Available platforms</h5>
     <div>
-        <!--Product OTT display as clickable icon one by one-->
-        @foreach (var platform in Model.Product.Ott)
+        <!-- Display OTT platforms as clickable icons -->
+        @if (Model.Product.Ott !=null)
         {
-            <a href="@platform.GetUrl()" target="_blank">
-                <img class="OTT-Icon" src="@platform.GetIcon()" alt="@platform">
-            </a>
+            @if (Model.Product.Ott.Any())
+            {
+                @foreach (var platform in Model.Product.Ott)
+                {
+                    <a href="@platform.GetUrl()" target="_blank">
+                        <img class="OTT-Icon" src="@platform.GetIcon()" alt="@platform">
+                    </a>
+                }
+            }
+            @if (!Model.Product.Ott.Any())
+            {
+                <p class="no-platforms-message">No OTT platforms available for this anime.</p>
+            }
+        }
+        @if (Model.Product.Ott ==null)
+        {
+            <p class="no-platforms-message">No OTT platforms available for this anime.</p>
         }
     </div>
 </div>
+
+<!-- Comments section -->
 <div class="padding-block">
     <h5>Comments</h5>
+
+    <!-- Check if comments exist -->
     @if (Model.Product.Comments !=null)
     {
-        if (Model.Product.Comments.Any())
+        @if (Model.Product.Comments.Any())
         {
             <ul>
+                <!-- Display each comment -->
                 @foreach (var comment in Model.Product.Comments)
                 {
                     <li>@comment</li>
                 }
             </ul>
         }
-    }
-
-    @if (Model.Product.Comments ==null)
-    {
-        <p class="no-comments-message">No comments available for this anime.</p>
-    }
-    @if (Model.Product.Comments !=null)
-    {
-        if (!Model.Product.Comments.Any())
+        @if (!Model.Product.Comments.Any())
         {
             <p class="no-comments-message">No comments available for this anime.</p>
         }
+    }
+    @if (Model.Product.Comments ==null)
+    {
+        <p class="no-comments-message">No comments available for this anime.</p>
     }
 </div>
