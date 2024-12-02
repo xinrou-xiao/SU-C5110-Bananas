@@ -2,7 +2,7 @@
 @using ContosoCrafts.WebSite.Models
 @model ContosoCrafts.WebSite.Pages.Product.CreateModel
 @{
-    ViewData["Title"] = "Create"; @* set page title to Create *@
+    ViewData["Title"] = "Create";
 }
 
 <nav aria-label="breadcrumb">
@@ -15,19 +15,21 @@
 
 <div class="container white-font">
     <h2 class="white-font">Create new anime</h2>
-    <form method="post"><!--Create form-->
+    <form method="post" novalidate>
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-        <div class="form-group"><!--Anime Title input group-->
+        <!-- Title Field -->
+        <div class="form-group">
             <label class="white-font" asp-for="Product.Title">Title</label>
-            <input id="title-input" type="text" class="form-control" asp-for="Product.Title" placeholder="Title" />
-            <span id="title-msg" class="title-msg"></span>
+            <input id="title-input" type="text" class="form-control" asp-for="Product.Title" placeholder="Title" required maxlength="100" />
+            <span id="title-msg" class="title-msg text-danger"></span>
             <span asp-validation-for="Product.Title" class="text-danger"></span>
         </div>
 
-        <div class="form-group"><!--Anime Description input group-->
+        <!-- Description Field -->
+        <div class="form-group">
             <label class="white-font" asp-for="Product.Description">Description</label>
-            <textarea class="form-control" asp-for="Product.Description" placeholder="Descrption"></textarea>
+            <textarea class="form-control" asp-for="Product.Description" placeholder="Description" required maxlength="500"></textarea>
             <span asp-validation-for="Product.Description" class="text-danger"></span>
         </div>
 
