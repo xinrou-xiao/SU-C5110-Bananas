@@ -85,14 +85,37 @@
         </div>
 
 
+        <!-- Display the trailer URL if valid -->
         <div class="form-group">
             <label class="white-font" asp-for="Product.Trailer">Trailer URL</label>
-            <input asp-for="Product.Trailer" class="form-control" readonly />
+            @if (!string.IsNullOrEmpty(Model.Product.Trailer))
+            {
+                @if (Uri.IsWellFormedUriString(Model.Product.Trailer, UriKind.Absolute))
+                {
+                    <input asp-for="Product.Trailer" class="form-control" readonly />
+                }
+                @if (!Uri.IsWellFormedUriString(Model.Product.Trailer, UriKind.Absolute))
+                {
+                    <p class="text-danger">Trailer URL is invalid.</p>
+                }
+            }
+            @if (string.IsNullOrEmpty(Model.Product.Trailer))
+            {
+                <p class="text-danger">Trailer URL is not available.</p>
+            }
         </div>
 
+        <!-- Display the season number if valid -->
         <div class="form-group">
             <label class="white-font" asp-for="Product.Season">Season</label>
-            <input asp-for="Product.Season" type="number" class="form-control" readonly />
+            @if (Model.Product.Season > 0)
+            {
+                <input asp-for="Product.Season" type="number" class="form-control" readonly />
+            }
+            @if (Model.Product.Season <= 0)
+            {
+                <p class="text-danger">Season information is not available.</p>
+            }
         </div>
 
         <div class="form-group">
