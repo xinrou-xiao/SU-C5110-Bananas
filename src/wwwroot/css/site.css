@@ -1353,3 +1353,17 @@ body.dark-theme .hashtags span {
         max-height: 560px;
         object-fit: cover;
     }
+/* General dark mode styling */
+body {
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* Default text color for dark mode */
+}
+
+/* Specific styling for the "No comments available" message */
+.no-comments-message {
+    color: #ffffff; /* White text */
+    font-size: 1.2rem; /* Slightly larger font size for emphasis */
+    font-weight: 500; /* Medium font weight */
+    text-align: left; /* Center align the text */
+    margin-top: 20px; /* Add some spacing above the message */
+}
