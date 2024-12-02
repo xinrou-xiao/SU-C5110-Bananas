@@ -32,11 +32,15 @@
         <iframe class="trailer" src="@Model.Product.Trailer" title="Official English Trailer | Naruto, Set 1 | VIZ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
 
+    <!-- Display the product title -->
+    <h2>@Model.Product.Title</h2>
 
-    <h2>@Model.Product.Title</h2> <!--Product title-->
-    <div class="description">@Model.Product.Description</div><!--Product description-->
-    <!--tags area, contains release year and genre-->
+    <!-- Display the product description -->
+    <div class="description">@Model.Product.Description</div>
+
+    <!-- Tags area: contains release year, season, and genre -->
     <div class="padding-block">
+        <!-- Display the average rating if available -->
         @if (Model.AverageRating.HasValue)
         {
             <span class="tags">Average Rating : @Model.AverageRating.Value.ToString("0.0")</span>
