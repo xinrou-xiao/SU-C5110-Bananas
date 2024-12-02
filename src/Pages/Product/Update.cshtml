@@ -67,15 +67,17 @@
         </div>
 
 
+        <!-- Season Field -->
         <div class="form-group">
             <label class="white-font" asp-for="Product.Season">Season</label>
-            <input asp-for="Product.Season" type="number" class="form-control" />
+            <input asp-for="Product.Season" type="number" class="form-control" required min="1" />
             <span asp-validation-for="Product.Season" class="text-danger"></span>
         </div>
 
+        <!-- Banner URL Field -->
         <div class="form-group">
             <label class="white-font" asp-for="Product.Banner">Banner URL</label>
-            <input asp-for="Product.Banner" class="form-control" />
+            <input asp-for="Product.Banner" class="form-control" pattern="https?://.+" />
             <span asp-validation-for="Product.Banner" class="text-danger"></span>
         </div>
 
