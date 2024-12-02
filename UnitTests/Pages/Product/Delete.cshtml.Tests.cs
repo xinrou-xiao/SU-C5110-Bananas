@@ -16,6 +16,9 @@ using Microsoft.AspNetCore.Routing;
 
 namespace UnitTests.Pages.Product.Delete
 {
+    /// <summary>
+    /// Contains unit tests for the Delete page model.
+    /// </summary>
     public class DeleteTests
     {
         #region TestSetup
@@ -32,6 +35,9 @@ namespace UnitTests.Pages.Product.Delete
         public static DeleteModel PageModel;
         private static JsonFileProductService productService;
 
+        /// <summary>
+        /// Initializes test setup, creating mock objects and configuring dependencies.
+        /// </summary>
         [SetUp]
         public void TestInitialize()
         {
@@ -72,6 +78,9 @@ namespace UnitTests.Pages.Product.Delete
 
         #region OnGet Tests
 
+        /// <summary>
+        /// Tests OnGet when the product is not found and ensures that the product is null.
+        /// </summary>
         [Test]
         public void OnGet_Product_NotFound_Should_Return_NotFound()
         {
@@ -85,6 +94,9 @@ namespace UnitTests.Pages.Product.Delete
             Assert.That(PageModel.Product, Is.Null);
         }
 
+        /// <summary>
+        /// Tests OnGet with a valid product ID and ensures the product is correctly populated.
+        /// </summary>
         [Test]
         public void OnGet_Valid_Should_Return_Valid_Product()
         {
@@ -116,6 +128,9 @@ namespace UnitTests.Pages.Product.Delete
             Assert.That(PageModel.Product.CommentList, Is.Empty);
         }
 
+        /// <summary>
+        /// Tests OnPost when the ID is null and ensures that the page is returned.
+        /// </summary>
         [Test]
         public void OnPost_ID_Null_Should_Return_Page()
         {
@@ -129,11 +144,12 @@ namespace UnitTests.Pages.Product.Delete
             Assert.That(result, Is.TypeOf<PageResult>());
         }
 
+        /// <summary>
+        /// Tests OnGet when the product ID is null, ensuring that the product is set to null.
+        /// </summary>
         [Test]
         public void OnGet_ID_Null_Should_Set_Product_To_Null()
         {
-            // Arrange
-
             // Act
             PageModel.OnGet(null);
 
@@ -145,6 +161,9 @@ namespace UnitTests.Pages.Product.Delete
 
         #region OnPost Tests
 
+        /// <summary>
+        /// Tests OnPost when the model state is invalid and ensures that the page is returned.
+        /// </summary>
         [Test]
         public void OnPost_InvalidModelState_Should_Return_Page()
         {
@@ -158,6 +177,9 @@ namespace UnitTests.Pages.Product.Delete
             Assert.That(result, Is.TypeOf<PageResult>());
         }
 
+        /// <summary>
+        /// Tests OnPost when the product is not found, ensuring that the product is not deleted and the page is returned.
+        /// </summary>
         [Test]
         public void OnPost_Product_NotFound_Should_Not_Delete_And_Return_Page()
         {
