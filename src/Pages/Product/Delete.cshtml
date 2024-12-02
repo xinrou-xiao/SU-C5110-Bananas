@@ -58,15 +58,32 @@
             }
         </div>
 
+        <!-- Display the product image URL if available -->
         <div class="form-group">
             <label class="white-font" asp-for="Product.Image">Image URL</label>
-            <input asp-for="Product.Image" class="form-control" readonly />
+            @if (!string.IsNullOrEmpty(Model.Product.Image))
+            {
+                <input asp-for="Product.Image" class="form-control" readonly />
+            }
+            @if (string.IsNullOrEmpty(Model.Product.Image))
+            {
+                <p class="text-danger">Image URL is not available.</p>
+            }
         </div>
 
+        <!-- Display the release year if available -->
         <div class="form-group">
             <label class="white-font" asp-for="Product.Release">Release Year</label>
-            <input asp-for="Product.Release" class="form-control" readonly />
+            @if (Model.Product.Release !=null)
+            {
+                <input asp-for="Product.Release" class="form-control" readonly />
+            }
+            @if (Model.Product.Release ==null)
+            {
+                <p class="text-danger">Release year is not available.</p>
+            }
         </div>
+
 
         <div class="form-group">
             <label class="white-font" asp-for="Product.Trailer">Trailer URL</label>
