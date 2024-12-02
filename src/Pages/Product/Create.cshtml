@@ -48,19 +48,28 @@
         </div>
 
 
+        <!-- Release Year and Season Fields -->
         <div class="row form-group">
-            <div class="col"><!--Anime Release input group-->
+            <div class="col">
                 <label class="white-font" asp-for="Product.Release">Release Year</label>
-                <input class="form-control" type="number" asp-for="Product.Release" placeholder="Release year" min="1000" max="9999" />
+                <input class="form-control" type="number" asp-for="Product.Release" placeholder="Release year" required min="1900" max="@DateTime.Now.Year" />
                 <span asp-validation-for="Product.Release" class="text-danger"></span>
             </div>
 
-            <div class="col"><!--Anime Season input group-->
-                <label class="white-font" asp-for="Product.Season">Total Season</label>
-                <input class="form-control" type="number" asp-for="Product.Season" placeholder="Total Season" min="1" value="1" />
+            <div class="col">
+                <label class="white-font" asp-for="Product.Season">Total Seasons</label>
+                <input class="form-control" type="number" asp-for="Product.Season" placeholder="Total Seasons" required min="1" />
                 <span asp-validation-for="Product.Season" class="text-danger"></span>
             </div>
         </div>
+
+        <!-- Trailer URL Field -->
+        <div class="form-group">
+            <label class="white-font" asp-for="Product.Trailer">Trailer URL</label>
+            <input class="form-control" type="text" asp-for="Product.Trailer" placeholder="Trailer URL" pattern="https?://.+" />
+            <span asp-validation-for="Product.Trailer" class="text-danger"></span>
+        </div>
+
 
         <div class="form-group"><!--Anime Trailer input group-->
             <label class="white-font" asp-for="Product.Trailer">Trailer URL</label>
