@@ -139,14 +139,11 @@
                                     </li>
                                 }
                             }
-                            else
+
+                            if (selectedProduct.Comments.Count == 0)
                             {
                                 <li class="comment-item">No comments yet. Be the first to comment!</li>
                             }
-                        }
-                        else
-                        {
-                            <li class="comment-item">No comments yet. Be the first to comment!</li>
                         }
                     </ul>
 
