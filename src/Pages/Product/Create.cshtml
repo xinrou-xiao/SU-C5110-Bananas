@@ -33,17 +33,20 @@
             <span asp-validation-for="Product.Description" class="text-danger"></span>
         </div>
 
-        <div class="form-group"><!--Anime Image input group-->
+        <!-- Image URL Field -->
+        <div class="form-group">
             <label class="white-font" asp-for="Product.Image">Image</label>
-            <input class="form-control" type="text" asp-for="Product.Image" placeholder="image" />
+            <input class="form-control" type="text" asp-for="Product.Image" placeholder="Image URL" required pattern="https?://.+" />
             <span asp-validation-for="Product.Image" class="text-danger"></span>
         </div>
 
-        <div class="form-group"><!--Anime Url input group-->
-            <label class="white-font" asp-for="Product.Url">Url</label>
-            <input class="form-control" type="text" asp-for="Product.Url" placeholder="related webstie URL" />
+        <!-- URL Field -->
+        <div class="form-group">
+            <label class="white-font" asp-for="Product.Url">URL</label>
+            <input class="form-control" type="text" asp-for="Product.Url" placeholder="Related website URL" required pattern="https?://.+" />
             <span asp-validation-for="Product.Url" class="text-danger"></span>
         </div>
+
 
         <div class="row form-group">
             <div class="col"><!--Anime Release input group-->
