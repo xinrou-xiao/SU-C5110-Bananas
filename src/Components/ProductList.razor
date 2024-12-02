@@ -447,36 +447,7 @@
             // Clear the NewComment field after adding the comment
             selectedProduct.NewComment = string.Empty;
         }
-    }
-    @code {
-        private string editingComment { get; set; } = null;
-
-        // Method to enter edit mode for a comment
-        void EditComment(string comment)
-        {
-            editingComment = comment;
-        }
-
-        // Method to save the edited comment
-        void SaveEditedComment()
-        {
-            if (editingComment != null)
-            {
-                // Save changes (if needed, you can add validation here)
-                editingComment = null; // Exit edit mode
-            }
-        }
-
-        // Method to cancel editing a comment
-        void CancelEditComment()
-        {
-            if (editingComment != null)
-            {
-                // Optionally, reset the comment text to its original value
-                editingComment = null; // Exit edit mode
-            }
-        }
-
+   
         // Method to delete a comment
         void DeleteComment(string comment)
         {
