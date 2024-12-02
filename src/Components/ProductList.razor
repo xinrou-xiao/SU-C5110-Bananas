@@ -124,29 +124,24 @@
                     <h6>Comments</h6>
                     <!-- Display Comments -->
                     <ul class="comment-list">
-                        @if (selectedProduct.Comments != null && selectedProduct.Comments.Any())
+                        @if (selectedProduct.Comments !=null)
                         {
-                            @foreach (var comment in selectedProduct.Comments.OrderByDescending(c => c))
+                            if (selectedProduct.Comments.Count > 0)
                             {
-                                <li class="comment-item">
-                                    @if (editingComment == comment)
-                                    {
-                                        <!-- Edit Comment Form -->
-                                        <textarea @bind="editingComment" class="form-control mb-2"></textarea>
-                                        <button @onclick="SaveEditedComment" class="btn btn-success btn-sm">Save</button>
-                                        <button @onclick="CancelEditComment" class="btn btn-secondary btn-sm">Cancel</button>
-                                    }
-                                    else
-                                    {
+                                @foreach (var comment in selectedProduct.Comments.OrderByDescending(c => c))
+                                {
+                                    <li class="comment-item">
                                         <!-- Display Comment -->
                                         <span class="comment-text">@comment</span>
-                                        // <span class="comment-timestamp">@comment.Timestamp.ToString("g")</span>
                                         <div class="comment-actions">
-                                            <button @onclick="(() => EditComment(comment))" class="btn btn-link btn-sm">Edit</button>
                                             <button @onclick="(() => DeleteComment(comment))" class="btn btn-link btn-sm text-danger">Delete</button>
                                         </div>
-                                    }
-                                </li>
+                                    </li>
+                                }
+                            }
+                            else
+                            {
+                                <li class="comment-item">No comments yet. Be the first to comment!</li>
                             }
                         }
                         else
@@ -161,7 +156,6 @@
                         <button @onclick="AddCommentToSelectedProduct" class="btn btn-primary mt-2">Add Comment</button>
                     </div>
                 </div>
-
 
                 <div class="modal-footer">
                     @if (voteCount == 0)
