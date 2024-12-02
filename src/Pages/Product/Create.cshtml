@@ -47,7 +47,6 @@
             <span asp-validation-for="Product.Url" class="text-danger"></span>
         </div>
 
-
         <!-- Release Year and Season Fields -->
         <div class="row form-group">
             <div class="col">
@@ -88,9 +87,9 @@
             </div>
         </div>
 
-
-        <div class="form-group"><!--platform input group-->
-            <label class="white-font" asp-for="Product.Genre">OTT platform</label>
+        <!-- OTT Platform Field -->
+        <div class="form-group">
+            <label class="white-font" asp-for="Product.Genre">OTT Platform</label>
             @foreach (OttTypeEnum platform in Enum.GetValues(typeof(OttTypeEnum)))
             {
                 if (platform != 0)
@@ -108,9 +107,8 @@
             }
         </div>
 
-        <button class="btn btn-success" type="submit">Save</button> <!--save data-->
+        <button class="btn btn-success" type="submit">Save</button>
         <button class="btn btn-danger" onclick="location.href='/Product/Index';" type="button">Cancel</button>
-
     </form>
 </div>
 
@@ -123,15 +121,13 @@
 <script src="/lib/jquery/dist/jquery.js"></script>
 
 <script>
-    /// detect input event for Title to detect duplicate title
+    // Detect input event for Title to detect duplicate title
     $(document).ready(function () {
         $('#title-input').on('input', function () {
             var data = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(Model.ProductService.GetAllData()));
             var title = $(this).val();
-            console.log("title=" + title);
-            console.log("duplicate=" + data.some(p => p.Title === title));
             if (data.some(p => p.Title === title)) {
-                $("#title-msg").text("Duplicate title.");
+                $("#title-msg").text("Duplicate title. Please choose a different title.");
                 return;
             }
             $("#title-msg").text("");
