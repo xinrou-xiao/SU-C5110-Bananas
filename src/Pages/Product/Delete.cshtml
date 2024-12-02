@@ -27,13 +27,14 @@
         return; // Stop rendering the page if the product is
     }
 
+ <!-- Form for deleting the product -->
     <form id="deleteForm" method="post">
+        <!-- Hidden fields to pass product data -->
         <input type="hidden" asp-for="Product.Id" />
-
         @Html.HiddenFor(x => x.Product.Id)
-        <input type="hidden" asp-for="Product.Id" />
         <input type="hidden" asp-for="Product.Maker" />
 
+        <!-- Display the product title -->
         <div class="form-group">
             <label class="white-font" asp-for="Product.Title">Title</label>
             <input asp-for="Product.Title" class="form-control" readonly />
