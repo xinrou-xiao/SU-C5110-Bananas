@@ -70,28 +70,24 @@
             <span asp-validation-for="Product.Trailer" class="text-danger"></span>
         </div>
 
-
-        <div class="form-group"><!--Anime Trailer input group-->
-            <label class="white-font" asp-for="Product.Trailer">Trailer URL</label>
-            <input class="form-control" type="text" asp-for="Product.Trailer" placeholder="Trailer URL" />
-            <span asp-validation-for="Product.Trailer" class="text-danger"></span>
-        </div>
-
+        <!-- Banner URL Field -->
         <div class="form-group">
             <label class="white-font" asp-for="Product.Banner">Banner URL</label>
-            <input class="form-control" type="text" asp-for="Product.Banner" placeholder="related banner URL" />
+            <input class="form-control" type="text" asp-for="Product.Banner" placeholder="Banner URL" pattern="https?://.+" />
             <span asp-validation-for="Product.Banner" class="text-danger"></span>
         </div>
 
-        <div class="form-group"><!--Anime Genre input group-->
+        <!-- Genre Field -->
+        <div class="form-group">
             <label class="white-font" asp-for="Product.Genre">Genre</label>
             <button class="btn btn-success custom-btn" type="button" id="create-genre">+</button>
             <div class="form-group form-inline">
-                <input class="form-control" type="text" name="Product.Genre" placeholder="Genre" />
+                <input class="form-control" type="text" name="Product.Genre" placeholder="Genre" required maxlength="50" />
                 <button class="btn btn-danger custom-btn remove-genre" type="button">-</button>
                 <span asp-validation-for="Product.Genre" class="text-danger"></span>
             </div>
         </div>
+
 
         <div class="form-group"><!--platform input group-->
             <label class="white-font" asp-for="Product.Genre">OTT platform</label>
