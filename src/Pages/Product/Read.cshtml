@@ -52,23 +52,30 @@
             <span class="tags">#@Model.Product.Release</span>
         }
 
-        <!-- Display the number of seasons if greater than 0 -->
-        @if (Model.Product.Season > 0)
+        <!-- Display the genres as clickable tags if available -->
+        @if (Model.Product.Genre !=null)
         {
-            <span class="tags">#@Model.Product.Season Seasons</span>
-        }
-
-        <!--Product genre display as tags one by one-->
-        @if (@Model.Product.Genre != null)
-        {
-            @foreach (var genre in Model.Product.Genre)
+            @if (Model.Product.Genre.Any())
             {
-                <a class="tags clickable" onclick="location.href='/Index?genre=@genre';">#@genre</a>
+                @foreach (var genre in Model.Product.Genre)
+                {
+                    <a class="tags clickable" onclick="location.href='/Index?genre=@genre';">#@genre</a>
+                }
             }
+            @if (!Model.Product.Genre.Any())
+            {
+                <p class="no-genres-message">No genres available for this anime.</p>
+            }
+        }
+        @if (Model.Product.Genre ==null)
+        {
+            <p class="no-genres-message">No genres available for this anime.</p>
         }
     </div>
 
-    <div class="padding-block"></div> <!--push some space for better look-->
+    <!-- Add some padding for better layout -->
+    <div class="padding-block"></div>
+
     <!--OTT area-->
     <h5>Available platforms</h5><!--OTT title-->
     <div>
