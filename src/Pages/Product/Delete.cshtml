@@ -118,20 +118,44 @@
             }
         </div>
 
+        <!-- Display the banner URL if available -->
         <div class="form-group">
             <label class="white-font" asp-for="Product.Banner">Banner URL</label>
-            <input asp-for="Product.Banner" class="form-control" readonly />
-        </div>
-
-        <div class="form-group">
-            <label class="white-font" asp-for="Product.Genre">Genre</label>
-            @foreach (var genre in Model.Product.Genre)
+            @if (!string.IsNullOrEmpty(Model.Product.Banner))
             {
-                <div class="form-group">
-                    <input class="margin-bottom form-control" asp-for="Product.Genre" value="@genre" readonly />
-                </div>
+                <input asp-for="Product.Banner" class="form-control" readonly />
+            }
+            @if (string.IsNullOrEmpty(Model.Product.Banner))
+            {
+                <p class="text-danger">Banner URL is not available.</p>
             }
         </div>
+
+        <!-- Display the genres if available -->
+        <div class="form-group">
+            <label class="white-font" asp-for="Product.Genre">Genre</label>
+            @if (Model.Product.Genre !=null)
+            {
+                @if (Model.Product.Genre.Any())
+                {
+                    @foreach (var genre in Model.Product.Genre)
+                    {
+                        <div class="form-group">
+                            <input class="margin-bottom form-control" asp-for="Product.Genre" value="@genre" readonly />
+                        </div>
+                    }
+                }
+                @if (!Model.Product.Genre.Any())
+                {
+                    <p class="text-danger">No genres available.</p>
+                }
+            }
+            @if (Model.Product.Genre ==null)
+            {
+                <p class="text-danger">No genres available.</p>
+            }
+        </div>
+
 
         <div class="form-group">
             <label class="white-font" asp-for="Product.Genre">OTT platform</label>
