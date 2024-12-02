@@ -1,10 +1,5 @@
 ﻿using ContosoCrafts.WebSite.Models;
 using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace UnitTests.Models
 {
@@ -35,7 +30,7 @@ namespace UnitTests.Models
         /// Tests that the Maker property can be set and retrieved correctly.
         /// </summary>
         [Test]
-        public void Maker_SetAndRetrieve_Should_Work_Correctly()
+        public void Maker_Set_And_Retrieve_Should_Work_Correctly()
         {
             // Arrange: Create a new ProductModel instance and define the expected Maker value.
             var productModel = new ProductModel();
@@ -52,7 +47,7 @@ namespace UnitTests.Models
         /// Tests that the Image property can be set and retrieved correctly.
         /// </summary>
         [Test]
-        public void Image_SetAndRetrieve_Should_Work_Correctly()
+        public void Image_Set_And_Retrieve_Should_Work_Correctly()
         {
             // Arrange: Create a new ProductModel instance and define the expected Image value.
             var productModel = new ProductModel();
@@ -69,7 +64,7 @@ namespace UnitTests.Models
         /// Tests that the Url property can be set and retrieved correctly.
         /// </summary>
         [Test]
-        public void Url_SetAndRetrieve_Should_Work_Correctly()
+        public void Url_Set_And_Retrieve_Should_Work_Correctly()
         {
             // Arrange: Create a new ProductModel instance and define the expected Url value.
             var productModel = new ProductModel();
@@ -86,7 +81,7 @@ namespace UnitTests.Models
         /// Tests that the Title property can be set and retrieved correctly.
         /// </summary>
         [Test]
-        public void Title_SetAndRetrieve_Should_Work_Correctly()
+        public void Title_Set_And_Retrieve_Should_Work_Correctly()
         {
             // Arrange: Create a new ProductModel instance and define the expected Title value.
             var productModel = new ProductModel();
@@ -103,7 +98,7 @@ namespace UnitTests.Models
         /// Tests that the Description property can be set and retrieved correctly.
         /// </summary>
         [Test]
-        public void Description_SetAndRetrieve_Should_Work_Correctly()
+        public void Description_Set_And_Retrieve_Should_Work_Correctly()
         {
             // Arrange: Create a new ProductModel instance and define the expected Description value.
             var productModel = new ProductModel();
@@ -120,7 +115,7 @@ namespace UnitTests.Models
         /// Tests that the Release property can be set and retrieved correctly.
         /// </summary>
         [Test]
-        public void Release_SetAndRetrieve_Should_Work_Correctly()
+        public void Release_Set_And_Retrieve_Should_Work_Correctly()
         {
             // Arrange: Create a new ProductModel instance and define the expected Release value.
             var productModel = new ProductModel();
@@ -137,7 +132,7 @@ namespace UnitTests.Models
         /// Tests that the Trailer property can be set and retrieved correctly.
         /// </summary>
         [Test]
-        public void Trailer_SetAndRetrieve_Should_Work_Correctly()
+        public void Trailer_Set_And_Retrieve_Should_Work_Correctly()
         {
             // Arrange: Create a new ProductModel instance and define the expected Trailer value.
             var productModel = new ProductModel();
@@ -154,7 +149,7 @@ namespace UnitTests.Models
         /// Tests that the OTT property can be set and retrieved correctly.
         /// </summary>
         [Test]
-        public void OTT_SetAndRetrieve_Should_Work_Correctly()
+        public void OTT_Set_And_Retrieve_Should_Work_Correctly()
         {
             // Arrange: Create a new ProductModel instance and define the expected OTT value.
             var productModel = new ProductModel();
@@ -171,7 +166,7 @@ namespace UnitTests.Models
         /// Tests that the Season property can be set and retrieved correctly.
         /// </summary>
         [Test]
-        public void Season_SetAndRetrieve_Should_Work_Correctly()
+        public void Season_Set_And_Retrieve_Should_Work_Correctly()
         {
             // Arrange: Create a new ProductModel instance and define the expected Season value.
             var productModel = new ProductModel();
