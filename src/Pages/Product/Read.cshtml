@@ -4,6 +4,7 @@
 @inject JsonFileProductService ProductService
 @model ReadModel
 
+<!-- Breadcrumb navigation for better user experience -->
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb" style="background: none; color: white;">
         <li class="breadcrumb-item"><a href="/Index" style="color: white;">Home</a></li>
@@ -13,22 +14,24 @@
 </nav>
 
 @{
-    ViewData["Title"] = "Read"; @* set page title to Read *@
+    // Set the page title
+    ViewData["Title"] = "Read";
 }
 
 <div class="container white-font">
-    <!--content container-->
-    @if (Model.Product == null)
+    <!-- Check if the product exists -->
+    @if (Model.Product ==null)
     {
-        <h5>Sorry, the data you trying to access is not exists.</h5>
-        return;
+        <h5>Sorry, the data you are trying to access does not exist.</h5>
+        return; // Stop rendering the page if the product is
     }
 
-    <!--Embeded video with iframe-->
+    <!-- Embedded video with iframe -->
     <div class="videobox">
-        <!--for responsive usage-->
+        <!-- Display the trailer video -->
         <iframe class="trailer" src="@Model.Product.Trailer" title="Official English Trailer | Naruto, Set 1 | VIZ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
+
 
     <h2>@Model.Product.Title</h2> <!--Product title-->
     <div class="description">@Model.Product.Description</div><!--Product description-->
