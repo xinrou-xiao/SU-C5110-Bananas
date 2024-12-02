@@ -81,19 +81,21 @@
             <span asp-validation-for="Product.Banner" class="text-danger"></span>
         </div>
 
+        <!-- Genre Field -->
         <div class="form-group">
             <label class="white-font" asp-for="Product.Genre">Genre</label>
             <button class="btn btn-success custom-btn" type="button" id="create-genre">+</button>
             @foreach (var genre in Model.Product.Genre)
             {
                 <div class="form-group form-inline">
-                    <input class="form-control" class="form-control" value="@genre" name="Product.Genre"/>
+                    <input class="form-control" value="@genre" name="Product.Genre" required maxlength="50" />
                     <button class="btn btn-danger custom-btn remove-genre" type="button">-</button>
                     <span asp-validation-for="Product.Genre" class="text-danger"></span>
                 </div>
             }
         </div>
 
+        <!-- OTT Platform Field -->
         <div class="form-group">
             <label class="white-font" asp-for="Product.Genre">OTT platform</label>
             @foreach (OttTypeEnum platform in Enum.GetValues(typeof(OttTypeEnum)))
