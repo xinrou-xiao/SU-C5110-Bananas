@@ -331,7 +331,7 @@ h1, h2, h3, h4, h5 {
 }
 
 body.dark-theme .retake-quiz-btn:hover {
-    background: linear-gradient(90deg, #6a0dad, #a4508b); /* Purple gradient */
+    background: #092144); /* Purple gradient */
     color: white; /* Ensure text color remains white */
 }
 
@@ -462,7 +462,7 @@ body.dark-theme .modal-content {
 
 /* Dark theme styles for .comment-section */
 body.dark-theme .comment-section {
-    background: linear-gradient(90deg, #6a0dad, #a4508b); /* Purple gradient background */
+    background: #092144; /* Purple gradient background */
     color: #ffffff; /* Light text for dark mode */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Slightly darker shadow */
 }
@@ -475,7 +475,7 @@ body.dark-theme .comment-section {
 /* Media query for prefers-color-scheme: dark */
 @media (prefers-color-scheme: dark) {
     .comment-section {
-        background: linear-gradient(90deg, #6a0dad, #a4508b); /* Purple gradient background */
+        background: #092144; /* Purple gradient background */
         color: #ffffff; /* Light text for dark mode */
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Slightly darker shadow */
     }
@@ -503,14 +503,14 @@ body.dark-theme ul {
 
 /* Dark theme styles for .comment-item */
 body.dark-theme .comment-item {
-    background: linear-gradient(90deg, #6a0dad, #a4508b); /* Purple gradient background */
+    background: #092144; /* Purple gradient background */
     color: white; /* Ensure text color remains white */
 }
 
 /* Media query for prefers-color-scheme: dark */
 @media (prefers-color-scheme: dark) {
     .comment-item {
-        background: linear-gradient(90deg, #6a0dad, #a4508b); /* Purple gradient background */
+        background: #092144; /* Purple gradient background */
         color: white; /* Ensure text color remains white */
     }
 }
