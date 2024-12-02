@@ -40,8 +40,8 @@ namespace ContosoCrafts.WebSite.Pages.Product
                 Product = null;
                 return;
             }
-
-            Product = ProductService.GetOneDataById(id);
+            // Fetch the product data by ID, including comments
+            Product = ProductService.GetOneDataById(id); Product = ProductService.GetOneDataById(id);
         }
 
         /// <summary>
