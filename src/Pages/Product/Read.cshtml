@@ -46,18 +46,16 @@
             <span class="tags">Average Rating : @Model.AverageRating.Value.ToString("0.0")</span>
         }
 
-        @if (@Model.Product.Release != null)
+        <!-- Display the release year if available -->
+        @if (Model.Product.Release !=null)
         {
             <span class="tags">#@Model.Product.Release</span>
-
-            <!--Product Release year-->
         }
 
-        @if (@Model.Product.Season != 0)
+        <!-- Display the number of seasons if greater than 0 -->
+        @if (Model.Product.Season > 0)
         {
             <span class="tags">#@Model.Product.Season Seasons</span>
-
-            <!--Product Season year-->
         }
 
         <!--Product genre display as tags one by one-->
