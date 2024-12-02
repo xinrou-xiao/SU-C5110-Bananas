@@ -76,3 +76,30 @@
         }
     </div>
 </div>
+<div class="padding-block">
+    <h5>Comments</h5>
+    @if (Model.Product.Comments !=null)
+    {
+        if (Model.Product.Comments.Any())
+        {
+            <ul>
+                @foreach (var comment in Model.Product.Comments)
+                {
+                    <li>@comment</li>
+                }
+            </ul>
+        }
+    }
+
+    @if (Model.Product.Comments ==null)
+    {
+        <p class="no-comments-message">No comments available for this anime.</p>
+    }
+    @if (Model.Product.Comments !=null)
+    {
+        if (!Model.Product.Comments.Any())
+        {
+            <p class="no-comments-message">No comments available for this anime.</p>
+        }
+    }
+</div>
