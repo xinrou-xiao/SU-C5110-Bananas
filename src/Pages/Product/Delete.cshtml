@@ -157,21 +157,37 @@
         </div>
 
 
+        <!-- Display the OTT platforms if available -->
         <div class="form-group">
-            <label class="white-font" asp-for="Product.Genre">OTT platform</label>
+            <label class="white-font" asp-for="Product.Genre">OTT Platform</label>
             <div>
-                @foreach (OttTypeEnum platform in Model.Product.Ott)
+                @if (Model.Product.Ott !=null)
                 {
-                    if (platform != 0)
+                    @if (Model.Product.Ott.Any())
                     {
-                        <a href="@platform.GetUrl()" target="_blank">
-                            <img class="OTT-Icon" src="@platform.GetIcon()" alt="@platform">
-                        </a>
+                        @foreach (OttTypeEnum platform in Model.Product.Ott)
+                        {
+                            @if (platform != 0)
+                            {
+                                <a href="@platform.GetUrl()" target="_blank">
+                                    <img class="OTT-Icon" src="@platform.GetIcon()" alt="@platform">
+                                </a>
+                            }
+                        }
                     }
+                    @if (!Model.Product.Ott.Any())
+                    {
+                        <p class="text-danger">No OTT platforms available.</p>
+                    }
+                }
+                @if (Model.Product.Ott ==null)
+                {
+                    <p class="text-danger">No OTT platforms available.</p>
                 }
             </div>
         </div>
 
+        <!-- Submit and cancel buttons -->
         <button type="submit" class="btn delete-btn">Delete</button>
         <a asp-page="/Product/Index" class="btn btn-secondary">Cancel</a>
     </form>
@@ -179,8 +195,8 @@
 
 @section Scripts {
     <script>
+        // Redirect to the Index page after form submission
         function redirectToIndex() {
-            // After form submission, redirect to the Index page
             window.location.href = '@Url.Page("/Product/Index")';
         }
     </script>
