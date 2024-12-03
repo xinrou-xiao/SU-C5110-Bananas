@@ -462,7 +462,7 @@ body.dark-theme .modal-content {
 
 /* Dark theme styles for .comment-section */
 body.dark-theme .comment-section {
-    background: #092144; /* Purple gradient background */
+    background: #1a1a1a; /* Purple gradient background */
     color: #ffffff; /* Light text for dark mode */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Slightly darker shadow */
 }
@@ -472,23 +472,8 @@ body.dark-theme .comment-section {
         color: #f0f0f0; /* Light text for better readability in dark mode */
     }
 
-/* Media query for prefers-color-scheme: dark */
-@media (prefers-color-scheme: dark) {
-    .comment-section {
-        background: #092144; /* Purple gradient background */
-        color: #ffffff; /* Light text for dark mode */
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Slightly darker shadow */
-    }
-
-        .comment-section h6 {
-            color: #f0f0f0; /* Light text for better readability in dark mode */
-        }
-}
-
 /* Default styles for .comment-item */
 .comment-item {
-    color: #ffffff; /* White text */
-    background-color: #333333; /* Dark background */
     padding: 10px;
     border-radius: 5px;
     font-size: 14px;
@@ -503,19 +488,9 @@ body.dark-theme ul {
 
 /* Dark theme styles for .comment-item */
 body.dark-theme .comment-item {
-    background: #092144; /* Purple gradient background */
+    background: #1a1a1a; /* Purple gradient background */
     color: white; /* Ensure text color remains white */
 }
-
-/* Media query for prefers-color-scheme: dark */
-@media (prefers-color-scheme: dark) {
-    .comment-item {
-        background: #092144; /* Purple gradient background */
-        color: white; /* Ensure text color remains white */
-    }
-}
-
-
 
 .description {
     max-width: 1000px; /* set maximum width to 1000px */
