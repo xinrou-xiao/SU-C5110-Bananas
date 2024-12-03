@@ -644,6 +644,13 @@ body {
     border-radius: 5px; /*Applied rounded corners to the caption box*/
 }
 
+@media (min-width: 768px) {
+    #animeCarousel {
+        width: 66%;
+        margin: auto;
+    }
+}
+
 /* Container for audio controls */
 #audio-controls {
     display: flex; /* Use flexbox for layout */
