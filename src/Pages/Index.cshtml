@@ -90,6 +90,7 @@
         var urlParams = new URLSearchParams(window.location.search);  // get current url
         var genre = urlParams.get('genre');  // get genre parameter value in url
 
+        console.log("genre=" + genre);
         if (genre) {
             var attempts = 0;  // attempt times
             var maxAttempts = 50;  // maximun attempt times
@@ -105,7 +106,10 @@
                 buttons.forEach(function (button) {
                     if (button.textContent.trim() === genre && button.classList.contains('genre-unselected')) {
                         button.click();
-                        success = true;
+                        if (button.classList.contains('genre-selected'))
+                        {
+                            success = true;
+                        }
                     }
                 });
 
