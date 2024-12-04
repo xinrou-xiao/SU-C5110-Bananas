@@ -6,9 +6,6 @@ using ContosoCrafts.WebSite.Components;
 using ContosoCrafts.WebSite.Services;
 using Bunit.Extensions;
 using System.Collections.Generic;
-using NUnit.Framework.Internal.Commands;
-using ContosoCrafts.WebSite.Models;
-using AngleSharp.Dom;
 
 namespace UnitTests.Components
 {
