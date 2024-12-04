@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using ContosoCrafts.WebSite.Pages;
 
 namespace UnitTests.Pages
@@ -30,7 +29,7 @@ namespace UnitTests.Pages
         /// Test to verify that the Developers list is null before OnGet is called.
         /// </summary>
         [Test]
-        public void OnGet_Before_Calling_Developers_List_IsNull_Should_Not_Be_Populated()
+        public void OnGet_Developers_Initial_Value_Should_Be_Null()
         {
             // Assert
             Assert.That(pageModel.Developers, Is.Null); // Verify Developers is null before OnGet
@@ -40,7 +39,7 @@ namespace UnitTests.Pages
         /// Test to verify that the OnGet method populates the Developers list with four developers.
         /// </summary>
         [Test]
-        public void OnGet_When_Called_Developers_List_Should_Be_Populated_With_Four_Developers()
+        public void OnGet_Valid_Call_Should_Set_Developer_To_List_And_Has_Four_Elements()
         {
             // Act
             pageModel.OnGet(); // Call OnGet to populate the Developers list
@@ -54,7 +53,7 @@ namespace UnitTests.Pages
         /// Test to verify that the first developer's details are populated correctly.
         /// </summary>
         [Test]
-        public void OnGet_When_Called_First_Developer_Details_Should_Be_Correct()
+        public void OnGet_Valid_Call_First_Element_Should_Be_Xinrou()
         {
             // Act
             pageModel.OnGet(); // Call OnGet to populate the Developers list
@@ -70,7 +69,7 @@ namespace UnitTests.Pages
         /// Test to verify that the second developer's details are populated correctly.
         /// </summary>
         [Test]
-        public void OnGet_When_Called_Second_Developer_Details_Should_Be_Correct()
+        public void OnGet_Valid_Call_First_Element_Should_Be_Shanvi()
         {
             // Act
             pageModel.OnGet(); // Call OnGet to populate the Developers list
@@ -86,7 +85,7 @@ namespace UnitTests.Pages
         /// Test to verify that the third developer's details are populated correctly.
         /// </summary>
         [Test]
-        public void OnGet_When_Called_Third_Developer_Details_Should_Be_Correct()
+        public void OnGet_Valid_Call_First_Element_Should_Be_Samarth()
         {
             // Act
             pageModel.OnGet(); // Call OnGet to populate the Developers list
@@ -102,7 +101,7 @@ namespace UnitTests.Pages
         /// Test to verify that the fourth developer's details are populated correctly.
         /// </summary>
         [Test]
-        public void OnGet_When_Called_Fourth_Developer_Details_Should_Be_Correct()
+        public void OnGet_Valid_Call_First_Element_Should_Be_Vineet()
         {
             // Act
             pageModel.OnGet(); // Call OnGet to populate the Developers list
