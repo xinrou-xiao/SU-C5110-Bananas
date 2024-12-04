@@ -1,4 +1,8 @@
-﻿.form-check-label {
+﻿.card-title {
+    color: black;
+}
+
+.form-check-label {
     padding-bottom: 10px;
 }
 
