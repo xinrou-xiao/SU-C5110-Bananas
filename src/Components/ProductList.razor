@@ -93,8 +93,8 @@
                     </button>
                     <a href="@product.Trailer" target="_blank" class="btn btn-secondary btn-watch-trailer"> Watch Trailer</a>
                 </div>
-                    </div>
-                </div>
+            </div>
+        </div>
     }
 </div>
 
@@ -169,7 +169,8 @@
                         <span class="fa fa-star @(i <= currentRating ? "checked" : "")"
                               @onclick="(e => SubmitRating(currentStar))">
                         </span>
-                    } <span>@voteCount</span>
+                    } 
+                    <span>@voteCount</span>
                 </div>
             </div>
         </div>
@@ -421,55 +422,53 @@
             Products = Products.OrderByDescending(p => p.Ratings?.Average() ?? 0);
             return;
         }
-        @code {
-        public string newCommentText { get; set; } = string.Empty;
+    }   
+    
+    public string newCommentText { get; set; } = string.Empty;
 
-        /// <summary>
-        /// Adds a new comment to the selected product.
-        /// </summary>
-        public void AddCommentToSelectedProduct()
+    /// <summary>
+    /// Adds a new comment to the selected product.
+    /// </summary>
+    public void AddCommentToSelectedProduct()
+    {
+        if (selectedProduct == null)
         {
-            if (selectedProduct ==null)
-            {
-                return;
-            }
-
-            if (string.IsNullOrWhiteSpace(selectedProduct.NewComment))
-            {
-                return;
-            }
-
-            if (selectedProduct.Comments ==null)
-            {
-                selectedProduct.Comments = new List<string>();
-            }
-
-            selectedProduct.Comments.Add(selectedProduct.NewComment);
-            ProductService.UpdateData(selectedProduct);
-
-            selectedProduct.NewComment = string.Empty;
+            return;
         }
 
-        /// <summary>
-        /// Deletes a specific comment.
-        /// </summary>
-        /// <param name="comment">The comment to delete.</param>
-        public void DeleteComment(string comment)
+        if (string.IsNullOrWhiteSpace(selectedProduct.NewComment))
         {
-            if (selectedProduct ==null)
-            {
-                return;
-            }
-
-            if (selectedProduct.Comments ==null)
-            {
-                return;
-            }
-
-            selectedProduct.Comments.Remove(comment);
-            ProductService.UpdateData(selectedProduct);
+            return;
         }
+
+        if (selectedProduct.Comments == null)
+        {
+            selectedProduct.Comments = new List<string>();
+        }
+
+        selectedProduct.Comments.Add(selectedProduct.NewComment);
+        ProductService.UpdateData(selectedProduct);
+
+        selectedProduct.NewComment = string.Empty;
     }
-    }
+
+    /// <summary>
+    /// Deletes a specific comment.
+    /// </summary>
+    /// <param name="comment">The comment to delete.</param>
+    public void DeleteComment(string comment)
+    {
+        if (selectedProduct == null)
+        {
+            return;
+        }
+
+        if (selectedProduct.Comments == null)
+        {
+            return;
+        }
+
+        selectedProduct.Comments.Remove(comment);
+        ProductService.UpdateData(selectedProduct);
     }
 }
