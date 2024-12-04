@@ -8,6 +8,7 @@ using Bunit.Extensions;
 using System.Collections.Generic;
 using NUnit.Framework.Internal.Commands;
 using ContosoCrafts.WebSite.Models;
+using AngleSharp.Dom;
 
 namespace UnitTests.Components
 {
@@ -793,7 +794,7 @@ namespace UnitTests.Components
 
             component.Instance.selectedProduct = new ContosoCrafts.WebSite.Models.ProductModel
             {
-                Comments =null 
+                Comments = null
             };
 
             // Act
@@ -802,6 +803,41 @@ namespace UnitTests.Components
             // Assert
             Assert.That(component.Instance.selectedProduct.Comments, Is.Null);
         }
+        
+
+        [Test]
+        public void DeleteCommentButton_Click_Should_Remove_Comment()
+        {
+            // Arrange
+            using var context = new Bunit.TestContext();
+            context.Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
+            var component = context.RenderComponent<ProductList>();
+
+            // Find the card containing the specific text
+            var card = component.FindAll(".card")
+                .FirstOrDefault(c => c.TextContent.Contains("Naruto: The Journey of a Ninja Dreamer"));
+
+            Assert.That(card, Is.Not.Null, "The card with the specified text was not found.");
+
+            // Find the button inside the card
+            var element = card.QuerySelector(".btn-primary");
+            Assert.That(element, Is.Not.Null, "The button inside the card was not found.");
+
+            // Act: Click the button
+            element.Click();
+
+            // Assert: Verify the comment text
+            var comment = component.Find(".comment-text");
+            Assert.That(comment.TextContent, Is.EqualTo("Hello there."));
+
+            // Act: Click on Delete button
+            var deleteButton = component.Find(".btn-link:contains('Delete')");
+            deleteButton.Click();
+
+            // Assert: comment is deleted
+            Assert.That(component.Instance.selectedProduct.Comments, Is.Empty);
+        }
+
 
         #endregion Comments
     }
