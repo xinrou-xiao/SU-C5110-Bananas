@@ -180,68 +180,86 @@ namespace UnitTests.Models
             Assert.That(productModel.Season, Is.EqualTo(expectedSeason));
         }
 
+        /// <summary>
+        /// Tests that a newly created CommentModel instance has an empty Text property.
+        /// </summary>
         [Test]
         public void CommentModel_WhenCreated_ShouldHaveEmptyText()
         {
-            // Arrange & Act
+            // Arrange & Act: Create a new CommentModel instance.
             var comment = new CommentModel();
 
-            // Assert
+            // Assert: Verify that the Text property is or empty.
             Assert.That(comment.Text, Is.Null.Or.Empty);
         }
 
+        /// <summary>
+        /// Tests that a newly created CommentModel instance has the default Timestamp value.
+        /// </summary>
         [Test]
         public void CommentModel_WhenCreated_ShouldHaveDefaultTimestamp()
         {
-            // Arrange & Act
+            // Arrange & Act: Create a new CommentModel instance.
             var comment = new CommentModel();
 
-            // Assert
+            // Assert: Verify that the Timestamp property is set to the default DateTime value.
             Assert.That(comment.Timestamp, Is.EqualTo(default(DateTime)));
         }
 
+        /// <summary>
+        /// Tests that a newly created CommentModel instance has a EditingComment property.
+        /// </summary>
         [Test]
         public void CommentModel_WhenCreated_EditingCommentShouldBeNull()
         {
-            // Arrange & Act
+            // Arrange & Act: Create a new CommentModel instance.
             var comment = new CommentModel();
 
-            // Assert
+            // Assert: Verify that the editingComment property is.
             Assert.That(comment.editingComment, Is.Null);
         }
 
+        /// <summary>
+        /// Tests that the Text property can be set and retrieved correctly.
+        /// </summary>
         [Test]
         public void CommentModel_SetText_ShouldUpdateText()
         {
-            // Arrange
+            // Arrange: Create a new CommentModel instance and define the expected Text value.
             var comment = new CommentModel();
             var expectedText = "Test comment";
 
-            // Act
+            // Act: Set the Text property.
             comment.Text = expectedText;
 
-            // Assert
+            // Assert: Verify that the Text property was set correctly.
             Assert.That(comment.Text, Is.EqualTo(expectedText));
         }
 
+        /// <summary>
+        /// Tests that the Timestamp property can be set and retrieved correctly.
+        /// </summary>
         [Test]
         public void CommentModel_SetTimestamp_ShouldUpdateTimestamp()
         {
-            // Arrange
+            // Arrange: Create a new CommentModel instance and define the expected Timestamp value.
             var comment = new CommentModel();
             var expectedTime = DateTime.Now;
 
-            // Act
+            // Act: Set the Timestamp property.
             comment.Timestamp = expectedTime;
 
-            // Assert
+            // Assert: Verify that the Timestamp property was set correctly.
             Assert.That(comment.Timestamp, Is.EqualTo(expectedTime));
         }
 
+        /// <summary>
+        /// Tests that the EditingComment property can be set and retrieved correctly.
+        /// </summary>
         [Test]
         public void CommentModel_SetEditingComment_ShouldUpdateEditingComment()
         {
-            // Arrange
+            // Arrange: Create a new CommentModel instance and define the expected EditingComment value.
             var comment = new CommentModel();
             var editingComment = new CommentModel
             {
@@ -249,10 +267,10 @@ namespace UnitTests.Models
                 Timestamp = DateTime.Now
             };
 
-            // Act
+            // Act: Set the editingComment property.
             comment.editingComment = editingComment;
 
-            // Assert
+            // Assert: Verify that the editingComment property was set correctly.
             Assert.Multiple(() =>
             {
                 Assert.That(comment.editingComment, Is.Not.Null);
@@ -261,21 +279,24 @@ namespace UnitTests.Models
             });
         }
 
+        /// <summary>
+        /// Tests that a CommentModel instance created with specific values has the correct properties.
+        /// </summary>
         [Test]
         public void CommentModel_CreateWithValues_ShouldHaveCorrectProperties()
         {
-            // Arrange
+            // Arrange: Define the expected Text and Timestamp values.
             var expectedText = "Test comment";
             var expectedTime = DateTime.Now;
 
-            // Act
+            // Act: Create a new CommentModel instance with the specified values.
             var comment = new CommentModel
             {
                 Text = expectedText,
                 Timestamp = expectedTime
             };
 
-            // Assert
+            // Assert: Verify that the properties were set correctly.
             Assert.Multiple(() =>
             {
                 Assert.That(comment.Text, Is.EqualTo(expectedText));
@@ -284,30 +305,36 @@ namespace UnitTests.Models
             });
         }
 
+        /// <summary>
+        /// Tests that the Text property can be set to.
+        /// </summary>
         [Test]
         public void CommentModel_SetNullText_ShouldAllowNull()
         {
-            // Arrange
+            // Arrange: Create a new CommentModel instance.
             var comment = new CommentModel();
 
-            // Act
-            comment.Text = null;
+            // Act: Set the Text property to.
+            comment.Text =null;
 
-            // Assert
+            // Assert: Verify that the Text property is.
             Assert.That(comment.Text, Is.Null);
         }
 
+        /// <summary>
+        /// Tests that the EditingComment property can be cleared by setting it to.
+        /// </summary>
         [Test]
         public void CommentModel_ClearEditingComment_ShouldSetToNull()
         {
-            // Arrange
+            // Arrange: Create a new CommentModel instance and set the EditingComment property.
             var comment = new CommentModel();
             comment.editingComment = new CommentModel();
 
-            // Act
-            comment.editingComment = null;
+            // Act: Clear the EditingComment property by setting it to.
+            comment.editingComment =null;
 
-            // Assert
+            // Assert: Verify that the EditingComment property is.
             Assert.That(comment.editingComment, Is.Null);
         }
     }
