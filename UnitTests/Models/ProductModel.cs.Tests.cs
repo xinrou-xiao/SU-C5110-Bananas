@@ -1,5 +1,6 @@
 ﻿using ContosoCrafts.WebSite.Models;
 using NUnit.Framework;
+using System;
 
 namespace UnitTests.Models
 {
@@ -177,6 +178,137 @@ namespace UnitTests.Models
 
             // Assert: Verify that the Season property was set correctly.
             Assert.That(productModel.Season, Is.EqualTo(expectedSeason));
+        }
+
+        [Test]
+        public void CommentModel_WhenCreated_ShouldHaveEmptyText()
+        {
+            // Arrange & Act
+            var comment = new CommentModel();
+
+            // Assert
+            Assert.That(comment.Text, Is.Null.Or.Empty);
+        }
+
+        [Test]
+        public void CommentModel_WhenCreated_ShouldHaveDefaultTimestamp()
+        {
+            // Arrange & Act
+            var comment = new CommentModel();
+
+            // Assert
+            Assert.That(comment.Timestamp, Is.EqualTo(default(DateTime)));
+        }
+
+        [Test]
+        public void CommentModel_WhenCreated_EditingCommentShouldBeNull()
+        {
+            // Arrange & Act
+            var comment = new CommentModel();
+
+            // Assert
+            Assert.That(comment.editingComment, Is.Null);
+        }
+
+        [Test]
+        public void CommentModel_SetText_ShouldUpdateText()
+        {
+            // Arrange
+            var comment = new CommentModel();
+            var expectedText = "Test comment";
+
+            // Act
+            comment.Text = expectedText;
+
+            // Assert
+            Assert.That(comment.Text, Is.EqualTo(expectedText));
+        }
+
+        [Test]
+        public void CommentModel_SetTimestamp_ShouldUpdateTimestamp()
+        {
+            // Arrange
+            var comment = new CommentModel();
+            var expectedTime = DateTime.Now;
+
+            // Act
+            comment.Timestamp = expectedTime;
+
+            // Assert
+            Assert.That(comment.Timestamp, Is.EqualTo(expectedTime));
+        }
+
+        [Test]
+        public void CommentModel_SetEditingComment_ShouldUpdateEditingComment()
+        {
+            // Arrange
+            var comment = new CommentModel();
+            var editingComment = new CommentModel
+            {
+                Text = "Editing this comment",
+                Timestamp = DateTime.Now
+            };
+
+            // Act
+            comment.editingComment = editingComment;
+
+            // Assert
+            Assert.Multiple(() =>
+            {
+                Assert.That(comment.editingComment, Is.Not.Null);
+                Assert.That(comment.editingComment.Text, Is.EqualTo(editingComment.Text));
+                Assert.That(comment.editingComment.Timestamp, Is.EqualTo(editingComment.Timestamp));
+            });
+        }
+
+        [Test]
+        public void CommentModel_CreateWithValues_ShouldHaveCorrectProperties()
+        {
+            // Arrange
+            var expectedText = "Test comment";
+            var expectedTime = DateTime.Now;
+
+            // Act
+            var comment = new CommentModel
+            {
+                Text = expectedText,
+                Timestamp = expectedTime
+            };
+
+            // Assert
+            Assert.Multiple(() =>
+            {
+                Assert.That(comment.Text, Is.EqualTo(expectedText));
+                Assert.That(comment.Timestamp, Is.EqualTo(expectedTime));
+                Assert.That(comment.editingComment, Is.Null);
+            });
+        }
+
+        [Test]
+        public void CommentModel_SetNullText_ShouldAllowNull()
+        {
+            // Arrange
+            var comment = new CommentModel();
+
+            // Act
+            comment.Text = null;
+
+            // Assert
+            Assert.That(comment.Text, Is.Null);
+        }
+
+        [Test]
+        public void CommentModel_ClearEditingComment_ShouldSetToNull()
+        {
+            // Arrange
+            var comment = new CommentModel();
+            comment.editingComment = new CommentModel();
+
+            // Act
+            comment.editingComment = null;
+
+            // Assert
+            Assert.That(comment.editingComment, Is.Null);
         }
     }
 }
