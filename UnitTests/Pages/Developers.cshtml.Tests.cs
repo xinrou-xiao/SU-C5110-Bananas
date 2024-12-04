@@ -10,6 +10,8 @@ namespace UnitTests.Pages
         // Instance of the DevelopersModel to test
         private DevelopersModel pageModel;
 
+        #region TestSetup
+
         /// <summary>
         /// This method runs before each test and initializes the pageModel instance.
         /// </summary>
@@ -19,6 +21,10 @@ namespace UnitTests.Pages
             // Create a new instance of DevelopersModel before each test
             pageModel = new DevelopersModel();
         }
+
+        #endregion TestSetup
+
+        #region OnGet
 
         /// <summary>
         /// Test to verify that the Developers list is null before OnGet is called.
@@ -107,5 +113,7 @@ namespace UnitTests.Pages
             Assert.That(pageModel.Developers[3].Email, Is.EqualTo("vsomwanshi@seattleu.edu"));
             Assert.That(pageModel.Developers[3].ImageUrl, Is.EqualTo("https://t3.ftcdn.net/jpg/06/01/17/18/360_F_601171862_l7yZ0wujj8o2SowiKTUsfLEEx8KunYNd.jpg"));
         }
+
+        #endregion OnGet
     }
 }
