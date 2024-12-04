@@ -5,6 +5,8 @@ using NUnit.Framework;
 using ContosoCrafts.WebSite.Components;
 using ContosoCrafts.WebSite.Services;
 using Bunit.Extensions;
+using System.Collections.Generic;
+using NUnit.Framework.Internal.Commands;
 
 namespace UnitTests.Components
 {
@@ -595,5 +597,184 @@ namespace UnitTests.Components
         }
 
         #endregion Sort
+
+        #region Comments
+        [Test]
+        public void NewCommentText_Get_IsEmpty()
+        {
+            // Arrange
+            using var context = new Bunit.TestContext();
+            context.Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
+            var component = context.RenderComponent<ProductList>();
+
+            // Assert
+            Assert.That(component.Instance.newCommentText, Is.Empty);
+        }
+
+        [Test]
+        public void NewCommentText_Set_NotEmpty()
+        {
+            // Arrange
+            using var context = new Bunit.TestContext();
+            context.Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
+            var component = context.RenderComponent<ProductList>();
+
+            // Act
+            component.Instance.newCommentText = "something";
+
+            // Assert
+            Assert.That(component.Instance.newCommentText, Is.Not.Empty);
+            Assert.That(component.Instance.newCommentText, Is.EqualTo("something"));
+        }
+
+        [Test]
+        public void AddCommentToSelectedProduct_SelectedProductNull()
+        {
+            // Arrange
+            using var context = new Bunit.TestContext();
+            context.Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
+            var component = context.RenderComponent<ProductList>();
+
+            // Act
+            component.Instance.selectedProduct = null;
+
+            // Assert
+            component.Instance.AddCommentToSelectedProduct();
+        }
+
+        [Test]
+        public void AddCommentToSelectedProduct_NewComment_Null()
+        {
+            // Arrange
+            using var context = new Bunit.TestContext();
+            context.Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
+            var component = context.RenderComponent<ProductList>();
+
+            // Act
+            component.Instance.selectedProduct = new ContosoCrafts.WebSite.Models.ProductModel();
+            component.Instance.selectedProduct.NewComment = null;
+
+            // Assert
+            component.Instance.AddCommentToSelectedProduct();
+        }
+
+        [Test]
+        public void AddCommentToSelectedProduct_NewComment_WhiteSpace()
+        {
+            // Arrange
+            using var context = new Bunit.TestContext();
+            context.Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
+            var component = context.RenderComponent<ProductList>();
+
+            // Act
+            component.Instance.selectedProduct = new ContosoCrafts.WebSite.Models.ProductModel();
+            component.Instance.selectedProduct.NewComment = " ";
+
+            // Assert
+            component.Instance.AddCommentToSelectedProduct();
+        }
+
+        [Test]
+        public void AddCommentToSelectedProduct_Comments_Null()
+        {
+            // Arrange
+            using var context = new Bunit.TestContext();
+            context.Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
+            var component = context.RenderComponent<ProductList>();
+
+            // Act
+            component.Instance.selectedProduct = new ContosoCrafts.WebSite.Models.ProductModel
+            {
+                Comments = null,
+                NewComment = "Test Comment"
+            };
+            component.Instance.AddCommentToSelectedProduct();
+
+            // Assert
+            Assert.That(component.Instance.selectedProduct.Comments, Is.Not.Null);
+            Assert.That(component.Instance.selectedProduct.Comments, Is.InstanceOf<List<string>>());
+            Assert.That(component.Instance.selectedProduct.Comments.Count, Is.EqualTo(1));
+            Assert.That(component.Instance.selectedProduct.Comments[0], Is.EqualTo("Test Comment"));
+        }
+
+
+        [Test]
+        public void AddCommentToSelectedProduct_Comments_NotNull_AddedComment()
+        {
+            // Arrange
+            using var context = new Bunit.TestContext();
+            context.Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
+            var component = context.RenderComponent<ProductList>();
+
+            // Act
+            component.Instance.selectedProduct = new ContosoCrafts.WebSite.Models.ProductModel();
+            component.Instance.selectedProduct.Comments = new System.Collections.Generic.List<string>();
+            component.Instance.selectedProduct.NewComment = "something";
+            component.Instance.AddCommentToSelectedProduct();
+
+            // Assert
+            Assert.That(component.Instance.selectedProduct.Comments, Is.Not.EqualTo(new System.Collections.Generic.List<string>()));
+            Assert.That(component.Instance.selectedProduct.NewComment, Is.EqualTo(string.Empty));
+        }
+
+        [Test]
+        public void DeleteComment_ValidComment_ShouldRemoveComment()
+        {
+            // Arrange
+            using var context = new Bunit.TestContext();
+            context.Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
+            var component = context.RenderComponent<ProductList>();
+
+            var testComment = "Test Comment";
+            component.Instance.selectedProduct = new ContosoCrafts.WebSite.Models.ProductModel
+            {
+                Comments = new List<string> { testComment }
+            };
+
+            // Act
+            component.Instance.DeleteComment(testComment);
+
+            // Assert
+            Assert.That(component.Instance.selectedProduct.Comments.Count, Is.EqualTo(0));
+        }
+
+        [Test]
+        public void DeleteComment_SelectedProductNull_ShouldReturnEarly()
+        {
+            // Arrange
+            using var context = new Bunit.TestContext();
+            context.Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
+            var component = context.RenderComponent<ProductList>();
+
+            component.Instance.selectedProduct = null;
+
+            // Act
+            component.Instance.DeleteComment("Test Comment");
+
+            // Assert
+            Assert.Pass(); // Verifies the method doesn't throw an exception
+        }
+
+        [Test]
+        public void DeleteComment_CommentsNull_ShouldReturnEarly()
+        {
+            // Arrange
+            using var context = new Bunit.TestContext();
+            context.Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
+            var component = context.RenderComponent<ProductList>();
+
+            component.Instance.selectedProduct = new ContosoCrafts.WebSite.Models.ProductModel
+            {
+                Comments = null
+            };
+
+            // Act
+            component.Instance.DeleteComment("Test Comment");
+
+            // Assert
+            Assert.That(component.Instance.selectedProduct.Comments, Is.Null);
+        }
+
+        #endregion Comments
     }
 }
