@@ -12,7 +12,6 @@
   <ItemGroup>
     <Content Remove="wwwroot\Images\" />
     <Content Remove="wwwroot\Audio\" />
-    <Content Remove="wwwroot\Audio\kamado_tanjiro_no_uta.mp3" />
   </ItemGroup>
   <ItemGroup>
     <Content Update="wwwroot\data\products.json">
@@ -23,8 +22,5 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <CopyToPublishDirectory>Never</CopyToPublishDirectory>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="wwwroot\Audio\" />
   </ItemGroup>
 </Project>
