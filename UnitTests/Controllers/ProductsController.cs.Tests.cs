@@ -9,13 +9,21 @@ using ContosoCrafts.WebSite.Services;
 
 namespace UnitTests.Controllers
 {
+    /// <summary>
+    /// Unit tests for the ProductsController class.
+    /// </summary>
     [TestFixture]
     public class ProductsControllerTests
     {
-        private ProductsController _controller;
-        private JsonFileProductService _productService;
-        private string _testWebRootPath;
+        private ProductsController _controller;  // The controller instance being tested.
+        private JsonFileProductService _productService;  // The product service used by the controller to manage product data.
+        private string _testWebRootPath;  // The path to a temporary WebRoot directory used for testing purposes.
 
+        #region Setup
+
+        /// <summary>
+        /// Initializes the test setup.
+        /// </summary>
         [SetUp]
         public void Setup()
         {
@@ -64,6 +72,9 @@ namespace UnitTests.Controllers
             _controller = new ProductsController(_productService);
         }
 
+        /// <summary>
+        /// Cleans up resources created during the test setup.
+        /// </summary>
         [TearDown]
         public void TearDown()
         {
@@ -74,6 +85,13 @@ namespace UnitTests.Controllers
             }
         }
 
+        #endregion Setup
+
+        #region Constructor
+
+        /// <summary>
+        /// Verifies that the ProductsController is correctly initialized with the provided product service.
+        /// </summary>
         [Test]
         public void Constructor_Initialization_State_Should_Initialize_ProductService()
         {
@@ -81,6 +99,13 @@ namespace UnitTests.Controllers
             Assert.That(_controller.ProductService, Is.EqualTo(_productService), "Expected ProductService to be initialized with the provided service.");
         }
 
+        #endregion Constructor
+
+        #region Get
+
+        /// <summary>
+        /// Tests that the <see cref="ProductsController.Get"/> method returns all available products.
+        /// </summary>
         [Test]
         public void Get_AnyCondition_State_Should_Return_All_Products()
         {
@@ -91,6 +116,13 @@ namespace UnitTests.Controllers
             Assert.That(result.Count(), Is.EqualTo(2), "Expected Get() to return two products.");
         }
 
+        #endregion Get
+
+        #region Patch
+
+        /// <summary>
+        /// Tests that the <see cref="ProductsController.Patch"/> method handles a valid rating request correctly.
+        /// </summary>
         [Test]
         public void Patch_ValidRequest_State_Should_Return_Ok_And_AddRating()
         {
@@ -120,5 +152,6 @@ namespace UnitTests.Controllers
             // Check if the Ratings array contains the new rating
             Assert.That(product.Ratings, Contains.Item(5), "Product Ratings should contain the new rating.");
         }
+        #endregion Patch
     }
 }
