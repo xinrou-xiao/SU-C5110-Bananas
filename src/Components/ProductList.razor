@@ -181,7 +181,7 @@
 @code
 {
     // Represents the currently selected product.
-    ProductModel selectedProduct = new ProductModel();
+    public ProductModel selectedProduct = new ProductModel();
 
     // Holds the ID of the selected product.
     string selectedProductId;
@@ -422,12 +422,12 @@
             return;
         }
         @code {
-        private string newCommentText { get; set; } = string.Empty;
+        public string newCommentText { get; set; } = string.Empty;
 
         /// <summary>
         /// Adds a new comment to the selected product.
         /// </summary>
-        private void AddCommentToSelectedProduct()
+        public void AddCommentToSelectedProduct()
         {
             if (selectedProduct ==null)
             {
@@ -454,7 +454,7 @@
         /// Deletes a specific comment.
         /// </summary>
         /// <param name="comment">The comment to delete.</param>
-        private void DeleteComment(string comment)
+        public void DeleteComment(string comment)
         {
             if (selectedProduct ==null)
             {
