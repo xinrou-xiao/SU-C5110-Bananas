@@ -7,6 +7,7 @@ using ContosoCrafts.WebSite.Services;
 using Bunit.Extensions;
 using System.Collections.Generic;
 using NUnit.Framework.Internal.Commands;
+using ContosoCrafts.WebSite.Models;
 
 namespace UnitTests.Components
 {
@@ -599,8 +600,12 @@ namespace UnitTests.Components
         #endregion Sort
 
         #region Comments
+
+        /// <summary>
+        /// Verifies that the initial value of the newCommentText property is an empty string.
+        /// </summary>
         [Test]
-        public void NewCommentText_Get_IsEmpty()
+        public void NewCommentText_InitialValue_Should_Be_Empty()
         {
             // Arrange
             using var context = new Bunit.TestContext();
@@ -611,8 +616,11 @@ namespace UnitTests.Components
             Assert.That(component.Instance.newCommentText, Is.Empty);
         }
 
+        /// <summary>
+        /// Verifies that setting a value to the newCommentText property updates it correctly.
+        /// </summary>
         [Test]
-        public void NewCommentText_Set_NotEmpty()
+        public void NewCommentText_SetValue_Should_Update_Property()
         {
             // Arrange
             using var context = new Bunit.TestContext();
@@ -627,8 +635,11 @@ namespace UnitTests.Components
             Assert.That(component.Instance.newCommentText, Is.EqualTo("something"));
         }
 
+        /// <summary>
+        /// Verifies that calling AddCommentToSelectedProduct does nothing when the selectedProduct is.
+        /// </summary>
         [Test]
-        public void AddCommentToSelectedProduct_SelectedProductNull()
+        public void AddCommentToSelectedProduct_SelectedProductNull_Should_Return_Early()
         {
             // Arrange
             using var context = new Bunit.TestContext();
@@ -636,14 +647,17 @@ namespace UnitTests.Components
             var component = context.RenderComponent<ProductList>();
 
             // Act
-            component.Instance.selectedProduct = null;
+            component.Instance.selectedProduct =null;
 
             // Assert
-            component.Instance.AddCommentToSelectedProduct();
+            Assert.DoesNotThrow(() => component.Instance.AddCommentToSelectedProduct());
         }
 
+        /// <summary>
+        /// Verifies that calling AddCommentToSelectedProduct does nothing when the NewComment property is.
+        /// </summary>
         [Test]
-        public void AddCommentToSelectedProduct_NewComment_Null()
+        public void AddCommentToSelectedProduct_NewCommentNull_Should_Return_Early()
         {
             // Arrange
             using var context = new Bunit.TestContext();
@@ -652,14 +666,17 @@ namespace UnitTests.Components
 
             // Act
             component.Instance.selectedProduct = new ContosoCrafts.WebSite.Models.ProductModel();
-            component.Instance.selectedProduct.NewComment = null;
+            component.Instance.selectedProduct.NewComment =null;
 
             // Assert
-            component.Instance.AddCommentToSelectedProduct();
+            Assert.DoesNotThrow(() => component.Instance.AddCommentToSelectedProduct());
         }
 
+        /// <summary>
+        /// Verifies that calling AddCommentToSelectedProduct does nothing when the NewComment property contains only whitespace.
+        /// </summary>
         [Test]
-        public void AddCommentToSelectedProduct_NewComment_WhiteSpace()
+        public void AddCommentToSelectedProduct_NewCommentWhiteSpace_Should_Return_Early()
         {
             // Arrange
             using var context = new Bunit.TestContext();
@@ -671,11 +688,14 @@ namespace UnitTests.Components
             component.Instance.selectedProduct.NewComment = " ";
 
             // Assert
-            component.Instance.AddCommentToSelectedProduct();
+            Assert.DoesNotThrow(() => component.Instance.AddCommentToSelectedProduct());
         }
 
+        /// <summary>
+        /// Verifies that calling AddCommentToSelectedProduct initializes the Comments list if it is and adds the new comment.
+        /// </summary>
         [Test]
-        public void AddCommentToSelectedProduct_Comments_Null()
+        public void AddCommentToSelectedProduct_CommentsNull_Should_Initialize_And_Add_Comment()
         {
             // Arrange
             using var context = new Bunit.TestContext();
@@ -685,7 +705,7 @@ namespace UnitTests.Components
             // Act
             component.Instance.selectedProduct = new ContosoCrafts.WebSite.Models.ProductModel
             {
-                Comments = null,
+                Comments =null,
                 NewComment = "Test Comment"
             };
             component.Instance.AddCommentToSelectedProduct();
@@ -697,9 +717,11 @@ namespace UnitTests.Components
             Assert.That(component.Instance.selectedProduct.Comments[0], Is.EqualTo("Test Comment"));
         }
 
-
+        /// <summary>
+        /// Verifies that calling AddCommentToSelectedProduct adds a new comment to the Comments list when it is not.
+        /// </summary>
         [Test]
-        public void AddCommentToSelectedProduct_Comments_NotNull_AddedComment()
+        public void AddCommentToSelectedProduct_CommentsNotNull_Should_Add_Comment()
         {
             // Arrange
             using var context = new Bunit.TestContext();
@@ -708,17 +730,20 @@ namespace UnitTests.Components
 
             // Act
             component.Instance.selectedProduct = new ContosoCrafts.WebSite.Models.ProductModel();
-            component.Instance.selectedProduct.Comments = new System.Collections.Generic.List<string>();
+            component.Instance.selectedProduct.Comments = new List<string>();
             component.Instance.selectedProduct.NewComment = "something";
             component.Instance.AddCommentToSelectedProduct();
 
             // Assert
-            Assert.That(component.Instance.selectedProduct.Comments, Is.Not.EqualTo(new System.Collections.Generic.List<string>()));
+            Assert.That(component.Instance.selectedProduct.Comments, Is.Not.Empty);
             Assert.That(component.Instance.selectedProduct.NewComment, Is.EqualTo(string.Empty));
         }
 
+        /// <summary>
+        /// Verifies that calling DeleteComment removes the specified comment from the Comments list.
+        /// </summary>
         [Test]
-        public void DeleteComment_ValidComment_ShouldRemoveComment()
+        public void DeleteComment_ValidComment_Should_Remove_Comment()
         {
             // Arrange
             using var context = new Bunit.TestContext();
@@ -738,25 +763,28 @@ namespace UnitTests.Components
             Assert.That(component.Instance.selectedProduct.Comments.Count, Is.EqualTo(0));
         }
 
+        /// <summary>
+        /// Verifies that calling DeleteComment does nothing when the selectedProduct is.
+        /// </summary>
         [Test]
-        public void DeleteComment_SelectedProductNull_ShouldReturnEarly()
+        public void DeleteComment_SelectedProductNull_Should_Return_Early()
         {
             // Arrange
             using var context = new Bunit.TestContext();
             context.Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
             var component = context.RenderComponent<ProductList>();
 
-            component.Instance.selectedProduct = null;
+            component.Instance.selectedProduct =null;
 
             // Act
             component.Instance.DeleteComment("Test Comment");
-
-            // Assert
-            Assert.Pass(); // Verifies the method doesn't throw an exception
         }
 
+        /// <summary>
+        /// Verifies that calling DeleteComment does nothing when the Comments list is.
+        /// </summary>
         [Test]
-        public void DeleteComment_CommentsNull_ShouldReturnEarly()
+        public void DeleteComment_CommentsNull_Should_Return_Early()
         {
             // Arrange
             using var context = new Bunit.TestContext();
@@ -765,7 +793,7 @@ namespace UnitTests.Components
 
             component.Instance.selectedProduct = new ContosoCrafts.WebSite.Models.ProductModel
             {
-                Comments = null
+                Comments =null 
             };
 
             // Act
