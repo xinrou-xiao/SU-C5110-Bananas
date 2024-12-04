@@ -16,6 +16,12 @@
 </nav>
 
 <div class="container">
+    @if (Model.Product == null)
+    {
+        <h5>Sorry, the data you are trying to access does not exist.</h5>
+        return; // Stop rendering the page if the product is
+    }
+
     <h2 class="white-font">Update Anime Information</h2>
     <form method="post" novalidate>
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
