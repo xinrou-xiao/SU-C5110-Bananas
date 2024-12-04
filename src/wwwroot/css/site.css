@@ -1017,6 +1017,7 @@ ul {
     text-decoration: underline;
     /*added border radius to the button*/
     border-radius: 10px;
+    align-content: center;
 }
     /* Style for the trailer watch button when hovered */
     .btn-watch-trailer:hover {
