@@ -43,7 +43,7 @@ namespace ContosoCrafts.WebSite.Pages.Product
             // Redirect to error page if the product is not found.
             if (Product == null)
             {
-                return RedirectToPage("/Error");
+                return Page();
             }
 
             return Page();
