@@ -10,7 +10,7 @@ namespace UnitTests.Controllers
     [TestFixture]
     public class ReadControllerTests
     {
-        private ReadController _controller;
+        private ReadController _controller;  // The controller instance being tested.
 
         #region Setup
 
