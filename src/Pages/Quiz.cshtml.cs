@@ -169,7 +169,7 @@ namespace ContosoCrafts.WebSite.Pages
             // Assign the video URL based on the result
             ResultVideoUrl = ResultName switch
             {
-                "Naruto Uzumaki (Anime: Naruto)" => "https://www.desktophut.com/files/dkZH0secomXUvl9_Naruto%20Artistic%20Live%20Wallpaper_2_151011.mp4",
+                "Naruto Uzumaki (Anime: Naruto)" => "https://www.desktophut.com/files/cA08Rj3lLcZIIVi_Kurama-Nine-Tails-Fox-And-Naruto-4K_2_192441.mp4",
                 "Luffy D. Monkey (Anime: One Piece)" => "https://motionbgs.com/media/6827/strawhat-luffy.960x540.mp4",
                 "Tanjiro Kamado (Anime: Demon Slayer)" => "https://motionbgs.com/media/6009/tanjiro-water-dragon.960x540.mp4",
                 "Roronoa Zoro (Anime: One Piece)" => "https://motionbgs.com/media/6005/fearless-zoro.960x540.mp4",
