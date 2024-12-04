@@ -803,41 +803,45 @@ namespace UnitTests.Components
             // Assert
             Assert.That(component.Instance.selectedProduct.Comments, Is.Null);
         }
-        
 
+        /// <summary>
+        /// Verifies that clicking the Delete Comment button removes the comment from the Comments list.
+        /// </summary>
         [Test]
         public void DeleteCommentButton_Click_Should_Remove_Comment()
         {
-            // Arrange
+            // Arrange: Set up the test context and render the ProductList component.
             using var context = new Bunit.TestContext();
             context.Services.AddSingleton<JsonFileProductService>(TestHelper.ProductService);
             var component = context.RenderComponent<ProductList>();
 
-            // Find the card containing the specific text
+            // Find the card containing the specific product text.
             var card = component.FindAll(".card")
                 .FirstOrDefault(c => c.TextContent.Contains("Naruto: The Journey of a Ninja Dreamer"));
 
+            // Assert: Verify that the card with the specified text exists.
             Assert.That(card, Is.Not.Null, "The card with the specified text was not found.");
 
-            // Find the button inside the card
+            // Find the button inside the card to add a comment.
             var element = card.QuerySelector(".btn-primary");
+
+            // Assert: Verify that the button exists inside the card.
             Assert.That(element, Is.Not.Null, "The button inside the card was not found.");
 
-            // Act: Click the button
+            // Act: Click the button to add a comment.
             element.Click();
 
-            // Assert: Verify the comment text
+            // Assert: Verify that the comment text is displayed.
             var comment = component.Find(".comment-text");
             Assert.That(comment.TextContent, Is.EqualTo("Hello there."));
 
-            // Act: Click on Delete button
+            // Act: Find and click the Delete button to remove the comment.
             var deleteButton = component.Find(".btn-link:contains('Delete')");
             deleteButton.Click();
 
-            // Assert: comment is deleted
+            // Assert: Verify that the comment is removed and the Comments list is empty.
             Assert.That(component.Instance.selectedProduct.Comments, Is.Empty);
         }
-
 
         #endregion Comments
     }
